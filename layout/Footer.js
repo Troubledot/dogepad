@@ -9,7 +9,7 @@ const Footer = ({ t }) => {
           <ul>
             <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>
             <a href="https://twitter.com/bisoswap" target="_blank"><li className={styles.tw}></li></a>
-            <li className={styles.logo}></li>
+            <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.logo}></li></a>
             <li className={styles.dc}></li>
             <li className={styles.gb}></li>
           </ul>
