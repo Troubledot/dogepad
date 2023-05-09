@@ -1,0 +1,57 @@
+
+import Head from "next/head"
+import Header from "./Header"
+import Footer from "./Footer"
+import React, { useState, useEffect } from 'react'
+import { findDOMNode } from 'react-dom'
+
+const HeaderFooter = (props) => {
+
+  const { activeIndex , scrolling } = props
+  const [progress, setProgress] = useState(0)
+
+  return (
+    <div>
+      <Head>
+        <title>NBC</title>
+        <meta charSet="utf-8" />
+        <meta name="renderer" content="webkit" />
+        <meta name="author" content="NBC" />
+        <meta name="generator" content="NBC" />
+        <meta name="copyright" content="NBC" />
+        {/* <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+          <meta httpEquiv="Cache-Control" content="no-transform" />
+          <meta httpEquiv="Cache-Control" content="no-siteapp" /> */}
+        <link rel="shortcut icon" href="/favicon.ico" />
+        <link rel="bookmark" href="/favicon.ico" />
+        <meta name="description" content="NBC" />
+        <meta name="keywords" content="NBC" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
+        <script src="/js/viewport.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2NVSQMYBS"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+
+              function gtag() {
+                dataLayer.push(arguments);
+              }
+              gtag('js', new Date());
+
+              gtag('config', 'G-X2NVSQMYBS');
+              `
+          }}
+        />
+      </Head>
+      <Header activeIndex={activeIndex} scrolling={scrolling} />
+      <main>{props.children}</main>
+      <Footer />
+    </div>
+  )
+};
+
+export default HeaderFooter;

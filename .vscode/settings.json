@@ -1,0 +1,5 @@
+{
+  "editor.formatOnSave": false,
+  "git.ignoreLimitWarning": true,
+  "i18n-ally.localesPaths": ["public/locales"]
+}

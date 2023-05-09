@@ -1,0 +1,129 @@
+ .walletMask {
+     font-family: Arial, Helvetica, sans-serif;
+     background-color: rgba(0, 0, 0, 0.8);
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     display: flex;
+     z-index: 9999;
+     -webkit-box-align: center;
+     align-items: center;
+     -webkit-box-pack: center;
+     justify-content: center;
+     pointer-events: auto;
+     &.hide {
+         display: none;
+     }
+    .walletWrapper {
+        cursor: pointer;
+        border-radius: 10px;
+        box-sizing: border-box;
+        width: 20vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border: 1px solid #ccc;
+        padding: 0.4rem 0;
+        background: rgb(43, 43, 43);
+    }
+    .walletTitle {
+        font-size: 0.2rem;
+        color: #fff;
+        text-align: center;
+        margin: 0.2rem 0;
+        font-family: "halva_m";
+    }
+    .walletTips {
+        color: #fff6;
+        font-size: 0.15rem;
+        font-family: "halva_m";
+    }
+ }
+
+ .wallet {
+     font-size: 0.16rem;
+     font-family: "halva_m";
+     text-align: left;
+     flex-direction: column;
+     position: relative;
+     z-index: 9999999;
+     min-height: 73px;
+     margin-left: 0.3rem;
+     width: 150px;
+     .accountWrap{
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.15rem;
+     }
+     .account {
+        vertical-align: middle;
+        font-family: Arial, Helvetica, sans-serif;
+        display: inline-block;
+        color: #fff;
+     }
+     .balance {
+        color: #fff;
+        margin: 0 7.403px;
+        vertical-align: middle;
+        display: inline-block;
+     }
+ }
+ .button {
+    align-items: center;
+    color: #ff5100;
+    font-size: .16rem;
+    font-weight: bold;
+    justify-content: center;
+    outline: none;
+    white-space: nowrap;
+    border: none;
+    background: none;
+    border-radius: 4px;
+    border: 1px solid #ff5100;
+    margin-top: 0.1rem;
+    &:hover{
+      color: #fff;
+      background: #ff5100;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .walletMask {
+        .walletWrapper {
+          width: 70vw;
+        }
+        .walletTitle {
+            font-size: 0.8rem;
+        }
+        .walletTips {
+            font-size: 0.6rem;
+        }
+    }
+
+    .wallet {
+      width: auto;
+      .account {
+        font-size: 0.5rem;
+     }
+     .balance {
+       font-size: 0.5rem;
+     }
+    }
+
+    .button {
+        font-size: 0.5rem;
+        border-radius: 0.2rem;
+        padding: 0.2rem;
+        &.disconnect{
+          padding: 0.2rem;
+        }
+    }
+
+}
+.padding{
+  padding-top: 0.25rem;
+}
