@@ -10,62 +10,34 @@ import {
     Trans
 } from 'next-i18next'
 import { route } from "next/dist/server/router"
-
+import styles from "../styles/layout.module.scss"
 // const cx = classNames.bind(styles)
 
 const Header = (props) => {
     const { activeIndex, scrolling } = props
     const [openState, setopenState] = useState(false)
 
-    const router = useRouter()
-    const {
-        t
-    } = useTranslation('common')
-    useEffect(async () => {
-        // initNetWork()
-    }, [])
+        const router = useRouter()
+        const { t } = useTranslation('common')
 
-    const initNetWork = async () => {
-        let ethereum = window.ethereum
-        // const data = [{
-        //     // chainId: "0x61",
-        //     chainId: "0x38",
-        //     chainName: "Binance Smart Chain Mainnet",
-        //     nativeCurrency: {
-        //         name: "BNB",
-        //         symbol: "BNB",
-        //         decimals: 18,
-        //     },
-        //     rpcUrls: ["https://bsc-dataseed.binance.org"],
-        //     blockExplorerUrls: ["https://bscscan.com/"],
-        // },]
-         const data = [{
-             chainId: "0x61",
-             // chainId: "0x38",
-             chainName: "Binance Smart Chain Mainnet",
-             nativeCurrency: {
-                 name: "tBNB",
-                 symbol: "tBNB",
-                 decimals: 18,
-             },
-             // rpcUrls: ["https://bsc-dataseed.binance.org"],
-             rpcUrls: ["https://data-seed-prebsc-1-s1.binance.org:8545"],
-             blockExplorerUrls: ["https://bscscan.com/"],
-         }, ]
+        useEffect(async () => {
+            // initNetWork()
+        }, [])
 
-
-        /* eslint-disable */
-        const tx = await ethereum.request({
-            method: "wallet_addEthereumChain",
-            params: data
-        }).catch()
-        if (tx) {
-            console.log(tx)
-        }
-    }
     return (
-        <header>
+        <header className={styles.header}>
             {/* <Wallet /> */}
+            <div className={styles.inner}>
+                <i className={styles.logo}></i>
+                <div className={styles.settings}>
+                    <ul className={styles.link}>
+                        <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>
+                        <a href="https://twitter.com/bisoswap" target="_blank"><li className={styles.tw}></li></a>
+                        <li className={styles.dc}></li>
+                        <li className={styles.gb}></li>
+                    </ul>
+                </div>
+            </div>
         </header>
     )
 }

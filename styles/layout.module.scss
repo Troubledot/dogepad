@@ -1,0 +1,133 @@
+.header{
+    .inner{
+        width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        .logo{
+            background: url(../public/layout/logo.svg) no-repeat center;
+            width: 263px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .settings{
+            .link {
+                li {
+                    width: 40px;
+                    height: 40px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    background-size: 100% auto;
+                    margin: 0 5px;
+                    cursor: pointer;
+        
+                    &.tg {
+                        background-image: url(../public/layout/icon_tele.png);
+                    }
+        
+                    &.tw {
+                        background-image: url(../public/layout/icon_tw.png);
+                    }
+        
+                    &.dc {
+                        background-image: url(../public/layout/icon_dc.png);
+                    }
+                    &.gb{
+                    background-image: url(../public/layout/icon_github.png) ;
+                }
+                }
+            }
+        }
+    }
+}
+
+.footer{
+    .inner{
+        width: 1280px;
+        margin: 0 auto;
+        ul{
+            text-align: center;
+            li{
+                display: inline-block;
+                width: 50px;
+                height: 50px;
+                margin: 0 10px;
+                &.tg{
+                    background: url(../public/layout/icon_tele.png) no-repeat center/100% auto;
+                }
+                &.tw{
+                    background: url(../public/layout/icon_tw.png) no-repeat center/100% auto;
+                }
+                &.logo{
+                    background: url(../public/layout/logo_mini.png) no-repeat center/100% auto;
+                }
+                &.dc{
+                    background: url(../public/layout/icon_dc.png) no-repeat center/100% auto;
+                }
+                &.gb{
+                    background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .header {
+            .inner {
+                width: 100%;
+                padding: 5px 20px;
+                .logo {
+                    background: url(../public/layout/logo_mini.png) no-repeat center/ 100% auto;
+                    width: 50px;
+                    height: 50px;
+                }
+    
+                .settings {
+                    .link {
+                        display: none;
+                    }
+                }
+            }
+        }
+    
+        .footer {
+            .inner {
+                width: 100%;
+                padding: 10px 0;
+                ul {
+                    text-align: center;
+                    li {
+                        display: inline-block;
+                        width: 50px;
+                        height: 50px;
+                        margin: 0 10px;
+    
+                        &.tg {
+                            background: url(../public/layout/icon_tele.png) no-repeat center/100% auto;
+                        }
+    
+                        &.tw {
+                            background: url(../public/layout/icon_tw.png) no-repeat center/100% auto;
+                        }
+    
+                        &.logo {
+                            background: url(../public/layout/logo_mini.png) no-repeat center/100% auto;
+                        }
+    
+                        &.dc {
+                            background: url(../public/layout/icon_dc.png) no-repeat center/100% auto;
+                        }
+    
+                        &.gb {
+                            background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
+                        }
+                    }
+                }
+            }
+        }
+}

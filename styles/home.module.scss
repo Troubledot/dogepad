@@ -1,3 +1,207 @@
 .wrapper{
+    .slogan{
+        background: linear-gradient(360deg, #FFB800 0%, rgba(21, 20, 20, 0) 23.96%);
+        height: 770px;
+        position: relative;
+        .inner{
+            width:1280px;
+            margin: 0 auto;
+        .text{
+                position: absolute;
+                left: 50%;
+                width: 600px;
+                margin-left: -540px;
+                top: 160px;
+                h1{
+                    font-family: 'Play';
+                    font-size: 44px;
+                    line-height: 44px;
+                    color: #FFB800;
+                    margin-bottom: 10px;
+                }
+                p{
+                    font-family: 'Play';
+                    font-size: 20px;
+                    line-height: 150%;
+                    color: #D9D9D9;
+                    margin-bottom: 40px;
+                }
+                button{
+                    border: 2px solid #FFB800;
+                    width: 302px;
+                    height: 60px;
+                    color: #fff;
+                    font-family: 'Play';
+                    font-size: 24px;
+                    line-height: 28px;
+                    background: transparent;
+                    padding: 0 10px;
+                    cursor: pointer;
+                    span{
+                        border-left: 5px solid #6EB737;
+                        border-right: 5px solid #6EB737;
+                        display: block;
+                    }
+                }
+            }
+            .rhinoceros {
+                background: url(../public/home/rhinoceros.png) no-repeat center/ 100% auto;
+                width: 538px;
+                height: 582px;
+                position: absolute;
+                bottom: 0;
+                right: 50px;
+                i.token_biso{
+                    width: 90px;
+                    height: 90px;
+                    background: url(../public/home/token_biso.png) no-repeat center/100% auto;
+                    position: absolute;
+                    top: -10px;
+                    left: 50px;
+                            animation: bounce 5s cubic-bezier(.5, .2, .8, .8) infinite alternate;
+                }
+                i.token_btc{
+                    width: 76px;
+                    height: 76px;
+                    background: url(../public/home/token_btc.png) no-repeat center/100% auto;
+                    position: absolute;
+                    top: -70px;
+                    left: 150px;
+                            animation: bounce 10s cubic-bezier(.5, .2, .8, .8) infinite alternate;
+                }
+            }
+        }
+    }
+    .how_it_works{
+        width: 1280px;
+        margin: 0 auto;
+        h1{
+            font-size: 40px;
+            line-height: 60px;
+            color: #FFB800;
+            text-align: center;
+            margin-top: 40px;
+            font-family: 'play';
+            position: relative;
+            i{
+                border-bottom: 2px solid #6EB737;
+                width: 100px;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                margin-left: -50px;
+            }
+        }
+        .step1{
+            background: url(../public/home/step1.png) no-repeat center/ 100% auto;
+            height: 750px;
+        }
+        .step2{
+            background: url(../public/home/step2.png) no-repeat center/ 100% auto;
+            height: 750px;
+        }
+        .step3{
+            background: url(../public/home/step3.png) no-repeat center/ 100% auto;
+            height: 750px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .wrapper {
+            .slogan {
+                height: 880px;
+                .inner {
+                    width: 100%;
+                    .text {
+                        position: relative;
+                        width: 100%;
+                        margin-left: 0;
+                        left: 0;
+                        padding: 0 30px;
+                        top: 70px;
+                        text-align: center;
+                        h1 {
+                            font-family: 'Play';
+                            font-size: 30px;
+                            line-height: 40px;
+                            text-align: left;
+                        }
     
+                        p {
+                            font-size: 16px;
+                            margin-bottom: 80px;
+                            text-align: left;
+                        }
+    
+                        button {
+                        }
+                    }
+    
+                    .rhinoceros {
+                        background: url(../public/home/rhinoceros.png) no-repeat center/ 100% auto;
+                        width: 400px;
+                        height: 371px;
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+    
+                        i.token_biso {
+                            width: 70px;
+                            height: 70px;
+                            top: -10px;
+                            left: 70px;
+                        }
+    
+                        i.token_btc {
+                            width: 70px;
+                            height: 70px;
+                        }
+                    }
+                }
+            }
+    
+            .how_it_works {
+                width: 100%;
+                .content{
+                    width: 100%;
+                    white-space: nowrap;
+                    overflow: auto;
+                }
+                .step1 {
+                    background: url(../public/home/m_step1.png) no-repeat center top/ 100% auto;
+                    height: 1800px;
+                    display: inline-block;
+                    width: 100%;
+                    vertical-align: top;
+                }
+    
+                .step2 {
+                    background: url(../public/home/m_step2.png) no-repeat center top/ 100% auto;
+                    height: 1650px;
+                    display: inline-block;
+                        width: 100%;
+                    vertical-align: top;
+                }
+    
+                .step3 {
+                    background: url(../public/home/m_step3.png) no-repeat center top/ 100% auto;
+                    height: 1750px;
+                    display: inline-block;
+                        width: 100%;
+                    vertical-align: top;
+                }
+            }
+        }
+}
+
+@keyframes bounce {
+    0% {
+        margin-top: 0;
+    }
+
+    100% {
+        margin-top: 50px;
+    }
 }

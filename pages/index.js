@@ -47,10 +47,47 @@ const Home = () => {
   }, []);
 
 
+  const toastConfig = {
+      position: 'bottom-left',
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: 'dark'
+    }
+
+
   return (
     <HeaderFooter activeIndex={1}>
+      <ToastContainer />
       <div className={styles.wrapper}>
-
+        <div className={styles.slogan}>
+          <div className={styles.inner}>
+            <div className={styles.text}>
+              <h1>BISO - the first AMM DEX in the BRC20 ecosystem! </h1>
+              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <button onClick={()=>{
+                toast.success('Come Soon! 🚀', toastConfig)
+              }}><span>IDO</span></button>
+            </div>
+            <div className={styles.rhinoceros}>
+              <i className={styles.token_biso}></i>
+              <i className={styles.token_btc}></i>
+            </div>
+          </div>
+        </div>
+        <div className={styles.how_it_works}>
+          <h1>How it works
+            <i></i>
+          </h1>
+          <div className={styles.content}>
+            <div className={styles.step1}></div>
+            <div className={styles.step2}></div>
+            <div className={styles.step3}></div>
+          </div>
+        </div>
       </div>
     </HeaderFooter>
   );
