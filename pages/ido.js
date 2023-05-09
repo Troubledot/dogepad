@@ -226,13 +226,13 @@ const Home = () => {
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
               <div className={styles.label}>Received</div>
-              <div className={styles.content}>{whitelistMyContributeBtc * 1176031.360836289} <b className={styles.colorPrimary}>BISO</b></div>
+              <div className={styles.content}>{whitelistMyContributeBtc * (126000000  * 0.3) / (totalWhitelistSaleData > 3.2142 ? totalWhitelistSaleData :  3.2142 )} <b className={styles.colorPrimary}>BISO</b></div>
             </div>
           </div>
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
               <div className={styles.label}>Ratio</div>
-              <div className={styles.content}>1 BTC = 1176031.360836289 <b className={styles.colorPrimary}>BISO</b></div>
+              <div className={styles.content}>1 BTC = {(126000000  * 0.3) / (totalWhitelistSaleData > 3.2142 ? totalWhitelistSaleData :  3.2142 )} <b className={styles.colorPrimary}>BISO</b></div>
             </div>
           </div>
           <div className={styles.btns}>
@@ -300,13 +300,13 @@ const Home = () => {
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
               <div className={styles.label}>Received</div>
-              <div className={styles.content}>{publicMyContributeBtc * 1176031.360836289} <b className={styles.colorPrimary}>BISO</b></div>
+              <div className={styles.content}>{publicMyContributeBtc * (126000000  * 0.7) / (totalWhitelistSaleData > 6.4284 ? totalWhitelistSaleData :  6.4284 )} <b className={styles.colorPrimary}>BISO</b></div>
             </div>
           </div>
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
               <div className={styles.label}>Ratio</div>
-              <div className={styles.content}>1 BTC = 1176031.360836289 <b className={styles.colorPrimary}>BISO</b></div>
+              <div className={styles.content}>1 BTC = {(126000000  * 0.7) / (totalWhitelistSaleData > 6.4284 ? totalWhitelistSaleData :  6.4284 )} <b className={styles.colorPrimary}>BISO</b></div>
             </div>
           </div>
           <div className={styles.btns}>

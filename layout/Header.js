@@ -23,14 +23,14 @@ const Header = (props) => {
         const [account,setAccount] = useState("")
 
         useEffect(async () => {
-            const timer = setInterval(async () => {
-                if (typeof window.unisat !== 'undefined' && window.account) {
-                    setAccount(window.account)
-                }
-            }, 1000)
-            return () => {
-                clearInterval(timer)
-            }
+            // const timer = setInterval(async () => {
+            //     if (typeof window.unisat !== 'undefined' && window.account) {
+            //         setAccount(window.account)
+            //     }
+            // }, 1000)
+            // return () => {
+            //     clearInterval(timer)
+            // }
         }, [])
 
         const connectWallet = async () => {
