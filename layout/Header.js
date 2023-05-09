@@ -11,6 +11,7 @@ import {
 } from 'next-i18next'
 import { route } from "next/dist/server/router"
 import styles from "../styles/layout.module.scss"
+import { concat } from "ethers/lib/utils"
 // const cx = classNames.bind(styles)
 
 const Header = (props) => {
@@ -19,10 +20,28 @@ const Header = (props) => {
 
         const router = useRouter()
         const { t } = useTranslation('common')
+        const [account,setAccount] = useState("")
 
         useEffect(async () => {
-            // initNetWork()
+            const timer = setInterval(async () => {
+                // if (typeof window.unisat !== 'undefined') {
+                //     let accounts = await window.unisat.getAccounts();
+                //     setAccount(accounts[0])
+                // }
+            }, 3000)
+            return () => {
+                clearInterval(timer)
+            }
         }, [])
+
+        const connectWallet = async () => {
+            if (typeof window.unisat !== 'undefined') {
+                let accounts = await window.unisat.requestAccounts();
+                setAccount(accounts[0])
+            }else{
+                alert('UniSat Wallet is not installed!');
+            }
+        }
 
     return (
         <header className={styles.header}>
@@ -36,6 +55,13 @@ const Header = (props) => {
                         <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.md}></li></a>
                         <li className={styles.gb}></li>
                     </ul>
+                    <div className={styles.wallet}>
+                        {!account ? 
+                            <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Wallet</button>
+                            :
+                            <button className={styles.wallet_btn}>12{account}</button>
+                        }
+                    </div>
                 </div>
             </div>
         </header>

@@ -1,33 +1,34 @@
 import axios from 'axios'
 
-
-export const getInvite = async (account) => {
+export const getTotalPublicSale = async () => {
     try {
         const {
             data
-        } = await axios.get(`/api/invite/${account}`)
+        } = await axios.get(`/api/getTotalPublicSale`)
         return data
     } catch (error) {
         console.log(error)
     }
 }
 
-export const getInviteRank = async () => {
+export const getPublicSaleByAddress = async (adress) => {
     try {
         const {
             data
-        } = await axios.get(`/api/invite_rank`)
+        } = await axios.get(`/api/getPublicSaleByAddress/${adress}`)
         return data
     } catch (error) {
         console.log(error)
     }
 }
 
-export const createInvite = async (account,invite) => {
+
+export const publicSale = async (address, tx, amount) => {
     try {
-        const {data} = await axios.post(`/api/create_invite`, {
-                account: account,
-                invite: invite
+        const {data} = await axios.post(`/api/publicSale`, {
+                address: address,
+                tx: tx,
+                amount: amount,
             }
         )
         return data
@@ -37,28 +38,40 @@ export const createInvite = async (account,invite) => {
     
 }
 
-export const getIdoData = async () => {
+export const getTotalWhitelistSale = async () => {
     try {
-        const { data } = await axios.get(`/api/get_ido_data`)
+        const {
+            data
+        } = await axios.get(`/api/getTotalWhitelistSale`)
         return data
     } catch (error) {
         console.log(error)
     }
-    // return {
-    //   alreadyMint: ['0', '0', '0', '0'],
-    //   publicSaleStartTime: [
-    //     '1669505362',
-    //     '1669605362',
-    //     '1669705362',
-    //     '1669805362',
-    //     '1669905362',
-    //     '1669995362'
-    //   ],
-    //   freeMintStartTime: '1669305362',
-    //   whiteListMintStartTime: '1669405362',
-    //   totalSupply: '0',
-    //   round: 0
-    // }
-    
 }
 
+export const getWhitelistSaleByAddress = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getWhitelistSaleByAddress/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export const whitelistSale = async (address, tx, whitelist_amount) => {
+    try {
+        const {data} = await axios.post(`/api/whitelistSale`, {
+                address: address,
+                tx: tx,
+                whitelist_amount: whitelist_amount,
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+    
+}

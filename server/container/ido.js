@@ -3,64 +3,205 @@ import fs from "fs"
 import Web3 from "web3"
 import Sequelize from 'sequelize'
 import e from "express"
-import tokenConfig from "../../contract.config"
-import {
-  initWeb3,
-  initETHWeb3,
-  initContract
-} from '../libs/utils'
-import {
-  utils
-} from "ethers"
 
-export async function getIDOData(req, res) {
-  const web3 = initWeb3()
-  const { ido } = tokenConfig
-  const idoContract = new web3.eth.Contract(ido.abi, ido.address)
-  const limitPromise = [],
-    pricePromise = [],
-    mintedPromise = [],
-    timePromise = []
-  for (let index = 0; index < 5; index++) {
-    limitPromise.push(idoContract.methods.publicPrice(index).call())
-    pricePromise.push(idoContract.methods.mintLimit(index).call())
-    mintedPromise.push(idoContract.methods.alreadyMint(index).call())
-  }
-  for (let index = 0; index < 10; index++) {
-    timePromise.push(idoContract.methods.publicSaleStartTime(index).call())
-  }
-  
-  const mintLimit = await Promise.all(limitPromise)
-  const publicPrice = await Promise.all(pricePromise)
-  const alreadyMint = await Promise.all(mintedPromise)
-  const publicSaleStartTime = await Promise.all(timePromise)
-  const totalSupply = await idoContract.methods.totalSupply().call()
-  console.log(publicSaleStartTime)
-    res.send({
-      alreadyMint,
-      publicSaleStartTime,
-      totalSupply,
-      mintLimit,
-      publicPrice
-    })
+const Op = db.Op
+const IDO = db.IDO
+const IDOP = db.IDOP
+
+export async function getTotalPublicSale(req, res) {
+  const totalPublicSale = await IDOP.sum("whitelist_amount",{
+    where: {
+      state: 1,
+    }
+  })
+
+  res.send({
+    msg: "success",
+    code: 1,
+    data:{
+      totalPublicSale: totalPublicSale
+    }
+  })
 
 }
 
-export async function getCardById(req, res) {
-  console.log("params", req.params)
-  const {
-    id
-  } = req.params;
-  if (!id) {
-    res.send({})
+export async function getPublicSaleByAddress(req, res) {
+  const { address } = req.params;
+  console.log( req.query)
+  if (!address) {
+    res.send({
+        msg: "Address is empty",
+        code: 0
+    })
     return
   }
 
-  res.send({
-    "description": "The League of France Football Club, FFC in short, is a project of the football ecosystem on Web3 jointly created by many top football clubs under the LIGUE 1. It is committed to building a football metaverse on Web3 through emerging technologies such as fan tokens, NFTs, and football games. It allows users to interact with football stars better in the ecosystem and participate in the development decisions of football clubs. Enable users for the club, expand the influence of all members from the LIGUE 1 ecosystem over the world, and connect with football fans worldwide to build an interactive football metaverse.",
-    "image": "https://www.ffcfan.com/home/mint.mp4",
-    "name": "FFC Alliance Rights Card NFT",
-    "attributes": []
+  const totalBuy = await IDOP.sum("whitelist_amount",{
+    where: {
+      address: address,
+      state: 1,
+    }
   })
-  return
+
+  res.send({
+    msg: "success",
+    code: 1,
+    data:{
+      address: address,
+      totalBuy: totalBuy
+    }
+  })
+
+}
+
+export async function publicSale(req, res) {
+  let {
+    address,
+    tx,
+    amount
+  } = req.body
+
+  console.log( address, tx, amount)
+
+
+  if (!address || !tx || !amount){
+      res.send({
+        msg: "Incomplete parameter",
+        code: 0
+      })
+      return
+  }
+
+  const ga = !!req.cookies._ga ? req.cookies._ga : ""
+  
+  const result = await IDOP.create({
+    address: address,
+    tx: tx,
+    whitelist_amount: amount,
+    ga: ga,
+    date: new Date().getTime()
+  })
+
+  if (result) {
+    res.send({
+      msg: "Success",
+      code: 1
+    })
+  } else {
+    res.send({
+      msg: "Save failure",
+      code: 0
+    })
+  }
+}
+
+
+export async function getTotalWhitelistSale(req, res) {
+  const totalWhitelistSale = await IDO.sum("whitelist_amount",{
+    where: {
+      state: 1,
+    }
+  })
+
+  res.send({
+    msg: "success",
+    code: 1,
+    data:{
+      totalWhitelistSale: totalWhitelistSale
+    }
+  })
+
+}
+
+export async function getWhitelistSaleByAddress(req, res) {
+  const { address } = req.params;
+  console.log( req.query)
+  if (!address) {
+    res.send({
+        msg: "Address is empty",
+        code: 0
+    })
+    return
+  }
+
+  const totalBuy = await IDO.sum("whitelist_amount",{
+    where: {
+      address: address,
+      state: 1,
+    }
+  })
+
+  res.send({
+    msg: "success",
+    code: 1,
+    data:{
+      address: address,
+      totalBuy: totalBuy
+    }
+  })
+
+}
+
+export async function whitelistSale(req, res) {
+  let {
+    address,
+    tx,
+    whitelist_amount
+  } = req.body
+
+  console.log( address, tx, whitelist_amount)
+
+  if(["bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv"].indexOf(address) == -1){
+      res.send({
+        msg: "Not on the whitelist",
+        code: 0
+      })
+      return
+  }
+
+  if (!address || !tx || !whitelist_amount){
+      res.send({
+        msg: "Incomplete parameter",
+        code: 0
+      })
+      return
+  }
+
+  const totalBuy = await IDO.sum("whitelist_amount",{
+    where: {
+      address: address,
+      state: 1,
+    }
+  })
+  console.log("totalBuy",totalBuy)
+
+  if(totalBuy >=  0.0714){
+    res.send({
+        msg: "Have exceeded the limit",
+        code: 0
+    })
+    return
+  }
+
+  const ga = !!req.cookies._ga ? req.cookies._ga : ""
+  
+  const result = await IDO.create({
+    address: address,
+    tx: tx,
+    whitelist_amount: whitelist_amount,
+    ga: ga,
+    date: new Date().getTime()
+  })
+
+  if (result) {
+    res.send({
+      msg: "Success",
+      code: 1
+    })
+  } else {
+    res.send({
+      msg: "Save failure",
+      code: 0
+    })
+  }
 }

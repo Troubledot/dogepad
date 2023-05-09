@@ -30,8 +30,8 @@ const db = {
 };
 
 //user table model
-db.INVITE = db.sequelize.import("../model/invite.js")
-db.INVITETOTAL = db.sequelize.import("../model/invite_total.js")
+db.IDO = db.sequelize.import("../model/ido.js")
+db.IDOP = db.sequelize.import("../model/idop.js")
 db.Op = Op;
 
 export default db;

@@ -1,0 +1,139 @@
+.idoWrapper{
+  color: white;
+  font-family: 'Play';
+  .form {
+    display: flex;
+    width: 960px;
+    margin: 0 auto 20px;
+    text-align: center;
+    flex-direction: column;
+    padding: 26px 25px;
+    color: white;
+    background: #151515;
+    h3 {
+      line-height: 42px;
+      font-size: 36px;
+      font-weight: normal;
+      color: #FFB800;
+      margin-bottom: 15px;
+    }
+    .deadline{
+      padding: 15px 0;
+      ul{
+        li{
+          display: inline-block;
+          text-align: center;
+          padding: 0 10px;
+          font-size: 36px;
+        }
+      }
+    }
+    .timeout {
+      font-size: 36px;
+    }
+    .timeoutDesc {
+      width: 200px;
+      display: flex;
+      justify-content: space-around;
+      margin: 0 auto;
+      font-size: 10px;
+      color: #666666;
+    }
+    .info {
+      margin-top: 10px;
+      font-size: 22px;
+      color: #ccc;
+      b{
+        color: #FFB800;
+      }
+      .sub {
+        font-size: 12px;
+        color: #666666;
+      }
+    }
+    .buttonDefault {
+      height: 76px;
+      border: 1px solid #4A4A4A;
+      color: #FFB800;
+      font-size: 20px;
+      background: transparent;
+    }
+    .btns{
+      display: flex;
+        justify-content: space-evenly;
+        margin-top: 10px;
+      .input {
+          color: #FFB800;
+          border: 1px solid #4A4A4A;
+          flex: 1 1;
+          background: transparent;
+          margin-right: 13px;
+          padding: 5px 15px;
+          text-align: center;
+          font-size: 20px;
+        }
+      
+        .buttonPrimary {
+          flex: 1 1;
+            height: 76px;
+            border: 1px solid #FFB800;
+            color: #FFB800;
+            font-size: 20px;
+            background: transparent;
+            padding: 0 20px;
+            cursor: pointer;;
+      
+          .inner {
+            border-left: 5px solid #6EB737;
+            border-right: 5px solid #6EB737;
+          }
+        }
+    }
+    .tips{
+      padding: 15px 0;
+      color: #666666;
+      font-size: 12px;
+    }
+   
+  }
+  .cells {
+    padding: 10px 0;
+    .progress{
+      border: 1px solid #FFB800;
+      height: 15px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      margin: 20px 0;
+      i{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 40%;
+        background: #FFB800;
+      }
+    }
+    .cell {
+      display: flex;
+      justify-content: space-between;
+      font-size: 18px;
+      padding: 14px 0;
+      .label {}
+      .content {
+        b{
+          color: #FFB800;
+        }
+      }
+    }
+  }
+  .borderTop {
+    border-top: 1px solid #4A4A4A;
+  }
+  .borderBottom {
+    border-bottom: 1px solid #4A4A4A;
+  }
+  .colorPrimary {
+    color: #FFB800;
+  }
+}

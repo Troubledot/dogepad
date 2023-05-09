@@ -1,16 +1,18 @@
 export default function (sequelize, DataTypes) {
-  var INVITE = sequelize.define('invite', {
+  var IDO = sequelize.define('idop', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
       autoIncrement: true,
     },
-    account: DataTypes.STRING,
-    invite: DataTypes.STRING,
+    address: DataTypes.STRING,
+    tx: DataTypes.STRING,
+    whitelist_amount: DataTypes.STRING,
     ga: DataTypes.STRING,
+    date: DataTypes.STRING,
     state: DataTypes.INTEGER,
   })
-  INVITE.sync();
-  return INVITE;
+  IDO.sync();
+  return IDO;
 }

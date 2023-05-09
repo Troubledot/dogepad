@@ -68,9 +68,8 @@ const Home = () => {
             <div className={styles.text}>
               <h1>BISO - the first AMM DEX in the BRC20 ecosystem! </h1>
               <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
-              <button onClick={()=>{
-                toast.success('Come Soon! 🚀', toastConfig)
-              }}><span>IDO</span></button>
+              <button onClick={()=>toast.success('Comming soon!', toastConfig)}><span>IDO</span></button>
+              {/* <Link to="/ido"><button><span>IDO</span></button></Link> */}
             </div>
             <div className={styles.rhinoceros}>
               <i className={styles.token_biso}></i>

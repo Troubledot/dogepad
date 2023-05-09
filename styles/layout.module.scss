@@ -14,6 +14,7 @@
             vertical-align: middle;
         }
         .settings{
+            display: flex;
             .link {
                 li {
                     width: 40px;
@@ -38,9 +39,23 @@
                     }
                     &.gb{
                     background-image: url(../public/layout/icon_github.png) ;
-                    }&.md {
+                    }
+                    &.md {
                         background-image: url(../public/layout/icon_medium.png);
                     }
+                }
+            }
+            .wallet{
+                margin-left: 10px;
+                button{
+                    border: 1px solid #ffb800;
+                    background: transparent;
+                    color: #fff;
+                    padding: 10px 15px;
+                    width: 150px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    cursor: pointer;
                 }
             }
         }
@@ -72,6 +87,9 @@
                 }
                 &.gb{
                     background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
+                }
+                &.md{
+                    background: url(../public/layout/icon_medium.png) no-repeat center/100% auto;
                 }
             }
         }
@@ -108,29 +126,7 @@
                         width: 50px;
                         height: 50px;
                         margin: 0 10px;
-    
-                        &.tg {
-                            background: url(../public/layout/icon_tele.png) no-repeat center/100% auto;
-                        }
-    
-                        &.tw {
-                            background: url(../public/layout/icon_tw.png) no-repeat center/100% auto;
-                        }
-    
-                        &.logo {
-                            background: url(../public/layout/logo_mini.png) no-repeat center/100% auto;
-                        }
-    
-                        &.dc {
-                            background: url(../public/layout/icon_dc.png) no-repeat center/100% auto;
-                        }
-    
-                        &.gb {
-                            background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
-                        }
-                        &.md {
-                            background: url(../public/layout/icon_medium.png) no-repeat center/100% auto;
-                        }
+                        
                     }
                 }
             }

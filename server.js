@@ -43,7 +43,7 @@ app
           }
           console.log(`
         > Ready on port ${port} [${env}]
-        http://localhost:8000
+        http://localhost:8080
       `)
       })
   })
