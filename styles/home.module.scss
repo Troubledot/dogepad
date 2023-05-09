@@ -4,8 +4,10 @@
         height: 770px;
         position: relative;
         .inner{
-            width:1280px;
-            margin: 0 auto;
+                width: 1280px;
+                    margin: 0 auto;
+                    position: relative;
+                    height: 100%;
         .text{
                 position: absolute;
                 left: 50%;

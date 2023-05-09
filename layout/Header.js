@@ -33,7 +33,7 @@ const Header = (props) => {
                     <ul className={styles.link}>
                         <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>
                         <a href="https://twitter.com/bisoswap" target="_blank"><li className={styles.tw}></li></a>
-                        <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.dc}></li></a>
+                        <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.md}></li></a>
                         <li className={styles.gb}></li>
                     </ul>
                 </div>

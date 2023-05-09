@@ -38,7 +38,9 @@
                     }
                     &.gb{
                     background-image: url(../public/layout/icon_github.png) ;
-                }
+                    }&.md {
+                        background-image: url(../public/layout/icon_medium.png);
+                    }
                 }
             }
         }
@@ -125,6 +127,9 @@
     
                         &.gb {
                             background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
+                        }
+                        &.md {
+                            background: url(../public/layout/icon_medium.png) no-repeat center/100% auto;
                         }
                     }
                 }
