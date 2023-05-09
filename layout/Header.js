@@ -24,11 +24,10 @@ const Header = (props) => {
 
         useEffect(async () => {
             const timer = setInterval(async () => {
-                // if (typeof window.unisat !== 'undefined') {
-                //     let accounts = await window.unisat.getAccounts();
-                //     setAccount(accounts[0])
-                // }
-            }, 3000)
+                if (typeof window.unisat !== 'undefined' && window.account) {
+                    setAccount(window.account)
+                }
+            }, 1000)
             return () => {
                 clearInterval(timer)
             }

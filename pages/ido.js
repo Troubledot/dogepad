@@ -59,6 +59,7 @@ const Home = () => {
             setTotalWhitelistSaleData(totalWhitelistSaleData.data.totalWhitelistSale)
             if (typeof window.unisat !== 'undefined') {
                 let accounts = await window.unisat.getAccounts();
+                window.account = accounts[0]
                 const whitelistSaleByAddressData = await getWhitelistSaleByAddress(accounts[0])
                 setWhitelistMyContributeBtc(whitelistSaleByAddressData.data?.totalBuy)
                 const publicMyContributeBtc = await getPublicSaleByAddress(accounts[0])
