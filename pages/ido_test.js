@@ -91,15 +91,9 @@ const Home = () => {
   }
 
   const publicSale = async() => {
-    try {
-      let res = await window.unisat.getAccounts();
-      console.log(res)
-    } catch (e) {
-      toast.warning('Please Connect Wallet', toastConfig)
-    }
     if(publicBtnEnable) return
     setPublicBtnEnable(true)
-    if(new Date().getTime() < 1683766800*1000) {
+    if(new Date().getTime() > 1683766800*1000) {
       toast.warning('The Public sale round has yet to begin', toastConfig)
       return
     }
@@ -134,15 +128,9 @@ const Home = () => {
 
 
   const whitelistSale = async() => {
-    try {
-      let res = await window.unisat.getAccounts();
-      console.log(res)
-    } catch (e) {
-      toast.warning('Please Connect Wallet', toastConfig)
-    }
     if(whitelistBtnEnable) return
     setWhitelistBtnEnable(true)
-    if(new Date().getTime() < 1683723600*1000) {
+    if(new Date().getTime() > 1683723600*1000) {
       toast.warning('The Whitelist sale round has yet to begin', toastConfig)
       return
     }
