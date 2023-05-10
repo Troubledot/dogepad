@@ -349,7 +349,7 @@ const Home = () => {
             <div className={styles.cell}>
               <div className={styles.label}>Ratio</div>
               <div className={styles.content}>
-                1 <b className={styles.colorPrimary}>BTC</b> = 0.0000000852{" "}
+                1 <b className={styles.colorPrimary}>BISO</b> = 0.0000000852{" "}
                 <b className={styles.colorPrimary}>BTC</b>
               </div>
             </div>
@@ -475,7 +475,7 @@ const Home = () => {
             <div className={styles.cell}>
               <div className={styles.label}>Ratio</div>
               <div className={styles.content}>
-                1 <b className={styles.colorPrimary}>BTC</b> = 0.0000000852{" "}
+                1 <b className={styles.colorPrimary}>BISO</b> = 0.0000000852{" "}
                 <b className={styles.colorPrimary}>BTC</b>
               </div>
             </div>
