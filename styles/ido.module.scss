@@ -168,6 +168,9 @@
   .idoWrapper {
       color: white;
       font-family: 'Play';
+      .banner {
+          height: 120px;
+        }
       .form {
         display: flex;
         width: 100%;
@@ -247,7 +250,7 @@
             background: transparent;
             margin-right: 13px;
             padding: 5px 15px;
-            text-align: center;
+            text-align: left !important;
             font-size: 20px;
           }
   

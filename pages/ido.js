@@ -53,8 +53,8 @@ const Home = () => {
   const [totalWhitelistSaleData, setTotalWhitelistSaleData] = useState(0);
   const [publicMyContributeBtc, setPublicMyContributeBtc] = useState(0);
   const [totalPublicSaleData, setTotalPublicSaleData] = useState(0);
-  const [whitelistInput, setWhitelistInput] = useState(0.0005);
-  const [publicInput, setPublicInput] = useState(0.0005);
+  const [whitelistInput, setWhitelistInput] = useState(0.00036);
+  const [publicInput, setPublicInput] = useState(0.00036);
   const [whitelistBtnEnable, setWhitelistBtnEnable] = useState(false);
   const [publicBtnEnable, setPublicBtnEnable] = useState(false);
 
@@ -432,12 +432,12 @@ const Home = () => {
           </div>
           <div className={cx(styles.cells)}>
             <div className={styles.progress}>
-              <i style={{ width: `${(totalPublicSaleData / 6) * 100}%` }}></i>
+              <i style={{ width: `${(totalPublicSaleData / 7.5) * 100}%` }}></i>
             </div>
             <div className={styles.cell}>
               <div className={styles.label}>Raising Percentage</div>
               <div className={styles.content}>
-                {((totalPublicSaleData / 6) * 100).toFixed(2)}%
+                {((totalPublicSaleData / 7.5) * 100).toFixed(2)}%
               </div>
             </div>
             <div className={styles.cell}>
@@ -468,10 +468,10 @@ const Home = () => {
             <div className={styles.cell}>
               <div className={styles.label}>Received</div>
               <div className={styles.content}>
-                {totalPublicSaleData * 1 < 3.22
+                {totalPublicSaleData * 1 < 7.5
                   ? publicMyContributeBtc / 0.0000000852
                   : publicMyContributeBtc /
-                    (totalPublicSaleData / 3.22) /
+                    (totalPublicSaleData / 7.5) /
                     0.0000000852}{" "}
                 <b className={styles.colorPrimary}>BISO</b>
               </div>

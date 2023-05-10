@@ -9,7 +9,7 @@ const IDO = db.IDO
 const IDOP = db.IDOP
 
 const WHITELIST = [
-  "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7q1"
+  "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv"
 ]
 
 export async function getTotalPublicSale(req, res) {
