@@ -12,14 +12,7 @@ import {
 import { route } from "next/dist/server/router"
 import styles from "../styles/layout.module.scss"
 import { concat } from "ethers/lib/utils"
-
-import WalletConnect from "@walletconnect/client";
-import QRCodeModal from "@walletconnect/qrcode-modal";
-
-
-// const okxWeb3 = require('@okwallet/extension')
 // const cx = classNames.bind(styles)
-
 
 const Header = (props) => {
     const { activeIndex, scrolling } = props
@@ -40,48 +33,26 @@ const Header = (props) => {
             // }
         }, [])
 
+        
+
         const connectWallet = async () => {
-            
-        // Create a connector
-        const connector = new WalletConnect({
-            bridge: "https://bridge.walletconnect.org", // Required
-            qrcodeModal: QRCodeModal,
-        });
-        
-        // Check if connection is already established
-        if (!connector.connected) {
-            // create new session
-            connector.createSession();
+            if (typeof window.unisat !== 'undefined') {
+                let accounts = await window.unisat.requestAccounts();
+                setAccount(accounts[0])
+            }else{
+                alert('UniSat Wallet is not installed!');
+            }
         }
-        
-        // Subscribe to connection events
-        connector.on("connect", (error, payload) => {
-            if (error) {
-            throw error;
+
+
+        const connectWalletOKX = async () => {
+            if (typeof window.okxwallet !== 'undefined') {
+                const res = await window.okxwallet.requestWallets(true);
+                setAccount(res[0].address[0].address)
+            }else{
+                alert('UniSat Wallet is not installed!');
             }
-        
-            // Get provided accounts and chainId
-            const { accounts, chainId } = payload.params[0];
-            setAccount(accounts[0])
-        });
-        
-        connector.on("session_update", (error, payload) => {
-            if (error) {
-            throw error;
-            }
-        
-            // Get updated accounts and chainId
-            const { accounts, chainId } = payload.params[0];
-            setAccount(accounts[0])
-        });
-        
-        connector.on("disconnect", (error, payload) => {
-            if (error) {
-            throw error;
-            }
-        
-            // Delete connector
-        });}
+        }
 
     return (
         <header className={styles.header}>
@@ -97,7 +68,10 @@ const Header = (props) => {
                     </ul>
                     <div className={styles.wallet}>
                         {!account ? 
-                            <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Wallet</button>
+                            <>
+                                <button className={styles.wallet_btn} onClick={()=>connectWalletOKX()}>Connect OKX Wallet</button>
+                                <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Wallet</button>
+                            </>
                             :
                             <button className={styles.wallet_btn}>{account}</button>
                         }
