@@ -6,7 +6,7 @@ import Timer from "react-compound-timer";
 import Web3 from "web3";
 import Wallet from "../components/wallet";
 import useWallet from "use-wallet";
-import { whitelistSale, getWhitelistSaleByAddress, getTotalWhitelistSale, getTotalPublicSale, getPublicSaleByAddress, publicSale} from "../api/api";
+import { whitelistSale, getWhitelistSaleByAddress, getTotalWhitelistSale, getTotalPublicSale, getPublicSaleByAddress, publicSale, checkWhitelist} from "../api/api";
 import tokenConfig from "../contract.config";
 import { confirmAlert } from "react-confirm-alert";
 import HeaderFooter from "../layout/HeaderFooter";
@@ -150,6 +150,8 @@ const Home = () => {
       toast.warning('Your contribution amount must be between 0.00036 to 0.0714!', toastConfig)
       return
     }
+    const isWhitelist = await checkWhitelist()
+    console.log(isWhitelist)
     let accounts = await window.unisat.getAccounts();
     const whitelistSaleByAddressData = await getWhitelistSaleByAddress(accounts[0])
     console.log(whitelistSaleByAddressData.data.totalBuy,  whitelistInput ,whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput > 0.0714 )

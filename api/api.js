@@ -1,5 +1,18 @@
 import axios from 'axios'
 
+
+
+export const checkWhitelist = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/checkWhitelist/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export const getTotalPublicSale = async () => {
     try {
         const {

@@ -6,7 +6,7 @@ import Timer from "react-compound-timer";
 import Web3 from "web3";
 import Wallet from "../components/wallet";
 import useWallet from "use-wallet";
-import { whitelistSale, getWhitelistSaleByAddress, getTotalWhitelistSale, getTotalPublicSale, getPublicSaleByAddress, publicSale} from "../api/api";
+import { whitelistSale, getWhitelistSaleByAddress, getTotalWhitelistSale, getTotalPublicSale, getPublicSaleByAddress, publicSale, checkWhitelist} from "../api/api";
 import tokenConfig from "../contract.config";
 import { confirmAlert } from "react-confirm-alert";
 import HeaderFooter from "../layout/HeaderFooter";
@@ -91,6 +91,12 @@ const Home = () => {
   }
 
   const publicSale = async() => {
+    try {
+      let res = await window.unisat.getAccounts();
+      console.log(res)
+    } catch (e) {
+      toast.warning('Please Connect Wallet', toastConfig)
+    }
     if(publicBtnEnable) return
     setPublicBtnEnable(true)
     if(new Date().getTime() > 1683766800*1000) {
@@ -128,6 +134,12 @@ const Home = () => {
 
 
   const whitelistSale = async() => {
+    try {
+      let res = await window.unisat.getAccounts();
+      console.log(res)
+    } catch (e) {
+      toast.warning('Please Connect Wallet', toastConfig)
+    }
     if(whitelistBtnEnable) return
     setWhitelistBtnEnable(true)
     if(new Date().getTime() > 1683723600*1000) {
@@ -136,6 +148,12 @@ const Home = () => {
     }
     if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.0714){
       toast.warning('Your contribution amount must be between 0.00036 to 0.0714!', toastConfig)
+      return
+    }
+    const {data} = await checkWhitelist()
+    // console.log("isWhitelist", isWhitelist)
+    if(data.isWhitelist == false) {
+      toast.warning('You are not include the whitelist', toastConfig)
       return
     }
     let accounts = await window.unisat.getAccounts();

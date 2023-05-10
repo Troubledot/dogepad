@@ -8,6 +8,8 @@ const Op = db.Op
 const IDO = db.IDO
 const IDOP = db.IDOP
 
+const WHITELIST = ["bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv"]
+
 export async function getTotalPublicSale(req, res) {
   const totalPublicSale = await IDOP.sum("whitelist_amount",{
     where: {
@@ -142,6 +144,19 @@ export async function getWhitelistSaleByAddress(req, res) {
 
 }
 
+
+export async function checkWhitelist(req, res) {
+  const { address } = req.params;
+  res.send({
+    msg: "success",
+    code: 1,
+    data:{
+      isWhitelist: WHITELIST.indexOf(address) != -1 ? true: false,
+    }
+  })
+}
+
+
 export async function whitelistSale(req, res) {
   let {
     address,
@@ -151,7 +166,7 @@ export async function whitelistSale(req, res) {
 
   console.log( address, tx, whitelist_amount)
 
-  if(["bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv"].indexOf(address) == -1){
+  if(WHITELIST.indexOf(address) == -1){
       res.send({
         msg: "Not on the whitelist",
         code: 0
