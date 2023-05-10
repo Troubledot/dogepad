@@ -9,6 +9,9 @@ const IDO = db.IDO
 const IDOP = db.IDOP
 
 const WHITELIST = [
+"bc1qt34t95xknj0d427qq0yh3pqqljfh20jyp6cvg0",
+"bc1qth43atnamfka0yv7c0pk4jlfv0z70rfsvr6wqx",
+"bc1p7z5afvekcg5ekm5dj35gxs005e2jq5yjr6wxw6y6ancl5vxrx68qxv6aun",
 "bc1q4uk5s8vph5y5tjjuxgd37fhkna0f9klp4fa0ey",
 "bc1q902syzhzfj94dnctjd9rzlh2rxde0e73jerg5t",
 "bc1pkv9zx432uqre2jceeghexj9zhglhchh3k08kyph0krc3krwssc3qc3at4r",
@@ -836,6 +839,17 @@ export async function getTotalWhitelistSale(req, res) {
       state: 1,
     }
   })
+
+  // const totalUsers = await IDO.count({
+  //   where: {
+  //     state: 1,
+  //   },
+  //   group: "address"
+  // })
+
+  // console.log(totalUsers)
+
+
 
   res.send({
     msg: "success",
