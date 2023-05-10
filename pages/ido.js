@@ -103,29 +103,29 @@ const Home = () => {
       toast.warning('The Public sale round has yet to begin', toastConfig)
       return
     }
-    if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.714){
+    if(publicInput * 1 <  0.00036 || publicInput * 1 >  0.714){
       toast.warning('Your contribution amount must be between 0.00036 to 0.714!', toastConfig)
       return
     }
     let accounts = await window.unisat.getAccounts();
     const publicSaleByAddress = await getPublicSaleByAddress(accounts[0])
-    if(publicSaleByAddress.data.totalBuy * 1 + whitelistInput * 1 > 0.714 ){
+    if(publicSaleByAddress.data.totalBuy * 1 + publicInput * 1 > 0.714 ){
       toast.warning('Your contribution amount cannot exceed 0.714', toastConfig)
       return
     }
     try {
-      console.log(utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1)
+      console.log(utils.parseUnits(String(publicInput),8).add("35000").toString() * 1)
       let accounts = await window.unisat.requestAccounts();
       setTimeout(()=>{
         setPublicBtnEnable(false)
       },1000)
       let txid = await window.unisat.sendBitcoin(
           "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
-          utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1
+          utils.parseUnits(String(publicInput),8).add("35000").toString() * 1
         );
       console.log(txid)
       if(txid){
-        await publicSale(accounts[0], txid, utils.parseUnits(String(whitelistInput),8).toString())
+        await publicSale(accounts[0], txid, utils.parseUnits(String(publicInput),8).toString())
       }
     } catch (e) {
       console.log(e);
