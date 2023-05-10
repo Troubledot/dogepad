@@ -72,11 +72,11 @@ const Home = () => {
 
     const timer = setInterval(async () => {
       const totalPublicSaleData = await getTotalPublicSale();
-      setTotalPublicSaleData(totalPublicSaleData.data.totalPublicSale);
+      setTotalPublicSaleData((totalPublicSaleData.data.totalPublicSale* 1).toFixed(6));
       setTotalPublicSaleUsers(totalPublicSaleData.data.totalUsers);
 
       const totalWhitelistSaleData = await getTotalWhitelistSale();
-      setTotalWhitelistSaleData(totalWhitelistSaleData.data.totalWhitelistSale);
+      setTotalWhitelistSaleData((totalWhitelistSaleData.data.totalWhitelistSale* 1).toFixed(6));
       setTotalWhitelistSaleUsers(totalWhitelistSaleData.data?.totalUsers)
 
       console.log(
