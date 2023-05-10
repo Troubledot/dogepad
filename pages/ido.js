@@ -129,7 +129,7 @@ const Home = () => {
     }
     let accounts = await window.unisat.getAccounts();
     const publicSaleByAddress = await getPublicSaleByAddress(accounts[0]);
-    if (publicSaleByAddress.data.totalBuy * 1 + publicInput * 1 >= 0.72) {
+    if (publicSaleByAddress.data.totalBuy * 1 + publicInput * 1 > 0.72) {
       toast.warning("Your contribution amount cannot exceed 0.72", toastConfig);
       return;
     }
@@ -194,7 +194,7 @@ const Home = () => {
       whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput > 0.072
     );
     if (
-      whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput * 1 >=
+      whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput * 1 >
       0.072
     ) {
       toast.warning(
@@ -267,7 +267,7 @@ const Home = () => {
             <Timer
               formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
               initialTime={
-                new Date(1683723600 * 1000).getTime() - new Date().getTime()
+                new Date(1683766800 * 1000).getTime() - new Date().getTime()
               }
               lastUnit="h"
               direction="backward"
