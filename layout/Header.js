@@ -58,7 +58,7 @@ const Header = (props) => {
                         {!account ? 
                             <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Wallet</button>
                             :
-                            <button className={styles.wallet_btn}>12{account}</button>
+                            <button className={styles.wallet_btn}>{account}</button>
                         }
                     </div>
                 </div>

@@ -24,7 +24,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import styles from "../styles/ido.module.scss"
 const cx = classNames.bind(styles)
-
 import "animate.css";
 
 const toastConfig = {
@@ -48,6 +47,8 @@ const Home = () => {
   const [totalPublicSaleData, setTotalPublicSaleData] = useState(0)
   const [whitelistInput, setWhitelistInput] = useState(0.00036)
   const [publicInput, setPublicInput] = useState(0.00036)
+  const [whitelistBtnEnable, setWhitelistBtnEnable] = useState(false)
+  const [publicBtnEnable, setPublicBtnEnable] = useState(false)
 
 
   useEffect(async () => {
@@ -85,11 +86,14 @@ const Home = () => {
     let value = e.target.value
     value = (value.match(/^\d*(\.?\d{0,8})/g)[0]) || null
     obj[e.target.id] = value
+    console.log(value)
     setWhitelistInput(value)
   }
 
   const publicSale = async() => {
-    if(new Date().getTime() < 1683766800*1000) {
+    if(publicBtnEnable) return
+    setPublicBtnEnable(true)
+    if(new Date().getTime() > 1683766800*1000) {
       toast.warning('The Public sale round has yet to begin', toastConfig)
       return
     }
@@ -104,7 +108,11 @@ const Home = () => {
       return
     }
     try {
+      console.log(utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1)
       let accounts = await window.unisat.requestAccounts();
+      setTimeout(()=>{
+        setPublicBtnEnable(false)
+      },1000)
       let txid = await window.unisat.sendBitcoin(
           "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
           utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1
@@ -120,7 +128,9 @@ const Home = () => {
 
 
   const whitelistSale = async() => {
-    if(new Date().getTime() < 1683723600*1000) {
+    if(whitelistBtnEnable) return
+    setWhitelistBtnEnable(true)
+    if(new Date().getTime() > 1683723600*1000) {
       toast.warning('The Whitelist sale round has yet to begin', toastConfig)
       return
     }
@@ -136,7 +146,11 @@ const Home = () => {
       return
     }
     try {
+      console.log(whitelistInput, utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1)
       let accounts = await window.unisat.requestAccounts();
+      setTimeout(()=>{
+        setWhitelistBtnEnable(false)
+      },1000)
       let txid = await window.unisat.sendBitcoin(
           "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
           utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1
