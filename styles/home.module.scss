@@ -13,7 +13,7 @@
                 left: 50%;
                 width: 600px;
                 margin-left: -540px;
-                top: 160px;
+                top: 160px;;
                 h1{
                     font-family: 'Play';
                     font-size: 44px;
@@ -129,7 +129,7 @@
 @media screen and (max-width: 500px) {
     .wrapper {
             .slogan {
-                height: 880px;
+                height: 950px;
                 .inner {
                     width: 100%;
                     .text {
@@ -159,8 +159,8 @@
     
                     .rhinoceros {
                         background: url(../public/home/rhinoceros.png) no-repeat center/ 100% auto;
-                        width: 400px;
-                        height: 371px;
+                        width: 350px;
+                        height: 321px;
                         position: absolute;
                         bottom: 0;
                         right: 0;
