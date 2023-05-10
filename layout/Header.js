@@ -52,7 +52,7 @@ const Header = (props) => {
                         <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>
                         <a href="https://twitter.com/bisoswap" target="_blank"><li className={styles.tw}></li></a>
                         <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.md}></li></a>
-                        <li className={styles.gb}></li>
+                        <a href='https://bisoswap.gitbook.io/bisoswap/' target="_blank"><li className={styles.gitbook}></li></a>
                     </ul>
                     <div className={styles.wallet}>
                         {!account ? 
