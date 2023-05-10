@@ -9,6 +9,13 @@ const IDO = db.IDO
 const IDOP = db.IDOP
 
 const WHITELIST = [
+  "bc1pgx7uyj2dujckxhznpu457vdx3m09jzjdyustel8cz0x0zjwfrrgqz4xy5x",
+"bc1p59852vay0k0unz2lql2kaj5u00f270f568cpcgar2dkssgjndkyqx07mx6",
+"bc1p8hn8stwfmajzxevqsnzh88fnsrm0nlh7p69csgdvuh4peu2mqkwsxlek4r",
+"bc1pjxagmp2l2wak8em36muhzurhrgc9w472q04vagejavs952nl3jfsht8mma",
+"bc1px6hrqu783vggec4pe6pjfgmk96ncpd60mftx9p0mkettyc6elzwqlhrum4",
+"bc1p2usggu0ma0ht2r3yy7dltnlzckvqjn3a8k229rc36qdcyvgj4tzq4tl9v0",
+"bc1pj2wuqrrststr2ajm8z37cfe6hunnn2pg3al98x7hurn24xmeyl6swmavp2",
 "bc1pzw6ptsn8gnm66xfz7hwtvrmm2mqxs3w5t67uf78x8acalpgppnjs7f3m40",
 "bc1qk64mdhgemnff8v4qpk6zeykyq2hla5f797nvtv",
 "bc1q8hdj857936wg8mpwq2gajfgtml7st0x7xtm3jx",

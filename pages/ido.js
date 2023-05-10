@@ -57,13 +57,28 @@ const Home = () => {
   const [publicInput, setPublicInput] = useState(0.00036);
   const [whitelistBtnEnable, setWhitelistBtnEnable] = useState(false);
   const [publicBtnEnable, setPublicBtnEnable] = useState(false);
+  const [totalWhitelistSaleUsers, setTotalWhitelistSaleUsers] = useState(0)
+  const [totalPublicSaleUsers, setTotalPublicSaleUsers] = useState(0)
+
 
   useEffect(async () => {
+    const totalPublicSaleData = await getTotalPublicSale();
+    setTotalPublicSaleData((totalPublicSaleData.data.totalPublicSale* 1).toFixed(6));
+    setTotalPublicSaleUsers(totalPublicSaleData.data.totalUsers);
+
+    const totalWhitelistSaleData = await getTotalWhitelistSale();
+    setTotalWhitelistSaleData((totalWhitelistSaleData.data.totalWhitelistSale * 1).toFixed(6));
+    setTotalWhitelistSaleUsers(totalWhitelistSaleData.data?.totalUsers)
+
     const timer = setInterval(async () => {
       const totalPublicSaleData = await getTotalPublicSale();
       setTotalPublicSaleData(totalPublicSaleData.data.totalPublicSale);
+      setTotalPublicSaleUsers(totalPublicSaleData.data.totalUsers);
+
       const totalWhitelistSaleData = await getTotalWhitelistSale();
       setTotalWhitelistSaleData(totalWhitelistSaleData.data.totalWhitelistSale);
+      setTotalWhitelistSaleUsers(totalWhitelistSaleData.data?.totalUsers)
+
       console.log(
         "totalWhitelistSaleData",
         totalWhitelistSaleData.data.totalWhitelistSale
@@ -71,12 +86,10 @@ const Home = () => {
       if (typeof window.unisat !== "undefined") {
         let accounts = await window.unisat.getAccounts();
         window.account = accounts[0];
-        const whitelistSaleByAddressData = await getWhitelistSaleByAddress(
-          accounts[0]
-        );
-        setWhitelistMyContributeBtc(whitelistSaleByAddressData.data?.totalBuy);
-        const publicMyContributeBtc = await getPublicSaleByAddress(accounts[0]);
-        setPublicMyContributeBtc(publicMyContributeBtc.data?.totalBuy);
+        const whitelistSaleByAddressData = await getWhitelistSaleByAddress( accounts[0] )
+        setWhitelistMyContributeBtc(whitelistSaleByAddressData.data?.totalBuy)
+        const publicMyContributeBtc = await getPublicSaleByAddress(accounts[0])
+        setPublicMyContributeBtc(publicMyContributeBtc.data?.totalBuy)
       }
       console.log("timer");
       // clearInterval(timer)
@@ -298,7 +311,7 @@ const Home = () => {
           </div>
           <div className={cx(styles.info)}>
             <p>
-              {totalWhitelistSaleData} <b>BTC</b>
+              {totalWhitelistSaleData} <b>BTC </b> / {totalWhitelistSaleUsers} contributors
             </p>
             <p className={cx(styles.sub)}>Current Contribution</p>
           </div>
@@ -426,7 +439,7 @@ const Home = () => {
           </div>
           <div className={cx(styles.info)}>
             <p>
-              {totalPublicSaleData} <b>BTC</b>
+              {totalPublicSaleData} <b>BTC</b> / {totalPublicSaleUsers} contributors
             </p>
             <p className={cx(styles.sub)}>Current Contribution</p>
           </div>
