@@ -94,13 +94,13 @@ const Home = () => {
       return
     }
     if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.714){
-      toast.warning('Cannot be less than 0.00036 and greater than 0.714', toastConfig)
+      toast.warning('Your contribution amount must be between 0.00036 to 0.714!', toastConfig)
       return
     }
     let accounts = await window.unisat.getAccounts();
     const publicSaleByAddress = await getPublicSaleByAddress(accounts[0])
     if(publicSaleByAddress.data.totalBuy * 1 + whitelistInput * 1 > 0.714 ){
-      toast.warning('Greater than 0.714', toastConfig)
+      toast.warning('Your contribution amount cannot exceed 0.714', toastConfig)
       return
     }
     try {
@@ -125,14 +125,14 @@ const Home = () => {
       return
     }
     if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.0714){
-      toast.warning('Cannot be less than 0.00036 and greater than 0.0714', toastConfig)
+      toast.warning('Your contribution amount must be between 0.00036 to 0.0714!', toastConfig)
       return
     }
     let accounts = await window.unisat.getAccounts();
     const whitelistSaleByAddressData = await getWhitelistSaleByAddress(accounts[0])
     console.log(whitelistSaleByAddressData.data.totalBuy,  whitelistInput ,whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput > 0.0714 )
     if(whitelistSaleByAddressData.data.totalBuy * 1 + whitelistInput * 1 > 0.0714 ){
-      toast.warning('Greater than 0.0714', toastConfig)
+      toast.warning('Your contribution amount cannot exceed 0.0714', toastConfig)
       return
     }
     try {
