@@ -53,8 +53,8 @@ const Home = () => {
   const [totalWhitelistSaleData, setTotalWhitelistSaleData] = useState(0);
   const [publicMyContributeBtc, setPublicMyContributeBtc] = useState(0);
   const [totalPublicSaleData, setTotalPublicSaleData] = useState(0);
-  const [whitelistInput, setWhitelistInput] = useState(0.00036);
-  const [publicInput, setPublicInput] = useState(0.00036);
+  const [whitelistInput, setWhitelistInput] = useState(0.0005);
+  const [publicInput, setPublicInput] = useState(0.0005);
   const [whitelistBtnEnable, setWhitelistBtnEnable] = useState(false);
   const [publicBtnEnable, setPublicBtnEnable] = useState(false);
 
@@ -103,7 +103,7 @@ const Home = () => {
     setWhitelistInput(value);
   };
 
-  const publicSale = async () => {
+  const publicSaleMint = async () => {
     if (publicBtnEnable) return;
     setPublicBtnEnable(true);
     setTimeout(() => {
@@ -112,6 +112,11 @@ const Home = () => {
 
     if (new Date().getTime() < 1683766800 * 1000) {
       toast.warning("The Public sale round has yet to begin", toastConfig);
+      return;
+    }
+
+    if (new Date().getTime() > 1683896400 * 1000) {
+      toast.warning("The Public sale round has end", toastConfig);
       return;
     }
 
@@ -137,7 +142,7 @@ const Home = () => {
       await publicSale(
         accounts[0],
         txid,
-        utils.parseUnits(String(publicInput), 8).toString()
+        publicInput
       );
       toast.success(
         "Payment success",
@@ -146,15 +151,20 @@ const Home = () => {
     }
   };
 
-  const whitelistSale = async () => {
+  const whitelistSaleMint = async () => {
     console.log("whitelistBtnEnable", whitelistBtnEnable);
     if (whitelistBtnEnable) return;
     setWhitelistBtnEnable(true);
     setTimeout(() => {
       setWhitelistBtnEnable(false);
     }, 1000);
-    if (new Date().getTime() < 1683723600 * 1000) {
+    if (new Date().getTime() < 1683723600 * 1000 ) {
       toast.warning("The Whitelist sale round has yet to begin", toastConfig);
+      return;
+    }
+
+    if (new Date().getTime() > 1683766800 * 1000) {
+      toast.warning("The Whitelist sale round has end", toastConfig);
       return;
     }
 
@@ -206,7 +216,7 @@ const Home = () => {
       await whitelistSale(
         accounts[0],
         txid,
-        utils.parseUnits(String(whitelistInput), 8).toString()
+        whitelistInput
       );
        toast.success(
         "Payment success",
@@ -367,7 +377,7 @@ const Home = () => {
               <button onClick={() => setWhitelistMax()}>Max</button>
             </span>
             <button className={cx(styles.buttonPrimary)}>
-              <div className={cx(styles.inner)} onClick={() => whitelistSale()}>
+              <div className={cx(styles.inner)} onClick={() => whitelistSaleMint()}>
                 MINT
               </div>
             </button>
@@ -493,7 +503,7 @@ const Home = () => {
               <button onClick={()=>setPublicMax()}>Max</button>
             </span>
             <button className={cx(styles.buttonPrimary)}>
-              <div className={cx(styles.inner)} onClick={() => publicSale()}>
+              <div className={cx(styles.inner)} onClick={() => publicSaleMint()}>
                 MINT
               </div>
             </button>

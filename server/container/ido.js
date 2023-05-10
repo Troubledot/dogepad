@@ -8,7 +8,9 @@ const Op = db.Op
 const IDO = db.IDO
 const IDOP = db.IDOP
 
-const WHITELIST = ["bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv"]
+const WHITELIST = [
+  "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7q1"
+]
 
 export async function getTotalPublicSale(req, res) {
   const totalPublicSale = await IDOP.sum("whitelist_amount",{
@@ -96,7 +98,8 @@ export async function publicSale(req, res) {
     tx: tx,
     whitelist_amount: amount,
     ga: ga,
-    date: new Date().getTime()
+    date: new Date().getTime(),
+    state: 1
   })
 
   if (result) {
@@ -221,7 +224,8 @@ export async function whitelistSale(req, res) {
     tx: tx,
     whitelist_amount: whitelist_amount,
     ga: ga,
-    date: new Date().getTime()
+    date: new Date().getTime(),
+    state: 1
   })
 
   if (result) {

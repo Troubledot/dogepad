@@ -1,5 +1,5 @@
 export default function (sequelize, DataTypes) {
-  var IDOP = sequelize.define('ido', {
+  var IDO = sequelize.define('ido', {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
@@ -13,6 +13,6 @@ export default function (sequelize, DataTypes) {
     date: DataTypes.STRING,
     state: DataTypes.INTEGER,
   })
-  IDOP.sync();
-  return IDOP;
+  IDO.sync();
+  return IDO;
 }
