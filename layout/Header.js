@@ -46,7 +46,7 @@ const Header = (props) => {
         <header className={styles.header}>
             {/* <Wallet /> */}
             <div className={styles.inner}>
-                <i className={styles.logo}></i>
+                <Link href="/"><i className={styles.logo}></i></Link>
                 <div className={styles.settings}>
                     <ul className={styles.link}>
                         <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>

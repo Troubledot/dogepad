@@ -24,7 +24,6 @@ import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import styles from "../styles/ido.module.scss"
 const cx = classNames.bind(styles)
-import banner from '../public/home/banner.png'
 
 import "animate.css";
 
@@ -90,8 +89,8 @@ const Home = () => {
   }
 
   const publicSale = async() => {
-    if(new Date().getTime() > 1683698400*1000) {
-      toast.warning('The Whitelist round has yet to begin', toastConfig)
+    if(new Date().getTime() < 1683766800*1000) {
+      toast.warning('The Public sale round has yet to begin', toastConfig)
       return
     }
     if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.714){
@@ -121,8 +120,8 @@ const Home = () => {
 
 
   const whitelistSale = async() => {
-    if(new Date().getTime() > 1683698400*1000) {
-      toast.warning('The Whitelist round has yet to begin', toastConfig)
+    if(new Date().getTime() < 1683723600*1000) {
+      toast.warning('The Whitelist sale round has yet to begin', toastConfig)
       return
     }
     if(whitelistInput * 1 <  0.00036 || whitelistInput * 1 >  0.0714){
@@ -167,16 +166,15 @@ const Home = () => {
     <HeaderFooter activeIndex={1}>
       <ToastContainer />
       <div className={cx(styles.idoWrapper)}>
-        <div className={cx(styles.banner)}>
-          <Image src={banner} alt=""/>
+        <div className={styles.banner}>
         </div>
         <section className={cx(styles.form)}>
-          <h3>Whitelist</h3>
+          <h3>Whitelist Sale</h3>
           <div  className={styles.deadline}>
           <Timer
                 formatValue={(value) => `${(value < 10 ? `0${value}` : value)} `}
                 initialTime={
-                  new Date(1683698400*1000).getTime() -
+                  new Date(1683723600*1000).getTime() -
                     new Date().getTime()
                 }
                 lastUnit="h"
@@ -209,7 +207,7 @@ const Home = () => {
               <i style={{"width":`${(totalWhitelistSaleData / 3.2142 * 100)}%`}}></i>
             </div>
             <div className={styles.cell}>
-              <div className={styles.label}>Total Committed</div>
+              <div className={styles.label}>Raising Percentage</div>
               <div className={styles.content}>{(totalWhitelistSaleData / 3.2142 * 100).toFixed(2)}%</div>
             </div>
             <div className={styles.cell}>
@@ -219,7 +217,7 @@ const Home = () => {
           </div>
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
-              <div className={styles.label}>My contribute</div>
+              <div className={styles.label}>My Investment</div>
               <div className={styles.content}>{whitelistMyContributeBtc} <b className={styles.colorPrimary}>BTC</b></div>
             </div>
           </div>
@@ -241,16 +239,16 @@ const Home = () => {
               <div className={cx(styles.inner)} onClick={()=>whitelistSale()}>MINT</div>
             </button>
           </div>
-          <div className={styles.tips}>The costs includes IDO fee and network fee (3500 stats).</div>
+          <div className={styles.tips}>he cost included in IDO fee and network fee (3500 stats)</div>
         </section>
 
         <section className={cx(styles.form)}>
-          <h3>Public Offer</h3>
+          <h3>Public Sale</h3>
           <div  className={styles.deadline}>
           <Timer
                 formatValue={(value) => `${(value < 10 ? `0${value}` : value)} `}
                 initialTime={
-                  new Date(1683698400*1000).getTime() -
+                  new Date(1683766800*1000).getTime() -
                     new Date().getTime()
                 }
                 lastUnit="h"
@@ -283,7 +281,7 @@ const Home = () => {
               <i style={{"width":`${(totalPublicSaleData / 6.4284 * 100)}%`}}></i>
             </div>
             <div className={styles.cell}>
-              <div className={styles.label}>Total Committed</div>
+              <div className={styles.label}>Raising Percentage</div>
               <div className={styles.content}>{(totalPublicSaleData / 6.4284 * 100).toFixed(2)}%</div>
             </div>
             <div className={styles.cell}>
@@ -293,7 +291,7 @@ const Home = () => {
           </div>
           <div  className={[`${cx(styles.cells)}`,`${cx(styles.borderTop)}`].join(' ')}>
             <div className={styles.cell}>
-              <div className={styles.label}>My contribute</div>
+              <div className={styles.label}>My Investment</div>
               <div className={styles.content}>{publicMyContributeBtc} <b className={styles.colorPrimary}>BTC</b></div>
             </div>
           </div>
@@ -315,7 +313,7 @@ const Home = () => {
               <div className={cx(styles.inner)} onClick={()=>publicSale()}>MINT</div>
             </button>
           </div>
-          <div className={styles.tips}>The costs includes IDO fee and network fee (3500 stats).</div>
+          <div className={styles.tips}>he cost included in IDO fee and network fee (3500 stats)</div>
         </section>
       </div>
     </HeaderFooter>

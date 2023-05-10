@@ -67,7 +67,36 @@ const Home = () => {
           <div className={styles.inner}>
             <div className={styles.text}>
               <h1>BISO - the first AMM DEX in the BRC20 ecosystem! </h1>
-              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <p>Add liquidity, gain to transaction fees and enjoy a lower GAS trading experience!</p>
+              <div className={styles.deadline}>
+                <h4>IDO Countdown:</h4>
+                <Timer
+                  formatValue={(value) => `${(value < 10 ? `0${value}` : value)} `}
+                  initialTime={
+                    new Date(1683723600*1000).getTime() -
+                      new Date().getTime()
+                  }
+                  lastUnit="h"
+                  direction="backward"
+                >
+                  <ul>
+                    <li>
+                      <h1><Timer.Hours /></h1>
+                      <p>hours</p>
+                    </li>
+                    <li></li>
+                    <li>
+                      <h1><Timer.Minutes /></h1>
+                      <p>minutes</p>
+                    </li>
+                    <li></li>
+                    <li>
+                      <h1><Timer.Seconds /></h1>
+                      <p>seconds</p>
+                    </li>
+                  </ul>
+                </Timer>
+              </div>
               <button onClick={()=>toast.success('Comming soon!', toastConfig)}><span>IDO</span></button>
               {/* <Link to="/ido"><button><span>IDO</span></button></Link> */}
             </div>
