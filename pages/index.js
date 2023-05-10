@@ -1,6 +1,7 @@
 import React, { useState, useEffect,Component } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from 'next/link'
 import classNames from "classnames/bind";
 import Timer from "react-compound-timer";
 import Web3 from "web3";
@@ -97,8 +98,8 @@ const Home = () => {
                   </ul>
                 </Timer>
               </div>
-              <button onClick={()=>toast.success('Comming soon!', toastConfig)}><span>IDO</span></button>
-              {/* <Link to="/ido"><button><span>IDO</span></button></Link> */}
+              {/* <button onClick={()=>toast.success('Comming soon!', toastConfig)}><span>IDO</span></button> */}
+              <Link href="/ido"><button><span>IDO</span></button></Link>
             </div>
             <div className={styles.rhinoceros}>
               <i className={styles.token_biso}></i>

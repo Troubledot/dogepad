@@ -113,22 +113,17 @@ const Home = () => {
       toast.warning('Your contribution amount cannot exceed 0.714', toastConfig)
       return
     }
-    try {
-      console.log(utils.parseUnits(String(publicInput),8).add("35000").toString() * 1)
-      let accounts = await window.unisat.requestAccounts();
-      setTimeout(()=>{
-        setPublicBtnEnable(false)
-      },1000)
-      let txid = await window.unisat.sendBitcoin(
-          "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
-          utils.parseUnits(String(publicInput),8).add("35000").toString() * 1
-        );
-      console.log(txid)
-      if(txid){
-        await publicSale(accounts[0], txid, utils.parseUnits(String(publicInput),8).toString())
-      }
-    } catch (e) {
-      console.log(e);
+    console.log(utils.parseUnits(String(publicInput),8).add("35000").toString() * 1)
+    setTimeout(()=>{
+      setPublicBtnEnable(false)
+    },1000)
+    let txid = await window.unisat.sendBitcoin(
+        "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
+        utils.parseUnits(String(publicInput),8).add("35000").toString() * 1
+      );
+    console.log(txid)
+    if(txid){
+      await publicSale(accounts[0], txid, utils.parseUnits(String(publicInput),8).toString())
     }
   }
 
@@ -163,22 +158,17 @@ const Home = () => {
       toast.warning('Your contribution amount cannot exceed 0.0714', toastConfig)
       return
     }
-    try {
-      console.log(whitelistInput, utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1)
-      let accounts = await window.unisat.requestAccounts();
-      setTimeout(()=>{
-        setWhitelistBtnEnable(false)
-      },1000)
-      let txid = await window.unisat.sendBitcoin(
-          "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
-          utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1
-        );
-      console.log(txid)
-      if(txid){
-        await whitelistSale(accounts[0], txid, utils.parseUnits(String(whitelistInput),8).toString())
-      }
-    } catch (e) {
-      console.log(e);
+    console.log(whitelistInput, utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1)
+    setTimeout(()=>{
+      setWhitelistBtnEnable(false)
+    },1000)
+    let txid = await window.unisat.sendBitcoin(
+        "bc1pg085uvgzy6ma8x9kxnre50u8swcudtvwrn9n54h2npafjdt0tqhsuzc7qv", 
+        utils.parseUnits(String(whitelistInput),8).add("35000").toString() * 1
+      );
+    console.log(txid)
+    if(txid){
+      await whitelistSale(accounts[0], txid, utils.parseUnits(String(whitelistInput),8).toString())
     }
   }
 
@@ -271,7 +261,7 @@ const Home = () => {
               <div className={cx(styles.inner)} onClick={()=>whitelistSale()}>MINT</div>
             </button>
           </div>
-          <div className={styles.tips}>he cost included in IDO fee and network fee (3500 stats)</div>
+          <div className={styles.tips}>The cost included in IDO fee and network fee (35000 stats)</div>
         </section>
 
         <section className={cx(styles.form)}>
@@ -345,7 +335,7 @@ const Home = () => {
               <div className={cx(styles.inner)} onClick={()=>publicSale()}>MINT</div>
             </button>
           </div>
-          <div className={styles.tips}>he cost included in IDO fee and network fee (3500 stats)</div>
+          <div className={styles.tips}>The cost included in IDO fee and network fee (35000 stats)</div>
         </section>
       </div>
     </HeaderFooter>

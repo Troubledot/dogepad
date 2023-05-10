@@ -74,6 +74,21 @@ export async function publicSale(req, res) {
       return
   }
 
+  const totalBuy = await IDOP.sum("whitelist_amount",{
+    where: {
+      address: address,
+      state: 1,
+    }
+  })
+
+  if(totalBuy >=  0.72){
+    res.send({
+        msg: "Have exceeded the limit",
+        code: 0
+    })
+    return
+  }
+
   const ga = !!req.cookies._ga ? req.cookies._ga : ""
   
   const result = await IDOP.create({
@@ -147,6 +162,7 @@ export async function getWhitelistSaleByAddress(req, res) {
 
 export async function checkWhitelist(req, res) {
   const { address } = req.params;
+  console.log(address, WHITELIST.indexOf(address))
   res.send({
     msg: "success",
     code: 1,
@@ -190,7 +206,7 @@ export async function whitelistSale(req, res) {
   })
   console.log("totalBuy",totalBuy)
 
-  if(totalBuy >=  0.0714){
+  if(totalBuy >=  0.072){
     res.send({
         msg: "Have exceeded the limit",
         code: 0
