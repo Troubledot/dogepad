@@ -12,7 +12,14 @@ import {
 import { route } from "next/dist/server/router"
 import styles from "../styles/layout.module.scss"
 import { concat } from "ethers/lib/utils"
+
+import WalletConnect from "@walletconnect/client";
+import QRCodeModal from "@walletconnect/qrcode-modal";
+
+
+// const okxWeb3 = require('@okwallet/extension')
 // const cx = classNames.bind(styles)
+
 
 const Header = (props) => {
     const { activeIndex, scrolling } = props
@@ -34,13 +41,47 @@ const Header = (props) => {
         }, [])
 
         const connectWallet = async () => {
-            if (typeof window.unisat !== 'undefined') {
-                let accounts = await window.unisat.requestAccounts();
-                setAccount(accounts[0])
-            }else{
-                alert('UniSat Wallet is not installed!');
-            }
+            
+        // Create a connector
+        const connector = new WalletConnect({
+            bridge: "https://bridge.walletconnect.org", // Required
+            qrcodeModal: QRCodeModal,
+        });
+        
+        // Check if connection is already established
+        if (!connector.connected) {
+            // create new session
+            connector.createSession();
         }
+        
+        // Subscribe to connection events
+        connector.on("connect", (error, payload) => {
+            if (error) {
+            throw error;
+            }
+        
+            // Get provided accounts and chainId
+            const { accounts, chainId } = payload.params[0];
+            setAccount(accounts[0])
+        });
+        
+        connector.on("session_update", (error, payload) => {
+            if (error) {
+            throw error;
+            }
+        
+            // Get updated accounts and chainId
+            const { accounts, chainId } = payload.params[0];
+            setAccount(accounts[0])
+        });
+        
+        connector.on("disconnect", (error, payload) => {
+            if (error) {
+            throw error;
+            }
+        
+            // Delete connector
+        });}
 
     return (
         <header className={styles.header}>
