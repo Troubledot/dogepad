@@ -23,6 +23,15 @@
     }
     .deadline{
       padding: 15px 0;
+      position: relative;
+      text-align: center;
+      i{
+        font-style: normal;
+        font-size: 20px;
+        display: block;
+        margin-bottom: 10px;
+        margin-top: -15px;
+      }
       ul{
         li{
           display: inline-block;
@@ -191,7 +200,6 @@
   
         .deadline {
           padding: 15px 0;
-  
           ul {
             li {
               display: inline-block;

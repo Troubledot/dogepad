@@ -277,6 +277,7 @@ const Home = () => {
         <section className={cx(styles.form)}>
           <h3>Whitelist Sale</h3>
           <div className={styles.deadline}>
+            <i>End Time:</i>
             <Timer
               formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
               initialTime={
@@ -405,6 +406,7 @@ const Home = () => {
         <section className={cx(styles.form)}>
           <h3>Public Sale</h3>
           <div className={styles.deadline}>
+            <i>Countdown:</i>
             <Timer
               formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
               initialTime={

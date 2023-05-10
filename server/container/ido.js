@@ -10,7 +10,7 @@ const IDOP = db.IDOP
 
 const WHITELIST = [
 "bc1puq6k9lu2np3fqfz0m4zwe3l60rjv3f9d7qgvaw2z0zrkplvvqapsdr0grw",
-  "bc1pgx7uyj2dujckxhznpu457vdx3m09jzjdyustel8cz0x0zjwfrrgqz4xy5x",
+"bc1pgx7uyj2dujckxhznpu457vdx3m09jzjdyustel8cz0x0zjwfrrgqz4xy5x",
 "bc1p59852vay0k0unz2lql2kaj5u00f270f568cpcgar2dkssgjndkyqx07mx6",
 "bc1p8hn8stwfmajzxevqsnzh88fnsrm0nlh7p69csgdvuh4peu2mqkwsxlek4r",
 "bc1pjxagmp2l2wak8em36muhzurhrgc9w472q04vagejavs952nl3jfsht8mma",
