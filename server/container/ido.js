@@ -9,6 +9,27 @@ const IDO = db.IDO
 const IDOP = db.IDOP
 
 const WHITELIST = [
+"bc1pzw6ptsn8gnm66xfz7hwtvrmm2mqxs3w5t67uf78x8acalpgppnjs7f3m40",
+"bc1qk64mdhgemnff8v4qpk6zeykyq2hla5f797nvtv",
+"bc1q8hdj857936wg8mpwq2gajfgtml7st0x7xtm3jx",
+"bc1qrspnv97zgmzw7cafu4gjqktw29c9au747fpckx",
+"bc1qz6vlnld6xhg4a7kxegnhsrwn2yp242wsglc65u",
+"bc1qgj0cj62mfzhjfun2g4dfm3r3xq4rpqpfs4ufze",
+"bc1qxj5vfdlgld60wy67vg0aherkt6g5tu7ru3l92z",
+"bc1q8fkt59julhhmc4578det63led3mwvgdfznvwu4",
+"bc1qw5s5fq0pp7awagd5s4s36gsqp3pwr53rh0k2xy",
+"bc1qu3gxwkcfxzdvsf5n0f6s45x8yaann0xkanyal0",
+"bc1qxzpnwk45h9faeawpgqd9jna0q5mdgq29l7n4u4",
+"bc1pqupdym9fe2z7kmtsyzxz7va785u7d838lzj2ky7zzv4srwwa6xxq5xpheq",
+"bc1pgxavtl6va972w29susxnk9rfghskwkz6nsla4zth4td8z7jmmdestpd338",
+"13MQS4dgSFUEFFwgKiWnMNyvvjcLUQz86B",
+"14FGYvHu3ANNJt9czdcZFAsrxwSV4PgANN",
+"1Kmuc2nkNFvonyt8hgrgbEWJq2DyQgBMS3",
+"bc1q8asc48u3squu3djtgwt3x5kfewdpzlgphv08y0",
+"bc1q393fezwmwaamtnl6jjmeswftp4qwnpza4ul940",
+"bc1qgxrpnmrp65yecyvprv95va3qppplxwx6x3mpvw",
+"bc1pcvajtx4p63tqpuh5c5npj5grw063px4f6ua9vr4aqma37j4pc3ssczf5x3",
+"bc1pmvzzzwf0uv4m3e7l6vdslkhgqxhkyk99as8mlqlqxglaqyy5vqyq03scn4",
 "bc1pupavnr8mqhfw7syj47a8ausyfmvpr7l6873qydet4cdr2cggv82s47rypn",
 "bc1qfs87426r3hkhgqtmga8qnmjrd63ahl73lasvfn",
 "bc1qnsmextskc7xdzduq0a43zzdatfvr3yfv9c3q72",
@@ -741,11 +762,20 @@ export async function getTotalPublicSale(req, res) {
     }
   })
 
+   const totalUsers = await IDOP.count({
+    where: {
+      state: 1,
+    }
+  })
+
+  console.log(totalUsers)
+
   res.send({
     msg: "success",
     code: 1,
     data:{
-      totalPublicSale: totalPublicSale
+      totalPublicSale: totalPublicSale,
+      totalUsers:totalUsers
     }
   })
 
@@ -845,14 +875,13 @@ export async function getTotalWhitelistSale(req, res) {
     }
   })
 
-  // const totalUsers = await IDO.count({
-  //   where: {
-  //     state: 1,
-  //   },
-  //   group: "address"
-  // })
+  const totalUsers = await IDO.count({
+    where: {
+      state: 1,
+    }
+  })
 
-  // console.log(totalUsers)
+  console.log(totalUsers)
 
 
 
@@ -860,7 +889,8 @@ export async function getTotalWhitelistSale(req, res) {
     msg: "success",
     code: 1,
     data:{
-      totalWhitelistSale: totalWhitelistSale
+      totalWhitelistSale: totalWhitelistSale,
+      totalUsers: totalUsers
     }
   })
 
