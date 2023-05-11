@@ -50,7 +50,7 @@ const Header = (props) => {
                 const res = await window.okxwallet.requestWallets(true);
                 setAccount(res[0].address[0].address)
             }else{
-                alert('UniSat Wallet is not installed!');
+                alert('OKX Wallet is not installed!');
             }
         }
 

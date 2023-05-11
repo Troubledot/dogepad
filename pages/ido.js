@@ -275,6 +275,133 @@ const Home = () => {
       <div className={cx(styles.idoWrapper)}>
         <div className={styles.banner}></div>
         <section className={cx(styles.form)}>
+          <h3>Public Sale</h3>
+          <div className={styles.deadline}>
+            <i>End Time:</i>
+            <Timer
+              formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
+              initialTime={
+                new Date(1683896400 * 1000).getTime() - new Date().getTime()
+              }
+              lastUnit="h"
+              direction="backward"
+            >
+              <ul>
+                <li>
+                  <h1>
+                    <Timer.Hours />
+                  </h1>
+                  <p>hours</p>
+                </li>
+                <li></li>
+                <li>
+                  <h1>
+                    <Timer.Minutes />
+                  </h1>
+                  <p>minutes</p>
+                </li>
+                <li></li>
+                <li>
+                  <h1>
+                    <Timer.Seconds />
+                  </h1>
+                  <p>seconds</p>
+                </li>
+              </ul>
+            </Timer>
+          </div>
+          <div className={cx(styles.info)}>
+            <p>
+              {totalPublicSaleData} <b>BTC</b> / {totalPublicSaleUsers} contributors
+            </p>
+            <p className={cx(styles.sub)}>Current Contribution</p>
+          </div>
+          <div className={cx(styles.cells)}>
+            <div className={styles.progress}>
+              <i style={{ width: `${(totalPublicSaleData / 7.5) * 100}%` }}></i>
+            </div>
+            <div className={styles.cell}>
+              <div className={styles.label}>Raising Percentage</div>
+              <div className={styles.content}>
+                {((totalPublicSaleData / 7.5) * 100).toFixed(2)}%
+              </div>
+            </div>
+            <div className={styles.cell}>
+              <div className={styles.label}>Funds to raise</div>
+              <div className={styles.content}>
+                7.5 <b>BTC</b>
+              </div>
+            </div>
+          </div>
+          <div
+            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
+              " "
+            )}
+          >
+            <div className={styles.cell}>
+              <div className={styles.label}>My Investment</div>
+              <div className={styles.content}>
+                {publicMyContributeBtc}{" "}
+                <b className={styles.colorPrimary}>BTC</b>
+              </div>
+            </div>
+          </div>
+          <div
+            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
+              " "
+            )}
+          >
+            <div className={styles.cell}>
+              <div className={styles.label}>Received</div>
+              <div className={styles.content}>
+                {totalPublicSaleData * 1 < 7.5
+                  ? publicMyContributeBtc / 0.0000000852
+                  : publicMyContributeBtc /
+                    (totalPublicSaleData / 7.5) /
+                    0.0000000852}{" "}
+                <b className={styles.colorPrimary}>BISO</b>
+              </div>
+            </div>
+          </div>
+          <div
+            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
+              " "
+            )}
+          >
+            <div className={styles.cell}>
+              <div className={styles.label}>Ratio</div>
+              <div className={styles.content}>
+                1 <b className={styles.colorPrimary}>BISO</b> = 0.0000000852{" "}
+                <b className={styles.colorPrimary}>BTC</b>
+              </div>
+            </div>
+          </div>
+          <div className={styles.btns}>
+            <span>
+              <input
+                className={styles.input}
+                type="number"
+                min="0.00036"
+                max="0.72"
+                value={publicInput}
+                onChange={(e) => publicInputChange(e)}
+              />
+              <button onClick={()=>setPublicMax()}>Max</button>
+            </span>
+            <button className={cx(styles.buttonPrimary)}>
+              <div className={cx(styles.inner)} onClick={() => publicSaleMint()}>
+                MINT
+              </div>
+            </button>
+          </div>
+          <div className={styles.input_tips}>Limit:(0.00036~0.72)</div>
+          <div className={styles.tips}>
+            The cost included in IDO fee and network fee 35000 sats (~200
+            sats/vB)
+          </div>
+        </section>
+
+          <section className={cx(styles.form)}>
           <h3>Whitelist Sale</h3>
           <div className={styles.deadline}>
             <i>End Time:</i>
@@ -397,133 +524,6 @@ const Home = () => {
             </button>
           </div>
           <div className={styles.input_tips}>Limit:(0.00036~0.072)</div>
-          <div className={styles.tips}>
-            The cost included in IDO fee and network fee 35000 sats (~200
-            sats/vB)
-          </div>
-        </section>
-
-        <section className={cx(styles.form)}>
-          <h3>Public Sale</h3>
-          <div className={styles.deadline}>
-            <i>End Time:</i>
-            <Timer
-              formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
-              initialTime={
-                new Date(1683896400 * 1000).getTime() - new Date().getTime()
-              }
-              lastUnit="h"
-              direction="backward"
-            >
-              <ul>
-                <li>
-                  <h1>
-                    <Timer.Hours />
-                  </h1>
-                  <p>hours</p>
-                </li>
-                <li></li>
-                <li>
-                  <h1>
-                    <Timer.Minutes />
-                  </h1>
-                  <p>minutes</p>
-                </li>
-                <li></li>
-                <li>
-                  <h1>
-                    <Timer.Seconds />
-                  </h1>
-                  <p>seconds</p>
-                </li>
-              </ul>
-            </Timer>
-          </div>
-          <div className={cx(styles.info)}>
-            <p>
-              {totalPublicSaleData} <b>BTC</b> / {totalPublicSaleUsers} contributors
-            </p>
-            <p className={cx(styles.sub)}>Current Contribution</p>
-          </div>
-          <div className={cx(styles.cells)}>
-            <div className={styles.progress}>
-              <i style={{ width: `${(totalPublicSaleData / 7.5) * 100}%` }}></i>
-            </div>
-            <div className={styles.cell}>
-              <div className={styles.label}>Raising Percentage</div>
-              <div className={styles.content}>
-                {((totalPublicSaleData / 7.5) * 100).toFixed(2)}%
-              </div>
-            </div>
-            <div className={styles.cell}>
-              <div className={styles.label}>Funds to raise</div>
-              <div className={styles.content}>
-                7.5 <b>BTC</b>
-              </div>
-            </div>
-          </div>
-          <div
-            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
-              " "
-            )}
-          >
-            <div className={styles.cell}>
-              <div className={styles.label}>My Investment</div>
-              <div className={styles.content}>
-                {publicMyContributeBtc}{" "}
-                <b className={styles.colorPrimary}>BTC</b>
-              </div>
-            </div>
-          </div>
-          <div
-            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
-              " "
-            )}
-          >
-            <div className={styles.cell}>
-              <div className={styles.label}>Received</div>
-              <div className={styles.content}>
-                {totalPublicSaleData * 1 < 7.5
-                  ? publicMyContributeBtc / 0.0000000852
-                  : publicMyContributeBtc /
-                    (totalPublicSaleData / 7.5) /
-                    0.0000000852}{" "}
-                <b className={styles.colorPrimary}>BISO</b>
-              </div>
-            </div>
-          </div>
-          <div
-            className={[`${cx(styles.cells)}`, `${cx(styles.borderTop)}`].join(
-              " "
-            )}
-          >
-            <div className={styles.cell}>
-              <div className={styles.label}>Ratio</div>
-              <div className={styles.content}>
-                1 <b className={styles.colorPrimary}>BISO</b> = 0.0000000852{" "}
-                <b className={styles.colorPrimary}>BTC</b>
-              </div>
-            </div>
-          </div>
-          <div className={styles.btns}>
-            <span>
-              <input
-                className={styles.input}
-                type="number"
-                min="0.00036"
-                max="0.72"
-                value={publicInput}
-                onChange={(e) => publicInputChange(e)}
-              />
-              <button onClick={()=>setPublicMax()}>Max</button>
-            </span>
-            <button className={cx(styles.buttonPrimary)}>
-              <div className={cx(styles.inner)} onClick={() => publicSaleMint()}>
-                MINT
-              </div>
-            </button>
-          </div>
-          <div className={styles.input_tips}>Limit:(0.00036~0.72)</div>
           <div className={styles.tips}>
             The cost included in IDO fee and network fee 35000 sats (~200
             sats/vB)
