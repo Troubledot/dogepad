@@ -406,11 +406,11 @@ const Home = () => {
         <section className={cx(styles.form)}>
           <h3>Public Sale</h3>
           <div className={styles.deadline}>
-            <i>Countdown:</i>
+            <i>End Time:</i>
             <Timer
               formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
               initialTime={
-                new Date(1683766800 * 1000).getTime() - new Date().getTime()
+                new Date(1683896400 * 1000).getTime() - new Date().getTime()
               }
               lastUnit="h"
               direction="backward"
