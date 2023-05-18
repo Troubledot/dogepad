@@ -119,6 +119,20 @@
                     .link {
                         display: none;
                     }
+                    .wallet{
+                        button{
+                            border: 1px solid #ffb800;
+                            background: transparent;
+                            color: #fff;
+                            padding: 10px 10px;
+                            width: 140px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            cursor: pointer;
+                            margin-left: 5px;
+                            font-size: 12px;
+                        }
+                    }
                 }
             }
         }
