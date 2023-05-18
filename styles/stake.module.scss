@@ -30,13 +30,13 @@
     z-index: 9;
     h3 {
         line-height: 42px;
-            font-size: 36px;
-            font-weight: normal;
-            color: #FFB800;
-            margin-top: 20px;
-            margin-bottom: 5px;
-            padding-top: 25px;
-            border-top: 1px solid #666;
+        font-size: 26px;
+        font-weight: normal;
+        color: #FFB800;
+        margin-top: 20px;
+        margin-bottom: 5px;
+        padding-top: 25px;
+        border-top: 1px solid #666;
     }
     h4{
         color: #6EB737;
@@ -219,9 +219,15 @@
             display: inline-block;
             text-align: center;
             width: 50%;
-            font-size: 30px;
+            font-size: 32px;
             h1{
                 line-height: 1.5em;
+                i{
+                  color: #FFB800;
+                  font-size: 16px;
+                  font-style: normal;
+                  margin-left: 5px;
+                }
                 b{
                     font-size: 12px;
                 }

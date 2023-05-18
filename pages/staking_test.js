@@ -83,7 +83,7 @@ const Home = () => {
           <div className={styles.detail}>
             <ul>
               <li>
-                  <h1>bISO:0 <b>$0</b></h1>
+                  <h1>0<i>BISO</i> <b>$0</b></h1>
                   <p>TVL</p>
               </li>
               <li>
@@ -92,7 +92,7 @@ const Home = () => {
               </li>
             </ul>
           </div>
-          <h3>Stake $Biso</h3>
+          <h3>Stake $BISO</h3>
           <div className={cx(styles.cells)}>
             <div className={styles.cell}>
               <div className={styles.label}><b>Balance</b></div>
