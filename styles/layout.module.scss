@@ -6,6 +6,18 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px 0;
+        .nav{
+            font-family: 'Play';
+            li{
+                color: #fff;
+                display: inline-block;
+                padding: 0 30px;
+                cursor: pointer;
+                &:hover,&.active{
+                    color: #ffb800;
+                }
+            }
+        }
         .logo{
             background: url(../public/layout/logo.svg) no-repeat center;
             width: 263px;
@@ -51,7 +63,28 @@
             }
             .wallet{
                 margin-left: 10px;
-                button{
+                .wallet_inner{
+                    position: relative;
+                    &:hover{
+                        ul{
+                            display: block;
+                        }
+                    }
+                    ul{
+                        display: none;
+                        position: absolute;
+                        padding: 10px 0;
+                        margin-top: -10px;
+                        z-index: 999;
+                        li{
+                            margin: 5px 0;
+                            &:hover{
+                                background: #ffb800;
+                            }
+                        }
+                    }
+                }
+                button {
                     border: 1px solid #ffb800;
                     background: transparent;
                     color: #fff;
@@ -60,7 +93,6 @@
                     overflow: hidden;
                     text-overflow: ellipsis;
                     cursor: pointer;
-                    margin-left: 10px ;
                 }
             }
         }

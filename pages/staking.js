@@ -73,7 +73,7 @@ const Home = () => {
   }
 
   return (
-    <HeaderFooter activeIndex={1}>
+    <HeaderFooter activeIndex={3}>
       <ToastContainer />
       <div className={cx(styles.idoWrapper)}>
         <div className={styles.banner}>
@@ -115,7 +115,7 @@ const Home = () => {
               <div className={cx(styles.inner)} onClick={()=>staking()}>CLAIM</div>
             </button>
           </div>
-          <h3>Stake $Biso</h3>
+          <h3>Stake $BISO</h3>
           <div className={cx(styles.cells)}>
             <div className={styles.cell}>
               <div className={styles.label}><b>Staked Amount</b></div>

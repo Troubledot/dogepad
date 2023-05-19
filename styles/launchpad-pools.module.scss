@@ -1,0 +1,207 @@
+.launchpadPoolsWarp {
+  padding-top: 70px;
+  margin: 0 24px;
+  flex: 1;
+  .topBox {
+    border: 1px solid #252525;
+    padding: 16px;
+    padding-bottom: 0;
+    .inputBox {
+      display: flex;
+      align-items: center;
+    }
+    .tabBox {
+      display: flex;
+      align-items: center;
+      margin-top: 32px;
+      .tabItem {
+        font-size: 13px;
+        color: #fafafa;
+        height: 46px;
+        line-height: 46px;
+        text-align: center;
+        padding: 0 16px;
+        cursor: pointer;
+      }
+      .actItem {
+        @extend .tabItem;
+        border-bottom: 2px solid #ffb800;
+      }
+    }
+    .input {
+      color: #fafafa;
+      border: 1px solid #2a2f34;
+      background: #262a2f;
+      padding: 5px 15px;
+      text-align: center;
+      font-size: 14px;
+      flex: 1;
+      height: 37px;
+      text-align: left;
+      min-width: 0;
+    }
+    .select {
+      width: 102px;
+      flex-shrink: 1;
+      background-color: #252525;
+      color: #fff;
+      font-size: 12px;
+      border: none;
+      margin-left: 20px;
+      padding: 0 12px;
+      height: 37px;
+    }
+  }
+  .flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+    .flexItem {
+      width: calc(33% - 24px);
+      margin-bottom: 24px;
+      border: 1px solid #252525;
+      box-sizing: border-box;
+      padding: 16px;
+      .wordCss {
+        color: #beb5b5;
+        font-size: 12px;
+        margin-bottom: 2px;
+      }
+      .numCss {
+        font-size: 14px;
+        color: #fafafa;
+      }
+      .topItem {
+        .tagBox {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .leftBox {
+            .tagItemBlue {
+              background-color: rgba(115, 176, 224, 0.15);
+              color: #73b0e0;
+              font-size: 14px;
+              border-radius: 24px;
+              height: 22px;
+              line-height: 22px;
+              text-align: center;
+              padding: 0 12px;
+            }
+          }
+          .rightBox {
+            display: flex;
+            align-items: center;
+            div:nth-last-child(1) {
+              margin-right: 0;
+            }
+            .tagGreen {
+              background-color: #1cc7a0;
+              color: #fff;
+              border-radius: 4px;
+              font-size: 12px;
+              padding: 0 4px;
+              height: 18px;
+              display: flex;
+              align-items: center;
+              text-align: center;
+              margin-right: 6px;
+            }
+            .tagBlue {
+              @extend .tagGreen;
+              background-color: #1da1f2;
+              margin-right: 6px;
+            }
+          }
+        }
+        .imgBox {
+          display: flex;
+          align-items: center;
+          margin-top: 12px;
+          .imgCss {
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            background-color: #fff;
+            margin-right: 8px;
+          }
+          .rightTitle {
+            .nameCss {
+              font-size: 20px;
+              color: #fafafa;
+              margin-bottom: 2px;
+            }
+            .descCss {
+              font-size: 13px;
+              color: #beb5b5;
+            }
+          }
+        }
+      }
+      .softBox {
+        border-left: 2px solid #2a2f34;
+        margin-top: 20px;
+        padding: 0 16px;
+
+        .yellowWord {
+          color: #ffb800;
+          font-size: 18px;
+        }
+      }
+      .flexBox1 {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin-top:16px;
+        .flex1 {
+          flex: 1;
+          border-left: 2px solid #2a2f34;
+          padding: 0 16px;
+        }
+      }
+      .progressBox {
+        margin-top: 16px;
+        .titleCss {
+          color: #beb5b5;
+          font-size: 13px;
+        }
+        .topCss {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .pregressBar {
+          height: 10px;
+          width: 100%;
+          background-color: #ffb800;
+          margin: 12px 0;
+        }
+        .progressBottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+      .opBox{
+        background-color: #282D34;
+        height: 38px;
+        width: 100%;
+        font-size: 14px;
+        color: #BEB5B5;
+        text-align: center;
+        line-height: 38px;
+        margin-top:24px;
+      }
+      .opBox1{
+        height: 38px;
+        width: 100%;
+        font-size: 14px;
+        line-height: 38px;
+        text-align: center;
+        color: #FFB800;
+        border:1px solid #252525;
+        margin-top:24px;
+      }
+    }
+  }
+}

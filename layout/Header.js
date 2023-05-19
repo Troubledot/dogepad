@@ -12,7 +12,7 @@ import {
 import { route } from "next/dist/server/router"
 import styles from "../styles/layout.module.scss"
 import { concat } from "ethers/lib/utils"
-// const cx = classNames.bind(styles)
+const cx = classNames.bind(styles)
 
 const Header = (props) => {
     const { activeIndex, scrolling } = props
@@ -59,19 +59,36 @@ const Header = (props) => {
             {/* <Wallet /> */}
             <div className={styles.inner}>
                 <Link href="/"><i className={styles.logo}></i></Link>
+                <ul className={styles.nav}>
+                    <Link href="/">
+                    <li className={cx({
+                            active: activeIndex === 1
+                    })}>Home</li>
+                    </Link>
+                    <li className={cx({
+                            active: activeIndex === 2
+                    })}>Launchpad</li>
+                    <Link href="/staking">
+                        <li className={cx({
+                                active: activeIndex === 3
+                        })}>Stake</li>
+                    </Link>
+                    <a href="https://bisoswap.gitbook.io/bisoswap/" target="_blank"><li>Doc</li></a>
+                </ul>
                 <div className={styles.settings}>
-                    <ul className={styles.link}>
-                        <a href="https://t.me/BisoSwap" target="_blank"><li className={styles.tg}></li></a>
-                        <a href="https://twitter.com/bisoswap" target="_blank"><li className={styles.tw}></li></a>
-                        <a href='https://medium.com/@BisoSwap' target="_blank"><li className={styles.md}></li></a>
-                        <a href='https://bisoswap.gitbook.io/bisoswap/' target="_blank"><li className={styles.gitbook}></li></a>
-                    </ul>
                     <div className={styles.wallet}>
                         {!account ? 
-                            <>
-                                <button className={styles.wallet_btn} onClick={()=>connectWalletOKX()}>Connect OKX Wallet</button>
-                                <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Wallet</button>
-                            </>
+                            <div className={styles.wallet_inner}>
+                                <button>Connect Wallet</button>
+                                <ul>
+                                    <li>
+                                        <button className={styles.wallet_btn} onClick={()=>connectWallet()}>Connect Unisat Wallet</button>
+                                    </li>
+                                    <li>
+                                        <button className={styles.wallet_btn} onClick={()=>connectWalletOKX()}>Connect OKX Wallet</button>
+                                    </li>
+                                </ul>
+                            </div>
                             :
                             <button className={styles.wallet_btn}>{account}</button>
                         }
