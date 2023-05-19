@@ -116,7 +116,7 @@ const LauchpadCreate = () => {
             </div>
           </div>
           <div className={styles.yellowCss}>
-            Make sure the token has 'Exclude transfer fee' function if it has
+            Make sure the token has Exclude transfer fee function if it has
             transfer fees.
           </div>
           <button className={styles.btnCss}>Approve spend</button>
