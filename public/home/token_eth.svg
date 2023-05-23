@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="105px" viewBox="0 0 68 105" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>download-3 1</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="68" height="105"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-109.000000, -566.000000)">
+            <g id="download-3-1" transform="translate(109.000000, 566.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip" fill-rule="nonzero"></g>
+                <path d="M64.8539765,51.7768565 L33.6924683,1.69354844 L1.70000005,50.5354858 L31.6150681,102.688307 L64.8539765,51.7768565 Z" id="Vector" fill="#6039A8" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M33.291441,69.2237906 L63.8263283,52.5558891 L32.036499,100.893147 L33.291441,69.2237906 Z" id="Vector" fill="#A586DF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M33.291441,34.2350794 L63.8263283,50.902981 L32.036499,2.56574273 L33.291441,34.2350794 Z" id="Vector" fill="#A586DF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <g id="Group" mask="url(#mask-2)" fill-rule="nonzero" stroke="#29193E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.72617996">
+                    <g transform="translate(1.703230, 1.693548)" id="Vector">
+                        <path d="M63.1541519,50.0833081 L31.9926403,0 L0,48.8419374 L29.9150715,100.994759 L63.1541519,50.0833081 Z"></path>
+                        <path d="M30.7827485,67.0797615 L60.8430035,50.2763727 L31.0753186,32.104599 L2.16002011,49.0773401 L30.7827485,67.0797615 Z"></path>
+                        <line x1="29.9171124" y1="100.994757" x2="31.9946811" y2="0.413259596"></line>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

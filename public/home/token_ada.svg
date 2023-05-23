@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="71px" viewBox="0 0 66 71" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>download-6 1</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="66" height="71"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-1234.000000, -526.000000)">
+            <g id="download-6-1" transform="translate(1234.000000, 526.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip" fill-rule="nonzero"></g>
+                <g id="Group" mask="url(#mask-2)" fill-rule="nonzero" stroke="#29193E" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.86278999">
+                    <g transform="translate(1.609756, 1.614136)" id="Vector">
+                        <path d="M62.8472895,37.7892506 C62.8472895,54.6807964 48.1212429,67.3300909 32.852546,67.3752728 C16.0027457,67.3752728 9.29693728,57.4239763 7.11687685,53.9530445 C5.66349248,51.63909 3.50499727,46.0370825 0.641391218,37.1470222 L57.5885385,16.9620457 C60.4092603,22.9411067 62.1621773,29.8835084 62.8472895,37.7892506 Z" fill="#4659AB"></path>
+                        <path d="M30.5092239,61.1655197 C47.3590247,61.1655197 61.0184479,47.4731676 61.0184479,30.5827506 C61.0184479,13.692366 47.3590247,0 30.5092239,0 C13.6594401,0 0,13.692366 0,30.5827506 C0,47.4731676 13.6594401,61.1655197 30.5092239,61.1655197 Z" fill="#4659AB"></path>
+                        <line x1="56.7941284" y1="46.3786392" x2="57.9600754" y2="52.5378852" fill="none"></line>
+                        <line x1="52.798069" y1="51.7181587" x2="53.964016" y2="57.8774109" fill="none"></line>
+                    </g>
+                </g>
+                <path d="M32.6477867,13.7821007 L48.8118286,23.0023863 L48.8118286,41.4430221 L32.6477867,50.6633415 L16.4837418,41.4430221 L16.4837418,23.0023863 L32.6477867,13.7821007 Z" id="Vector" fill="#F9FBEF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                <path d="M32.6489127,22.334341 L41.3164825,27.2785245 L41.3164825,37.1668883 L32.6489127,42.1110687 L23.9811802,37.1668883 L23.9811802,27.2785245 L32.6489127,22.334341 Z" id="Vector" fill="#4659AB" fill-rule="nonzero" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

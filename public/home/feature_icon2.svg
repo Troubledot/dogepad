@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="42px" viewBox="0 0 48 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>download-5 3</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="48" height="42"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="index" transform="translate(-315.000000, -1897.000000)">
+            <g id="Frame-415" transform="translate(0.000000, 1565.000000)">
+                <g id="Group-4" transform="translate(160.000000, -90.000000)">
+                    <g id="Frame-36" transform="translate(0.000000, 422.000000)">
+                        <g id="download-5-3" transform="translate(155.000000, 0.000000)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <g id="Clip" fill-rule="nonzero"></g>
+                            <path d="M21.797761,10.0514393 L6,10.0514393 L6.73284018,21.3682793 C7.16202021,27.995579 11.1508794,33.8691594 17.1530399,36.7117194 L21.797761,38.9114399 L21.797761,10.0514393 Z" id="Vector" fill="#FFFFFF" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M21.677639,10.0513191 L37.4754,10.0513191 L36.7425592,21.3680991 C36.3133792,27.9954593 32.3244611,33.8690397 26.322361,36.7115997 L21.677639,38.9113235 L21.677639,10.0513191 Z" id="Vector" fill="#F1F1F1" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <path d="M26.4943199,4.20007229 L41.4451809,4.20007229 L41.4451809,19.1509323 L26.4943199,19.1509323 L26.4943199,4.20007229 Z" id="Vector" stroke="#A1C7FF" stroke-width="1.38607001" fill="#EDF1F7" fill-rule="nonzero" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
+                            <path d="M26.4943199,4.20007229 L41.4451809,4.20007229 L41.4451809,19.1509323 L26.4943199,19.1509323 L26.4943199,4.20007229 Z" id="Vector" stroke="#2A193E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" mask="url(#mask-2)"></path>
+                            <g id="Group" mask="url(#mask-2)" fill="#29193E" fill-rule="nonzero">
+                                <g transform="translate(28.308286, 7.464719)" id="Vector">
+                                    <path d="M5.05620861,1.51332096 C5.05620861,2.31490373 4.40639669,2.96471451 3.60481394,2.96471451 C2.80323118,2.96471451 2.15341926,2.31490373 2.15341926,1.51332096 C2.15341926,0.711738189 2.80323118,0.0619268283 3.60481394,0.0619268283 C4.40639669,0.0619268283 5.05620861,0.711738189 5.05620861,1.51332096 Z"></path>
+                                    <path d="M9.6822083,7.35258073 C9.6822083,8.15416347 9.0323964,8.80397538 8.23081367,8.80397538 C7.42923094,8.80397538 6.77942133,8.15416347 6.77942133,7.35258073 C6.77942133,6.55099798 7.42923094,5.90118722 8.23081367,5.90118722 C9.0323964,5.90118722 9.6822083,6.55099798 9.6822083,7.35258073 Z"></path>
+                                    <path d="M5.08179487,-2.12878012 L6.19179858,-2.12878012 L6.19179858,11.3599999 L5.08179487,11.3599999 L5.08179487,-2.12878012 Z" transform="translate(5.636797, 4.615610) rotate(51.699699) translate(-5.636797, -4.615610) "></path>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

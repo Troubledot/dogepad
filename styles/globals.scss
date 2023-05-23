@@ -193,7 +193,7 @@ a {
 }
 
 body {
-    background: #0b0b0b;
+    background: #f5f5f5;
     animation: overflow 6s;
     animation-fill-mode: forwards;
 }
@@ -201,6 +201,20 @@ body {
 @font-face {
     font-family: play;
     src: url(../public/fonts/Play-Regular.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: PPRightGrotesk;
+    src: url(../public/fonts/PPRightGrotesk-SpatialBlack.ttf) format("truetype");
+    font-weight: 400;
+    font-style: normal
+}
+
+@font-face {
+    font-family: Product;
+    src: url(../public/fonts/Product-Sans-Regular.ttf) format("truetype");
     font-weight: 400;
     font-style: normal
 }

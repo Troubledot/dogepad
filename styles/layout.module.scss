@@ -9,18 +9,34 @@
         .nav{
             font-family: 'Play';
             li{
-                color: #fff;
+                color: #291A3D;
                 display: inline-block;
                 padding: 0 30px;
                 cursor: pointer;
+                position: relative;
+                &::after{
+                    content: "";
+                    background: #ffb800;
+                    position: absolute;
+                    width: 0px;
+                    height: 2px;
+                    left: 50%;
+                    margin-left: 0px;
+                    bottom: -4px;
+                    transition: all .2s ease-in-out;
+                }
                 &:hover,&.active{
-                    color: #ffb800;
+                    color: #F5C45F;
+                    &::after {
+                        width: 20px;
+                        margin-left: -10px;
+                    }
                 }
             }
         }
         .logo{
-            background: url(../public/layout/logo.svg) no-repeat center;
-            width: 263px;
+            background: url(../public/layout/logo.svg) no-repeat center/100% auto;
+            width: 200px;
             height: 50px;
             display: inline-block;
             vertical-align: middle;
@@ -28,41 +44,9 @@
         }
         .settings{
             display: flex;
-            .link {
-                li {
-                    width: 40px;
-                    height: 40px;
-                    display: inline-block;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    background-size: 100% auto;
-                    margin: 0 5px;
-                    cursor: pointer;
-        
-                    &.tg {
-                        background-image: url(../public/layout/icon_tele.png);
-                    }
-        
-                    &.tw {
-                        background-image: url(../public/layout/icon_tw.png);
-                    }
-        
-                    &.dc {
-                        background-image: url(../public/layout/icon_dc.png);
-                    }
-                    &.gb{
-                    background-image: url(../public/layout/icon_github.png) ;
-                    }
-                    &.md {
-                        background-image: url(../public/layout/icon_medium.png);
-                    }
-                    &.gitbook {
-                        background-image: url(../public/layout/icon_gitbook.png);
-                    }
-                }
-            }
             .wallet{
                 margin-left: 10px;
+                border: none;
                 .wallet_inner{
                     position: relative;
                     &:hover{
@@ -78,21 +62,26 @@
                         z-index: 999;
                         li{
                             margin: 5px 0;
+                            border-radius: 20px;
                             &:hover{
-                                background: #ffb800;
+                                button{
+                                    background: #ff9500;
+                                }
                             }
                         }
                     }
                 }
                 button {
-                    border: 1px solid #ffb800;
+                    border: none;
                     background: transparent;
+                    background: #FFB800;
                     color: #fff;
                     padding: 10px 15px;
                     width: 170px;
                     overflow: hidden;
                     text-overflow: ellipsis;
                     cursor: pointer;
+                    border-radius: 20px;
                 }
             }
         }

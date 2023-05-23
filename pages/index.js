@@ -65,56 +65,118 @@ const Home = () => {
       <ToastContainer />
       <div className={styles.wrapper}>
         <div className={styles.slogan}>
+          <h1>The first AMM DEX  in the BRC20 ecosystem! </h1>
+          <h2>BISO SWAP</h2>
+          <div className={styles.rhinoceros}></div>
+          <i className={styles.eth}></i>
+          <i className={styles.btc}></i>
+          <i className={styles.knc}></i>
+          <i className={styles.ada}></i>
+          <i className={styles.usdt}></i>
+          <i className={styles.dai}></i>
+        </div>
+        <ul className={styles.link}>
+          <li>
+            <span>Treade</span>
+            <i></i>
+          </li>
+          <li>
+            <span>Treade</span>
+            <i></i>
+          </li>
+          <li>
+            <span>Treade</span>
+            <i></i>
+          </li>
+          <li>
+            <span>Treade</span>
+            <i></i>
+          </li>
+        </ul>
+        <ul className={styles.partner}>
+          <li className={styles.tp}></li>
+          <li className={styles.gate}></li>
+          <li className={styles.mxc}></li>
+          <li className={styles.nasdaq}></li>
+        </ul>
+        <div className={styles.feature}>
+          <h1></h1>
+          <h2>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</h2>
+          <ul>
+            <i className={styles.character}></i>
+            <li>
+              <h3>
+                <b>What is</b> 
+                BISO SWAP.
+              </h3>
+              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <a href="#">go to Swap >></a>
+            </li>
+            <li>
+              <h3>
+                <b>What is</b> 
+                BISO SWAP.
+              </h3>
+              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <a href="#">go to Swap >></a>
+            </li>
+            <li>
+              <h3>
+                <b>What is</b> 
+                BISO SWAP.
+              </h3>
+              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <a href="#">go to Swap >></a>
+            </li>
+          </ul>
+        </div>
+        <div className={styles.info}>
           <div className={styles.inner}>
             <div className={styles.text}>
-              <h1>BISO - the first AMM DEX in the BRC20 ecosystem! </h1>
-              <p>Add liquidity, gain to transaction fees and enjoy a lower GAS trading experience!</p>
-              {/* <div className={styles.deadline}>
-                <h4>IDO Countdown:</h4>
-                <Timer
-                  formatValue={(value) => `${(value < 10 ? `0${value}` : value)} `}
-                  initialTime={
-                    new Date(1683723600*1000).getTime() -
-                      new Date().getTime()
-                  }
-                  lastUnit="h"
-                  direction="backward"
-                >
-                  <ul>
-                    <li>
-                      <h1><Timer.Hours /></h1>
-                      <p>hours</p>
-                    </li>
-                    <li></li>
-                    <li>
-                      <h1><Timer.Minutes /></h1>
-                      <p>minutes</p>
-                    </li>
-                    <li></li>
-                    <li>
-                      <h1><Timer.Seconds /></h1>
-                      <p>seconds</p>
-                    </li>
-                  </ul>
-                </Timer>
-              </div> */}
-              {/* <button onClick={()=>toast.success('Comming soon!', toastConfig)}><span>IDO</span></button> */}
-              <Link href="/ido"><button><span>IDO</span></button></Link>
+              <h1>Used by millions.
+                <br />Trusted <b>with billions.</b></h1>
+              <p>BISOSwap has the most users of any decentralized platform, ever. And those users are now entrusting the platform with over $2.1 billion in funds.</p>
+              <ul className={styles.icon}>
+                <li>No KYC</li>
+                <li>Non-Custodial</li>
+                <li>Indefinite Term</li>
+              </ul>
+              <p>
+                <button>Swap Now<i></i></button>
+                <a href="#">Learn<i></i></a>
+              </p>
             </div>
-            <div className={styles.rhinoceros}>
-              <i className={styles.token_biso}></i>
-              <i className={styles.token_btc}></i>
+            <div className={styles.bg}>
+              <ul>
+                <li>
+                  <h1></h1>
+                  <p>1.6 million <b>Users</b></p>
+                  <button>in the last 30 days</button>
+                </li>
+                <li>
+                  <h1></h1>
+                  <p>1.6 million <b>Users</b></p>
+                  <button>in the last 30 days</button>
+                </li>
+                <li>
+                  <h1></h1>
+                  <p>1.6 million <b>Users</b></p>
+                  <button>in the last 30 days</button>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-        <div className={styles.how_it_works}>
-          <h1>How it works
-            <i></i>
-          </h1>
-          <div className={styles.content}>
-            <div className={styles.step1}></div>
-            <div className={styles.step2}></div>
-            <div className={styles.step3}></div>
+        </div> 
+        <div className={styles.stake}>
+          <div className={styles.inner}>
+            <div className={styles.text}>
+              <h1>Stake passive income with crypto.</h1>
+              <p>BisoSwap makes it easy to make your crypto work for you.</p>
+              <ul>
+                <li>USE $BISO EARN $BISO TOKENS</li>
+                <li>USTAKE $BISO TOKENS EARN FEES</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
