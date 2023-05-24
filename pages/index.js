@@ -139,14 +139,12 @@ Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplif
           <div className={styles.inner}>
             <div className={styles.text}>
               <h1>
-                Used by millions.
+                We server users and 
                 <br />
-                Trusted <b>with billions.</b>
+                <b> project stakeholders</b>
               </h1>
               <p>
-                BISOSwap has the most users of any decentralized platform, ever.
-                And those users are now entrusting the platform with over $2.1
-                billion in funds.
+               We're gonna offer users all the decentralized services, and provide project partners with services like fundraising, distribution, and airdrops.
               </p>
               <ul className={styles.icon}>
                 <li>No KYC</li>
@@ -167,21 +165,21 @@ Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplif
                 <li>
                   <h1></h1>
                   <p>
-                    1.6 million <b>Users</b>
+                    1893 <b>Hloders</b>
                   </p>
                   <button>in the last 30 days</button>
                 </li>
                 <li>
                   <h1></h1>
                   <p>
-                    1.6 million <b>Users</b>
+                   1893 <b>Hloders</b>
                   </p>
                   <button>in the last 30 days</button>
                 </li>
                 <li>
                   <h1></h1>
                   <p>
-                    1.6 million <b>Users</b>
+                   1893 <b>Hloders</b>
                   </p>
                   <button>in the last 30 days</button>
                 </li>
