@@ -77,19 +77,19 @@ const Home = () => {
         </div>
         <ul className={styles.link}>
           <li>
-            <span>Treade</span>
+            <span>Ido</span>
             <i></i>
           </li>
           <li>
-            <span>Treade</span>
+            <span>Stake</span>
             <i></i>
           </li>
           <li>
-            <span>Treade</span>
+            <span>Launchpad</span>
             <i></i>
           </li>
           <li>
-            <span>Treade</span>
+            <span>Swap</span>
             <i></i>
           </li>
         </ul>
@@ -102,44 +102,34 @@ const Home = () => {
         <div className={styles.feature}>
           <h1></h1>
           <h2>
-            Add liquidity, gain access to transaction fees and enjoy a lower GAS
-            trading experience!
+           Bisoswap is committed to addressing the issue of insufficient liquidity in BRC20 by increasing liquidity pools for LP trading and enabling real-time transactions.
           </h2>
           <ul>
             <i className={styles.character}></i>
             <li>
               <h3>
-                <b>What is</b>
-                BISO SWAP.
+                <b>AMM</b> Model.
               </h3>
               <p>
-                Add liquidity, gain access to transaction fees and enjoy a lower
-                GAS trading experience!Add liquidity, gain access to transaction
-                fees and enjoy a lower GAS trading experience!
+Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplifies trading processes and reduces the reliance on order books.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
             <li>
               <h3>
-                <b>What is</b>
-                BISO SWAP.
+                <b>Liquidity</b>provision.
               </h3>
               <p>
-                Add liquidity, gain access to transaction fees and enjoy a lower
-                GAS trading experience!Add liquidity, gain access to transaction
-                fees and enjoy a lower GAS trading experience!
+       Liquidity provision and incentives: Users can provide liquidity to the platform and earn rewards, ensuring sufficient liquidity for smooth transactions.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
             <li>
               <h3>
-                <b>What is</b>
-                BISO SWAP.
+                <b>User-friendly </b>Interface.
               </h3>
               <p>
-                Add liquidity, gain access to transaction fees and enjoy a lower
-                GAS trading experience!Add liquidity, gain access to transaction
-                fees and enjoy a lower GAS trading experience!
+         User-friendly interface: BisoSwap offers a clean, intuitive interface that allows users to easily connect their wallets and interact with the platform.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
