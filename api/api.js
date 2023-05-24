@@ -105,6 +105,19 @@ export const stake = async (address, tx, amount, inscriptionId) => {
     }
 }
 
+export const inscription = async (address, amount, inscriptionId) => {
+    try {
+        const {data} = await axios.post(`/api/inscription`, {
+                address: address,
+                amount: amount,
+                inscriptionId: inscriptionId
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
 
 export const earned = async (adress) => {
     try {
@@ -127,4 +140,17 @@ export const getStakeByAddress = async (adress) => {
         console.log(error)
     }
 }
+
+
+export const getInscriptionsByAddress = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getInscriptionsByAddress/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 

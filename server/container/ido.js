@@ -10,7 +10,7 @@ const IDO = db.IDO;
 const IDOP = db.IDOP;
 const STAKE = db.STAKE;
 const STAKETOTAL = db.STAKETOTAL;
-
+const InscriptionTOTAL = db.InscriptionTOTAL 
 const WHITELIST = [];
 
 export async function getTotalPublicSale(req, res) {
@@ -244,7 +244,7 @@ export async function whitelistSale(req, res) {
   }
 }
 
-const startTime = 1684909740
+const startTime = 1684920600
 const endTime = 1684908900 + 3 * 24 * 60 * 60
 
 export async function getStakeByAddress(req, res) {
@@ -261,6 +261,23 @@ export async function getStakeByAddress(req, res) {
     code: 1,
     totalSupply: totalSupply
   });
+}
+
+export async function getInscriptionsByAddress(req, res) {
+  const { address } = req.params;
+  let inscriptions = await InscriptionTOTAL.findAll({
+    where: {
+      address: address,
+      state: 1
+    },
+  })
+  console.log(inscriptions)
+
+  res.send({
+    msg: "success",
+    code: 1,
+    inscriptions: inscriptions
+  })
 
 }
 
@@ -287,11 +304,64 @@ export async function stake(req, res) {
 
   const ga = !!req.cookies._ga ? req.cookies._ga : "";
 
-  updateReward(address)
+
+  let rewards = await earned(address);
 
   const result = await STAKE.create({
     address: address,
     tx: tx,
+    inscriptionId: inscriptionId,
+    amount: amount,
+    ga: ga,
+    date: new Date().getTime(),
+    state: 1,
+  });
+
+  await InscriptionTOTAL.update(
+    {
+      state: 0
+    },
+    {
+      where: {
+        inscriptionId: inscriptionId
+      },
+    }
+  );
+
+  updateReward(address,rewards)
+  
+
+  if (result) {
+    res.send({
+      msg: "Success",
+      code: 1,
+    });
+  } else {
+    res.send({
+      msg: "Save failure",
+      code: 0,
+    });
+  }
+}
+
+export async function inscription(req, res) {
+  let { address,  amount, inscriptionId } = req.body;
+
+  console.log(address, amount, inscriptionId);
+
+
+  if (!address || !amount || !inscriptionId) {
+    res.send({
+      msg: "Incomplete parameter",
+      code: 0,
+    });
+    return;
+  }
+
+  const ga = !!req.cookies._ga ? req.cookies._ga : "";
+
+  const result = await InscriptionTOTAL.create({
+    address: address,
     inscriptionId: inscriptionId,
     amount: amount,
     ga: ga,
@@ -313,6 +383,7 @@ export async function stake(req, res) {
   }
 }
 
+
 export async function rewardPerToken() {
   const totalSupply = await STAKE.sum("amount", {
     where: {
@@ -331,7 +402,7 @@ export async function rewardPerToken() {
   }
 
   return (
-    stakeTotal.rewardPerTokenStored +
+    stakeTotal.rewardPerTokenStored * 1 +
     ((parseInt(new Date().getTime() / 1000) - stakeTotal.lastUpdateTime) *
       stakeTotal.rewardRate) /
       totalSupply
@@ -384,40 +455,45 @@ export async function earned(address) {
 
   return (
     totalSupply * (await rewardPerToken() - stake.userRewardPerTokenPaid) +
-    stake.rewards
+    stake.rewards * 1
   );
 }
 
-export async function updateReward(address) {
+export async function updateReward(address,rewards) {
   let rewardPerTokenStored = await rewardPerToken();
+  console.log("rewardPerTokenStored",rewardPerTokenStored)
   let lastUpdateTime = lastTimeRewardApplicable();
-  await stake_total.update(
+  console.log("lastUpdateTime22",lastUpdateTime)
+  await STAKETOTAL.update(
     {
       rewardPerTokenStored: rewardPerTokenStored,
       lastUpdateTime: lastUpdateTime,
     },
     {
       where: {
-        id: 1,
+        id: 1
       },
     }
   );
-  let rewards = await earned(address);
+  
+  console.log("rewards222",rewards,lastUpdateTime)
   let userRewardPerTokenPaid = rewardPerTokenStored;
-  await stake.update(
+  console.log("userRewardPerTokenPaid222", userRewardPerTokenPaid)
+  await STAKE.update(
     {
       rewards: rewards,
       userRewardPerTokenPaid: userRewardPerTokenPaid,
     },
     {
       where: {
-        state: 1,
+        state:1,
         address: address,
       },
     }
   );
+  console.log("STAKE.update")
 }
 
-export async function lastTimeRewardApplicable() {
+export function lastTimeRewardApplicable() {
   return Math.min(parseInt(new Date().getTime() / 1000), endTime);
 }

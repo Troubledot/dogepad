@@ -24,7 +24,7 @@ import nft5 from '../public/stake/nft5.png'
 import nft6 from '../public/stake/nft6.png'
 import "animate.css";
 import axios from 'axios';
-import { stake, earned, getStakeByAddress } from "../api/api";
+import { stake, earned, getStakeByAddress, getInscriptionsByAddress, inscription } from "../api/api";
 
 const Stake = () => {
   const { t } = useTranslation("common");
@@ -34,6 +34,7 @@ const Stake = () => {
   const [availableBalance,setAvailableBalance] = useState(0)
   const [overallBalance,setOverallBalance] = useState(0)
   const [transferableInscriptions, setTransferableInscriptions] = useState([])
+  const [buildInscriptions, setBuildInscriptions] = useState([])
   const [mintNft, setMintNft] = useState(0)
   const [transferValue, setTransferValue] = useState(0)
   const [stakeBalance, setStakeBalance] = useState(0)
@@ -43,7 +44,7 @@ const Stake = () => {
     updateBalance()
     const timer = setInterval(async () => {
       updateBalance()
-    }, 5000);
+    }, 20000);
     return () => {
       clearInterval(timer);
     };
@@ -62,8 +63,21 @@ const Stake = () => {
                 setOverallBalance(balanceData.data.data.detail[i].overallBalance)
             }
         }
+        const Inscriptions = await getInscriptionsByAddress(accounts[0])
+        console.log("Inscriptions",Inscriptions.inscriptions)
+        let inscription1 = Inscriptions.inscriptions
         const transferableInscriptions = await axios.get(`https://unisat.io/brc20-api-v2/address/${accounts[0]}/brc20/biso/transferable-inscriptions?limit=512&start=0`)
         console.log(transferableInscriptions.data.data.detail)
+        const transferableInscription1 = transferableInscriptions.data.data.detail
+        let tempTransferableInscriptionArr = []
+        for(var i = 0; i < transferableInscription1.length; i++){
+          tempTransferableInscriptionArr.push(transferableInscription1[0].inscriptionId)
+        }
+        console.log("tempTransferableInscriptionArr", transferableInscriptions.data.data.detail, tempTransferableInscriptionArr)
+        inscription1 = inscription1.filter(item => tempTransferableInscriptionArr.indexOf(item.inscriptionId)  )
+        console.log("inscription1",Inscriptions.inscriptions, inscription1)
+        setBuildInscriptions(inscription1)
+
         setTransferableInscriptions(transferableInscriptions.data.data.detail)
         const earn = await earned(accounts[0])
         console.log("earn",earn)
@@ -82,8 +96,18 @@ const Stake = () => {
 
   const inscribeTransfer = async () => {
     window.unisat.requestAccounts()
-    let { inscriptionId } = await window.unisat.inscribeTransfer("biso",transferValue)
+    let accounts = await window.unisat.getAccounts();
+    const {data} = await axios.get(`https://mempool.space/api/v1/fees/recommended`)
+    console.log(data)
+    let { inscriptionId } = await window.unisat.inscribeTransfer("biso",transferValue,{
+      feeRate: data.halfHourFee
+    })
     console.log(inscriptionId)
+    await inscription(
+      accounts[0],
+      transferValue,
+      inscriptionId
+    )
     setTransferValue(0)
   }
 
@@ -112,7 +136,7 @@ const Stake = () => {
 
 
   return (
-    <HeaderFooter activeIndex={1}>
+    <HeaderFooter activeIndex={3}>
       <ToastContainer />
       <div className={styles.wrapper}>
         <div className={styles.top}>
@@ -128,7 +152,7 @@ const Stake = () => {
             <Timer
               formatValue={(value) => `${value < 10 ? `0${value}` : value} `}
               initialTime={
-                new Date(1684896400 * 1000).getTime() - new Date().getTime()
+                new Date(1684918800 * 1000).getTime() - new Date().getTime()
               }
               lastUnit="h"
               direction="backward"
@@ -237,6 +261,14 @@ const Stake = () => {
                   </div>
                 </div>
                 <ul className={styles.inscriptions}>
+                  {buildInscriptions.map((inscription,index) =>
+                    <li key={index}>
+                      <h1>Unconfirmed</h1>
+                      <h2>BISO</h2>
+                      <h3>{inscription.amount}</h3>
+                      <p><button className={styles.grey}>Stake</button></p>
+                    </li>
+                  )}
                   {transferableInscriptions.map((inscription,index) =>
                     <li key={index}>
                       <h1>#{inscription.inscriptionNumber}</h1>

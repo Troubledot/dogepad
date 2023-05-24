@@ -120,6 +120,7 @@
                 padding: 10px;
                 margin-right: 10px;
                 cursor: pointer;
+                text-align: center;
                 h1{
                     font-size: 14px;
                     font-weight: bold;
@@ -150,6 +151,9 @@
                         padding: 3px 15px;
                         margin: 0 auto;
                         cursor: pointer;
+                        &.grey{
+                            background: #8E8E8E;
+                        }
                     }
                 }
             }

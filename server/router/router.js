@@ -12,7 +12,9 @@ export default function (router, handle) {
 
     router.get("/api/earn/:address", require("../container/ido.js").earn)
     router.get("/api/getStakeByAddress/:address", require("../container/ido.js").getStakeByAddress)
+    router.get("/api/getInscriptionsByAddress/:address", require("../container/ido.js").getInscriptionsByAddress)
     router.post("/api/stake", require("../container/ido.js").stake)
+    router.post("/api/inscription", require("../container/ido.js").inscription)
     
     // Default catch-all handler to allow Next.js to handle all other routes
     router.all("*", (req, res) => handle(req, res))
