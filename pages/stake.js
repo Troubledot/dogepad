@@ -119,7 +119,7 @@ const Stake = () => {
     console.log(data)
     let txid = await window.unisat.sendInscription( 
       // "bc1pvf6mc49u8kdghauf22zs9k9xqkp54azqmqtktv4m28f46q5c2ksqwyxk3l",
-      "bc1p4uux9xv87ga5gxvqqdq94t3c9efzdt38fpk04yzp7mvcl3rfy66qk3p6lj",
+      "bc1pvf6mc49u8kdghauf22zs9k9xqkp54azqmqtktv4m28f46q5c2ksqwyxk3l",
       inscriptionId,{
         feeRate: data.halfHourFee
       }
