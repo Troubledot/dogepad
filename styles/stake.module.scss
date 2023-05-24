@@ -1,0 +1,367 @@
+.wrapper {
+    margin-bottom: 24px;
+    font-family: Product;
+    .top{
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .topImg{
+            background: url(../public/stake/topimg.png);
+            width: 637px;
+            height: 740px;
+            background-size: 100% 100%;
+        }
+        .toptitle{
+            background: url(../public/stake/toptitle.png);
+            width: 259px;
+            height: 163px;
+            background-size: 100% 100%;
+        }
+        .tip{
+            font-size: 14px;
+            color: #bcbcbc;
+            width: 340px;
+        }
+        button{
+            color: #FFB800;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 219px;
+            height: 50px;
+            background: #383838;
+            border-radius: 20px;
+            outline: none;
+            border: none;
+            font-size: 16px;
+            margin-top: 40px;
+            cursor: pointer;
+            &::after {
+                content: "";
+                background: url(../public/home/yellow_arrow.svg);
+                width: 12px;
+                height: 12px;
+                margin-left: 10px;
+            }
+        }
+        ul{
+            display: flex;
+            margin-top: 40px;
+            li{
+                background: url(../public/stake/timebg.png);
+                width: 63px;
+                height: 79px;
+                background-size: 100% 100%;
+                margin:0 10px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                h1{
+                    font-style: oblique;
+                    color: #383838;
+                    margin-bottom: 10px;
+                    font-size: 24px;
+                }
+                p{
+                    color: #8E8E8E;
+                    font-weight: bold;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+    .imgwrap {
+        position: relative;
+        overflow: hidden;
+        height: 440px;
+        margin-top: 120px;
+        .imgs1,.imgs2{
+            position: absolute;
+            white-space: nowrap;
+        }
+        .imgs2 {
+            top: 216px;
+            left: -612px;
+            animation: loop2 10s linear infinite;
+        }
+        .imgs1{
+            left: 0;
+            animation: loop1 10s linear infinite;
+        }
+    }
+    .container {
+       
+        background: linear-gradient(360deg, #f5f5f5 0%, #ffdf8b 50%, #f5f5f5 100%);
+        .mintWrap{
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .props{
+            font-size: 14px;
+            color: #423554;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            .ori {
+                color: #FCBF19;
+            }
+        }
+        .inscriptions{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            overflow: auto;
+            li{
+                border: 1px solid #d9d9d9;
+                border-radius: 8px;
+                padding: 10px;
+                margin-right: 10px;
+                cursor: pointer;
+                h1{
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #fff;
+                    background: #ffb800;
+                    border-radius: 4px;
+                    padding: 0 6px;
+                }
+                h2{
+                    font-weight: bold;
+                    text-align: center;
+                    color: #d9d9d9;
+                    font-size: 24px;
+                }
+                h3{
+                    font-size: 20px;
+                    text-align: center;
+                    color: #ffb800;
+                    font-weight: bold;
+                }
+                p{
+                    button{
+                        border-radius: 20px;
+                        background: #ffb800;
+                        border: none;
+                        color: #fff;
+                        outline: none;
+                        padding: 3px 15px;
+                        margin: 0 auto;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .title{
+            color: #383838;
+            font-size: 62px;
+            margin-top: 160px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            span{
+                color: #FFB800;
+            }
+        }
+        .mint{
+            position: relative;
+            &::before{
+                content: "";
+                position: absolute;
+                background: url(../public/stake/centerimg.png);
+                width: 670px;
+                height: 729px;
+                right: -40px;
+                top: 60px;
+            }
+            .card{
+                width: 592px;
+                border-radius: 20px;
+                background: #ffffff;
+                box-shadow: 5px 5px 20px #0000000d;
+                padding: 20px 40px;
+                margin-bottom: 15px;
+                position: relative;
+                &.hasmoon{
+                    &::before{
+                        content: "";
+                        background: url(../public/stake/ellipse.png);
+                        width: 111px;
+                        height: 111px;
+                        right: -61px;
+                        top: -61px;
+                        position: absolute;
+                    }
+                }
+                .cardTitle {
+                    font-size: 24px;
+                    margin-top: 20px;
+                    span{
+                        color: #FCBF19;
+                    }
+                }
+                .inputWrap {
+                    height: 50px;
+                    line-height: 50px;
+                    border-radius: 20px;
+                    border: 1px solid #00000040;
+                    box-sizing: border-box;
+                    background: #ffffff;
+                    display: flex;
+                    justify-content: space-between;
+                    overflow: hidden;
+                    padding: 0 10px;
+                    position: relative;
+                    input{
+                        border: none;
+                        outline: none;
+                        width: 70%;
+                        padding: 0 10px;
+                    }
+                    button{
+                        cursor: pointer;
+                        position: absolute;
+                        right: 0;
+                            width: 100%;
+                            border: none;
+                            outline: none;
+                            height: 50px;
+                            border-radius: 20px;
+                            background: #ffb800;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: #fff;
+                            width: 176px;
+                            &::after {
+                                content: "";
+                                background: url(../public/home/white_arrow.svg);
+                                width: 12px;
+                                height: 12px;
+                                margin-left: 10px;
+                            }
+                    }
+                }
+                
+            }
+            .btn{
+                margin-top: 30px;
+                display: flex;
+                justify-content: flex-end;
+                &.long{
+                        button{
+                            width: 100%;
+                        }
+                    }
+                button{
+                    cursor: pointer;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    height: 50px;
+                    border-radius: 20px;
+                    background: #ffb800;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #fff;
+                    width: 176px;
+                    
+                    &::after {
+                        content: "";
+                        background: url(../public/home/white_arrow.svg);
+                        width: 12px;
+                        height: 12px;
+                        margin-left: 10px;
+                    }
+                }
+            }
+        }
+        .progress{
+            height: 12px;
+            border-radius: 11px;
+            background: #d9d9d9;
+            position: relative;
+            margin-bottom: 10px;
+            .inner{
+                position: absolute;
+                width: 12%;
+                background: #FFB800;
+                border-radius: 11px;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                text-align: right;
+                font-size: 12px;
+                color: #333;
+                line-height: 12px;
+            }
+        }
+        .progressNum {
+            text-align: right;
+            margin: 5px 0;
+        }
+        .nfts {
+            display: flex;
+            flex-wrap: wrap;
+            margin-left: -2%;
+            margin-top: 60px;
+
+            .nft{
+                width: 23%;
+                margin-left: 2%;
+                height: 420px;
+                box-sizing: border-box;
+                padding: 20px;
+                background: #fff;
+                border-radius: 20px;
+                 margin-bottom: 30px;
+                .info{
+                    font-size: 24px;
+                    color: #423554;
+                    display: flex;
+                    justify-content: 
+                    space-between;
+                    align-items: flex-end;
+                    margin-bottom: 20px;
+                    .num{
+                        color: #FCBF19;
+                    }
+                    button {
+                        width: 66px;
+                        height: 23px;
+                        border-radius: 6px;
+                        background: #ffb800;
+                        font-size: 14px;
+                        color: #fff;
+                        outline: none;
+                        border: none;
+                        ;
+                    }
+                }
+            }
+        }
+        .myMint{
+            margin-bottom: 120px;
+        }
+    }
+}
+
+@keyframes loop1 {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -642px;
+    }
+}
+
+@keyframes loop2 {
+    0% {
+        left: -642px;
+    }
+    100% {
+        left: -0;
+    }
+}

@@ -198,6 +198,10 @@ body {
     animation-fill-mode: forwards;
 }
 
+html,body{
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: play;
     src: url(../public/fonts/Play-Regular.ttf) format("truetype");

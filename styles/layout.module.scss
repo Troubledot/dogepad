@@ -89,9 +89,61 @@
 }
 
 .footer{
+    background: #ECEEF1;
+    margin-top: -24px;
+    padding-top: 40px;
     .inner{
-        width: 1280px;
+        max-width: 1440px;
         margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        height: 308px;
+        .left{
+            font-size: 18px;
+            color: #383838;
+            font-family: Product;
+            p{
+                margin-left: 40px;
+                padding: 3px 0;
+                &:nth-child(2) {
+                    opacity: 0.5;
+                }
+            }
+        }
+        .logo{
+            background: url(../public/layout/botlogo.svg);
+            width: 169px;
+            height: 32px;
+            margin-bottom: 20px;
+        }
+        .right{
+            font-family: Product;
+            display: flex;
+            .social {
+                margin-right: 20px;
+            }
+            .navs{
+                display: flex;
+                >div{
+                    margin-right: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    color: #291A3D;
+                    font-size: 18px;
+                    a{
+                        margin-bottom: 5px;
+                        text-decoration: none;
+                    }
+                }
+            }
+            .title{
+                color: #FFB800;
+                margin-bottom: 20px;
+                font-weight: 700;
+                font-size: 18px;
+            }
+        }
         ul{
             text-align: center;
             li{
@@ -100,26 +152,28 @@
                 height: 50px;
                 margin: 0 10px;
                 &.tg{
-                    background: url(../public/layout/icon_tele.png) no-repeat center/100% auto;
+                    background: url(../public/layout/tele.svg) no-repeat center/100% auto;
+                    width: 26px;
+                    height: 23px;
                 }
                 &.tw{
-                    background: url(../public/layout/icon_tw.png) no-repeat center/100% auto;
-                }
-                &.logo{
-                    background: url(../public/layout/logo_mini.png) no-repeat center/100% auto;
+                    background: url(../public/layout/tw.svg) no-repeat center/100% auto;
+                    width: 29px;
+                    height: 26px;
                 }
                 &.dc{
-                    background: url(../public/layout/icon_dc.png) no-repeat center/100% auto;
+                    background: url(../public/layout/dc.svg) no-repeat center/100% auto;
                 }
                 &.gb{
-                    background: url(../public/layout/icon_github.png) no-repeat center/100% auto;
+                    background: url(../public/layout/git.svg) no-repeat center/100% auto;
+                    width: 29px;
+                    height: 25px;
                 }
                 &.md{
-                    background: url(../public/layout/icon_medium.png) no-repeat center/100% auto;
+                    background: url(../public/layout/meta.svg) no-repeat center/100% auto;
+                    width: 29px;
+                    height: 23px;
                 }
-                &.gitbook {
-                        background: url(../public/layout/icon_gitbook.png) no-repeat center/100% auto;
-                    }
             }
         }
     }
@@ -160,7 +214,6 @@
     
         .footer {
             .inner {
-                width: 100%;
                 padding: 10px 0;
                 ul {
                     text-align: center;

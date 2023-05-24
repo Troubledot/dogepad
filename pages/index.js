@@ -65,7 +65,7 @@ const Home = () => {
       <ToastContainer />
       <div className={styles.wrapper}>
         <div className={styles.slogan}>
-          <h1>The first AMM DEX  in the BRC20 ecosystem! </h1>
+          <h1>The first AMM DEX in the BRC20 ecosystem! </h1>
           <h2>BISO SWAP</h2>
           <div className={styles.rhinoceros}></div>
           <i className={styles.eth}></i>
@@ -101,31 +101,46 @@ const Home = () => {
         </ul>
         <div className={styles.feature}>
           <h1></h1>
-          <h2>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</h2>
+          <h2>
+            Add liquidity, gain access to transaction fees and enjoy a lower GAS
+            trading experience!
+          </h2>
           <ul>
             <i className={styles.character}></i>
             <li>
               <h3>
-                <b>What is</b> 
+                <b>What is</b>
                 BISO SWAP.
               </h3>
-              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <p>
+                Add liquidity, gain access to transaction fees and enjoy a lower
+                GAS trading experience!Add liquidity, gain access to transaction
+                fees and enjoy a lower GAS trading experience!
+              </p>
               <a href="#">go to Swap >></a>
             </li>
             <li>
               <h3>
-                <b>What is</b> 
+                <b>What is</b>
                 BISO SWAP.
               </h3>
-              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <p>
+                Add liquidity, gain access to transaction fees and enjoy a lower
+                GAS trading experience!Add liquidity, gain access to transaction
+                fees and enjoy a lower GAS trading experience!
+              </p>
               <a href="#">go to Swap >></a>
             </li>
             <li>
               <h3>
-                <b>What is</b> 
+                <b>What is</b>
                 BISO SWAP.
               </h3>
-              <p>Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!Add liquidity, gain access to transaction fees and enjoy a lower GAS trading experience!</p>
+              <p>
+                Add liquidity, gain access to transaction fees and enjoy a lower
+                GAS trading experience!Add liquidity, gain access to transaction
+                fees and enjoy a lower GAS trading experience!
+              </p>
               <a href="#">go to Swap >></a>
             </li>
           </ul>
@@ -133,50 +148,112 @@ const Home = () => {
         <div className={styles.info}>
           <div className={styles.inner}>
             <div className={styles.text}>
-              <h1>Used by millions.
-                <br />Trusted <b>with billions.</b></h1>
-              <p>BISOSwap has the most users of any decentralized platform, ever. And those users are now entrusting the platform with over $2.1 billion in funds.</p>
+              <h1>
+                Used by millions.
+                <br />
+                Trusted <b>with billions.</b>
+              </h1>
+              <p>
+                BISOSwap has the most users of any decentralized platform, ever.
+                And those users are now entrusting the platform with over $2.1
+                billion in funds.
+              </p>
               <ul className={styles.icon}>
                 <li>No KYC</li>
                 <li>Non-Custodial</li>
                 <li>Indefinite Term</li>
               </ul>
               <p>
-                <button>Swap Now<i></i></button>
-                <a href="#">Learn<i></i></a>
+                <button>
+                  Swap Now<i></i>
+                </button>
+                <a href="#">
+                  Learn<i></i>
+                </a>
               </p>
             </div>
             <div className={styles.bg}>
               <ul>
                 <li>
                   <h1></h1>
-                  <p>1.6 million <b>Users</b></p>
+                  <p>
+                    1.6 million <b>Users</b>
+                  </p>
                   <button>in the last 30 days</button>
                 </li>
                 <li>
                   <h1></h1>
-                  <p>1.6 million <b>Users</b></p>
+                  <p>
+                    1.6 million <b>Users</b>
+                  </p>
                   <button>in the last 30 days</button>
                 </li>
                 <li>
                   <h1></h1>
-                  <p>1.6 million <b>Users</b></p>
+                  <p>
+                    1.6 million <b>Users</b>
+                  </p>
                   <button>in the last 30 days</button>
                 </li>
               </ul>
             </div>
           </div>
-        </div> 
+        </div>
         <div className={styles.stake}>
           <div className={styles.inner}>
             <div className={styles.text}>
-              <h1>Stake passive income with crypto.</h1>
+              <h1>
+                <span className={styles.ori}>Stake</span> passive income
+                <br />
+                <span className={styles.gray}>with crypto.</span>
+              </h1>
               <p>BisoSwap makes it easy to make your crypto work for you.</p>
               <ul>
-                <li>USE $BISO EARN $BISO TOKENS</li>
-                <li>USTAKE $BISO TOKENS EARN FEES</li>
+                <li>
+                  USE $BISO <br />
+                  EARN $BISO TOKENS
+                </li>
+                <li>
+                  USTAKE $BISO TOKENS <br /> EARN FEES
+                </li>
               </ul>
+              <div className={styles.opr}>
+                <button className={styles.oribtn}>Stake Now</button>
+                <button className={styles.btn}>Learn</button>
+              </div>
             </div>
+            <div className={styles.img1}></div>
+          </div>
+          <div className={styles.inner}>
+            <div className={styles.text}>
+              <h1>
+                <span className={styles.ori}>Launchpad </span> passive <br />{" "}
+                income
+                <span className={styles.gray}> with crypto.</span>
+              </h1>
+              <p>BisoSwap makes it easy to make your crypto work for you.</p>
+              <ul>
+                <li>
+                  USE $BISO <br />
+                  EARN $BISO TOKENS
+                </li>
+                <li>
+                  USTAKE $BISO TOKENS <br /> EARN FEES
+                </li>
+              </ul>
+              <div className={styles.opr}>
+                <button className={styles.oribtn}>Stake Now</button>
+                <button className={styles.btn}>Learn</button>
+              </div>
+            </div>
+            <div className={styles.img1}></div>
+          </div>
+        </div>
+        <div className={styles.subscribe}>
+          <div className={styles.bow}></div>
+          <div className={styles.inputwrap}>
+            <input type="text" placeholder="ENTER YOUR EMAIL" />
+            <button>SUBSCRIBE</button>
           </div>
         </div>
       </div>

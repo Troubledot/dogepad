@@ -68,7 +68,7 @@
                 top: 80px;
                 width: 55px;
                 height: 60px;
-                animation: bounce 7s both infinite;
+                animation: bounce 9s both infinite;
             }
             &.ada{
                 background: url(../public/home/token_ada.svg) no-repeat center/100% auto;
@@ -76,7 +76,7 @@
                 bottom: 50px;
                 width: 45px;
                 height: 50px;
-                animation: bounce 7s both infinite;
+                animation: bounce 20s both infinite;
             }
             &.dai{
                 background: url(../public/home/token_dai.svg) no-repeat center/100% auto;
@@ -84,7 +84,7 @@
                 bottom: 160px;
                 width: 30px;
                 height: 35px;
-                animation: bounce 7s both infinite;
+                animation: bounce 5s both infinite;
             }
         }
     }
@@ -298,7 +298,7 @@
                 text-align: center;
                 overflow: hidden;
                 .inner{
-                    
+
                 }
                 ul{
                     transform: rotateZ(15deg);
@@ -332,6 +332,175 @@
                             }
                         }
                 }
+            }
+        }
+    }
+    .stake {
+        .inner{
+            width: 1185px;
+            margin: 0 auto;
+            font-family: Product;
+            margin-top: 105px;
+            position: relative;
+            display: flex;
+            &:nth-child(2) {
+                flex-direction: row-reverse;
+                .img1 {
+                    left: 0;
+                    right: auto;
+                    background: url(../public/home/img1.png);
+                    width: 439px;
+                    height: 310.2px;
+                    background-size: 100% 100%;
+                }
+            }
+            .text{
+                width: 50%;
+            }
+            h1{
+                font-size: 50px;
+                font-weight: bolder;
+                color: #373837;
+                .ori {
+                    color: #FCBF19;
+                }
+                .gray{
+                    color: #38383880;
+                }
+            }
+            p{
+                font-size: 16px;
+                margin: 20px 0;
+            }
+            ul{
+                font-size: 16px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 40px;
+                li{
+                    position: relative;
+                    padding-left: 70px;
+                    &::before{
+                        content: "";
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        background: url(../public/home/icon1.svg);
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 0;
+                    }
+                    &:nth-child(1){
+                        &::before{
+                            background: url(../public/home/icon1.svg);
+                          
+                        }
+                    }
+                    &:nth-child(2){
+                        &::before{
+                            background: url(../public/home/icon2.svg);
+                          
+                        }
+                    }
+                }
+            }
+            .opr{
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                >button {
+                    border-radius: 25px;
+                    width: 152px;
+                    height: 50px;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #29193E;
+                    background: transparent;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &::after {
+                        content: "";
+                       
+                        width: 10px;
+                        height: 10px;
+                        margin-left: 10px;
+                    }
+                    &.oribtn {
+                        color: #fff;
+                        background: #FFB800;
+                        &::after{
+                             background: url(../public/home/white_arrow.svg) no-repeat center/100% auto;
+                        }
+                    }
+                    &.btn {
+                        &::after{
+                             background: url(../public/home/blackarrow.svg) no-repeat center/100% auto;
+                        }
+                    }
+                }
+            }
+            .img1{
+                position: absolute;
+                background: url(../public/home/img2.png);
+                width: 580.8px;
+                height: 380.4px;
+                right: 0;
+                top: 0;
+                z-index: 10;
+                background-size: 100% 100%;
+            }
+        }
+    }
+    .subscribe {
+         background: url(../public/home/botbg.png) no-repeat;
+        width: 1224px;
+        height: 333px;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 100px;
+        z-index: 1;
+        .bow{
+            position: absolute;
+            background: url(../public/home/bow.png);
+            width: 410px;
+            height: 410px;
+            background-size: 100% 100%;
+            z-index: 2;
+            right: 80px;
+            top: -120px;
+        }
+        .inputwrap {
+            position: absolute;
+            border: 1px solid #ccc;
+            top: 180px;
+            left: 160px;
+            height: 50px;
+            width: 600px;
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            font-size: 18px;
+            input{
+                height: 100%;
+                border: none;
+                outline: none;
+                padding: 0 20px;
+                width: 80%;
+                font-size: 18px;
+                background: #fff;
+            }
+            button {
+                cursor: pointer;
+                flex-grow: 1;
+                outline: none;
+                border: none;
+                background: #fff;
+                color: #FFD766;
             }
         }
     }

@@ -32,6 +32,8 @@ const db = {
 //user table model
 db.IDO = db.sequelize.import("../model/ido.js")
 db.IDOP = db.sequelize.import("../model/idop.js")
+db.STAKE = db.sequelize.import("../model/stake.js")
+db.STAKETOTAL = db.sequelize.import("../model/stake_total.js")
 db.Op = Op;
 
 export default db;

@@ -88,3 +88,43 @@ export const whitelistSale = async (address, tx, whitelist_amount) => {
     }
     
 }
+
+
+export const stake = async (address, tx, amount, inscriptionId) => {
+    try {
+        const {data} = await axios.post(`/api/stake`, {
+                address: address,
+                tx: tx,
+                amount: amount,
+                inscriptionId: inscriptionId
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
+export const earned = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/earn/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getStakeByAddress = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getStakeByAddress/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
