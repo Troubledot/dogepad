@@ -117,7 +117,7 @@ const Home = () => {
                 GAS trading experience!Add liquidity, gain access to transaction
                 fees and enjoy a lower GAS trading experience!
               </p>
-              <a href="#">go to Swap >></a>
+              <a href="#">go to Swap &gt;&gt;</a>
             </li>
             <li>
               <h3>
@@ -129,7 +129,7 @@ const Home = () => {
                 GAS trading experience!Add liquidity, gain access to transaction
                 fees and enjoy a lower GAS trading experience!
               </p>
-              <a href="#">go to Swap >></a>
+              <a href="#">go to Swap &gt;&gt;</a>
             </li>
             <li>
               <h3>
@@ -141,7 +141,7 @@ const Home = () => {
                 GAS trading experience!Add liquidity, gain access to transaction
                 fees and enjoy a lower GAS trading experience!
               </p>
-              <a href="#">go to Swap >></a>
+              <a href="#">go to Swap &gt;&gt;</a>
             </li>
           </ul>
         </div>
