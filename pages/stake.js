@@ -299,6 +299,8 @@ const Stake = () => {
                 <div className={styles.progress}>
                   <div className={styles.inner} style={{"width": (mintNft % 1) * 100 + "%"}}>{ ((mintNft % 1) * 100).toFixed(2) + "%"}</div>
                 </div>
+              <p> 27 May 2023 09:30:00 GMT withdraw the pledged $BISO and open the blind box to obtain the NFT</p>
+
               </div>
             </div>
             <div className={styles.myMint}>
