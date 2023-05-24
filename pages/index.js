@@ -144,7 +144,7 @@ Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplif
                 <b> project stakeholders</b>
               </h1>
               <p>
-               We're gonna offer users all the decentralized services, and provide project partners with services like fundraising, distribution, and airdrops.
+               We&apos;re gonna offer users all the decentralized services, and provide project partners with services like fundraising, distribution, and airdrops.
               </p>
               <ul className={styles.icon}>
                 <li>No KYC</li>
