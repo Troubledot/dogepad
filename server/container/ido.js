@@ -118,6 +118,22 @@ export async function publicSale(req, res) {
   }
 }
 
+export async function getTotalStake(req, res) {
+  const totalStake = await STAKE.sum("amount",{
+    where: {
+      state: 1,
+    },
+  });
+
+  res.send({
+    msg: "success",
+    code: 1,
+    data: {
+      totalStake: totalStake,
+    },
+  });
+}
+
 export async function getTotalWhitelistSale(req, res) {
   const totalWhitelistSale = await IDO.sum("whitelist_amount", {
     where: {

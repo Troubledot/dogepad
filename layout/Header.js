@@ -68,7 +68,7 @@ const Header = (props) => {
                     <li className={cx({
                             active: activeIndex === 2
                     })}>Launchpad</li>
-                    <Link href="/stake">
+                    <Link href="/staking">
                         <li className={cx({
                                 active: activeIndex === 3
                         })}>Stake</li>

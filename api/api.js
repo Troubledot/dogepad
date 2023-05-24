@@ -24,6 +24,18 @@ export const getTotalPublicSale = async () => {
     }
 }
 
+export const getTotalStake = async () => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getTotalStake`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
 export const getPublicSaleByAddress = async (adress) => {
     try {
         const {
