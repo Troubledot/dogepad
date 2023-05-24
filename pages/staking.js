@@ -24,7 +24,7 @@ import nft5 from '../public/stake/nft5.png'
 import nft6 from '../public/stake/nft6.png'
 import "animate.css";
 import axios from 'axios';
-import { stake, earned, getStakeByAddress, getInscriptionsByAddress, inscription } from "../api/api";
+import { stake, earned, getStakeByAddress, getInscriptionsByAddress, inscription,getTotalStake } from "../api/api";
 
 const Stake = () => {
   const { t } = useTranslation("common");
@@ -39,10 +39,13 @@ const Stake = () => {
   const [transferValue, setTransferValue] = useState(0)
   const [stakeBalance, setStakeBalance] = useState(0)
   const [box,setBox] = useState([])
+  const [totalStake,setTotalStake] = useState(0)
 
   useEffect(async() => {
     updateBalance()
     const timer = setInterval(async () => {
+      const  totalStake = await getTotalStake()
+      setTotalStake(totalStake.data.totalStake)
       updateBalance()
     }, 5000);
     return () => {
@@ -229,8 +232,9 @@ const Stake = () => {
               <div className={styles.title}>
                 <span>Mint</span>
                 <br />
-                BISO NFT
+                BISO NFT 
               </div>
+              <div className={styles.total_stake}>Total Stake $BISO : {totalStake}</div>
               <div className={classNames(styles.card, styles.hasmoon)}>
                 <div className={styles.cardTitle}>
                   <span>Stake $BISO</span> Earn NFT.
