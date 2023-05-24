@@ -21,7 +21,7 @@ import nft2 from '../public/stake/nft2.png'
 import nft3 from '../public/stake/nft3.png'
 import nft4 from '../public/stake/nft4.png'
 import nft5 from '../public/stake/nft5.png'
-import nft6 from '../public/stake/nft6.png'
+import nft6 from '../public/stake/info.png'
 import "animate.css";
 import axios from 'axios';
 import { stake, earned, getStakeByAddress, getInscriptionsByAddress, inscription } from "../api/api";
