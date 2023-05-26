@@ -156,19 +156,19 @@ const Stake = () => {
               <div className={styles.detail}>
                 <div className={styles.rows}>
                   <span>Website</span>
-                  <span><a href="https://arkstart.org" target="_blank">https://arkstart.org</a></span>
+                  <span><a href="https://arkstart.org" target="_blank"   rel="noreferrer">https://arkstart.org</a></span>
                 </div>
                 <div className={styles.rows}>
                   <span>Twitter</span>
-                  <span><a href="https://twitter.com/arkscoin" target="_blank">https://twitter.com/arkscoin</a></span>
+                  <span><a href="https://twitter.com/arkscoin" target="_blank"   rel="noreferrer">https://twitter.com/arkscoin</a></span>
                 </div>
                 <div className={styles.rows}>
                   <span>Medium</span>
-                  <span><a href="https://medium.com/@arkstart" target="_blank">https://medium.com/@arkstart</a></span>
+                  <span><a href="https://medium.com/@arkstart" target="_blank"   rel="noreferrer">https://medium.com/@arkstart</a></span>
                 </div>
                 <div className={styles.rows}>
                   <span>Telegarm</span>
-                  <span><a href="https://t.me/ArkstartOfficial" target="_blank">https://t.me/ArkstartOfficial</a></span>
+                  <span><a href="https://t.me/ArkstartOfficial" target="_blank"   rel="noreferrer">https://t.me/ArkstartOfficial</a></span>
                 </div>
                 {/* <div className={styles.deadline}>
                   <div className={styles.rows}>
