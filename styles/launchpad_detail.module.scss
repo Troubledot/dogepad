@@ -250,7 +250,9 @@
             display: flex;
             justify-content: space-between;
             padding: 5px 0;
-
+            a{
+              color: #64708b;
+            }
             span {
               &:first-child {
                 font-weight: bold;

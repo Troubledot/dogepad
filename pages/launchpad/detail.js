@@ -55,13 +55,13 @@ const Stake = () => {
                   <img src="/launchpad/arks.jpg" />
                 </i>
                 <h2>Arkstart</h2>
-                <dt>
+                {/* <dt>
                   <dl className={styles.twitter}></dl>
                   <dl className={styles.telegarm}></dl>
                   <dl className={styles.medium}></dl>
                   <dl className={styles.github}></dl>
                   <dl className={styles.discord}></dl>
-                </dt>
+                </dt> */}
               </span>
               <p>
                 The decentralized Muon network is like a distributed
@@ -153,24 +153,24 @@ const Stake = () => {
                   </div>
                 </div>
               </div>
-              {/* <div className={styles.detail}>
+              <div className={styles.detail}>
                 <div className={styles.rows}>
-                  <span>Start</span>
-                  <span>2023-05-27 13:00:00 UTC+8</span>
+                  <span>Website</span>
+                  <span><a href="https://arkstart.org" target="_blank">https://arkstart.org</a></span>
                 </div>
                 <div className={styles.rows}>
-                  <span>Start</span>
-                  <span>2023-05-27 13:00:00 UTC+8</span>
+                  <span>Twitter</span>
+                  <span><a href="https://twitter.com/arkscoin" target="_blank">https://twitter.com/arkscoin</a></span>
                 </div>
                 <div className={styles.rows}>
-                  <span>Start</span>
-                  <span>2023-05-27 13:00:00 UTC+8</span>
+                  <span>Medium</span>
+                  <span><a href="https://medium.com/@arkstart" target="_blank">https://medium.com/@arkstart</a></span>
                 </div>
                 <div className={styles.rows}>
-                  <span>Start</span>
-                  <span>2023-05-27 13:00:00 UTC+8</span>
+                  <span>Telegarm</span>
+                  <span><a href="https://t.me/ArkstartOfficial" target="_blank">https://t.me/ArkstartOfficial</a></span>
                 </div>
-                <div className={styles.deadline}>
+                {/* <div className={styles.deadline}>
                   <div className={styles.rows}>
                     <span>Start</span>
                     <span>2023-05-27 13:00:00 UTC+8</span>
@@ -183,8 +183,8 @@ const Stake = () => {
                     If the target value is not achieved in the end, crowdfunding
                     will fail
                   </div>
-                </div>
-              </div> */}
+                </div> */}
+              </div>
             </div>
 
             <div className={styles.right}>
