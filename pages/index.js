@@ -139,7 +139,7 @@ Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplif
           <div className={styles.inner}>
             <div className={styles.text}>
               <h1>
-                We server users and 
+                We serve users and 
                 <br />
                 <b> project stakeholders</b>
               </h1>

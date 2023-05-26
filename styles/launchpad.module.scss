@@ -1,0 +1,123 @@
+.wrapper {
+  .inner {
+    width: 1080px;
+    margin: 0 auto;
+    background: url(../public/launchpad/launchpad_top.png) no-repeat center top/
+      100% auto;
+    padding: 150px 0 60px 0;
+    .info {
+      padding-right: 500px;
+      margin-top: 50px;
+      h1 {
+        font-size: 50px;
+        color: #291a3d;
+      }
+      h2 {
+        font-size: 50px;
+        color: #ffb800;
+      }
+      p {
+        color: #878a99;
+        font-size: 14px;
+        padding: 20px 0;
+        button {
+          background: #fcbf19;
+          border-radius: 25px;
+          color: #ffffff;
+          width: 152px;
+          height: 50px;
+          border: none;
+          cursor: pointer;
+          font-size: 14px;
+
+          i {
+            background: url(../public/home/white_arrow.svg) no-repeat
+              center/100% auto;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+          }
+        }
+
+        a {
+          color: #29193e;
+          font-size: 16px;
+          margin-left: 10px;
+          padding: 0 30px;
+
+          i {
+            background: url(../public/home/grey_arrow.svg) no-repeat center/100%
+              auto;
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin-left: 10px;
+          }
+        }
+      }
+      .data {
+        padding: 50px 0;
+        position: relative;
+        width: 1080px;
+        b{
+            background: url(../public/home/rhinoceros.png) no-repeat center/100% auto;
+            position: absolute;
+            width: 450px;
+            height: 374px;
+            bottom: 301px;
+            right: -80px;
+        }
+        ul {
+          display: flex;
+          justify-content: space-between;
+          li {
+            width: 243px;
+            height: 251px;
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+
+            i {
+              background: url(../public/launchpad/launchpad_icon1.png) no-repeat
+                center/100% auto;
+                display: inline-block;
+                width: 80px;
+                height: 80px;
+            }
+            h1{
+                font-size: 30px;
+                line-height: 50px;
+            }
+            h2{
+                font-size: 18px;
+                color: #FFB800;
+            }
+            p{
+                font-size: 16px;
+                color: rgba(0, 0, 0, 0.25);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes loop1 {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -642px;
+  }
+}
+
+@keyframes loop2 {
+  0% {
+    left: -642px;
+  }
+  100% {
+    left: -0;
+  }
+}

@@ -65,9 +65,11 @@ const Header = (props) => {
                             active: activeIndex === 1
                     })}>Home</li>
                     </Link>
+                    <Link href="/launchpad">
                     <li className={cx({
                             active: activeIndex === 2
                     })}>Launchpad</li>
+                    </Link>
                     <Link href="/staking">
                         <li className={cx({
                                 active: activeIndex === 3
