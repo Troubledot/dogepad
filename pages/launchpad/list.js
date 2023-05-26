@@ -58,9 +58,9 @@ const Stake = () => {
                         <i> <img src="/launchpad/arks.jpg" /></i>
                         <h2>Arkstart</h2>
                         <dt>
-                          <a href="https://twitter.com/arkscoin" target="_blank"><dl className={styles.twitter}></dl></a>
-                          <a href="https://t.me/ArkstartOfficial" target="_blank"><dl className={styles.telegarm}></dl></a>
-                          <a href="https://medium.com/@arkstart" target="_blank"><dl className={styles.medium}></dl></a>
+                          <a href="https://twitter.com/arkscoin" target="_blank"  rel="noreferrer"><dl className={styles.twitter}></dl></a>
+                          <a href="https://t.me/ArkstartOfficial" target="_blank"  rel="noreferrer"><dl className={styles.telegarm}></dl></a>
+                          <a href="https://medium.com/@arkstart" target="_blank"  rel="noreferrer"><dl className={styles.medium}></dl></a>
                         </dt>
                     </span>
                     <p>The first project to adopt the VE (3,3) model on the #BRC20 protocol .</p>
