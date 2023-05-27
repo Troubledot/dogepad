@@ -640,9 +640,9 @@ export async function getRefundByAddress(req, res) {
     },
   })
 
-  console.log("REFUND",JSON.parse(JSON.stringify(result)).tx)
+  // console.log("REFUND",JSON.parse(JSON.stringify(result)).tx)
 
-  if (!!JSON.parse(JSON.stringify(result)).tx) {
+  if (result && !!JSON.parse(JSON.stringify(result)).tx) {
     res.send({
       msg: "Success",
       code: 1,
