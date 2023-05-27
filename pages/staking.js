@@ -1719,7 +1719,7 @@ const Stake = () => {
           tempArr.push("")
         }
         console.log("tempArr",tempArr)
-        setBox(tempArr)
+        setBox([])
         const luckBox = await getBoxByAddress(accounts[0], "1")
         console.log("luckBox",luckBox)
         const luckNumber = whiteListAddress.filter(item=> item.address == accounts[0] )
