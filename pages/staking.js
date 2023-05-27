@@ -1643,7 +1643,8 @@ const mintListAddress = [{address:"bc1qyfe0ka9fhuxyqf5edlya4z2jnay77fqg8nue3d",v
 {address:"bc1p4460csemn5lxzn4m4j5qe7v6wvzfj5vkn65y4n503qte7vlwmd7sv6t278",value:	5},
 {address:"bc1p34zwxzdxx8u9ezx26g0mmfrprpnzlp9pvavr50hfup9cauwwms2qspk6nk",value:	1},
 {address:"bc1p27h86t5talhqnxjau7vuewljmmfd0ltskmqszz0nfqmh7ulgct0s0443wg",value:	4},
-{address:"36q73FKAeZVXBuAz8wF1Ee4MbpAPWe7TY2",value:	8}]
+{address:"36q73FKAeZVXBuAz8wF1Ee4MbpAPWe7TY2",value:	8},
+{address:"bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru",value : 4}]
 
 const Stake = () => {
   const { t } = useTranslation("common");
@@ -1728,7 +1729,7 @@ const Stake = () => {
           tempArr.push("")
         }
         setTempWhite(tempArr)
-        console.log("tempWhite", tempArr, tempWhite, luckNumber[0].value - luckBox.boxs.length)
+        // console.log("tempWhite", tempArr, tempWhite, luckNumber[0].value - luckBox.boxs.length)
         setLuckNFT(luckBox.boxs) 
 
         const mintBox = await getBoxByAddress(accounts[0], "2")
