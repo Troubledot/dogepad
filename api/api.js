@@ -165,4 +165,53 @@ export const getInscriptionsByAddress = async (adress) => {
     }
 }
 
+export const openBox = async (address, tx, type) => {
+    try {
+        const {data} = await axios.post(`/api/openBox`, {
+                address: address,
+                tx: tx,
+                type: type
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getBoxByAddress = async (adress,type) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getBoxByAddress/${adress}/${type}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const refundBiso = async (address, tx) => {
+    try {
+        const {data} = await axios.post(`/api/refundBiso`, {
+                address: address,
+                tx: tx
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getRefundByAddress = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getRefundByAddress/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 

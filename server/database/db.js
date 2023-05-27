@@ -35,6 +35,8 @@ db.IDOP = db.sequelize.import("../model/idop.js")
 db.STAKE = db.sequelize.import("../model/stake.js")
 db.STAKETOTAL = db.sequelize.import("../model/stake_total.js")
 db.InscriptionTOTAL = db.sequelize.import("../model/inscription_total.js")
+db.BOX = db.sequelize.import("../model/box.js")
+db.REFUND = db.sequelize.import("../model/refund.js")
 db.Op = Op;
 
 export default db;

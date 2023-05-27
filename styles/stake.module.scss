@@ -343,6 +343,9 @@
                 background: #fff;
                 border-radius: 20px;
                  margin-bottom: 30px;
+                img {
+                        border-radius: 5px;
+                    }
                 button.open {
                         cursor: pointer;
                         width: 100%;
@@ -367,6 +370,7 @@
                     space-between;
                     align-items: flex-end;
                     margin-bottom: 20px;
+                   
                     .num{
                         color: #FCBF19;
                     }
