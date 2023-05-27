@@ -226,9 +226,28 @@ const Stake = () => {
             <Image src={nft5} alt="nft5" width={214} height={214}></Image>
             <Image src={nft6} alt="nft6" width={214} height={214}></Image>
           </div>
-        </div>
+        </div> 
         <div className={styles.container} id="mint">
           <div className={styles.mintWrap}>
+             <div className={styles.myMint}>
+              <div className={styles.title}>My Lucy NFT</div>
+              <div>My Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFT</div>
+                 <div className={styles.nfts}>
+                {["",""].map((e,index)=>
+                <div  key={index} className={styles.nft}>
+                  <div className={styles.info}>
+                    <div>
+                      <div className={styles.num}>#????</div>
+                      <div className={styles.name}>BISO NFT</div>
+                    </div>
+                    <button>Box</button>
+                  </div>
+                  <Image src={boxNft} alt="ntf" width={300} height={300}></Image>
+                  <button className={styles.open}>Open Box</button>
+                </div>)
+              }
+              </div>  
+            </div>
             <div className={styles.mint}>
               <div className={styles.title}>
                 <span>Mint</span>
@@ -304,8 +323,8 @@ const Stake = () => {
                 <div className={styles.progress}>
                   <div className={styles.inner} style={{"width": (mintNft % 1) * 100 + "%"}}>{ ((mintNft % 1) * 100).toFixed(2) + "%"}</div>
                 </div>
-              <p> 27 May 2023 09:30:00 GMT withdraw the pledged $BISO and open the blind box to obtain the NFT</p>
-
+                <p>27 May 2023 09:30:00 GMT withdraw the pledged $BISO and open the blind box to obtain the NFT</p>
+               <p><button>Withdraw</button></p>
               </div>
             </div>
             <div className={styles.myMint}>
@@ -321,10 +340,10 @@ const Stake = () => {
                     <button>Box</button>
                   </div>
                   <Image src={boxNft} alt="ntf" width={300} height={300}></Image>
+                  <button className={styles.open}>Open Box</button>
                 </div>)
               }
-              </div>
-              
+              </div>  
             </div>
           </div>
         </div>

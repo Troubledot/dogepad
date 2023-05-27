@@ -203,6 +203,21 @@
                     p{
                         font-size: 12px;
                         color: #ff0000;
+                        button {
+                                cursor: pointer;
+                                margin-top: 20px;
+                                width: 100%;
+                                border: none;
+                                outline: none;
+                                height: 50px;
+                                border-radius: 20px;
+                                background: #ffb800;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                color: #fff;
+                                width: 176px;
+                            }
                     }
                 }
                 .cardTitle {
@@ -328,6 +343,22 @@
                 background: #fff;
                 border-radius: 20px;
                  margin-bottom: 30px;
+                button.open {
+                        cursor: pointer;
+                        width: 100%;
+                        margin: 0 auto;
+                        border: none;
+                        outline: none;
+                        height: 50px;
+                        border-radius: 20px;
+                        background: #ffb800;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        width: 176px;
+                        margin-top: 10px;
+                    }
                 .info{
                     font-size: 24px;
                     color: #423554;
