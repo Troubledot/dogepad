@@ -229,7 +229,7 @@ const Stake = () => {
         </div> 
         <div className={styles.container} id="mint">
           <div className={styles.mintWrap}>
-             <div className={styles.myMint}>
+             {/* <div className={styles.myMint}>
               <div className={styles.title}>My Lucy NFT</div>
               <div>My Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFTMy Lucy NFT</div>
                  <div className={styles.nfts}>
@@ -247,7 +247,7 @@ const Stake = () => {
                 </div>)
               }
               </div>  
-            </div>
+            </div> */}
             <div className={styles.mint}>
               <div className={styles.title}>
                 <span>Mint</span>
@@ -324,7 +324,7 @@ const Stake = () => {
                   <div className={styles.inner} style={{"width": (mintNft % 1) * 100 + "%"}}>{ ((mintNft % 1) * 100).toFixed(2) + "%"}</div>
                 </div>
                 <p>27 May 2023 09:30:00 GMT withdraw the pledged $BISO and open the blind box to obtain the NFT</p>
-               <p><button>Withdraw</button></p>
+               {/* <p><button>Withdraw</button></p> */}
               </div>
             </div>
             <div className={styles.myMint}>
