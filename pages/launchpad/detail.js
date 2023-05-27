@@ -126,11 +126,11 @@ const Stake = () => {
                   </div>
                   <dl>
                     <dt>
-                      <h1>0.0 ETH</h1>
+                      <h1>0.0 BTC</h1>
                       <p>Current fundraising</p>
                     </dt>
                     <dt>
-                      <h1>0.0 ETH</h1>
+                      <h1>0.0 BTC</h1>
                       <p>Target fundraising</p>
                     </dt>
                   </dl>
