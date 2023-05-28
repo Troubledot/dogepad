@@ -1683,6 +1683,7 @@ const Stake = () => {
   const updateBalance = async() => {
     let accounts = await window.unisat.getAccounts();
       if(accounts[0]){
+        // accounts[0] = "bc1pquz9fjtherpg28gq7dns5llhha90x7rzckwkpae2squrrm82e53slpjl74"
         const balanceData  = await axios.get(`https://unisat.io/brc20-api-v2/address/${accounts[0]}/brc20/summary?start=0&limit=100`)
         for(var i = 0; i < balanceData.data.data.detail.length; i++){
             console.log(balanceData.data.data.detail[i])
@@ -1709,8 +1710,10 @@ const Stake = () => {
 
         setTransferableInscriptions(transferableInscriptions.data.data.detail)
         const earn = await earned(accounts[0])
+        const earnNum = mintListAddress.filter(item => item.address == accounts[0])
+        console.log("earnNum",earnNum)
         console.log("earn",earn)
-        setMintNft(earn.earn)
+        setMintNft(earnNum.length > 0 ? earnNum[0].value : 0)
         const stakeBiso = await getStakeByAddress(accounts[0])
         console.log("stakeBiso",stakeBiso)
         setStakeBalance(stakeBiso.totalSupply)
