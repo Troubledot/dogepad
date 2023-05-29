@@ -1644,7 +1644,8 @@ const mintListAddress = [{address:"bc1qyfe0ka9fhuxyqf5edlya4z2jnay77fqg8nue3d",v
 {address:"bc1p34zwxzdxx8u9ezx26g0mmfrprpnzlp9pvavr50hfup9cauwwms2qspk6nk",value:	1},
 {address:"bc1p27h86t5talhqnxjau7vuewljmmfd0ltskmqszz0nfqmh7ulgct0s0443wg",value:	4},
 {address:"36q73FKAeZVXBuAz8wF1Ee4MbpAPWe7TY2",value:	8},
-{address:"bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru",value : 4}]
+{address:"bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru",value : 4},
+{address:"bc1pcpxh0443q9mr9e8m55dpx2pu7c070tar63q08u0cknu396urtpjsz9nv08", value:5}]
 
 const Stake = () => {
   const { t } = useTranslation("common");
@@ -2049,7 +2050,10 @@ const Stake = () => {
                       <h1>#{inscription.inscriptionNumber}</h1>
                       <h2>BISO</h2>
                       <h3>{inscription.data.amt}</h3>
-                      <p><button onClick={()=>sendInscription(inscription.inscriptionId, inscription.data.amt )}>Stake</button></p>
+                      <p><button 
+                      // onClick={()=>sendInscription(inscription.inscriptionId, inscription.data.amt )}
+                      
+                      >Stake</button></p>
                     </li>
                   )}
                 </ul>
@@ -2075,6 +2079,7 @@ const Stake = () => {
                   <div className={styles.inner} style={{"width": (mintNft % 1) * 100 + "%"}}>{ ((mintNft % 1) * 100).toFixed(2) + "%"}</div>
                 </div>
                 <p>27 May 2023 09:30:00 GMT withdraw the pledged $BISO and open the blind box to obtain the NFT</p>
+                <p>The deadline for collecting the blind box is: 31 May 2023 07:00:00 GMT</p>
                <p><button onClick={()=>refund()}>Withdraw</button></p>
               </div>
             </div>
