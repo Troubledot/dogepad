@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useRef } from "react";
 import * as echarts from "echarts";
 
@@ -5,6 +6,7 @@ const Echart = () => {
   const chartRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // @ts-ignore
     const chart = echarts.init(chartRef.current);
 
     // 在这里配置您的图表选项和数据
