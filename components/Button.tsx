@@ -1,44 +1,59 @@
-import React from 'react';
-import Link from 'next/link';
-import styles from '../styles/button.module.scss';
+import React from "react";
+import Link from "next/link";
+import styles from "../styles/button.module.scss";
 enum Size {
-  Small = 'small',
-  Medium = 'medium',
-  Large = 'large'
+  Small = "small",
+  Medium = "medium",
+  Large = "large",
 }
 
 export interface ButtonProps {
-  text: string;
   backgroundColor: string;
   fontSize: number;
   size: Size;
   link?: string | null;
+  renderContent: () => any;
   handleClick: () => void;
 }
 
-const Button = ({ text, link, fontSize, size, backgroundColor, handleClick }: ButtonProps) => {
+const Button = ({
+  link,
+  fontSize,
+  size,
+  backgroundColor,
+  handleClick,
+  renderContent,
+}: ButtonProps) => {
+  debugger;
   if (link) {
     return (
       <Link href={link}>
-        <a style={{ fontSize, backgroundColor }} className={`${size} ${styles.btn}`}>
-          {text}
+        <a
+          style={{ fontSize, backgroundColor }}
+          className={`${size} ${styles.btn}`}
+        >
+          {renderContent()}
         </a>
       </Link>
     );
   }
   return (
-    <div style={{ fontSize, backgroundColor }} onClick={handleClick} className={`${size} ${styles.btn}`}>
-      {text}
+    <div
+      style={{ fontSize, backgroundColor }}
+      onClick={handleClick}
+      className={`${size} ${styles.btn}`}
+    >
+      {renderContent()}
     </div>
   );
 };
 
 Button.defaultProps = {
-  text: 'Mint',
-  backgroundColor: '#ccc',
-  size: Size.Small,
+  text: "Mint",
+  backgroundColor: "#ccc",
+  size: Size.Medium,
   fontSize: 14,
-  link: null
+  link: null,
 };
 
 export default Button;

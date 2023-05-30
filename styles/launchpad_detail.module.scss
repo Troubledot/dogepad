@@ -1,11 +1,23 @@
 .wrapper {
-  .inner {
-    width: 1080px;
+  background-color: #f5f5f5;
+  padding-bottom: 60px;
+  .ori {
+    color: #fcbf19;
+  }
+  .red {
+    color: #ee492e;
+  }
+  .blue {
+    color: #73b0e0;
+  }
+  .topimg {
+    width: 1440px;
     margin: 0 auto;
     background: url(../public/launchpad/launchpad_top.png) no-repeat center
       top/100% auto;
-    padding: 150px 0 60px 0;
+    padding: 150px 0 30px 0;
     overflow: hidden;
+
     .projects {
       li {
         width: 100%;
@@ -26,7 +38,7 @@
               border-radius: 20px 20px 0 0;
               object-fit: cover;
               height: 100%;
-                  object-position: center 80%;
+              object-position: center 80%;
             }
             height: 250px;
             overflow: hidden;
@@ -250,7 +262,7 @@
             display: flex;
             justify-content: space-between;
             padding: 5px 0;
-            a{
+            a {
               color: #64708b;
             }
             span {
@@ -294,35 +306,248 @@
         flex: 1;
         margin-left: 20px;
         border-radius: 20px;
-            overflow: hidden;
-            padding: 20px;
-            font-size: 12px;
-            img{
-              margin-bottom: 20px;
-            }
-            p{
-              color: #383838;
-              line-height: 1.5em;
-            }
+        overflow: hidden;
+        padding: 20px;
+        font-size: 12px;
+        img {
+          margin-bottom: 20px;
+        }
+        p {
+          color: #383838;
+          line-height: 1.5em;
+        }
       }
     }
   }
-}
 
-@keyframes loop1 {
-  0% {
-    left: 0;
-  }
-  100% {
-    left: -642px;
-  }
-}
-
-@keyframes loop2 {
-  0% {
-    left: -642px;
-  }
-  100% {
-    left: -0;
+  .container {
+    width: 1280px;
+    margin: 0 auto;
+    .card {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      &.grayback {
+        background-color: rgba(227, 227, 227, 0.5);
+      }
+    }
+    .project {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .banner {
+        width: 672px;
+        height: 340px;
+        flex-shrink: 0;
+        background-color: #cfcfcf;
+        border-radius: 20px;
+        margin-right: 20px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .title {
+          font-size: 34px;
+          color: #525252;
+          font-weight: bold;
+        }
+        .avatar {
+          display: flex;
+          align-items: center;
+          .name {
+            color: #000;
+            font-size: 18px;
+            margin-left: 12px;
+          }
+        }
+        .intro {
+          font-size: 12px;
+          color: #64708b;
+          background-color: #e3e3e3;
+          padding: 20px;
+          border-radius: 20px;
+          line-height: 20px;
+        }
+        .contact {
+          display: flex;
+          align-items: center;
+          .item {
+            margin-right: 20px;
+          }
+        }
+      }
+    }
+    .swap {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      .item {
+        width: 630px;
+        .title {
+          font-size: 24px;
+          font-weight: bold;
+          color: #423554;
+          display: flex;
+          align-items: center;
+          position: relative;
+          padding-bottom: 29px;
+          margin-bottom: 29px;
+          border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+          &::before {
+            content: "";
+            background: url(../public/launchpad/titleicon.png);
+            width: 57px;
+            height: 50px;
+            background-size: 100% 100%;
+            margin-right: 10px;
+          }
+          .deadline {
+            position: absolute;
+            right: 0;
+          }
+        }
+      }
+      .list {
+        display: flex;
+        justify-content: space-between;
+        margin: 16px 0;
+        font-size: 18px;
+        .label {
+          color: #64708b;
+          font-weight: bold;
+        }
+        &.small {
+          font-size: 14px;
+          .label {
+            color: #423554;
+          }
+        }
+      }
+      .amount {
+        padding: 24px;
+        border-radius: 20px;
+        background-color: #f6f6f6;
+        margin: 30px 0;
+      }
+      .btnText {
+        margin-right: 6px;
+      }
+    }
+    .team {
+      .title {
+        font-size: 34px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+      .member {
+        background-color: #f3f9fd;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 290px;
+        padding: 20px;
+        .name {
+          font-size: 24px;
+          margin-top: 5px;
+        }
+        .position {
+          font-size: 18px;
+          margin: 10px 0;
+        }
+        p {
+          color: rgba(0, 0, 0, 0.25);
+          font-size: 16px;
+          font-weight: bold;
+          text-align: center;
+        }
+      }
+    }
+    .data {
+      display: flex;
+      .protocol {
+        width: 725px;
+        flex-shrink: 0;
+        color: #000;
+        .title {
+          font-size: 48px;
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          &::before {
+            content: "";
+            width: 17px;
+            height: 17px;
+            background-color: #fcbf19;
+            border-radius: 2px;
+            margin-right: 20px;
+          }
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          padding-bottom: 40px;
+          position: relative;
+          margin-bottom: 20px;
+          &::before {
+            content: "";
+            width: 110px;
+            height: 10px;
+            background-color: #fcbf19;
+            border-radius: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .other {
+      margin-left: 20px;
+      .card {
+        margin-bottom: 20px;
+      }
+      .list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 10px 0;
+        font-size: 18px;
+        .label {
+          color: #64708b;
+          font-weight: bold;
+        }
+      }
+      .inner {
+        background-color: #f3f9fd;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .tips {
+        background-color: #e3e3e3;
+        color: #afafaf;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .prompt {
+        .title {
+          font-size: 24px;
+          color: #423554;
+          margin-bottom: 20px;
+        }
+        p {
+          line-height: 20px;
+          font-size: 12px;
+          color: #64708b;
+          margin-bottom: 10px;
+        }
+      }
+    }
   }
 }
