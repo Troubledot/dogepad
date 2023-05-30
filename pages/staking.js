@@ -1555,7 +1555,9 @@ const whiteListAddress =[{address:"16G1xYBbiNG78LSuZdMqp6tux5xvVp9Wxh", value:	3
 {address:"bc1pdttw7ftqkuwxqjs682zahlv6zlmckkvw7tneyrjahq5ja5yzh5jqplpa89", value:	1},
 {address:"bc1qqvxqkwlepct7yhht9yuyy04fgpmgm79v680jmn", value:	1},
 {address:"bc1p0sf06p9zse2m8tkjsxtlwlw7w550qfmyvyf53nsf6rmx7dxqdndqwlnyte", value:	1},
-{address:"bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru",value : 4}]
+{address:"bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru",value : 4},
+{address:"bc1pvz3h2fdn8ws7y4tn7l5up8efc8pguu2drtjm5v856ct57f7l4naqau46pn", value:	1},
+{address:"bc1q9ag7u24ps9xh7p2jlk2nmy733lyvjhrec4l6gg", value:	1}]
 
 const mintListAddress = [{address:"bc1qyfe0ka9fhuxyqf5edlya4z2jnay77fqg8nue3d",value:	5},
 {address:"bc1qxy2dqg2jzhhd5mx60m47c4tmd592550agzwtkr",value:	2},
@@ -1684,7 +1686,7 @@ const Stake = () => {
   const updateBalance = async() => {
     let accounts = await window.unisat.getAccounts();
       if(accounts[0]){
-        // accounts[0] = "bc1pquz9fjtherpg28gq7dns5llhha90x7rzckwkpae2squrrm82e53slpjl74"
+        // accounts[0] = "bc1peaddd7j6cqepuqhyxdg4dyf9je6uc8afk4t39y5z8y9yypcg7yrqle24ys"
         const balanceData  = await axios.get(`https://unisat.io/brc20-api-v2/address/${accounts[0]}/brc20/summary?start=0&limit=100`)
         for(var i = 0; i < balanceData.data.data.detail.length; i++){
             console.log(balanceData.data.data.detail[i])

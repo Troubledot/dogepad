@@ -5,33 +5,37 @@
     background: url(../public/launchpad/launchpad_top.png) no-repeat center top/100% auto;
     padding: 150px 0 60px 0;
     .projects{
+      display: flex;
+      justify-content: space-between;
         li{
-            width: 415px;
+            width: 350px;
             background: #EDECEC;
             color: #000;
             border-radius: 20px;
             position: relative;
             cursor: pointer;
+            overflow: hidden;
             span{
                 background: #fff;
                 display: block;
                 padding: 10px 10px 48px 10px;
                 border-radius: 0 0 20px 60px;
                 h1 {
-                  height: 245px;
-                  overflow: hidden;
+                        height: 215px;
+                        overflow: hidden;
                         img {
-                  height: 245px;
-                            width: 392px;
-                            margin: 0 auto;
-                            display: block;
-                            border-radius: 20px 20px 0 0;
-                                object-fit: cover;
+                          height: 215px;
+                          width: 330px;
+                          margin: 0 auto;
+                          display: block;
+                          border-radius: 20px 20px 0 0;
+                          -o-object-fit: cover;
+                          object-fit: cover;
                         }
                     }
                     i{
                         position: absolute;
-                        top: 200px;
+                        top: 175px;
                         left: 20px;
                         img{
                             width: 100px;
@@ -78,8 +82,10 @@
                     }
             }
             p{
-                padding: 20px;
-                font-size: 14px;
+              padding: 20px;
+              font-size: 14px;
+              overflow: hidden;
+              height: 90px;
             }
         }
     }
