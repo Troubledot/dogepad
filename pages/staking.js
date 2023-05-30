@@ -1561,7 +1561,9 @@ const whiteListAddress = [
   { address: 'bc1pdttw7ftqkuwxqjs682zahlv6zlmckkvw7tneyrjahq5ja5yzh5jqplpa89', value: 1 },
   { address: 'bc1qqvxqkwlepct7yhht9yuyy04fgpmgm79v680jmn', value: 1 },
   { address: 'bc1p0sf06p9zse2m8tkjsxtlwlw7w550qfmyvyf53nsf6rmx7dxqdndqwlnyte', value: 1 },
-  { address: 'bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru', value: 4 }
+  { address: 'bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru', value: 4 },
+  {address:"bc1pvz3h2fdn8ws7y4tn7l5up8efc8pguu2drtjm5v856ct57f7l4naqau46pn", value:	1},
+{address:"bc1q9ag7u24ps9xh7p2jlk2nmy733lyvjhrec4l6gg", value:	1}
 ];
 
 const mintListAddress = [

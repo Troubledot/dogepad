@@ -66,7 +66,7 @@ const Stake = () => {
                     <p>The first project to adopt the VE (3,3) model on the #BRC20 protocol .</p>
                 </li>
                 </Link>
-                <Link href="/launchpad/detail2"><li>
+                {/* <Link href="/launchpad/detail2"><li>
                     <span>
                         <h1>
                             <img src="/launchpad/ghz2.jpg" />
@@ -95,7 +95,7 @@ const Stake = () => {
                     </span>
                     <p>Isekai Metaverse is an AI-driven Web3 ACGN (anime, comics, games, and novels) creator ecosystem. With our open-source creator protocol: Isekai Protocol, we will build a bottom-up ACGN metaverse where creators can use NFT culture legos to participate in community creation and eventually form an NFT content network. Isekai Metaverse provides various creation tools and distribution channels.</p>
                 </li>
-                </Link>
+                </Link> */}
             </ul>
         </div>
       </div>
