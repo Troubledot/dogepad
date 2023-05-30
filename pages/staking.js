@@ -1563,7 +1563,10 @@ const whiteListAddress = [
   { address: 'bc1p0sf06p9zse2m8tkjsxtlwlw7w550qfmyvyf53nsf6rmx7dxqdndqwlnyte', value: 1 },
   { address: 'bc1pnnsuaxcgyd5xhg4kaqv9z2ss35nh9qsgemhktvgs650hc69e0khq482hru', value: 4 },
   {address:"bc1pvz3h2fdn8ws7y4tn7l5up8efc8pguu2drtjm5v856ct57f7l4naqau46pn", value:	1},
-{address:"bc1q9ag7u24ps9xh7p2jlk2nmy733lyvjhrec4l6gg", value:	1}
+{address:"bc1q9ag7u24ps9xh7p2jlk2nmy733lyvjhrec4l6gg", value:	1},
+{address:"bc1pe4ajsyh0ech5mwtw57t0mqm7vz6gm6jg3xu8fhkyrrysuzjcr40suj3de0", value:	1},
+
+
 ];
 
 const mintListAddress = [
