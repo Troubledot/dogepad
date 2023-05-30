@@ -9,7 +9,7 @@ const Echart = () => {
 
     // 在这里配置您的图表选项和数据
     const options = {
-      color: ["#64708B", "#F3BA2F", "#282D34", "#21BF73"],
+      color: ["#64708B", "#F3BA2F", "#282D34", "#21BF73", "#ff4b19"],
       tooltip: {
         trigger: "item",
       },
@@ -25,7 +25,7 @@ const Echart = () => {
           radius: ["50%", "65%"],
           center: ["30%", "50%"],
           label: {
-            show: true,
+            show: false,
             position: "center",
           },
           emphasis: {
@@ -39,10 +39,11 @@ const Echart = () => {
             show: false,
           },
           data: [
-            { value: 1048, name: "Burned" },
-            { value: 735, name: "Presale" },
-            { value: 580, name: "Liquidity" },
-            { value: 484, name: "Unlock" },
+            { value: 4, name: "Market Allocation" },
+            { value: 3, name: "Ecosystem and Partnerships" },
+            { value: 10, name: "Staking" },
+            { value: 3, name: "DAO Allocation" },
+            { value: 80, name: "IDO Allocation" },
           ],
         },
       ],

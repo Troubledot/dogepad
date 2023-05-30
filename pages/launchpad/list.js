@@ -50,7 +50,7 @@ const Stake = () => {
       <div className={styles.wrapper}>
         <div className={styles.inner}>
             <ul className={styles.projects}>
-                <Link href="/launchpad/detail1"><li>
+                <Link href="/launchpad/detail"><li>
                     <span>
                         <h1>
                             <img src="/launchpad/arks.jpg" />
