@@ -23,7 +23,9 @@ export default function (router, handle) {
     router.post("/api/refundBiso", require("../container/ido.js").refund)
     router.get("/api/getRefundByAddress/:address", require("../container/ido.js").getRefundByAddress)
     
-
+    //project
+    router.get("/api/getProjectTotalInfo", require("../container/project.js").getProjectTotalInfo)
+    router.get("/api/getProjectInfo/:projectID", require("../container/project.js").getProjectInfo)
 
     
     // Default catch-all handler to allow Next.js to handle all other routes
