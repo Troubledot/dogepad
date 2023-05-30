@@ -1,5 +1,7 @@
 {
-  "editor.formatOnSave": false,
-  "git.ignoreLimitWarning": true,
-  "i18n-ally.localesPaths": ["public/locales"]
+  // "editor.formatOnSave": false,
+  // "git.ignoreLimitWarning": true,
+  "prettier.tabWidth": 2,
+  "i18n-ally.localesPaths": ["public/locales"],
+  "cSpell.words": ["BISO"]
 }

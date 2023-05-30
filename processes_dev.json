@@ -1,12 +1,14 @@
 {
-  "apps" : [{
+  "apps": [
+    {
       "script": "node app",
       "name": "Ruby",
       "log_date_format": "YYYY-DD-MM HH:mm",
       "env": {
-          "NODE_ENV": "development"
+        "NODE_ENV": "development"
       },
       "watch": ["./server"],
       "ignore_watch": ["node_modules"]
-  }]
+    }
+  ]
 }
