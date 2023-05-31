@@ -13,8 +13,7 @@
   .topimg {
     width: 1440px;
     margin: 0 auto;
-    background: url(../public/launchpad/launchpad_top.png) no-repeat center
-      top/100% auto;
+    background: url(../public/launchpad/launchpad_top.png) no-repeat center top/100% auto;
     padding: 150px 0 30px 0;
     overflow: hidden;
 
@@ -82,24 +81,19 @@
               }
               &.twitter {
                 margin: 5px 0px;
-                background: url(../public/launchpad/icon_twitter.png) no-repeat
-                  center/100% auto;
+                background: url(../public/launchpad/icon_twitter.png) no-repeat center/100% auto;
               }
               &.telegarm {
-                background: url(../public/launchpad/icon_telegram.png) no-repeat
-                  center/100% auto;
+                background: url(../public/launchpad/icon_telegram.png) no-repeat center/100% auto;
               }
               &.medium {
-                background: url(../public/launchpad/icon_medium.png) no-repeat
-                  center/100% auto;
+                background: url(../public/launchpad/icon_medium.png) no-repeat center/100% auto;
               }
               &.github {
-                background: url(../public/launchpad/icon_github.png) no-repeat
-                  center/100% auto;
+                background: url(../public/launchpad/icon_github.png) no-repeat center/100% auto;
               }
               &.discord {
-                background: url(../public/launchpad/icon_discord.png) no-repeat
-                  center/100% auto;
+                background: url(../public/launchpad/icon_discord.png) no-repeat center/100% auto;
               }
             }
           }
@@ -243,7 +237,7 @@
                 cursor: pointer;
 
                 &::after {
-                  content: "";
+                  content: '';
                   background: url(../public/home/white_arrow.svg);
                   width: 12px;
                   height: 12px;
@@ -370,8 +364,8 @@
           padding: 20px;
           border-radius: 20px;
           line-height: 20px;
-              margin: 20px 0;
-              flex: 1;
+          margin: 20px 0;
+          flex: 1;
         }
         .contact {
           display: flex;
@@ -399,7 +393,7 @@
           margin-bottom: 29px;
           border-bottom: 2px solid rgba(0, 0, 0, 0.2);
           &::before {
-            content: "";
+            content: '';
             background: url(../public/launchpad/titleicon.png);
             width: 57px;
             height: 50px;
@@ -410,33 +404,36 @@
             position: absolute;
             right: 0;
             ul {
+              display: flex;
+              li {
+                background: url(../public/stake/timebg.png);
+                width: 63px;
+                height: 79px;
+                background-size: 100% 100%;
+                margin: 0 5px;
                 display: flex;
-                li {
-                  background: url(../public/stake/timebg.png);
-                  width: 63px;
-                  height: 79px;
-                  background-size: 100% 100%;
-                  margin: 0 5px;
-                  display: flex;
-                  align-items: center;
-                  flex-direction: column;
-                  justify-content: center;
-            
-                  h1 {
-                    font-style: oblique;
-                    color: #383838;
-                    margin-bottom: 10px;
-                    font-size: 24px;
-                  }
-            
-                  p {
-                    color: #8E8E8E;
-                    font-weight: bold;
-                    font-size: 12px;
-                  }
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+
+                h1 {
+                  font-style: oblique;
+                  color: #383838;
+                  margin-bottom: 10px;
+                  font-size: 24px;
+                }
+
+                p {
+                  color: #8e8e8e;
+                  font-weight: bold;
+                  font-size: 12px;
                 }
               }
+            }
           }
+        }
+        &:nth-child(2) {
+          filter: opacity(0.7);
         }
       }
       .list {
@@ -463,6 +460,7 @@
       }
       .btnText {
         margin-right: 6px;
+        color: #fff;
       }
     }
     .team {
@@ -512,7 +510,7 @@
           margin-top: 10px;
           margin-bottom: 20px;
           &::before {
-            content: "";
+            content: '';
             width: 17px;
             height: 17px;
             background-color: #fcbf19;
@@ -527,7 +525,7 @@
           position: relative;
           margin-bottom: 20px;
           &::before {
-            content: "";
+            content: '';
             width: 110px;
             height: 10px;
             background-color: #fcbf19;
