@@ -196,7 +196,7 @@ const LaunchpadDetails = () => {
               <div className={styles.title}>
                 <div>
                   <div className={styles.ori}>ArkStart</div>
-                  <div>Private Sale</div>
+                  <div>Whitelist Public Sale</div>
                 </div>
                 <div className={styles.deadline}>
                   <Timer
