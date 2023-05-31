@@ -6,22 +6,39 @@
       100% auto;
     padding: 150px 0 60px 0;
     .info {
-      padding-right: 500px;
       margin-top: 50px;
+      width: 560px;
       h1 {
         font-size: 50px;
-        color: #291a3d;
+        color: #000000;
+        margin-top: 20px;
       }
       h2 {
         font-size: 50px;
         color: #ffb800;
+        position: relative;
+        display: inline-block;
+        .version {
+          position: absolute;
+          font-size: 12px;
+          border: 1px solid #ffb800;
+          padding: 6px;
+          border-radius: 5px;
+          right: -70px;
+          top: 0;
+        }
       }
       p {
         color: #878a99;
-        font-size: 14px;
-        padding: 20px 0;
+        margin: 20px 0;
+        font-size: 16px;
+        line-height: 1.4;
+      }
+      .operate {
+        color: rgba(0, 0, 0, 0.25);
+        font-size: 16px;
         button {
-          background: #fcbf19;
+          background: #ffb800;
           border-radius: 25px;
           color: #ffffff;
           width: 152px;
@@ -29,7 +46,6 @@
           border: none;
           cursor: pointer;
           font-size: 14px;
-
           i {
             background: url(../public/home/white_arrow.svg) no-repeat
               center/100% auto;
@@ -43,9 +59,8 @@
         a {
           color: #29193e;
           font-size: 16px;
-          margin-left: 10px;
           padding: 0 30px;
-
+          text-decoration: none;
           i {
             background: url(../public/home/grey_arrow.svg) no-repeat center/100%
               auto;
@@ -56,48 +71,116 @@
           }
         }
       }
-      .data {
-        padding: 50px 0;
-        position: relative;
-        width: 1080px;
-        b{
-            background: url(../public/home/rhinoceros.png) no-repeat center/100% auto;
-            position: absolute;
-            width: 450px;
-            height: 374px;
-            bottom: 301px;
-            right: -80px;
+    }
+    .data {
+      padding: 50px 0;
+      position: relative;
+      b {
+        background: url(../public/home/rhinoceros.png) no-repeat center/100%
+          auto;
+        position: absolute;
+        width: 450px;
+        height: 374px;
+        bottom: 301px;
+        right: -80px;
+      }
+      ul {
+        display: flex;
+        justify-content: space-between;
+        li {
+          width: 243px;
+          height: 251px;
+          background: #fff;
+          border-radius: 20px;
+          padding: 25px;
+          h1 {
+            font-size: 30px;
+            line-height: 50px;
+          }
+          h2 {
+            font-size: 18px;
+            color: #ffb800;
+          }
+          p {
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.25);
+          }
         }
-        ul {
-          display: flex;
-          justify-content: space-between;
-          li {
-            width: 243px;
-            height: 251px;
-            background: #fff;
-            border-radius: 20px;
-            padding: 30px;
-
-            i {
-              background: url(../public/launchpad/launchpad_icon1.png) no-repeat
-                center/100% auto;
-                display: inline-block;
-                width: 80px;
-                height: 80px;
-            }
-            h1{
-                font-size: 30px;
-                line-height: 50px;
-            }
-            h2{
-                font-size: 18px;
-                color: #FFB800;
-            }
-            p{
-                font-size: 16px;
-                color: rgba(0, 0, 0, 0.25);
+      }
+    }
+    .list {
+      display: flex;
+      justify-content: space-between;
+      .listItem {
+        width: 345px;
+        height: 424px;
+        background-color: #edecec;
+        border-radius: 20px;
+        .main {
+          background-color: #fff;
+          padding: 12px;
+          border-radius: 20px 20px 20px 50px;
+          position: relative;
+          z-index: 1;
+          .avatar {
+            position: absolute;
+            background-color: #fff;
+            border: 4px solid #fff;
+            border-radius: 50%;
+            overflow: hidden;
+            z-index: 5;
+            left: 10px;
+            bottom: 8px;
+          }
+          .name {
+            font-size: 22px;
+            line-height: 1.24;
+            text-align: right;
+            padding: 5px 0;
+          }
+          .contact {
+            display: flex;
+            justify-content: flex-end;
+            .item {
+              margin-left: 5px;
             }
           }
+        }
+        .banner {
+          position: relative;
+          height: 220px;
+          border-radius: 20px 20px 0 0;
+          overflow: hidden;
+          .tag {
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            background-color: #f64546;
+            font-weight: bold;
+            font-size: 12px;
+            color: #fff;
+            height: 25px;
+            line-height: 25px;
+            padding: 0 10px;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            span {
+              margin-left: 2px;
+            }
+          }
+        }
+        p {
+          color: #000000;
+          width: 92%;
+          margin: 20px auto;
+          font-size: 14px;
+          line-height: 1.4;
+          display: -webkit-box;
+          -webkit-line-clamp: 3; /* 指定显示的行数 */
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }

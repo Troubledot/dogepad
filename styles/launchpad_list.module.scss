@@ -2,92 +2,97 @@
   .inner {
     width: 1080px;
     margin: 0 auto;
-    background: url(../public/launchpad/launchpad_top.png) no-repeat center top/100% auto;
+    background: url(../public/launchpad/launchpad_top.png) no-repeat center
+      top/100% auto;
     padding: 150px 0 60px 0;
-    .projects{
+    .projects {
       display: flex;
-      justify-content: space-between;
-        li{
-            width: 350px;
-            background: #EDECEC;
-            color: #000;
-            border-radius: 20px;
-            position: relative;
-            cursor: pointer;
+      li {
+        width: 350px;
+        background: #edecec;
+        color: #000;
+        border-radius: 20px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        span {
+          background: #fff;
+          display: block;
+          padding: 10px 10px 48px 10px;
+          border-radius: 0 0 20px 60px;
+          h1 {
+            height: 215px;
             overflow: hidden;
-            span{
-                background: #fff;
-                display: block;
-                padding: 10px 10px 48px 10px;
-                border-radius: 0 0 20px 60px;
-                h1 {
-                        height: 215px;
-                        overflow: hidden;
-                        img {
-                          height: 215px;
-                          width: 330px;
-                          margin: 0 auto;
-                          display: block;
-                          border-radius: 20px 20px 0 0;
-                          -o-object-fit: cover;
-                          object-fit: cover;
-                        }
-                    }
-                    i{
-                        position: absolute;
-                        top: 175px;
-                        left: 20px;
-                        img{
-                            width: 100px;
-                            height: 100px;
-                            border-radius: 50%;
-                            border:5px solid #fff ;
-                        }
-                    }
-                    h2{
-                        color:#291A3D;
-                        font-size: 18px;
-                        text-align: right;
-                    }
-                    dt{
-                        display: flex;
-                        float: right;
-                        dl{
-                            display: inline-block;
-                            width: 20px;
-                            height: 20px;
-                            opacity: 0.4;
-                            margin: 5px 3px;
-                            cursor: pointer;
-                            &:hover{
-                                opacity: 0.8;
-                            }
-                            &.twitter{
-                                margin: 5px 0px;
-                                background: url(../public/launchpad/icon_twitter.png) no-repeat center/100% auto ;
-                            }
-                            &.telegarm{
-                                background: url(../public/launchpad/icon_telegram.png) no-repeat center/100% auto ;
-                            }
-                            &.medium{
-                                background: url(../public/launchpad/icon_medium.png) no-repeat center/100% auto ;
-                            }
-                            &.github{
-                                background: url(../public/launchpad/icon_github.png) no-repeat center/100% auto ;
-                            }
-                            &.discord{
-                                background: url(../public/launchpad/icon_discord.png) no-repeat center/100% auto ;
-                            }
-                        }
-                    }
+            img {
+              height: 215px;
+              width: 330px;
+              margin: 0 auto;
+              display: block;
+              border-radius: 20px 20px 0 0;
+              -o-object-fit: cover;
+              object-fit: cover;
             }
-            p{
-              padding: 20px;
-              font-size: 14px;
-              overflow: hidden;
-              height: 90px;
+          }
+          i {
+            position: absolute;
+            top: 175px;
+            left: 20px;
+            img {
+              width: 100px;
+              height: 100px;
+              border-radius: 50%;
+              border: 5px solid #fff;
             }
+          }
+          h2 {
+            color: #291a3d;
+            font-size: 18px;
+            text-align: right;
+          }
+          dt {
+            display: flex;
+            float: right;
+            dl {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              opacity: 0.4;
+              margin: 5px 3px;
+              cursor: pointer;
+              &:hover {
+                opacity: 0.8;
+              }
+              &.twitter {
+                margin: 5px 0px;
+                background: url(../public/launchpad/icon_twitter.png) no-repeat
+                  center/100% auto;
+              }
+              &.telegarm {
+                background: url(../public/launchpad/icon_telegram.png) no-repeat
+                  center/100% auto;
+              }
+              &.medium {
+                background: url(../public/launchpad/icon_medium.png) no-repeat
+                  center/100% auto;
+              }
+              &.github {
+                background: url(../public/launchpad/icon_github.png) no-repeat
+                  center/100% auto;
+              }
+              &.discord {
+                background: url(../public/launchpad/icon_discord.png) no-repeat
+                  center/100% auto;
+              }
+            }
+          }
         }
+        p {
+          padding: 20px;
+          font-size: 14px;
+          overflow: hidden;
+          height: 90px;
+        }
+      }
     }
   }
 }
