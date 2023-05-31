@@ -12,15 +12,12 @@ export default function (sequelize, DataTypes) {
     date: DataTypes.STRING,
     state: DataTypes.INTEGER,
   })
-  PROJECT.associate = function (models) {
-      PROJECT.hasMany(models.PROJECT_TEAM, {
-        foreignKey: 'projectID',
-        as: 'team',
-      })
-      // PROJECT.belongsTo(models.PROJECT_TEAM, {
-      //   foreignKey: 'projectID'
-      // })
-  }
+  // PROJECT.associate = function (models) {
+  //     PROJECT.hasMany(models.PROJECT_TEAM, {
+  //       foreignKey: 'projectID',
+  //       as: 'team',
+  //     })
+  // }
   PROJECT.sync();
   return PROJECT;
 }

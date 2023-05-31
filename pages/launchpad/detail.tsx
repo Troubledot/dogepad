@@ -70,6 +70,8 @@ const LaunchpadDetails = () => {
   const [lockDuration, setLockDuration] = useState(32542);
   const [lockPercent, setLockPercent] = useState(25);
 
+
+
   useEffect(() => {
     // updateBalance();
     const setUpdate = () => {
@@ -86,6 +88,7 @@ const LaunchpadDetails = () => {
   const updateBalance = async () => {
     let accounts = await window.unisat.getAccounts();
     if (accounts[0]) {
+      
     }
   };
   const setMax = (value: string) => {

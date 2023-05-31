@@ -13,11 +13,11 @@ export default function (sequelize, DataTypes) {
     date: DataTypes.STRING,
     state: DataTypes.INTEGER,
   })
-   PROJECT_TEAM.associate = function(models) {
-      PROJECT_TEAM.belongsTo(models.PROJECT, {
-        foreignKey: 'projectID',
-      })
-    };
+  //  PROJECT_TEAM.associate = function(models) {
+  //     PROJECT_TEAM.belongsTo(models.PROJECT, {
+  //       foreignKey: 'projectID',
+  //     })
+  //   };
   PROJECT_TEAM.sync();
   return PROJECT_TEAM;
 }
