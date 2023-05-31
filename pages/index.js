@@ -1,57 +1,16 @@
-import React, { useState, useEffect, Component } from 'react';
-import Head from 'next/head';
-import Image from 'next/image';
-import Link from 'next/link';
-import classNames from 'classnames/bind';
-import Timer from 'react-compound-timer';
-import Web3 from 'web3';
-import Wallet from '../components/wallet';
-import useWallet from 'use-wallet';
+import React from 'react';
 import { getInvite, getInviteRank, createInvite } from '../api/api';
-import tokenConfig from '../contract.config';
-import { confirmAlert } from 'react-confirm-alert';
 import HeaderFooter from '../layout/HeaderFooter';
-import Clipboard from 'react-clipboard.js';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { withRouter, useRouter } from 'next/router';
-import { useTranslation, Trans } from 'next-i18next';
+import { withRouter } from 'next/router';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Cookies from 'js-cookie';
-import { utils } from 'ethers';
 
 import styles from '../styles/home.module.scss';
 
 import 'animate.css';
 
-const toastConfig = {
-  position: 'bottom-left',
-  autoClose: 3000,
-  hideProgressBar: false,
-  closeOnClick: true,
-  draggable: true,
-  progress: null,
-  pauseOnHover: false
-};
-
 const Home = () => {
-  const { t } = useTranslation('common');
-  const router = useRouter();
-  console.log(router);
-
-  useEffect(() => {}, []);
-
-  const toastConfig = {
-    position: 'bottom-left',
-    autoClose: 3000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: 'dark'
-  };
-
   return (
     <HeaderFooter activeIndex={1}>
       <ToastContainer />
@@ -69,11 +28,11 @@ const Home = () => {
         </div>
         <ul className={styles.link}>
           <li>
-            <span>Ido</span>
+            <span>IDO</span>
             <i></i>
           </li>
           <li>
-            <span>Stake</span>
+            <span>Staking</span>
             <i></i>
           </li>
           <li>
@@ -94,8 +53,8 @@ const Home = () => {
         <div className={styles.feature}>
           <h1></h1>
           <h2>
-            Bisoswap is committed to addressing the issue of insufficient liquidity in BRC20 by increasing liquidity
-            pools for LP trading and enabling real-time transactions.
+            Bisoswap is aiming to address the lack of liquidity in BRC20 by increasing the liquidity pool for LP trades
+            and enabling real-time trading.
           </h2>
           <ul>
             <i className={styles.character}></i>
@@ -104,8 +63,8 @@ const Home = () => {
                 <b>AMM</b> Model.
               </h3>
               <p>
-                Automated Market Maker (AMM) model: BisoSwap employs an AMM model, which simplifies trading processes
-                and reduces the reliance on order books.
+                Automated Market Maker (AMM) model: BisoSwap adopt an AMM model, which simplifies trading processes and
+                reduces the reliance on order books.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
@@ -114,8 +73,8 @@ const Home = () => {
                 <b>Liquidity</b>provision.
               </h3>
               <p>
-                Liquidity provision and incentives: Users can provide liquidity to the platform and earn rewards,
-                ensuring sufficient liquidity for smooth transactions.
+                Liquidity provision and incentives: Users can provide liquidity to the platform and receive incentives
+                to ensure sufficient liquidity for better trading experience.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
