@@ -46,24 +46,15 @@ const Stake = () => {
       <div className={styles.wrapper}>
         <div className={styles.inner}>
           <ul className={styles.projects}>
-            <Link href="/launchpad/detail" passHref>
+            <Link href="/launchpad/detail">
               <li>
                 <span>
                   <h1>
-                    <Image
-                      src="/launchpad/arks.jpg"
-                      alt="ark"
-                      width={330}
-                      height={215}
-                    />
+                    <img src="/launchpad/arks.jpg" />
                   </h1>
                   <i>
-                    <Image
-                      src="/launchpad/arks.jpg"
-                      alt="ark"
-                      width={100}
-                      height={100}
-                    />
+                    {" "}
+                    <img src="/launchpad/arks.jpg" />
                   </i>
                   <h2>Arkstart</h2>
                   <dt>
@@ -96,6 +87,36 @@ const Stake = () => {
                 </p>
               </li>
             </Link>
+            {/* <Link href="/launchpad/detail2"><li>
+                    <span>
+                        <h1>
+                            <img src="/launchpad/ghz2.jpg" />
+                        </h1>
+                        <i> <img src="/launchpad/ghz.jpg" /></i>
+                        <h2>古惑仔(GHZI)</h2>
+                        <dt>
+                          <a href="https://twitter.com/HK_Brother_" target="_blank"  rel="noreferrer"><dl className={styles.twitter}></dl></a>
+                          <a href="https://t.me/BRO10000X" target="_blank"  rel="noreferrer"><dl className={styles.telegarm}></dl></a>
+                        </dt>
+                    </span>
+                    <p>歡迎來到古惑幣世界！這是一個基於隱私的加密貨幣，由一群勇敢的古惑仔創造。</p>
+                </li>
+                </Link>
+                <Link href="/launchpad/detail3"><li>
+                    <span>
+                        <h1>
+                            <img src="/launchpad/iksa.jpg" />
+                        </h1>
+                        <i> <img src="/launchpad/iksa.jpg" /></i>
+                        <h2>Isekai Protocol</h2>
+                        <dt>
+                          <a href="https://twitter.com/isekaiprotocol" target="_blank"  rel="noreferrer"><dl className={styles.twitter}></dl></a>
+                          <a href="https://discord.com/invite/tuxbNWqhmA" target="_blank"  rel="noreferrer"><dl className={styles.discord}></dl></a>
+                        </dt>
+                    </span>
+                    <p>Isekai Metaverse is an AI-driven Web3 ACGN (anime, comics, games, and novels) creator ecosystem. With our open-source creator protocol: Isekai Protocol, we will build a bottom-up ACGN metaverse where creators can use NFT culture legos to participate in community creation and eventually form an NFT content network. Isekai Metaverse provides various creation tools and distribution channels.</p>
+                </li>
+                </Link> */}
           </ul>
         </div>
       </div>

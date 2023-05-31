@@ -1995,9 +1995,9 @@ const Stake = () => {
                       <button>Box</button>
                     </div>
                     <Image src={boxNft} alt="ntf" width={300} height={300}></Image>
-                    <button className={styles.open} onClick={() => openNFT('1')}>
+                    {/* <button className={styles.open} onClick={() => openNFT('1')}>
                       Open Box
-                    </button>
+                    </button> */}
                   </div>
                 ))}
               </div>
@@ -2119,9 +2119,9 @@ const Stake = () => {
                       <button>Box</button>
                     </div>
                     <Image src={boxNft} alt="ntf" width={300} height={300}></Image>
-                    <button className={styles.open} onClick={() => openNFT('2')}>
+                    {/* <button className={styles.open} onClick={() => openNFT('2')}>
                       Open Box
-                    </button>
+                    </button> */}
                   </div>
                 ))}
                 {box.map((e, index) => (
@@ -2134,9 +2134,9 @@ const Stake = () => {
                       <button>Box</button>
                     </div>
                     <Image src={boxNft} alt="ntf" width={300} height={300}></Image>
-                    <button className={styles.open} onClick={() => openNFT('2')}>
+                    {/* <button className={styles.open} onClick={() => openNFT('2')}>
                       Open Box
-                    </button>
+                    </button> */}
                   </div>
                 ))}
               </div>

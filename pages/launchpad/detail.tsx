@@ -1,122 +1,74 @@
-import React, { useState, useEffect } from "react";
-import Timer from "react-compound-timer";
-import HeaderFooter from "../../layout/HeaderFooter";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import { withRouter, useRouter } from "next/router";
-import { useTranslation, Trans } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import classNames from "classnames/bind";
-import { utils } from "ethers";
-import Image from "next/image";
-import Link from "next/link";
-import styles from "../../styles/launchpad_detail.module.scss";
-import "animate.css";
-import axios from "axios";
-import avatar from "../../public/launchpad/avatar.png";
-import address from "../../public/launchpad/address.png";
-import github from "../../public/launchpad/github.png";
-import twitter from "../../public/launchpad/twitter.png";
-import telegram from "../../public/launchpad/telegram.png";
-import discord from "../../public/launchpad/discord.png";
-import meta from "../../public/launchpad/meta.png";
-import arrow from "../../public/home/yellow_arrow.svg";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import Echart from "../../components/Echart";
+import React, { useState, useEffect } from 'react';
+import Timer from 'react-compound-timer';
+import HeaderFooter from '../../layout/HeaderFooter';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { withRouter, useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../../styles/launchpad_detail.module.scss';
+import 'animate.css';
+import axios from 'axios';
+import avatar from '../../public/launchpad/avatar.png';
+import address from '../../public/launchpad/address.png';
+import github from '../../public/launchpad/github.png';
+import twitter from '../../public/launchpad/twitter.png';
+import telegram from '../../public/launchpad/telegram.png';
+import discord from '../../public/launchpad/discord.png';
+import meta from '../../public/launchpad/meta.png';
+import yellowArrow from '../../public/home/yellow_arrow.svg';
+import whiteArrow from '../../public/home/white_arrow.svg';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+import Echart from '../../components/Echart';
 
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 const LaunchpadDetails = () => {
-  const { t } = useTranslation("common");
+  const { t } = useTranslation('common');
   const router = useRouter();
+  interface Member {
+    id: number;
+    name: string;
+    position: string;
+    avatar: StaticImageData;
+    intro: string;
+  }
+
   const myTeam: Member[] = [
     {
       id: 1,
-      name: "Gregoire Laugier",
-      position: "Founder",
+      name: 'Michael',
+      position: 'Founder',
       avatar,
       intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 2,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 3,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 4,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 5,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 6,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
-    {
-      id: 7,
-      name: "Gregoire Laugier",
-      position: "Founder",
-      avatar,
-      intro:
-        "With extensive experience in the fields of citizen technology and media, Gregoire founded Wistaverse in early 2020.",
-    },
+        'Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.'
+    }
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0);
+  const [tokenPrice, setTokenPrice] = useState(0.00000105952);
   const [percentage, setPercentage] = useState(0);
-  const [totalAmount, setTotalAmount] = useState(0);
+  const [totalAmount, setTotalAmount] = useState(5.2);
   const [actualAmount, setActualAmount] = useState(0);
   const [fundraisers, setFundraisers] = useState(0);
   const [obtained, setObtained] = useState(0);
   const [balance, setBalance] = useState(0);
   const [team, setTeam] = useState<Member[]>(myTeam);
-  const [status, setStatus] = useState("Listed");
+  const [status, setStatus] = useState('Listed');
   const [currentRate, setCurrentRate] = useState(65.3212345);
   const [myContribution, setMyContribution] = useState(0.0);
   const [totalContribution, setTotalContribution] = useState(65);
-  const [audit, setAudit] = useState("No");
-  const [KYC, setKYC] = useState("No");
+  const [audit, setAudit] = useState('No');
+  const [KYC, setKYC] = useState('No');
   const [supply, setSupply] = useState(12);
   const [lockDuration, setLockDuration] = useState(32542);
   const [lockPercent, setLockPercent] = useState(25);
-
-  interface Member {
-    id: number;
-    name: string;
-    position: string;
-    avatar: string;
-    intro: string;
-  }
 
   useEffect(() => {
     // updateBalance();
@@ -140,7 +92,7 @@ const LaunchpadDetails = () => {
     console.log(value);
   };
   const mint = () => {
-    console.log("mint");
+    console.log('mint');
   };
 
   return (
@@ -152,23 +104,31 @@ const LaunchpadDetails = () => {
           <div className={styles.card + " " + styles.project}>
             <div className={styles.banner}></div>
             <div className={styles.info}>
-              <div className={styles.title}>FairLady Project</div>
-              <div className={styles.avatar}>
+              <div className={styles.title}>Arkstart</div>
+              {/* <div className={styles.avatar}>
                 <Image src={avatar} alt="avatar" width={35} height={35} />
                 <div className={styles.name}>Cloris Chen</div>
-              </div>
+              </div> */}
               <p className={styles.intro}>
-                The decentralized Muon network is like a distributed
-                supercomputer with a universal operating system. It will be run
-                by a global community of node operators, all incentivized by the
-                Muon token. <br />
-                This creates a powerful and secure cloud computation service
-                that can run any app/software and connect to all public
-                blockchains. It in no way replaces blockchains, but rather is a
-                perfect technology-
+                Arkstart is pioneering the new era of BRC-20 token staking with
+                our innovative blockchain project. We aim to build a sustainable
+                staking ecosystem using unique staking mechanisms and economic
+                models.
+                <br />
+                We&apos;ve introduced &apos;arks&apos;, our native token, into
+                an advanced staking feature that brings value to BRC-20 tokens.
+                By staking &apos;arks&apos;, users can earn &apos;Aras&apos;
+                tokens as rewards. This model incentivizes continuous
+                participation aligning the long-term interests of users with our
+                protocol&apos;s objectives.
+                <br />
+                Our mission is to develop a robust and consistent staking
+                ecosystem, changing the staking paradigm for BRC-20 tokens. With
+                our dedicated efforts, we aim to offer greater value and
+                long-term returns to our participants.
               </p>
               <div className={styles.contact}>
-                <Link href="https://www.baidu.com/" passHref>
+                <Link href="https://arkstart.org" passHref>
                   <a className={styles.item}>
                     <Image
                       src={address}
@@ -178,7 +138,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link>
-                <Link href="https://www.baidu.com/" passHref>
+                <Link href="https://twitter.com/arkscoin" passHref>
                   <a className={styles.item}>
                     <Image
                       src={twitter}
@@ -188,7 +148,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link>
-                <Link href="https://www.baidu.com/" passHref>
+                {/* <Link href="https://www.baidu.com/" passHref>
                   <a className={styles.item}>
                     <Image
                       src={discord}
@@ -197,8 +157,8 @@ const LaunchpadDetails = () => {
                       height={20}
                     ></Image>
                   </a>
-                </Link>
-                <Link href="https://www.baidu.com/" passHref>
+                </Link> */}
+                <Link href="https://medium.com/@arkstart" passHref>
                   <a className={styles.item}>
                     <Image
                       src={telegram}
@@ -208,7 +168,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link>
-                <Link href="https://www.baidu.com/" passHref>
+                {/* <Link href="https://www.baidu.com/" passHref>
                   <a className={styles.item}>
                     <Image
                       src={github}
@@ -217,8 +177,8 @@ const LaunchpadDetails = () => {
                       height={20}
                     ></Image>
                   </a>
-                </Link>
-                <Link href="https://www.baidu.com/" passHref>
+                </Link> */}
+                <Link href="https://medium.com/@arkstart" passHref>
                   <a className={styles.item}>
                     <Image
                       src={meta}
@@ -235,21 +195,59 @@ const LaunchpadDetails = () => {
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>BisoSwap</div>
-                  <div>Private equity.</div>
+                  <div className={styles.ori}>ArkStart</div>
+                  <div>Whitelist Public Sale</div>
                 </div>
-                <div className={styles.deadline}></div>
+                <div className={styles.deadline}>
+                  <Timer
+                    formatValue={(value) =>
+                      `${value < 10 ? `0${value}` : value} `
+                    }
+                    initialTime={
+                      new Date(1685624400000).getTime() - new Date().getTime()
+                    }
+                    lastUnit="h"
+                    direction="backward"
+                  >
+                    <ul>
+                      <li>
+                        <h1>
+                          <Timer.Days />
+                        </h1>
+                        <p>D A Y</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Hours />
+                        </h1>
+                        <p>H R S</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Minutes />
+                        </h1>
+                        <p>M I N</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Seconds />
+                        </h1>
+                        <p>S E C</p>
+                      </li>
+                    </ul>
+                  </Timer>
+                </div>
               </div>
               <div className={styles.list}>
                 <div className={styles.label}>Token Price</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {tokenPrice} Xmm
+                  {tokenPrice} BTC
                 </div>
               </div>
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {percentage} Xmm
+                  {percentage} %
                 </div>
               </div>
               <div className={styles.amount}>
@@ -268,13 +266,13 @@ const LaunchpadDetails = () => {
                 <div className={styles.list}>
                   <div className={styles.label}>Number of fundraisers</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {fundraisers} BTC
+                    {fundraisers}
                   </div>
                 </div>
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {obtained} BTC
+                    {obtained} $ARKS
                   </div>
                 </div>
               </div>
@@ -282,7 +280,7 @@ const LaunchpadDetails = () => {
               <div className={styles.list + " " + styles.small}>
                 <div className={styles.label}>Balance</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {balance} $BISO
+                  {balance} $BTC
                 </div>
               </div>
               <Button
@@ -291,9 +289,14 @@ const LaunchpadDetails = () => {
                 renderContent={() => (
                   <>
                     <span className={styles.btnText + " " + styles.ori}>
-                      Mint! Go
+                      Buy
                     </span>
-                    <Image src={arrow} alt="mint" width={12} height={12} />
+                    <Image
+                      src={yellowArrow}
+                      alt="mint"
+                      width={12}
+                      height={12}
+                    />
                   </>
                 )}
               ></Button>
@@ -301,29 +304,65 @@ const LaunchpadDetails = () => {
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>BisoSwap</div>
-                  <div>Private equity.</div>
+                  <div className={styles.ori}>ArkStart</div>
+                  <div>Public Sale</div>
                 </div>
-                <div className={styles.deadline}></div>
+                <div className={styles.deadline}>
+                  <Timer
+                    formatValue={(value) =>
+                      `${value < 10 ? `0${value}` : value} `
+                    }
+                    initialTime={
+                      new Date(1685678400000).getTime() - new Date().getTime()
+                    }
+                    lastUnit="h"
+                    direction="backward"
+                  >
+                    <ul>
+                      <li>
+                        <h1>
+                          <Timer.Days />
+                        </h1>
+                        <p>D A Y</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Hours />
+                        </h1>
+                        <p>H R S</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Minutes />
+                        </h1>
+                        <p>M I N</p>
+                      </li>
+                      <li>
+                        <h1>
+                          <Timer.Seconds />
+                        </h1>
+                        <p>S E C</p>
+                      </li>
+                    </ul>
+                  </Timer>
+                </div>
               </div>
               <div className={styles.list}>
                 <div className={styles.label}>Token Price</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {tokenPrice} Xmm
+                  {tokenPrice} BTC
                 </div>
               </div>
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {percentage} Xmm
+                  {percentage} %
                 </div>
               </div>
               <div className={styles.amount}>
                 <div className={styles.list}>
                   <div className={styles.label}>Total fundraising amount</div>
-                  <div className={styles.val + " " + styles.ori}>
-                    {totalAmount} BTC
-                  </div>
+                  <div className={styles.val + " " + styles.ori}>12.6 BTC</div>
                 </div>
                 <div className={styles.list}>
                   <div className={styles.label}>Actual fundraising amount</div>
@@ -334,13 +373,13 @@ const LaunchpadDetails = () => {
                 <div className={styles.list}>
                   <div className={styles.label}>Number of fundraisers</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {fundraisers} BTC
+                    {fundraisers}
                   </div>
                 </div>
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {obtained} BTC
+                    {obtained} $ARKS
                   </div>
                 </div>
               </div>
@@ -348,18 +387,16 @@ const LaunchpadDetails = () => {
               <div className={styles.list + " " + styles.small}>
                 <div className={styles.label}>Balance</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {balance} $BISO
+                  {balance} $BTC
                 </div>
               </div>
               <Button
-                backgroundColor="#383838"
+                backgroundColor="rgba(56,56,56,0.25)"
                 handleClick={mint}
                 renderContent={() => (
                   <>
-                    <span className={styles.btnText + " " + styles.ori}>
-                      Mint! Go
-                    </span>
-                    <Image src={arrow} alt="mint" width={12} height={12} />
+                    <span className={styles.btnText}>Buy</span>
+                    <Image src={whiteArrow} alt="buy" width={12} height={12} />
                   </>
                 )}
               ></Button>
@@ -388,52 +425,63 @@ const LaunchpadDetails = () => {
           <div className={styles.data}>
             <div className={styles.card + " " + styles.protocol}>
               <div className={styles.item}>
-                <div className={styles.title}>Cogito Protocol</div>
+                <div className={styles.title}>80% IDO Allocation</div>
                 <p>
-                  The Cogito protocol provides a framework that allows for the
-                  creation of decentralized assets called tracepoints. They are
-                  artificial intelligence driven, secured stable currencies, and
-                  soft linked to non-financial indices. The mechanism behind
-                  this protocol is supported by SingularityNET's artificial
-                  intelligence technology.
+                  Increased to 80% to provide additional liquidity for initial
+                  exchange offerings. This expanded allocation ensures
+                  sufficient token availability for IDO/IEO participants,
+                  fostering wider participation and enhancing market liquidity.
                 </p>
               </div>
               <div className={styles.item}>
-                <div className={styles.title}>Cogito Protocol</div>
+                <div className={styles.title}>4% Market Allocation</div>
                 <p>
-                  The Cogito protocol provides a framework that allows for the
-                  creation of decentralized assets called tracepoints. They are
-                  artificial intelligence driven, secured stable currencies, and
-                  soft linked to non-financial indices. The mechanism behind
-                  this protocol is supported by SingularityNET's artificial
-                  intelligence technology.
+                  Unlocked 20% at Token Generation Event (TGE), primarily used
+                  for initial user airdrops, incentives, and ecosystem
+                  development. This allocation is adjusted to allocate 7% of the
+                  total supply to the market. It enables Arkstart to allocate
+                  resources for market development, user acquisition, and
+                  ecosystem growth, fostering adoption and establishing a strong
+                  presence in the market.
                 </p>
               </div>
               <div className={styles.item}>
-                <div className={styles.title}>Cogito Protocol</div>
+                <div className={styles.title}>
+                  3% Ecosystem and Partnerships
+                </div>
                 <p>
-                  The Cogito protocol provides a framework that allows for the
-                  creation of decentralized assets called tracepoints. They are
-                  artificial intelligence driven, secured stable currencies, and
-                  soft linked to non-financial indices. The mechanism behind
-                  this protocol is supported by SingularityNET's artificial
-                  intelligence technology.
+                  Allocated for ecosystem development, strategic partnerships,
+                  and collaborative initiatives. This allocation ensures 7% of
+                  the total supply is dedicated to fostering collaborations with
+                  other projects, platforms, and communities. It supports the
+                  growth and expansion of the Arkstart ecosystem by integrating
+                  complementary services, expanding use cases, and strengthening
+                  the overall ecosystem.
                 </p>
               </div>
               <div className={styles.item}>
-                <div className={styles.title}>Cogito Protocol</div>
+                <div className={styles.title}>10% Staking</div>
                 <p>
-                  The Cogito protocol provides a framework that allows for the
-                  creation of decentralized assets called tracepoints. They are
-                  artificial intelligence driven, secured stable currencies, and
-                  soft linked to non-financial indices. The mechanism behind
-                  this protocol is supported by SingularityNET's artificial
-                  intelligence technology.
+                  Users can stake the platform token and earn staking rewards.
+                  The staking mechanism incentivizes long-term commitment,
+                  active participation, and alignment of interests among
+                  participants. This allocation ensures 3% of the total supply
+                  is dedicated to staking rewards, promoting network security
+                  and token holder engagement.
+                </p>
+              </div>
+              <div className={styles.item}>
+                <div className={styles.title}>3% DAO Allocation</div>
+                <p>
+                  Reserved for internal and external incentives within the DAO
+                  organization. This allocation ensures active governance
+                  participation and supports collaborative partnerships,
+                  promoting community involvement and decision-making.
                 </p>
               </div>
             </div>
             <div className={styles.other}>
-              <div className={styles.card + " " + styles.status}>
+              {/* <div className={styles.card + " " + styles.status}>
                 <div className={styles.list}>
                   <div className={styles.label}>Status</div>
                   <div className={styles.val + " " + styles.blue}>{status}</div>
@@ -487,9 +535,9 @@ const LaunchpadDetails = () => {
                     Unsafe functions Powered by OKCA
                   </div>
                 </div>
-              </div>
+              </div> */}
               <div className={styles.card + " " + styles.metric}>
-                <div className={styles.title}>Token Metric</div>
+                <div className={styles.title}>Tokenomics</div>
                 <div className={styles.chart}>
                   <Echart />
                 </div>
@@ -529,11 +577,11 @@ const LaunchpadDetails = () => {
     </HeaderFooter>
   );
 };
-
+// @ts-ignore
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ["common"])),
-  },
+    ...(await serverSideTranslations(locale, ['common']))
+  }
 });
 
 export default withRouter(LaunchpadDetails);
