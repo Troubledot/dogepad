@@ -16,16 +16,15 @@ const Echart = () => {
         trigger: "item",
       },
       legend: {
-        top: "middle",
-        left: "right",
-        orient: "vertical",
+        left: "center",
+        top: "20px",
       },
       series: [
         {
           name: "Access From",
           type: "pie",
-          radius: ["50%", "65%"],
-          center: ["30%", "50%"],
+          radius: ["40%", "55%"],
+          center: ["50%", "70%"],
           label: {
             show: false,
             position: "center",

@@ -1,14 +1,14 @@
-import React from 'react';
-import { getInvite, getInviteRank, createInvite } from '../api/api';
-import HeaderFooter from '../layout/HeaderFooter';
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { withRouter } from 'next/router';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import React from "react";
+import { getInvite, getInviteRank, createInvite } from "../api/api";
+import HeaderFooter from "../layout/HeaderFooter";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { withRouter } from "next/router";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
-import styles from '../styles/home.module.scss';
+import styles from "../styles/home.module.scss";
 
-import 'animate.css';
+import "animate.css";
 
 const Home = () => {
   return (
@@ -53,8 +53,9 @@ const Home = () => {
         <div className={styles.feature}>
           <h1></h1>
           <h2>
-            Bisoswap is aiming to address the lack of liquidity in BRC20 by increasing the liquidity pool for LP trades
-            and enabling real-time trading.
+            Bisoswap is aiming to address the lack of liquidity in BRC20 by
+            increasing the liquidity pool for LP trades and enabling real-time
+            trading.
           </h2>
           <ul>
             <i className={styles.character}></i>
@@ -63,8 +64,9 @@ const Home = () => {
                 <b>AMM</b> Model.
               </h3>
               <p>
-                Automated Market Maker (AMM) model: BisoSwap adopt an AMM model, which simplifies trading processes and
-                reduces the reliance on order books.
+                Automated Market Maker (AMM) model: BisoSwap adopt an AMM model,
+                which simplifies trading processes and reduces the reliance on
+                order books.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
@@ -73,8 +75,9 @@ const Home = () => {
                 <b>Liquidity</b>provision.
               </h3>
               <p>
-                Liquidity provision and incentives: Users can provide liquidity to the platform and receive incentives
-                to ensure sufficient liquidity for better trading experience.
+                Liquidity provision and incentives: Users can provide liquidity
+                to the platform and receive incentives to ensure sufficient
+                liquidity for better trading experience.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
@@ -83,8 +86,9 @@ const Home = () => {
                 <b>User-friendly </b>Interface.
               </h3>
               <p>
-                User-friendly interface: BisoSwap offers a clean, intuitive interface that allows users to easily
-                connect their wallets and interact with the platform.
+                User-friendly interface: BisoSwap offers a clean, intuitive
+                interface that allows users to easily connect their wallets and
+                interact with the platform.
               </p>
               <a href="#">go to Swap &gt;&gt;</a>
             </li>
@@ -99,8 +103,9 @@ const Home = () => {
                 <b> project stakeholders</b>
               </h1>
               <p>
-                We&apos;re gonna offer users all the decentralized services, and provide project partners with services
-                like fundraising, distribution, and airdrops.
+                We&apos;re gonna offer users all the decentralized services, and
+                provide project partners with services like fundraising,
+                distribution, and airdrops.
               </p>
               <ul className={styles.icon}>
                 <li>No KYC</li>
@@ -171,7 +176,8 @@ const Home = () => {
           <div className={styles.inner}>
             <div className={styles.text}>
               <h1>
-                <span className={styles.ori}>Launchpad </span> passive <br /> income
+                <span className={styles.ori}>Launchpad </span> passive <br />{" "}
+                income
                 <span className={styles.gray}> with crypto.</span>
               </h1>
               <p>BisoSwap makes it easy to make your crypto work for you.</p>
@@ -206,8 +212,8 @@ const Home = () => {
 
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common']))
-  }
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
 });
 
 export default withRouter(Home);

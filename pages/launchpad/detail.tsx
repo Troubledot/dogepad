@@ -1,37 +1,37 @@
-import React, { useState, useEffect } from 'react';
-import Timer from 'react-compound-timer';
-import HeaderFooter from '../../layout/HeaderFooter';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { withRouter, useRouter } from 'next/router';
-import { useTranslation } from 'next-i18next';
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Image from 'next/image';
-import Link from 'next/link';
-import styles from '../../styles/launchpad_detail.module.scss';
-import 'animate.css';
-import axios from 'axios';
-import avatar from '../../public/launchpad/avatar.png';
-import address from '../../public/launchpad/address.png';
-import github from '../../public/launchpad/github.png';
-import twitter from '../../public/launchpad/twitter.png';
-import telegram from '../../public/launchpad/telegram.png';
-import discord from '../../public/launchpad/discord.png';
-import meta from '../../public/launchpad/meta.png';
-import yellowArrow from '../../public/home/yellow_arrow.svg';
-import whiteArrow from '../../public/home/white_arrow.svg';
-import Input from '../../components/Input';
-import Button from '../../components/Button';
-import Echart from '../../components/Echart';
+import React, { useState, useEffect } from "react";
+import Timer from "react-compound-timer";
+import HeaderFooter from "../../layout/HeaderFooter";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { withRouter, useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Image from "next/image";
+import Link from "next/link";
+import styles from "../../styles/launchpad_detail.module.scss";
+import "animate.css";
+import axios from "axios";
+import avatar from "../../public/launchpad/avatar.png";
+import address from "../../public/launchpad/address.png";
+import github from "../../public/launchpad/github.png";
+import twitter from "../../public/launchpad/twitter.png";
+import telegram from "../../public/launchpad/telegram.png";
+import discord from "../../public/launchpad/discord.png";
+import meta from "../../public/launchpad/meta.png";
+import yellowArrow from "../../public/home/yellow_arrow.svg";
+import whiteArrow from "../../public/home/white_arrow.svg";
+import Input from "../../components/Input";
+import Button from "../../components/Button";
+import Echart from "../../components/Echart";
 
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const LaunchpadDetails = () => {
-  const { t } = useTranslation('common');
+  const { t } = useTranslation("common");
   const router = useRouter();
   interface Member {
     id: number;
@@ -44,12 +44,36 @@ const LaunchpadDetails = () => {
   const myTeam: Member[] = [
     {
       id: 1,
-      name: 'Michael',
-      position: 'Founder',
+      name: "Michael1",
+      position: "Founder",
       avatar,
       intro:
-        'Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.'
-    }
+        "Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.",
+    },
+    {
+      id: 2,
+      name: "Michael2",
+      position: "Founder",
+      avatar,
+      intro:
+        "Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.",
+    },
+    {
+      id: 3,
+      name: "Michael3",
+      position: "Founder",
+      avatar,
+      intro:
+        "Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.",
+    },
+    {
+      id: 4,
+      name: "Michael4",
+      position: "Founder",
+      avatar,
+      intro:
+        "Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.",
+    },
   ];
 
   const [tokenPrice, setTokenPrice] = useState(0.00000105952);
@@ -60,12 +84,12 @@ const LaunchpadDetails = () => {
   const [obtained, setObtained] = useState(0);
   const [balance, setBalance] = useState(0);
   const [team, setTeam] = useState<Member[]>(myTeam);
-  const [status, setStatus] = useState('Listed');
+  const [status, setStatus] = useState("Listed");
   const [currentRate, setCurrentRate] = useState(65.3212345);
   const [myContribution, setMyContribution] = useState(0.0);
   const [totalContribution, setTotalContribution] = useState(65);
-  const [audit, setAudit] = useState('No');
-  const [KYC, setKYC] = useState('No');
+  const [audit, setAudit] = useState("No");
+  const [KYC, setKYC] = useState("No");
   const [supply, setSupply] = useState(12);
   const [lockDuration, setLockDuration] = useState(32542);
   const [lockPercent, setLockPercent] = useState(25);
@@ -92,7 +116,7 @@ const LaunchpadDetails = () => {
     console.log(value);
   };
   const mint = () => {
-    console.log('mint');
+    console.log("mint");
   };
 
   return (
@@ -214,25 +238,25 @@ const LaunchpadDetails = () => {
                         <h1>
                           <Timer.Days />
                         </h1>
-                        <p>D A Y</p>
+                        <p>DAY</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Hours />
                         </h1>
-                        <p>H R S</p>
+                        <p>HRS</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Minutes />
                         </h1>
-                        <p>M I N</p>
+                        <p>MIN</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Seconds />
                         </h1>
-                        <p>S E C</p>
+                        <p>SEC</p>
                       </li>
                     </ul>
                   </Timer>
@@ -323,25 +347,25 @@ const LaunchpadDetails = () => {
                         <h1>
                           <Timer.Days />
                         </h1>
-                        <p>D A Y</p>
+                        <p>DAY</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Hours />
                         </h1>
-                        <p>H R S</p>
+                        <p>HRS</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Minutes />
                         </h1>
-                        <p>M I N</p>
+                        <p>MIN</p>
                       </li>
                       <li>
                         <h1>
                           <Timer.Seconds />
                         </h1>
-                        <p>S E C</p>
+                        <p>SEC</p>
                       </li>
                     </ul>
                   </Timer>
@@ -406,13 +430,20 @@ const LaunchpadDetails = () => {
             <div className={styles.title}>About Team</div>
             <Swiper
               spaceBetween={50}
-              slidesPerView={4}
+              slidesPerView={3}
               onSlideChange={() => console.log("slide change")}
               onSwiper={(swiper) => console.log(swiper)}
             >
               {team.map((member: Member) => (
                 <SwiperSlide className={styles.member} key={member.id}>
-                  <Image src={member.avatar} alt={member.name} />
+                  <div className={styles.avatar}>
+                    <Image
+                      src={member.avatar}
+                      alt={member.name}
+                      width={80}
+                      height={80}
+                    />
+                  </div>
                   <div className={styles.name}>{member.name}</div>
                   <div className={styles.position + " " + styles.ori}>
                     {member.position}
@@ -580,8 +611,8 @@ const LaunchpadDetails = () => {
 // @ts-ignore
 export const getStaticProps = async ({ locale }) => ({
   props: {
-    ...(await serverSideTranslations(locale, ['common']))
-  }
+    ...(await serverSideTranslations(locale, ["common"])),
+  },
 });
 
 export default withRouter(LaunchpadDetails);
