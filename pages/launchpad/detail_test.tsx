@@ -191,31 +191,31 @@ const LaunchpadDetails = () => {
       setBtnEnable(false);
     }, 1000);
 
-    if (new Date().getTime() < 1685624400000 && type == 1) {
-      toast.warning("The Whitelist sale round has yet to begin", toastConfig);
-      return;
-    }
+    // if (new Date().getTime() < 1685624400000 && type == 1) {
+    //   toast.warning("The Whitelist sale round has yet to begin", toastConfig);
+    //   return;
+    // }
 
-    if (new Date().getTime() < 1685678400000 && type == 2) {
-      toast.warning("The Public sale round has yet to begin", toastConfig);
-      return;
-    }
+    // if (new Date().getTime() < 1685678400000 && type == 2) {
+    //   toast.warning("The Public sale round has yet to begin", toastConfig);
+    //   return;
+    // }
 
-    if (
-      new Date().getTime() > 1685624400000 + 12 * 60 * 60 * 1000 &&
-      type == 1
-    ) {
-      toast.warning("The Whitelist sale round has end", toastConfig);
-      return;
-    }
+    // if (
+    //   new Date().getTime() > 1685624400000 + 12 * 60 * 60 * 1000 &&
+    //   type == 1
+    // ) {
+    //   toast.warning("The Whitelist sale round has end", toastConfig);
+    //   return;
+    // }
 
-    if (
-      new Date().getTime() > 1685678400000 + 12 * 60 * 60 * 1000 &&
-      type == 2
-    ) {
-      toast.warning("The Whitelist sale round has end", toastConfig);
-      return;
-    }
+    // if (
+    //   new Date().getTime() > 1685678400000 + 12 * 60 * 60 * 1000 &&
+    //   type == 2
+    // ) {
+    //   toast.warning("The Whitelist sale round has end", toastConfig);
+    //   return;
+    // }
 
     if (
       (type == 1 && whitelistInput * 1 < 0.01) ||
