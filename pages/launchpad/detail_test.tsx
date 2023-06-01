@@ -252,12 +252,12 @@ const LaunchpadDetails = () => {
       toast.warning("Your address are not in whitelist.", toastConfig);
       return;
     }
-    let txid =
-        "a7a83f036208bebf6577a2c76d9b49ab6fe03e6944bcfe066e8c0d35c20aa414";
+    // let txid =
+    //     "a7a83f036208bebf6577a2c76d9b49ab6fe03e6944bcfe066e8c0d35c20aa414";
     if (type == 1) {
       let inputValue =
         utils.parseUnits(String(whitelistInput), 8).add("70000").toString() * 1;
-      // let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
+      let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
       if (txid) {
         const res = await mintSale(accounts[0], txid, type, whitelistInput, 1);
         console.log("res", res);
@@ -266,7 +266,7 @@ const LaunchpadDetails = () => {
     } else if (type == 2) {
       let inputValue =
         utils.parseUnits(String(publicInput), 8).add("70000").toString() * 1;
-      // let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
+      let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
       if (txid) {
         const res = await mintSale(accounts[0], txid, type, publicInput, 1);
         console.log("res", res);

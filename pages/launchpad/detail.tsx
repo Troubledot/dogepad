@@ -130,22 +130,24 @@ const LaunchpadDetails = () => {
       setFundraisers(totalPublicSale.data.totalUsers);
       setActualAmount(totalPublicSale.data.totalSale);
       const whitelistTotalSale = await getAmountByAddress(accounts[0], 1, 1);
+      console.log("whitelistTotalSale", whitelistTotalSale);
       setMyWhitelistBtc(whitelistTotalSale.data.totalBuy);
+      console.log("totalWhitelistSale", totalWhitelistSale.data.totalBuy);
       const WhitelistObtained =
-        whitelistTotalSale.data.totalBuy * 1 < 5.2
-          ? totalWhitelistSale.data.totalSale / 0.00000105952
-          : whitelistTotalSale.data.totalBuy /
-            (totalWhitelistSale.data.totalSale / 5.2) /
+        totalWhitelistSale.data.totalSale * 1 < 5.2
+          ? (whitelistTotalSale.data.totalBuy * 1) / 0.00000105952
+          : (whitelistTotalSale.data.totalBuy * 1) /
+            ((totalWhitelistSale.data.totalSale * 1) / 5.2) /
             0.00000105952;
       setWhitelistObtained(WhitelistObtained);
 
       const publicTotalSale = await getAmountByAddress(accounts[0], 1, 2);
       setMyPublicBtc(publicTotalSale.data.totalBuy);
       const publicObtained =
-        publicTotalSale.data.totalBuy * 1 < 12.6
-          ? totalPublicSale.data.totalSale / 0.00000105952
-          : publicTotalSale.data.totalBuy /
-            (totalPublicSale.data.totalSale / 12.6) /
+        totalPublicSale.data.totalSale * 1 < 12.6
+          ? (publicTotalSale.data.totalBuy * 1) / 0.00000105952
+          : (publicTotalSale.data.totalBuy * 1) /
+            ((totalPublicSale.data.totalSale * 1) / 12.6) /
             0.00000105952;
       console.log(
         "publicTotalSale",
@@ -247,21 +249,26 @@ const LaunchpadDetails = () => {
       toast.warning("Your address are not in whitelist.", toastConfig);
       return;
     }
-
-    var inputValue = 0;
+    // let txid =
+    //     "a7a83f036208bebf6577a2c76d9b49ab6fe03e6944bcfe066e8c0d35c20aa414";
     if (type == 1) {
-      inputValue =
+      let inputValue =
         utils.parseUnits(String(whitelistInput), 8).add("70000").toString() * 1;
+      let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
+      if (txid) {
+        const res = await mintSale(accounts[0], txid, type, whitelistInput, 1);
+        console.log("res", res);
+        toast.success("Payment success", toastConfig);
+      }
     } else if (type == 2) {
-      inputValue =
+      let inputValue =
         utils.parseUnits(String(publicInput), 8).add("70000").toString() * 1;
-    }
-    console.log("inputValue", inputValue);
-    let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
-    console.log(txid);
-    if (txid) {
-      await mintSale(accounts[0], txid, type, inputValue, 1);
-      toast.success("Payment success", toastConfig);
+      let txid = await window.unisat.sendBitcoin(wallet[type], inputValue);
+      if (txid) {
+        const res = await mintSale(accounts[0], txid, type, publicInput, 1);
+        console.log("res", res);
+        toast.success("Payment success", toastConfig);
+      }
     }
   };
 
@@ -434,7 +441,7 @@ const LaunchpadDetails = () => {
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {percentage} %
+                  {((whitelistActualAmount / 5.2) * 100).toFixed(2)} %
                 </div>
               </div>
               <div className={styles.amount}>
@@ -482,7 +489,7 @@ const LaunchpadDetails = () => {
               </div>
               <span className={styles.wrap}>
                 <input
-                  type="number"
+                  type="text"
                   min="0.01"
                   max="0.577"
                   value={whitelistInput}
@@ -569,7 +576,7 @@ const LaunchpadDetails = () => {
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {percentage} %
+                  {((actualAmount / 12.6) * 100).toFixed(2)} %
                 </div>
               </div>
               <div className={styles.amount}>
@@ -617,7 +624,7 @@ const LaunchpadDetails = () => {
               </div>
               <span className={styles.wrap}>
                 <input
-                  type="number"
+                  type="text"
                   min="0.01"
                   max="0.577"
                   value={publicInput}
