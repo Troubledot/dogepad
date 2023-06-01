@@ -12,8 +12,8 @@ import { utils } from "ethers";
 import Link from "next/link";
 import Image from "next/image";
 import tokenimg from "../../public/images/token.png";
-import project from "../../public/launchpad/project.png";
-import avatar from "../../public/launchpad/messi.webp";
+import project from "../../public/launchpad/arks.jpg";
+import avatar from "../../public/launchpad/avatar.png";
 import icon1 from "../../public/launchpad/titleicon.png";
 import icon2 from "../../public/launchpad/launchicon2.png";
 import icon3 from "../../public/launchpad/launchicon3.png";
@@ -65,14 +65,14 @@ const Stake = () => {
                 published on explorer websites.
               </p>
               <div className={styles.operate}>
-                <Link href="/launchpad/list" passHref>
+                {/* <Link href="/launchpad/list" passHref> */}
                   <button>
-                    Find Project<i></i>
+                    Learn<i></i>
                   </button>
-                </Link>
-                <a href="#">
+                {/* </Link> */}
+                {/* <a href="#">
                   Learn<i></i>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
@@ -108,6 +108,7 @@ const Stake = () => {
           <div className={styles.list}>
             <div className={styles.listItem}>
               <div className={styles.main}>
+                <Link href="/launchpad/detail" passHref>
                 <div className={styles.banner}>
                   <Image
                     src={project}
@@ -120,12 +121,13 @@ const Stake = () => {
                     <span>So Hot</span>
                   </div>
                 </div>
+                </Link>
                 <div className={styles.avatar}>
-                  <Image src={avatar} alt="avatar" width={80} height={80} />
+                  <Image src={avatar} alt="avatar" width={80} height={80} objectFit="cover" />
                 </div>
-                <div className={styles.name}>FairLady Project</div>
+                <div className={styles.name}>Arkstart</div>
                 <div className={styles.contact}>
-                  <Link href="https://www.baidu.com/" passHref>
+                  <Link href="https://twitter.com/arkscoin" passHref>
                     <a className={styles.item}>
                       <Image
                         src={twitter}
@@ -155,7 +157,7 @@ const Stake = () => {
                       ></Image>
                     </a>
                   </Link>
-                  <Link href="https://www.baidu.com/" passHref>
+                  {/* <Link href="https://www.baidu.com/" passHref>
                     <a className={styles.item}>
                       <Image
                         src={github}
@@ -164,8 +166,8 @@ const Stake = () => {
                         height={20}
                       ></Image>
                     </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
+                  </Link> */}
+                  <Link href="https://medium.com/@arkstart" passHref>
                     <a className={styles.item}>
                       <Image
                         src={meta}
@@ -178,175 +180,10 @@ const Stake = () => {
                 </div>
               </div>
               <p>
-                The decentralized Muon network is like a distributed
-                supercomputer with a universal operating system. It will be run
-                by a global community of node operators, all incentivized by the
-                Muon token. This creates a powerful and secure cloud computation
-                service that can run any app/software and connect to all public
-                blockchains. It in no way replaces blockchains, but rather is a
-                perfect technology-
-              </p>
-            </div>
-            <div className={styles.listItem}>
-              <div className={styles.main}>
-                <div className={styles.banner}>
-                  <Image
-                    src={project}
-                    alt="Remote Image"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <div className={styles.tag}>
-                    <Image src={hot} width={12} height={12} alt="hot" />
-                    <span>So Hot</span>
-                  </div>
-                </div>
-                <div className={styles.avatar}>
-                  <Image src={avatar} alt="avatar" width={80} height={80} />
-                </div>
-                <div className={styles.name}>FairLady Project</div>
-                <div className={styles.contact}>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={twitter}
-                        alt="twitter"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={discord}
-                        alt="discord"
-                        width={24.24}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={telegram}
-                        alt="telegram"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={github}
-                        alt="github"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={meta}
-                        alt="meta"
-                        width={25.8}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-              <p>
-                The decentralized Muon network is like a distributed
-                supercomputer with a universal operating system. It will be run
-                by a global community of node operators, all incentivized by the
-                Muon token. This creates a powerful and secure cloud computation
-                service that can run any app/software and connect to all public
-                blockchains. It in no way replaces blockchains, but rather is a
-                perfect technology-
-              </p>
-            </div>
-            <div className={styles.listItem}>
-              <div className={styles.main}>
-                <div className={styles.banner}>
-                  <Image
-                    src={project}
-                    alt="Remote Image"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <div className={styles.tag}>
-                    <Image src={hot} width={12} height={12} alt="hot" />
-                    <span>So Hot</span>
-                  </div>
-                </div>
-                <div className={styles.avatar}>
-                  <Image src={avatar} alt="avatar" width={80} height={80} />
-                </div>
-                <div className={styles.name}>FairLady Project</div>
-                <div className={styles.contact}>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={twitter}
-                        alt="twitter"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={discord}
-                        alt="discord"
-                        width={24.24}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={telegram}
-                        alt="telegram"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={github}
-                        alt="github"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={meta}
-                        alt="meta"
-                        width={25.8}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-              <p>
-                The decentralized Muon network is like a distributed
-                supercomputer with a universal operating system. It will be run
-                by a global community of node operators, all incentivized by the
-                Muon token. This creates a powerful and secure cloud computation
-                service that can run any app/software and connect to all public
-                blockchains. It in no way replaces blockchains, but rather is a
-                perfect technology-
+                Arkstart is pioneering the new era of BRC-20 token staking with
+                our innovative blockchain project. We aim to build a sustainable
+                staking ecosystem using unique staking mechanisms and economic
+                models.
               </p>
             </div>
           </div>

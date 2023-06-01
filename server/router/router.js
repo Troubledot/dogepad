@@ -26,9 +26,11 @@ export default function (router, handle) {
     //project
     router.get("/api/getProjectTotalInfo", require("../container/project.js").getProjectTotalInfo)
     router.get("/api/getProjectInfo/:projectID", require("../container/project.js").getProjectInfo)
-    router.post("/api/projectWhitelistSale", require("../container/project.js").whitelistSale)
+    router.post("/api/mintSale", require("../container/project.js").mintSale)
     router.get("/api/getAmountByAddress/:address/:projectID/:type", require("../container/project.js").getAmountByAddress)
     router.get("/api/getTotalSale/:projectID/:type", require("../container/project.js").getTotalSale)
+    router.get("/api/projectCheckWhitelist/:address", require("../container/project.js").projectCheckWhitelist)
+
 
 
     

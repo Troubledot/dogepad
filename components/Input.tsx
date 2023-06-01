@@ -6,6 +6,7 @@ export interface InputProps {
   btnText?: string;
   textColor?: string;
   placeholder?: string;
+  value: number,
   handleClick: (value: string) => void;
 }
 
@@ -17,12 +18,20 @@ const Input = ({
   placeholder,
 }: InputProps) => {
   const [inputValue, setInputValue] = useState("");
+  const inputChange = (e:any) => {
+    let obj:any = {};
+    let value: any = e.target.value;
+    value = value.match(/^\d*(\.?\d{0,8})/g)[0] || null;
+    obj[e.target.id] = value;
+    setInputValue(value);
+  };
   return (
     <div className={styles.wrap}>
       <input
-        onChange={(e) => setInputValue(e.target.value)}
-        type="text"
+        onChange={(e) => inputChange(e)}
+        type="number"
         placeholder={placeholder}
+        value={inputValue}
       />
       {hasBtn ? (
         <button

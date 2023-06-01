@@ -215,3 +215,57 @@ export const getRefundByAddress = async (adress) => {
 }
 
 
+
+
+
+
+export const mintSale = async (address, tx, type, amount, projectID) => {
+    try {
+        const {data} = await axios.post(`/api/mintSale`, {
+                address: address,
+                tx: tx,
+                type: type,
+                amount:amount,
+                projectID:projectID
+            }
+        )
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getAmountByAddress = async (addresss, projectID,type) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getAmountByAddress/${addresss}/${projectID}/${type}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const getTotalSale = async (projectID,type) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/getTotalSale/${projectID}/${type}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+export const projectCheckWhitelist = async (adress) => {
+    try {
+        const {
+            data
+        } = await axios.get(`/api/projectCheckWhitelist/${adress}`)
+        return data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+
