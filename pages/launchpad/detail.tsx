@@ -411,7 +411,7 @@ const LaunchpadDetails = () => {
                       `${value < 10 ? `0${value}` : value} `
                     }
                     initialTime={
-                      new Date(1685624400000).getTime() - new Date().getTime()
+                      new Date(1685624400000 + 12 * 60 * 60 * 1000).getTime() - new Date().getTime()
                     }
                     lastUnit="h"
                     direction="backward"
