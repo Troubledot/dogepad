@@ -1704,7 +1704,8 @@ const WHITELIST = [
 "bc1pnnca6h4qetlnmwvk0nfsel7amxmc9twse7u8f3dpmapznc5mpcssqu5zff",           
 "bc1p529n8f905es3wtwlv2p45ne950jeptmdynkq4dp9lqzg4yy8hews9tgqf3",           
 "bc1pevyph86ql9n6eqqx5k0zg96lnxta6wjehs5jfsmgua6zvg496dcqwnkm0a",           
-"bc1pl92cceuxcry00hcp0tpy4hfd38p82hmcdy2y52w9z9ry4asshxyqtrp6jm",           
+"bc1pl92cceuxcry00hcp0tpy4hfd38p82hmcdy2y52w9z9ry4asshxyqtrp6jm",    
+"bc1plwvzy06s0axy50ahn5g8dtgntjmkua8qkfed2ysupcvr7fjhk9mqzcjmrl",     
 ]
 
 // 获取Launchpad总数据
