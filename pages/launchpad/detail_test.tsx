@@ -493,7 +493,7 @@ const LaunchpadDetails = () => {
               </div>
               <span className={styles.wrap}>
                 <input
-                  type="number"
+                  type="text"
                   min="0.01"
                   max="0.577"
                   value={whitelistInput}
@@ -628,7 +628,7 @@ const LaunchpadDetails = () => {
               </div>
               <span className={styles.wrap}>
                 <input
-                  type="number"
+                  type="text"
                   min="0.01"
                   max="0.577"
                   value={publicInput}
