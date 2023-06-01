@@ -96,6 +96,7 @@ const LaunchpadDetails = () => {
   const [publicInput, setPublicInput] = useState(0.01);
   const [myWhitelistBtc, setMyWhitelistBtc] = useState(0);
   const [myPublicBtc, setMyPublicBtc] = useState(0);
+  const [isWhitelist, setIsWhitelist] = useState(false);
 
   const wallet = [
     "",
@@ -156,6 +157,8 @@ const LaunchpadDetails = () => {
       );
 
       setObtained(publicObtained);
+      const isWhiteList = await projectCheckWhitelist(accounts[0]);
+      setIsWhitelist(isWhiteList.data.isWhitelist);
     }
   };
   const setMax = async (value: number, type: number) => {
@@ -509,7 +512,7 @@ const LaunchpadDetails = () => {
                 renderContent={() => (
                   <>
                     <span className={styles.btnText + " " + styles.ori}>
-                      Buy
+                      {isWhitelist ? "Buy" : "Not in whitelis"}
                     </span>
                     <Image
                       src={yellowArrow}
