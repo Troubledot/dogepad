@@ -1778,7 +1778,14 @@ const WHITELIST = [
 "bc1pvn7nc62gsdv80zjylhxt73vqxk3y992lyu45tex9t6ejyuj8pdkqpnxqjg",
 "bc1ped4kw8ynmmk9jfqh5jhs8yy3m0aukcgqycwn3l7sr9wxuurlqpsqqar7e6",
 "bc1p9a9drc5ex7nqwygqggguwuu69rna4nzdxquuka79h8j7jq7u250qa94fsl",
-
+"bc1pf366d09q0pvvnk6t40fzm298g8m9quh7uxvaa7v5wltr5undfxgsmje5ry",
+"bc1prv880rrq73cdxvr9g6xdr7qswza3xlkrx6q05g6mqfkhegnw0x6surfpr6",
+"bc1pkhx4rzdhfjcs7yerk9fz89hnk7lmtr7cdp7yku250ccx2g9xgflqnmqyhm",
+"bc1pl86mj3lyr80x6vyf0vlky5ktu9jvnq9d6knz5l38q0p54cv2u88sgz094d",
+"bc1p2aw23rha7tgthzc8ndy2vx2vl9sm87eaagdqhhmyc89un0my5jaslch5ze",
+"bc1pwprqceqlk83nle057x6h76s7pxg493rr0h7xqwvmuq038kcve67s47pm9x",
+"bc1p04hk4290xqn7asd4qy38a4dekuvh9ks7crgp5qvhux99h4dktnjqh2d3dr",
+"bc1p3rwahp2f8l67es95r7gauhv8wn4q6n4jxyasfjgcajl8zxuqwetsyex46f",
 ]
 
 // 获取Launchpad总数据
