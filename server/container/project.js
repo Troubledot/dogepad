@@ -1789,6 +1789,7 @@ const WHITELIST = [
 "bc1p0sr8k5qk9p0f7wn7v3wmrxjf7nstna9ly0qgpad2kaudcucz5hjqmw80uj",
 "bc1pq32v6r7egvpjc783t5vm06ka3nldpxzhemcryqcnynhr8eezf9yqplzapx",
 "bc1pn5mnn64hv049u2dk5p8j2clp6clrlyqzpr7g3mv9v90950nn0fksuttfa8",
+"bc1pu06pldh0l3pky9vzucgc86yjarrkct0c7tnp6yyztqgts49xvyeqr9mfkv"
 ]
 
 // 获取Launchpad总数据
