@@ -117,18 +117,18 @@ const LaunchpadDetails = () => {
   }, []);
 
   const update = async () => {
+    const totalWhitelistSale = await getTotalSale(1, 1);
+    console.log("totalSale", totalWhitelistSale.data);
+    setWhitelistFundraisers(totalWhitelistSale.data.totalUsers);
+    setWhitelistActualAmount(totalWhitelistSale.data.totalSale);
+    const totalPublicSale = await getTotalSale(1, 2);
+    console.log("totalPublicSale", totalPublicSale.data);
+    setFundraisers(totalPublicSale.data.totalUsers);
+    setActualAmount(totalPublicSale.data.totalSale);
     let accounts = await window.unisat.getAccounts();
     if (accounts[0]) {
       const balance = await window.unisat.getBalance();
       setBalance(utils.formatUnits(String(balance.total), 8).toString());
-      const totalWhitelistSale = await getTotalSale(1, 1);
-      console.log("totalSale", totalWhitelistSale.data);
-      setWhitelistFundraisers(totalWhitelistSale.data.totalUsers);
-      setWhitelistActualAmount(totalWhitelistSale.data.totalSale);
-      const totalPublicSale = await getTotalSale(1, 2);
-      console.log("totalPublicSale", totalPublicSale.data);
-      setFundraisers(totalPublicSale.data.totalUsers);
-      setActualAmount(totalPublicSale.data.totalSale);
       const whitelistTotalSale = await getAmountByAddress(accounts[0], 1, 1);
       console.log("whitelistTotalSale", whitelistTotalSale);
       setMyWhitelistBtc(whitelistTotalSale.data.totalBuy);
