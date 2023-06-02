@@ -236,13 +236,22 @@ const LaunchpadDetails = () => {
     let accounts = await window.unisat.requestAccounts();
 
      const whitelistInputSale = await getAmountByAddress(accounts[0], 1, 1);
-     if (whitelistInputSale.data.totalBuy * 1 + whitelistInput * 1 > 0.077) {
+     if (type == 1 && whitelistInputSale.data.totalBuy * 1 + whitelistInput * 1 > 0.077) {
        toast.warning(
          "Your contribution amount cannot exceed 0.077",
          toastConfig
        );
        return;
      }
+
+      const publicInputSale = await getAmountByAddress(accounts[0], 1, 2);
+      if (type ==2 && publicInputSale.data.totalBuy * 1 + publicInput * 1 > 0.577) {
+        toast.warning(
+          "Your contribution amount cannot exceed 0.577",
+          toastConfig
+        );
+        return;
+      }
 
     console.log("publicInput", publicInput);
 
