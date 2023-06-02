@@ -1976,7 +1976,7 @@ export async function mintSale(req, res) {
   });
   console.log("totalBuy", totalBuy);
 
-  if (type == 1 && (totalBuy >= 0.077 || (totalBuy*1 + amount*1) >= 0.077) ) {
+  if (type == 1 && (totalBuy > 0.077 || (totalBuy*1 + amount*1) > 0.077) ) {
     res.send({
       msg: "Have exceeded the limit",
       code: 0,
@@ -1984,7 +1984,7 @@ export async function mintSale(req, res) {
     return;
   }
 
-  if (type == 2 && (totalBuy >= 0.577 || (totalBuy*1 + amount*1) >= 0.577) ) {
+  if (type == 2 && (totalBuy > 0.577 || (totalBuy*1 + amount*1) > 0.577) ) {
     res.send({
       msg: "Have exceeded the limit",
       code: 0,

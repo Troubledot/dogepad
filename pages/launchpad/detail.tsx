@@ -128,6 +128,8 @@ const LaunchpadDetails = () => {
     setActualAmount(totalPublicSale.data.totalSale);
     let accounts = await window.unisat.getAccounts();
     if (accounts[0]) {
+      // accounts[0] =
+      //   "bc1pmhsfvsy0s5antfw32hmav7vsa34rxvsxel3u5w42mh5ate9rdnhsqampvf";
       const balance = await window.unisat.getBalance();
       setBalance(utils.formatUnits(String(balance.total), 8).toString());
       const whitelistTotalSale = await getAmountByAddress(accounts[0], 1, 1);
@@ -144,6 +146,7 @@ const LaunchpadDetails = () => {
 
       const publicTotalSale = await getAmountByAddress(accounts[0], 1, 2);
       setMyPublicBtc(publicTotalSale.data.totalBuy);
+      console.log("publicTotalSale", publicTotalSale);
       const publicObtained =
         totalPublicSale.data.totalSale * 1 < 12.6
           ? (publicTotalSale.data.totalBuy * 1) / 0.00000105952
@@ -245,6 +248,7 @@ const LaunchpadDetails = () => {
      }
 
       const publicInputSale = await getAmountByAddress(accounts[0], 1, 2);
+      console.log("publicInputSale", publicInputSale);
       if (type ==2 && publicInputSale.data.totalBuy * 1 + publicInput * 1 > 0.577) {
         toast.warning(
           "Your contribution amount cannot exceed 0.577",
