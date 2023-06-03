@@ -831,25 +831,32 @@ const LaunchpadDetails = () => {
                   styles.card + " " + styles.grayback + " " + styles.prompt
                 }
               >
-                <div className={styles.title}>User Protection Mechanism</div>
+                <div className={styles.title}>IDO Special Announcement</div>
                 <p>
-                  BisoSwap will release 70% of the raised funds to the project
-                  party after the end of the fundraising.
+                  To protect the rights of our users, BisoSwap has prepared a
+                  special parachute mechanism
                 </p>
                 <p>
-                  If the token dump below the issue price within three days,
+                  This will be maximum ensure user token in reasonable price
+                </p>
+                <p>
+                  BisoSwap will release 70% of the funds raised to the project
+                  owner at the end of the fundraising
+                </p>
+                <p>
+                  If the token falls below the issue price within three days,
                   BisoSwap will activate the parachute mechanism to protect the
-                  community.We will confiscate 23% of the raised funds to
-                  protect the token price.
+                  community. We will provide 23% of the funds raised for market
+                  capitalisation and marketing
                 </p>
                 <p>
-                  If the token do not dump below the issue price within three
-                  days, we will release 23% of the raised funds to the project
-                  party.
+                  If the token does not fall below the issue price within three
+                  days, we will release 23% of the funds raised to the project
+                  team.
                 </p>
                 <p>
-                  7% of the raised funds will be used as platform service fees
-                  for marketing and promotion.
+                  7% of the funds will be used as a platform service fee for
+                  marketing purposes 🪙
                 </p>
               </div>
             </div>
