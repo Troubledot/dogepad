@@ -769,7 +769,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
               <div className={styles.item}>
                 <div className={styles.title}>Game Introduction</div>
                 <p>
-                  "THREE-BODY WARRIORS" is a Yuan cosmic game invested and
+                  &quot;THREE-BODY WARRIORS&quot; is a Yuan cosmic game invested and
                   developed by well-known American game R & D company IGS. You
                   can get the corresponding resources and tokens, and to obtain
                   higher returns by consuming tokens to upgrade soldiers.
@@ -778,7 +778,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                   game users through carefully designed rewards and economic
                   systems to improve the experience of game users from the game
                   mechanism. In this game, users and investors can get
-                  continuous, low -risk, and stable returns.
+                  continuous, low-risk, and stable returns.
                 </p>
               </div>
               <div className={styles.item}>
