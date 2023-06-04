@@ -11,9 +11,10 @@ import Cookies from "js-cookie";
 import { utils } from "ethers";
 import Link from "next/link";
 import Image from "next/image";
-import tokenimg from "../../public/images/token.png";
 import project from "../../public/launchpad/arks.jpg";
 import avatar from "../../public/launchpad/avatar.png";
+import avatar1 from "../../public/launchpad/avatar1.png";
+import project1 from "../../public/launchpad/project1.jpg";
 import icon1 from "../../public/launchpad/titleicon.png";
 import icon2 from "../../public/launchpad/launchicon2.png";
 import icon3 from "../../public/launchpad/launchicon3.png";
@@ -23,14 +24,56 @@ import github from "../../public/launchpad/github.png";
 import twitter from "../../public/launchpad/twitter.png";
 import telegram from "../../public/launchpad/telegram.png";
 import discord from "../../public/launchpad/discord.png";
-import meta from "../../public/launchpad/meta.png";
+import medium from "../../public/launchpad/meta.png";
 import styles from "../../styles/launchpad.module.scss";
 import "animate.css";
 import axios from "axios";
 
-const Stake = () => {
+const Launchpad = () => {
   const { t } = useTranslation("common");
   const router = useRouter();
+  const projects = [
+    {
+      id: 1,
+      title: "TBWS",
+      desc: `Three-body Warrior is a WEB3 game, based on the BRC20 protocol ARPG + MOBA game, the game story takes place in 2272 and now, the three-body man from the future takes over the governance of the earth in an all-round way, through the game system, each player can have an immersive experience. The form of the earth in the metaverse period and participate in various governances. At the same time, you can get income in the game, and you can also convert the income into real value, (legal currency). A global team based in the United States and South Korea provides support for game development. Product features include NFT mall, game center, Defi module, incentives, and personal center.`,
+      banner: project1,
+      avatar: avatar1,
+      hot: true,
+      details: "/launchpad/detail1",
+      twitter: "https://twitter.com/3bodywarriors",
+      medium: "http://threebodywarriors.medium.com",
+      telegram: "https://t.me/threebodywarriors",
+      discord: "discord",
+    },
+    {
+      id: 2,
+      title: "Arkstart",
+      desc: `Arkstart is pioneering the new era of BRC-20 token staking with
+                our innovative blockchain project. We aim to build a sustainable
+                staking ecosystem using unique staking mechanisms and economic
+                models.`,
+      banner: project,
+      avatar: avatar,
+      hot: false,
+      details: "/launchpad/detail",
+      twitter: "https://twitter.com/arkscoin",
+      medium: "https://medium.com/@arkstart",
+      telegram: "https://t.me/ArkstartOfficial",
+      discord: "discord",
+    },
+  ];
+
+  const [projectList, setProjectList] = useState(projects);
+
+  if (projectList.length > 1 && projectList.length % 3 !== 0) {
+    const remainder = projectList.length % 3;
+    if (remainder === 1) {
+      setProjectList([...projectList, { id: "seat1" }, { id: "seat2" }]);
+    } else {
+      setProjectList([...projectList, { id: "seat1" }]);
+    }
+  }
 
   // useEffect(() => {
   //   updateBalance();
@@ -45,6 +88,106 @@ const Stake = () => {
   const updateBalance = async () => {
     let accounts = await window.unisat.getAccounts();
     if (accounts[0]) {
+    }
+  };
+
+  const ListItem = (item) => {
+    if (typeof item.id === "number") {
+      return (
+        <div className={styles.listItem} key={item.id}>
+          <div className={styles.main}>
+            <Link href={item.details} passHref>
+              <div className={styles.banner}>
+                <Image
+                  src={item.banner}
+                  alt="Remote Image"
+                  layout="fill"
+                  objectFit="cover"
+                />
+                {item.hot ? (
+                  <div className={styles.tag}>
+                    <Image src={hot} width={12} height={12} alt="hot" />
+                    <span>So Hot</span>
+                  </div>
+                ) : (
+                  ""
+                )}
+              </div>
+            </Link>
+            <div className={styles.avatar}>
+              <Image
+                src={item.avatar}
+                alt="avatar"
+                width={80}
+                height={80}
+                objectFit="cover"
+              />
+            </div>
+            <div className={styles.name}>{item.title}</div>
+            <div className={styles.contact}>
+              <Link href={item.twitter} passHref>
+                <a className={styles.item}>
+                  <Image
+                    src={twitter}
+                    alt="twitter"
+                    width={20}
+                    height={20}
+                  ></Image>
+                </a>
+              </Link>
+              {/* <Link href="https://www.baidu.com/" passHref>
+                <a className={styles.item}>
+                  <Image
+                    src={discord}
+                    alt="discord"
+                    width={24.24}
+                    height={20}
+                  ></Image>
+                </a>
+              </Link> */}
+              <Link href={item.telegram} passHref>
+                <a className={styles.item}>
+                  <Image
+                    src={telegram}
+                    alt="telegram"
+                    width={23.53}
+                    height={20}
+                  ></Image>
+                </a>
+              </Link>
+              {/* <Link href="https://www.baidu.com/" passHref>
+                    <a className={styles.item}>
+                      <Image
+                        src={github}
+                        alt="github"
+                        width={23.53}
+                        height={20}
+                      ></Image>
+                    </a>
+                  </Link> */}
+              <Link href={item.medium} passHref>
+                <a className={styles.item}>
+                  <Image
+                    src={medium}
+                    alt="medium"
+                    width={25.8}
+                    height={20}
+                  ></Image>
+                </a>
+              </Link>
+            </div>
+          </div>
+          <p>{item.desc}</p>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          className={styles.listItem}
+          key={item.id}
+          style={{ backgroundColor: "transparent" }}
+        ></div>
+      );
     }
   };
 
@@ -66,9 +209,9 @@ const Stake = () => {
               </p>
               <div className={styles.operate}>
                 {/* <Link href="/launchpad/list" passHref> */}
-                  <button>
-                    Learn<i></i>
-                  </button>
+                <button>
+                  Learn<i></i>
+                </button>
                 {/* </Link> */}
                 {/* <a href="#">
                   Learn<i></i>
@@ -81,7 +224,7 @@ const Stake = () => {
             <ul>
               <li>
                 <Image src={icon1} alt="icon" width={57} height={50} />
-                <h1>1</h1>
+                <h1>2</h1>
                 <h2>Projects</h2>
                 <p>in the last 30 days</p>
               </li>
@@ -106,86 +249,7 @@ const Stake = () => {
             </ul>
           </div>
           <div className={styles.list}>
-            <div className={styles.listItem}>
-              <div className={styles.main}>
-                <Link href="/launchpad/detail" passHref>
-                <div className={styles.banner}>
-                  <Image
-                    src={project}
-                    alt="Remote Image"
-                    layout="fill"
-                    objectFit="cover"
-                  />
-                  <div className={styles.tag}>
-                    <Image src={hot} width={12} height={12} alt="hot" />
-                    <span>So Hot</span>
-                  </div>
-                </div>
-                </Link>
-                <div className={styles.avatar}>
-                  <Image src={avatar} alt="avatar" width={80} height={80} objectFit="cover" />
-                </div>
-                <div className={styles.name}>Arkstart</div>
-                <div className={styles.contact}>
-                  <Link href="https://twitter.com/arkscoin" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={twitter}
-                        alt="twitter"
-                        width={20}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={discord}
-                        alt="discord"
-                        width={24.24}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={telegram}
-                        alt="telegram"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                  {/* <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={github}
-                        alt="github"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link> */}
-                  <Link href="https://medium.com/@arkstart" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={meta}
-                        alt="meta"
-                        width={25.8}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-              <p>
-                Arkstart is pioneering the new era of BRC-20 token staking with
-                our innovative blockchain project. We aim to build a sustainable
-                staking ecosystem using unique staking mechanisms and economic
-                models.
-              </p>
-            </div>
+            {projectList.map((item) => ListItem(item))}
           </div>
         </div>
       </div>
@@ -199,4 +263,4 @@ export const getStaticProps = async ({ locale }) => ({
   },
 });
 
-export default withRouter(Stake);
+export default withRouter(Launchpad);

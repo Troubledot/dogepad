@@ -11,7 +11,7 @@ import Link from "next/link";
 import styles from "../../styles/launchpad_detail.module.scss";
 import "animate.css";
 import axios from "axios";
-import avatar from "../../public/launchpad/avatar.png";
+import avatar from "../../public/launchpad/avatar1.png";
 import address from "../../public/launchpad/address.png";
 import github from "../../public/launchpad/github.png";
 import twitter from "../../public/launchpad/twitter.png";
@@ -52,8 +52,9 @@ const toastConfig = {
 const LaunchpadDetails = () => {
   const { t } = useTranslation("common");
   const router = useRouter();
+
   const options = {
-    color: ["#64708B", "#F3BA2F", "#282D34", "#21BF73", "#ff4b19"],
+    color: ["#282D34", "#21BF73", "#ff4b19"],
     tooltip: {
       trigger: "item",
     },
@@ -82,15 +83,14 @@ const LaunchpadDetails = () => {
           show: false,
         },
         data: [
-          { value: 4, name: "Market Allocation" },
-          { value: 3, name: "Ecosystem and Partnerships" },
-          { value: 10, name: "Staking" },
-          { value: 3, name: "DAO Allocation" },
-          { value: 80, name: "IDO Allocation" },
+          { value: 12600000, name: "IDO" },
+          { value: 6300000, name: "Game output" },
+          { value: 2100000, name: "CEX reserved" },
         ],
       },
     ],
   };
+
   interface Member {
     id: number;
     name: string;
@@ -102,15 +102,15 @@ const LaunchpadDetails = () => {
   const myTeam: Member[] = [
     {
       id: 1,
-      name: "Michael",
+      name: "Three-body Warrior",
       position: "Founder",
       avatar,
-      intro:
-        "Michael is a passionate technology innovator. He has extensive engineering knowledge and technical expertise, with in-depth research and hands-on experience in multiple fields. Michael is committed to exploring and applying cutting-edge technology solutions to create innovative value for customers.",
+      intro: `Decentralized global office team, members come to the United States
+China, Singapore, and South Korea, currently have a total of 9 people. Among them, the CEO/founder Adamsteve is from the United States.`,
     },
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0.00000105952);
+  const [tokenPrice, setTokenPrice] = useState(0.00000135);
   const [percentage, setPercentage] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [whitelistActualAmount, setWhitelistActualAmount] = useState(0);
@@ -176,22 +176,22 @@ const LaunchpadDetails = () => {
       setMyWhitelistBtc(whitelistTotalSale.data.totalBuy);
       console.log("totalWhitelistSale", totalWhitelistSale.data.totalBuy);
       const WhitelistObtained =
-        totalWhitelistSale.data.totalSale * 1 < 5.2
-          ? (whitelistTotalSale.data.totalBuy * 1) / 0.00000105952
+        totalWhitelistSale.data.totalSale * 1 < 5.1
+          ? (whitelistTotalSale.data.totalBuy * 1) / 0.00000135
           : (whitelistTotalSale.data.totalBuy * 1) /
-            ((totalWhitelistSale.data.totalSale * 1) / 5.2) /
-            0.00000105952;
+            ((totalWhitelistSale.data.totalSale * 1) / 5.1) /
+            0.00000135;
       setWhitelistObtained(WhitelistObtained);
 
       const publicTotalSale = await getAmountByAddress(accounts[0], 1, 2);
       setMyPublicBtc(publicTotalSale.data.totalBuy);
       console.log("publicTotalSale", publicTotalSale);
       const publicObtained =
-        totalPublicSale.data.totalSale * 1 < 12.6
-          ? (publicTotalSale.data.totalBuy * 1) / 0.00000105952
+        totalPublicSale.data.totalSale * 1 < 11.9
+          ? (publicTotalSale.data.totalBuy * 1) / 0.00000135
           : (publicTotalSale.data.totalBuy * 1) /
-            ((totalPublicSale.data.totalSale * 1) / 12.6) /
-            0.00000105952;
+            ((totalPublicSale.data.totalSale * 1) / 11.9) /
+            0.00000135;
       console.log(
         "publicTotalSale",
         publicTotalSale.data.totalBuy,
@@ -367,33 +367,28 @@ const LaunchpadDetails = () => {
         <div className={styles.topimg}></div>
         <div className={styles.container}>
           <div className={styles.card + " " + styles.project}>
-            <div className={styles.banner}></div>
+            <div className={styles.banner1}></div>
             <div className={styles.info}>
-              <div className={styles.title}>Arkstart</div>
+              <div className={styles.title}>TBWS</div>
               {/* <div className={styles.avatar}>
                 <Image src={avatar} alt="avatar" width={35} height={35} />
                 <div className={styles.name}>Cloris Chen</div>
               </div> */}
               <p className={styles.intro}>
-                Arkstart is pioneering the new era of BRC-20 token staking with
-                our innovative blockchain project. We aim to build a sustainable
-                staking ecosystem using unique staking mechanisms and economic
-                models.
-                <br />
-                We&apos;ve introduced &apos;arks&apos;, our native token, into
-                an advanced staking feature that brings value to BRC-20 tokens.
-                By staking &apos;arks&apos;, users can earn &apos;Aras&apos;
-                tokens as rewards. This model incentivizes continuous
-                participation aligning the long-term interests of users with our
-                protocol&apos;s objectives.
-                <br />
-                Our mission is to develop a robust and consistent staking
-                ecosystem, changing the staking paradigm for BRC-20 tokens. With
-                our dedicated efforts, we aim to offer greater value and
-                long-term returns to our participants.
+                Three-body Warrior is a WEB3 game, based on the BRC20 protocol
+                ARPG + MOBA game, the game story takes place in 2272 and now,
+                the three-body man from the future takes over the governance of
+                the earth in an all-round way, through the game system, each
+                player can have an immersive experience. The form of the earth
+                in the metaverse period and participate in various governances.
+                At the same time, you can get income in the game, and you can
+                also convert the income into real value, (legal currency). A
+                global team based in the United States and South Korea provides
+                support for game development. Product features include NFT mall,
+                game center, Defi module, incentives, and personal center.
               </p>
               <div className={styles.contact}>
-                <Link href="https://arkstart.org" passHref>
+                <Link href="https://threebodywarriors.com/" passHref>
                   <a className={styles.item}>
                     <Image
                       src={address}
@@ -403,7 +398,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link>
-                <Link href="https://twitter.com/arkscoin" passHref>
+                <Link href="https://twitter.com/3bodywarriors" passHref>
                   <a className={styles.item}>
                     <Image
                       src={twitter}
@@ -423,7 +418,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link> */}
-                <Link href="https://t.me/ArkstartOfficial" passHref>
+                <Link href="https://t.me/threebodywarriors" passHref>
                   <a className={styles.item}>
                     <Image
                       src={telegram}
@@ -443,7 +438,7 @@ const LaunchpadDetails = () => {
                     ></Image>
                   </a>
                 </Link> */}
-                <Link href="https://medium.com/@arkstart" passHref>
+                <Link href="http://threebodywarriors.medium.com" passHref>
                   <a className={styles.item}>
                     <Image
                       src={meta}
@@ -460,7 +455,7 @@ const LaunchpadDetails = () => {
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>ArkStart</div>
+                  <div className={styles.ori}>TBWS</div>
                   <div>Whitelist Public Sale</div>
                 </div>
                 <div className={styles.deadline}>
@@ -513,13 +508,13 @@ const LaunchpadDetails = () => {
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {((whitelistActualAmount / 5.2) * 100).toFixed(2)} %
+                  {((whitelistActualAmount / 5.1) * 100).toFixed(2)} %
                 </div>
               </div>
               <div className={styles.amount}>
                 <div className={styles.list}>
                   <div className={styles.label}>Total fundraising amount</div>
-                  <div className={styles.val + " " + styles.ori}>5.2 BTC</div>
+                  <div className={styles.val + " " + styles.ori}>5.1 BTC</div>
                 </div>
                 <div className={styles.list}>
                   <div className={styles.label}>Actual fundraising amount</div>
@@ -544,7 +539,7 @@ const LaunchpadDetails = () => {
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {whitelistObtained} $ARKS
+                    {whitelistObtained} $TBWS
                   </div>
                 </div>
               </div>
@@ -596,7 +591,7 @@ const LaunchpadDetails = () => {
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>ArkStart</div>
+                  <div className={styles.ori}>TBWS</div>
                   <div>Public Sale</div>
                 </div>
                 <div className={styles.deadline}>
@@ -649,13 +644,13 @@ const LaunchpadDetails = () => {
               <div className={styles.list}>
                 <div className={styles.label}>Fundraising percentage</div>
                 <div className={styles.val + " " + styles.ori}>
-                  {((actualAmount / 12.6) * 100).toFixed(2)} %
+                  {((actualAmount / 11.9) * 100).toFixed(2)} %
                 </div>
               </div>
               <div className={styles.amount}>
                 <div className={styles.list}>
                   <div className={styles.label}>Total fundraising amount</div>
-                  <div className={styles.val + " " + styles.ori}>12.6 BTC</div>
+                  <div className={styles.val + " " + styles.ori}>11.9 BTC</div>
                 </div>
                 <div className={styles.list}>
                   <div className={styles.label}>Actual fundraising amount</div>
@@ -680,7 +675,7 @@ const LaunchpadDetails = () => {
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {obtained} $ARKS
+                    {obtained} $TBWS
                   </div>
                 </div>
               </div>
@@ -754,58 +749,68 @@ const LaunchpadDetails = () => {
           <div className={styles.data}>
             <div className={styles.card + " " + styles.protocol}>
               <div className={styles.item}>
-                <div className={styles.title}>80% IDO Allocation</div>
+                <div className={styles.title}>Product introduction</div>
                 <p>
-                  Increased to 80% to provide additional liquidity for initial
-                  exchange offerings. This expanded allocation ensures
-                  sufficient token availability for IDO/IEO participants,
-                  fostering wider participation and enhancing market liquidity.
+                  Three-body Warrior is a WEB3 game, based on the BRC20 protocol
+                  ARPG + MOBA game, the game story takes place in 2272 and now,
+                  the three-body man from the future takes over the governance
+                  of the earth in an all-round way, through the game system,
+                  each player can have an immersive experience. The form of the
+                  earth in the metaverse period and participate in various
+                  governances. At the same time, you can get income in the game,
+                  and you can also convert the income into real value, (legal
+                  currency). A global team based in the United States and South
+                  Korea provides support for game development. Product features
+                  include NFT mall, game center, Defi module, incentives, and
+                  personal center.
                 </p>
               </div>
+
               <div className={styles.item}>
-                <div className={styles.title}>4% Market Allocation</div>
+                <div className={styles.title}>Game Introduction</div>
                 <p>
-                  Unlocked 20% at Token Generation Event (TGE), primarily used
-                  for initial user airdrops, incentives, and ecosystem
-                  development. This allocation is adjusted to allocate 7% of the
-                  total supply to the market. It enables Arkstart to allocate
-                  resources for market development, user acquisition, and
-                  ecosystem growth, fostering adoption and establishing a strong
-                  presence in the market.
+                  "THREE-BODY WARRIORS" is a Yuan cosmic game invested and
+                  developed by well-known American game R & D company IGS. You
+                  can get the corresponding resources and tokens, and to obtain
+                  higher returns by consuming tokens to upgrade soldiers.
+                  Three-Body Warriors has created an immersive virtual space
+                  parallel to the physical world. It drives the development of
+                  game users through carefully designed rewards and economic
+                  systems to improve the experience of game users from the game
+                  mechanism. In this game, users and investors can get
+                  continuous, low -risk, and stable returns.
                 </p>
               </div>
               <div className={styles.item}>
                 <div className={styles.title}>
-                  3% Ecosystem and Partnerships
+                  Introduction of project advantages
                 </div>
                 <p>
-                  Allocated for ecosystem development, strategic partnerships,
-                  and collaborative initiatives. This allocation ensures 7% of
-                  the total supply is dedicated to fostering collaborations with
-                  other projects, platforms, and communities. It supports the
-                  growth and expansion of the Arkstart ecosystem by integrating
-                  complementary services, expanding use cases, and strengthening
-                  the overall ecosystem.
+                  1. One of the few Brc20-based Gamefi with an aggressive
+                  entrepreneurial team and seed investment.
+                  <br /> 2. Professional game production and development, Korean
+                  game team. <br /> 3. Excellent game story and economics,
+                  immersive metaverse experience. <br /> 4. The combination of a
+                  native app and VR headset.
                 </p>
               </div>
               <div className={styles.item}>
-                <div className={styles.title}>10% Staking</div>
+                <div className={styles.title}>team introduction</div>
                 <p>
-                  Users can stake the platform token and earn staking rewards.
-                  The staking mechanism incentivizes long-term commitment,
-                  active participation, and alignment of interests among
-                  participants. This allocation ensures 3% of the total supply
-                  is dedicated to staking rewards, promoting network security
-                  and token holder engagement.
-                </p>
-              </div>
-              <div className={styles.item}>
-                <div className={styles.title}>3% DAO Allocation</div>
-                <p>
-                  Reserved for internal and external incentives within the DAO
-                  organization. This allocation ensures active governance
-                  participation and supports collaborative partnerships,
-                  promoting community involvement and decision-making.
+                  Decentralized global office team, members come to the United
+                  States China, Singapore, and South Korea, currently have a
+                  total of 9 people. Among them, the CEO/founder Adamsteve is
+                  from the United States) A well-known early investor of Web3.0
+                  and a continuous entrepreneur of Web3.0. CTO/co-founder Jin
+                  Youhao is from South Korea, An angel investor in the game
+                  field, a serial entrepreneur in the game industry, focusing on
+                  the integration and construction of mobile games and
+                  metaverses. COO·BILL from the United States A blockchain
+                  marketing expert with more than 8 years of web 2.0 operating
+                  experience. Chief game producer Park Eun-Kyung is from South
+                  Korea A core member of a well-known Korean game company with
+                  more than 15 years of game experience Other members have
+                  extensive experience in games, web3, and the Internet
                 </p>
               </div>
             </div>

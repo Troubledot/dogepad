@@ -44,6 +44,16 @@
         background: #161616 url(../public/launchpad/arks.jpg) no-repeat
           center/auto 100%;
       }
+      .banner1 {
+        width: 552px;
+        height: 340px;
+        flex-shrink: 0;
+        background-color: #cfcfcf;
+        border-radius: 20px;
+        margin-right: 20px;
+        background: #161616 url(../public/launchpad/project1.jpg) no-repeat
+          center/auto 100%;
+      }
       .info {
         display: flex;
         flex-direction: column;
