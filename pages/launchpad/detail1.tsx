@@ -102,11 +102,11 @@ const LaunchpadDetails = () => {
   const myTeam: Member[] = [
     {
       id: 1,
-      name: "Three-body Warrior",
+      name: "Adam Steve",
       position: "Founder",
       avatar,
       intro: `Decentralized global office team, members come to the United States
-China, Singapore, and South Korea, currently have a total of 9 people. Among them, the CEO/founder Adamsteve is from the United States.`,
+China, Singapore, and South Korea, currently have a total of 9 people. Among them, the CEO/founder Adam Steve is from the United States.`,
     },
   ];
 
@@ -157,11 +157,11 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
   }, []);
 
   const update = async () => {
-    const totalWhitelistSale = await getTotalSale(1, 1);
+    const totalWhitelistSale = await getTotalSale(2, 1);
     console.log("totalSale", totalWhitelistSale.data);
     setWhitelistFundraisers(totalWhitelistSale.data.totalUsers);
     setWhitelistActualAmount(totalWhitelistSale.data.totalSale);
-    const totalPublicSale = await getTotalSale(1, 2);
+    const totalPublicSale = await getTotalSale(2, 2);
     console.log("totalPublicSale", totalPublicSale.data);
     setFundraisers(totalPublicSale.data.totalUsers);
     setActualAmount(totalPublicSale.data.totalSale);
@@ -769,10 +769,10 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
               <div className={styles.item}>
                 <div className={styles.title}>Game Introduction</div>
                 <p>
-                  &quot;THREE-BODY WARRIORS&quot; is a Yuan cosmic game invested and
-                  developed by well-known American game R & D company IGS. You
-                  can get the corresponding resources and tokens, and to obtain
-                  higher returns by consuming tokens to upgrade soldiers.
+                  &quot;THREE-BODY WARRIORS&quot; is a Yuan cosmic game invested
+                  and developed by well-known American game R & D company IGS.
+                  You can get the corresponding resources and tokens, and to
+                  obtain higher returns by consuming tokens to upgrade soldiers.
                   Three-Body Warriors has created an immersive virtual space
                   parallel to the physical world. It drives the development of
                   game users through carefully designed rewards and economic
