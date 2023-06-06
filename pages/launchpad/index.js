@@ -15,6 +15,7 @@ import project from "../../public/launchpad/arks.jpg";
 import avatar from "../../public/launchpad/avatar.png";
 import avatar1 from "../../public/launchpad/avatar1.png";
 import project1 from "../../public/launchpad/project1.jpg";
+import project2 from "../../public/launchpad/project2.png";
 import icon1 from "../../public/launchpad/titleicon.png";
 import icon2 from "../../public/launchpad/launchicon2.png";
 import icon3 from "../../public/launchpad/launchicon3.png";
@@ -44,7 +45,7 @@ const Launchpad = () => {
       twitter: "https://twitter.com/3bodywarriors",
       medium: "http://threebodywarriors.medium.com",
       telegram: "https://t.me/threebodywarriors",
-      discord: "discord",
+      discord: null,
     },
     {
       id: 2,
@@ -60,7 +61,20 @@ const Launchpad = () => {
       twitter: "https://twitter.com/arkscoin",
       medium: "https://medium.com/@arkstart",
       telegram: "https://t.me/ArkstartOfficial",
-      discord: "discord",
+      discord: null,
+    },
+    {
+      id: 3,
+      title: "ISKA",
+      desc: `Isekai Protocol is a pioneering AI-driven Web3 creator ecosystem dedicated to the creation of ACGN (anime, comics, games, and novels) content. By leveraging the power of AI and Web3 technology, Isekai Protocol enables users to unleash their creative potential, generating derivative works from established IPs while adhering to the principles of the Isekai Protocol, fostering a dynamic NFT network that seamlessly connects derivatives and originals. The platform offers AI-powered creator tools, including a visual novel maker to enable immersive storytelling experiences. Moreover, the derivative creation royalty system ensures owners and creators of NFTs integrated into derivative works receive a fair share of profits when such creations achieve success. By establishing a bottom-up ACGN content creation ecosystem, Isekai aims to revolutionize the way content is created, shared, and monetized. `,
+      banner: project2,
+      avatar: project2,
+      hot: false,
+      details: "/launchpad/detail2",
+      twitter: "https://twitter.com/isekaiprotocol",
+      medium: "https://medium.com/@isekaimetaverse",
+      telegram: null,
+      discord: "https://discord.com/invite/tuxbNWqhmA",
     },
   ];
 
@@ -125,56 +139,54 @@ const Launchpad = () => {
             </div>
             <div className={styles.name}>{item.title}</div>
             <div className={styles.contact}>
-              <Link href={item.twitter} passHref>
-                <a className={styles.item}>
-                  <Image
-                    src={twitter}
-                    alt="twitter"
-                    width={20}
-                    height={20}
-                  ></Image>
-                </a>
-              </Link>
-              {/* <Link href="https://www.baidu.com/" passHref>
-                <a className={styles.item}>
-                  <Image
-                    src={discord}
-                    alt="discord"
-                    width={24.24}
-                    height={20}
-                  ></Image>
-                </a>
-              </Link> */}
-              <Link href={item.telegram} passHref>
-                <a className={styles.item}>
-                  <Image
-                    src={telegram}
-                    alt="telegram"
-                    width={23.53}
-                    height={20}
-                  ></Image>
-                </a>
-              </Link>
-              {/* <Link href="https://www.baidu.com/" passHref>
-                    <a className={styles.item}>
-                      <Image
-                        src={github}
-                        alt="github"
-                        width={23.53}
-                        height={20}
-                      ></Image>
-                    </a>
-                  </Link> */}
-              <Link href={item.medium} passHref>
-                <a className={styles.item}>
-                  <Image
-                    src={medium}
-                    alt="medium"
-                    width={25.8}
-                    height={20}
-                  ></Image>
-                </a>
-              </Link>
+              {item.twitter && (
+                <Link href={item.twitter} passHref>
+                  <a className={styles.item}>
+                    <Image
+                      src={twitter}
+                      alt="twitter"
+                      width={20}
+                      height={20}
+                    ></Image>
+                  </a>
+                </Link>
+              )}
+              {item.discord && (
+                <Link href={item.discord} passHref>
+                  <a className={styles.item}>
+                    <Image
+                      src={discord}
+                      alt="discord"
+                      width={24.24}
+                      height={20}
+                    ></Image>
+                  </a>
+                </Link>
+              )}
+              {item.telegram && (
+                <Link href={item.telegram} passHref>
+                  <a className={styles.item}>
+                    <Image
+                      src={telegram}
+                      alt="telegram"
+                      width={23.53}
+                      height={20}
+                    ></Image>
+                  </a>
+                </Link>
+              )}
+              {item.medium && (
+                <Link href={item.medium} passHref>
+                  <a className={styles.item}>
+                    <Image
+                      src={medium}
+                      alt="medium"
+                      width={25.8}
+                      height={20}
+                    ></Image>
+                  </a>
+                </Link>
+              )}
             </div>
           </div>
           <p>{item.desc}</p>

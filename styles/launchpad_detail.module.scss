@@ -54,6 +54,17 @@
         background: #161616 url(../public/launchpad/project1.jpg) no-repeat
           center/auto 100%;
       }
+      .banner2 {
+        width: 552px;
+        height: 340px;
+        flex-shrink: 0;
+        background-color: #cfcfcf;
+        border: 1px solid #cfcfcf;
+        border-radius: 20px;
+        margin-right: 20px;
+        background: #fff url(../public/launchpad/project2.png) no-repeat
+          center/auto 100%;
+      }
       .info {
         display: flex;
         flex-direction: column;
@@ -210,6 +221,8 @@
           font-size: 14px;
           font-weight: bold;
           text-align: center;
+          height: 100px;
+          overflow-y: auto;
         }
       }
     }
