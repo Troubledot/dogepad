@@ -144,7 +144,7 @@ const LaunchpadDetails = () => {
     },
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0.0000000034);
+  const [tokenPrice, setTokenPrice] = useState("0.0000000034");
   const [percentage, setPercentage] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [whitelistActualAmount, setWhitelistActualAmount] = useState(0);
@@ -772,8 +772,8 @@ const LaunchpadDetails = () => {
                   Introduction of project advantages
                 </div>
                 <p>
-                  1. The platform's AI-powered creator tools provide a seamless
-                  and efficient content creation  process, enhancing
+                  1. The platform&apos;s AI-powered creator tools provide a
+                  seamless and efficient content creation  process, enhancing
                   productivity and enabling users to produce captivating ACGN
                   content. 
                   <br />
@@ -798,7 +798,7 @@ const LaunchpadDetails = () => {
                   distributing the tokens to investors and holders through the
                   IDO process. IDOs often provide an opportunity for the general
                   public and community members to acquire the tokens, supporting
-                  the project's development and promotion.
+                  the project&apos;s development and promotion.
                 </p>
               </div>
               <div className={styles.item}>
@@ -818,14 +818,14 @@ const LaunchpadDetails = () => {
                 <div className={styles.title}>Team holding - 20%</div>
                 <p>
                   The team holding portion is intended to incentivize and
-                  support the project team's development. According to the given
-                  percentage, 20% of the token supply will be allocated to team
-                  holding. This means that 2 billion $ISKA will be distributed
-                  to team members and founders for their use in the project's
-                  development process. These tokens are typically subject to a
-                  lock-up period to ensure that the team has sufficient
-                  motivation and vested interest aligned with the project's
-                  success.
+                  support the project team&apos;s development. According to the
+                  given percentage, 20% of the token supply will be allocated to
+                  team holding. This means that 2 billion $ISKA will be
+                  distributed to team members and founders for their use in the
+                  project&apos;s development process. These tokens are typically
+                  subject to a lock-up period to ensure that the team has
+                  sufficient motivation and vested interest aligned with the
+                  project&apos;s success.
                 </p>
               </div>
             </div>

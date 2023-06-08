@@ -173,7 +173,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
       //   "bc1pmhsfvsy0s5antfw32hmav7vsa34rxvsxel3u5w42mh5ate9rdnhsqampvf";
       const balance = await window.unisat.getBalance();
       setBalance(utils.formatUnits(String(balance.total), 8).toString());
-      const whitelistTotalSale = await getAmountByAddress(accounts[0], 1, 1);
+      const whitelistTotalSale = await getAmountByAddress(accounts[0], 2, 1);
       console.log("whitelistTotalSale", whitelistTotalSale);
       setMyWhitelistBtc(whitelistTotalSale.data.totalBuy);
       console.log("totalWhitelistSale", totalWhitelistSale.data.totalBuy);
@@ -185,7 +185,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
             0.00000135;
       setWhitelistObtained(WhitelistObtained);
 
-      const publicTotalSale = await getAmountByAddress(accounts[0], 1, 2);
+      const publicTotalSale = await getAmountByAddress(accounts[0], 2, 2);
       setMyPublicBtc(publicTotalSale.data.totalBuy);
       console.log("publicTotalSale", publicTotalSale);
       const publicObtained =
@@ -208,7 +208,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
   const setMax = async (value: number, type: number) => {
     console.log(value);
     let accounts = await window.unisat.getAccounts();
-    const totalSale = await getAmountByAddress(accounts[0], 1, type);
+    const totalSale = await getAmountByAddress(accounts[0], 2, type);
     console.log("totalSale11", totalSale.data.totalBuy);
     if (type == 1) {
       setWhitelistInput(

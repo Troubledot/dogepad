@@ -51,6 +51,19 @@ const Launchpad = () => {
     },
     {
       id: 2,
+      title: "ISKA",
+      desc: `Isekai Protocol is a pioneering AI-driven Web3 creator ecosystem dedicated to the creation of ACGN (anime, comics, games, and novels) content. By leveraging the power of AI and Web3 technology, Isekai Protocol enables users to unleash their creative potential, generating derivative works from established IPs while adhering to the principles of the Isekai Protocol, fostering a dynamic NFT network that seamlessly connects derivatives and originals. The platform offers AI-powered creator tools, including a visual novel maker to enable immersive storytelling experiences. Moreover, the derivative creation royalty system ensures owners and creators of NFTs integrated into derivative works receive a fair share of profits when such creations achieve success. By establishing a bottom-up ACGN content creation ecosystem, Isekai aims to revolutionize the way content is created, shared, and monetized. `,
+      banner: project2,
+      avatar: project2,
+      hot: false,
+      details: "/launchpad/detail2",
+      twitter: "https://twitter.com/isekaiprotocol",
+      medium: "https://medium.com/@isekaimetaverse",
+      telegram: null,
+      discord: "https://discord.com/invite/tuxbNWqhmA",
+    },
+    {
+      id: 3,
       title: "Arkstart",
       desc: `Arkstart is pioneering the new era of BRC-20 token staking with
                 our innovative blockchain project. We aim to build a sustainable
@@ -251,25 +264,25 @@ const Launchpad = () => {
             <ul>
               <li>
                 <Image src={icon1} alt="icon" width={57} height={50} />
-                <h1>2</h1>
+                <h1>3</h1>
                 <h2>Projects</h2>
                 <p>in the last 30 days</p>
               </li>
               <li>
                 <Image src={icon2} alt="icon" width={60} height={60} />
-                <h1>0</h1>
+                <h1>3481</h1>
                 <h2>Total Users</h2>
                 <p>in the last 30 days</p>
               </li>
               <li>
                 <Image src={icon3} alt="icon" width={60} height={60} />
-                <h1>0</h1>
+                <h1>17.8 BTC</h1>
                 <h2>Total Liquidity Raised</h2>
                 <p>in the last 30 days</p>
               </li>
               <li>
                 <Image src={icon4} alt="icon" width={64} height={64} />
-                <h1>0</h1>
+                <h1>$357M</h1>
                 <h2>Total Values Locked</h2>
                 <p>in the last 30 days</p>
               </li>
