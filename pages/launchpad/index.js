@@ -11,8 +11,10 @@ import Cookies from "js-cookie";
 import { utils } from "ethers";
 import Link from "next/link";
 import Image from "next/image";
+import project3 from "../../public/launchpad/project3.png";
 import project from "../../public/launchpad/arks.jpg";
 import avatar from "../../public/launchpad/avatar.png";
+import avatar3 from "../../public/launchpad/avatar3-1.png";
 import avatar1 from "../../public/launchpad/avatar1.png";
 import project1 from "../../public/launchpad/project1.jpg";
 import project2 from "../../public/launchpad/project2.png";
@@ -75,6 +77,19 @@ const Launchpad = () => {
       medium: "https://medium.com/@isekaimetaverse",
       telegram: null,
       discord: "https://discord.com/invite/tuxbNWqhmA",
+    },
+    {
+      id: 4,
+      title: "ODPG",
+      desc: `OrdPlay is pioneering the future of the GameFi space by leveraging the power of BRC-20 tokens and the novelty of Ordinals. As the first Play2Earn platform within the Bitcoin ecosystem, we're bringing unprecedented innovation and financial opportunities to the gaming community.`,
+      banner: project3,
+      avatar: avatar3,
+      hot: false,
+      details: "/launchpad/detail3",
+      twitter: "https://twitter.com/OrdPlayBTC",
+      medium: "https://medium.com/ordplay",
+      telegram: "https://t.me/OrdPlay",
+      discord: null,
     },
   ];
 

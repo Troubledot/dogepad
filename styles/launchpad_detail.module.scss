@@ -65,6 +65,17 @@
         background: #fff url(../public/launchpad/project2.png) no-repeat
           center/auto 100%;
       }
+      .banner3 {
+        width: 552px;
+        height: 340px;
+        flex-shrink: 0;
+        background-color: #cfcfcf;
+        border: 1px solid #cfcfcf;
+        border-radius: 20px;
+        margin-right: 20px;
+        background: #fff url(../public/launchpad/project3.png) no-repeat
+          center/auto 100%;
+      }
       .info {
         display: flex;
         flex-direction: column;

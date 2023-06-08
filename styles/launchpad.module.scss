@@ -111,11 +111,13 @@
     .list {
       display: flex;
       justify-content: space-between;
+      flex-wrap: wrap;
       .listItem {
         width: 345px;
         height: 424px;
         background-color: #edecec;
         border-radius: 20px;
+        margin-bottom: 20px;
         .main {
           background-color: #fff;
           padding: 12px;

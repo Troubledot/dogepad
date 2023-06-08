@@ -11,7 +11,7 @@ import Link from "next/link";
 import styles from "../../styles/launchpad_detail.module.scss";
 import "animate.css";
 import axios from "axios";
-import avatar from "../../public/launchpad/avatar1.png";
+import avatar from "../../public/launchpad/avatar3.png";
 import address from "../../public/launchpad/address.png";
 import github from "../../public/launchpad/github.png";
 import twitter from "../../public/launchpad/twitter.png";
@@ -54,7 +54,7 @@ const LaunchpadDetails = () => {
   const router = useRouter();
 
   const options = {
-    color: ["#282D34", "#21BF73", "#ff4b19"],
+    color: ["#64708B", "#F3BA2F", "#282D34", "#21BF73"],
     tooltip: {
       trigger: "item",
     },
@@ -83,9 +83,10 @@ const LaunchpadDetails = () => {
           show: false,
         },
         data: [
-          { value: 12600000, name: "IDO" },
-          { value: 6300000, name: "Game output" },
-          { value: 2100000, name: "CEX reserved" },
+          { value: 60000000, name: "Public Donation" },
+          { value: 15000000, name: "Treasury" },
+          { value: 20000000, name: "Play2Earn" },
+          { value: 5000000, name: "Airdrop" },
         ],
       },
     ],
@@ -102,15 +103,14 @@ const LaunchpadDetails = () => {
   const myTeam: Member[] = [
     {
       id: 1,
-      name: "Adam Steve",
+      name: "Ordplay",
       position: "Founder",
       avatar,
-      intro: `Decentralized global office team, members come to the United States
-China, Singapore, and South Korea, currently have a total of 9 people. Among them, the CEO/founder Adam Steve is from the United States.`,
+      intro: `The OrdPlay team is composed of BTC enthusiasts and seasoned builders from the GameFi sector, offering a rich blend of blockchain and gaming expertise. Our team is committed to creating a platform that's fully owned and governed by its community, underscoring our dedication to decentralization. We aim to foster a vibrant and dynamic gaming environment, ensuring that OrdPlay remains a pioneer and leader in the BRC20 ecosystem's GameFi space.`,
     },
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0.00000135);
+  const [tokenPrice, setTokenPrice] = useState(0.00000033);
   const [percentage, setPercentage] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [whitelistActualAmount, setWhitelistActualAmount] = useState(0);
@@ -127,7 +127,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
   const [totalContribution, setTotalContribution] = useState(65);
   const [audit, setAudit] = useState("No");
   const [KYC, setKYC] = useState("No");
-  const [supply, setSupply] = useState(12);
+  const [supply, setSupply] = useState(14);
   const [lockDuration, setLockDuration] = useState(32542);
   const [lockPercent, setLockPercent] = useState(25);
   const [btnEnable, setBtnEnable] = useState(false);
@@ -155,15 +155,16 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
     };
     setUpdate();
   }, []);
-  const whiteAmount = 5.1,
-    publicAmount = 11.9;
+
+  const whiteAmount = 6,
+    publicAmount = 14;
 
   const update = async () => {
-    const totalWhitelistSale = await getTotalSale(2, 1);
+    const totalWhitelistSale = await getTotalSale(4, 1);
     console.log("totalSale", totalWhitelistSale.data);
     setWhitelistFundraisers(totalWhitelistSale.data.totalUsers);
     setWhitelistActualAmount(totalWhitelistSale.data.totalSale);
-    const totalPublicSale = await getTotalSale(2, 2);
+    const totalPublicSale = await getTotalSale(4, 2);
     console.log("totalPublicSale", totalPublicSale.data);
     setFundraisers(totalPublicSale.data.totalUsers);
     setActualAmount(totalPublicSale.data.totalSale);
@@ -179,10 +180,10 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
       console.log("totalWhitelistSale", totalWhitelistSale.data.totalBuy);
       const WhitelistObtained =
         totalWhitelistSale.data.totalSale * 1 < whiteAmount
-          ? (whitelistTotalSale.data.totalBuy * 1) / 0.00000135
+          ? (whitelistTotalSale.data.totalBuy * 1) / 0.0000000034
           : (whitelistTotalSale.data.totalBuy * 1) /
             ((totalWhitelistSale.data.totalSale * 1) / whiteAmount) /
-            0.00000135;
+            0.0000000034;
       setWhitelistObtained(WhitelistObtained);
 
       const publicTotalSale = await getAmountByAddress(accounts[0], 1, 2);
@@ -190,10 +191,10 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
       console.log("publicTotalSale", publicTotalSale);
       const publicObtained =
         totalPublicSale.data.totalSale * 1 < publicAmount
-          ? (publicTotalSale.data.totalBuy * 1) / 0.00000135
+          ? (publicTotalSale.data.totalBuy * 1) / 0.0000000034
           : (publicTotalSale.data.totalBuy * 1) /
             ((totalPublicSale.data.totalSale * 1) / publicAmount) /
-            0.00000135;
+            0.0000000034;
       console.log(
         "publicTotalSale",
         publicTotalSale.data.totalBuy,
@@ -206,7 +207,6 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
     }
   };
   const setMax = async (value: number, type: number) => {
-    console.log(value);
     let accounts = await window.unisat.getAccounts();
     const totalSale = await getAmountByAddress(accounts[0], 1, type);
     console.log("totalSale11", totalSale.data.totalBuy);
@@ -304,8 +304,6 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
       return;
     }
 
-    console.log("publicInput", publicInput);
-
     if (type == 2 && (publicInput * 1 < 0.01 || publicInput * 1 > 0.577)) {
       toast.warning(
         "Your contribution amount must be between 0.01 to 0.577!",
@@ -369,28 +367,22 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
         <div className={styles.topimg}></div>
         <div className={styles.container}>
           <div className={styles.card + " " + styles.project}>
-            <div className={styles.banner1}></div>
+            <div className={styles.banner3}></div>
             <div className={styles.info}>
-              <div className={styles.title}>TBWS</div>
+              <div className={styles.title}>ODPG</div>
               {/* <div className={styles.avatar}>
                 <Image src={avatar} alt="avatar" width={35} height={35} />
                 <div className={styles.name}>Cloris Chen</div>
               </div> */}
               <p className={styles.intro}>
-                Three-body Warrior is a WEB3 game, based on the BRC20 protocol
-                ARPG + MOBA game, the game story takes place in 2272 and now,
-                the three-body man from the future takes over the governance of
-                the earth in an all-round way, through the game system, each
-                player can have an immersive experience. The form of the earth
-                in the metaverse period and participate in various governances.
-                At the same time, you can get income in the game, and you can
-                also convert the income into real value, (legal currency). A
-                global team based in the United States and South Korea provides
-                support for game development. Product features include NFT mall,
-                game center, Defi module, incentives, and personal center.
+                OrdPlay is pioneering the future of the GameFi space by
+                leveraging the power of BRC-20 tokens and the novelty of
+                Ordinals. As the first Play2Earn platform within the Bitcoin
+                ecosystem, we're bringing unprecedented innovation and financial
+                opportunities to the gaming community.
               </p>
               <div className={styles.contact}>
-                <Link href="https://threebodywarriors.com/" passHref>
+                <Link href="https://ordplay.games/" passHref>
                   <a className={styles.item}>
                     <Image
                       src={address}
@@ -400,7 +392,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                     ></Image>
                   </a>
                 </Link>
-                <Link href="https://twitter.com/3bodywarriors" passHref>
+                <Link href="https://twitter.com/OrdPlayBTC" passHref>
                   <a className={styles.item}>
                     <Image
                       src={twitter}
@@ -410,7 +402,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                     ></Image>
                   </a>
                 </Link>
-                {/* <Link href="https://www.baidu.com/" passHref>
+                <Link href="https://discord.com/invite/tuxbNWqhmA" passHref>
                   <a className={styles.item}>
                     <Image
                       src={discord}
@@ -419,28 +411,9 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                       height={20}
                     ></Image>
                   </a>
-                </Link> */}
-                <Link href="https://t.me/threebodywarriors" passHref>
-                  <a className={styles.item}>
-                    <Image
-                      src={telegram}
-                      alt="telegram"
-                      width={23.53}
-                      height={20}
-                    ></Image>
-                  </a>
                 </Link>
-                {/* <Link href="https://www.baidu.com/" passHref>
-                  <a className={styles.item}>
-                    <Image
-                      src={github}
-                      alt="github"
-                      width={23.53}
-                      height={20}
-                    ></Image>
-                  </a>
-                </Link> */}
-                <Link href="http://threebodywarriors.medium.com" passHref>
+
+                <Link href="https://medium.com/ordplay" passHref>
                   <a className={styles.item}>
                     <Image
                       src={meta}
@@ -457,7 +430,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>TBWS</div>
+                  <div className={styles.ori}>ODPG</div>
                   <div>Whitelist Public Sale</div>
                 </div>
                 <div className={styles.deadline}>
@@ -543,7 +516,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {whitelistObtained} $TBWS
+                    {whitelistObtained} $ODPG
                   </div>
                 </div>
               </div>
@@ -595,7 +568,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
             <div className={styles.card + " " + styles.item}>
               <div className={styles.title}>
                 <div>
-                  <div className={styles.ori}>TBWS</div>
+                  <div className={styles.ori}>ODPG</div>
                   <div>Public Sale</div>
                 </div>
                 <div className={styles.deadline}>
@@ -681,7 +654,7 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
                 <div className={styles.list}>
                   <div className={styles.label}>Number of tokens obtained</div>
                   <div className={styles.val + " " + styles.ori}>
-                    {obtained} $TBWS
+                    {obtained} $ODPG
                   </div>
                 </div>
               </div>
@@ -755,68 +728,27 @@ China, Singapore, and South Korea, currently have a total of 9 people. Among the
           <div className={styles.data}>
             <div className={styles.card + " " + styles.protocol}>
               <div className={styles.item}>
-                <div className={styles.title}>Product introduction</div>
-                <p>
-                  Three-body Warrior is a WEB3 game, based on the BRC20 protocol
-                  ARPG + MOBA game, the game story takes place in 2272 and now,
-                  the three-body man from the future takes over the governance
-                  of the earth in an all-round way, through the game system,
-                  each player can have an immersive experience. The form of the
-                  earth in the metaverse period and participate in various
-                  governances. At the same time, you can get income in the game,
-                  and you can also convert the income into real value, (legal
-                  currency). A global team based in the United States and South
-                  Korea provides support for game development. Product features
-                  include NFT mall, game center, Defi module, incentives, and
-                  personal center.
-                </p>
-              </div>
-
-              <div className={styles.item}>
-                <div className={styles.title}>Game Introduction</div>
-                <p>
-                  &quot;THREE-BODY WARRIORS&quot; is a Yuan cosmic game invested
-                  and developed by well-known American game R & D company IGS.
-                  You can get the corresponding resources and tokens, and to
-                  obtain higher returns by consuming tokens to upgrade soldiers.
-                  Three-Body Warriors has created an immersive virtual space
-                  parallel to the physical world. It drives the development of
-                  game users through carefully designed rewards and economic
-                  systems to improve the experience of game users from the game
-                  mechanism. In this game, users and investors can get
-                  continuous, low-risk, and stable returns.
-                </p>
-              </div>
-              <div className={styles.item}>
                 <div className={styles.title}>
                   Introduction of project advantages
                 </div>
                 <p>
-                  1. One of the few Brc20-based Gamefi with an aggressive
-                  entrepreneurial team and seed investment.
-                  <br /> 2. Professional game production and development, Korean
-                  game team. <br /> 3. Excellent game story and economics,
-                  immersive metaverse experience. <br /> 4. The combination of a
-                  native app and VR headset.
-                </p>
-              </div>
-              <div className={styles.item}>
-                <div className={styles.title}>team introduction</div>
-                <p>
-                  Decentralized global office team, members come to the United
-                  States China, Singapore, and South Korea, currently have a
-                  total of 9 people. Among them, the CEO/founder Adamsteve is
-                  from the United States) A well-known early investor of Web3.0
-                  and a continuous entrepreneur of Web3.0. CTO/co-founder Jin
-                  Youhao is from South Korea, An angel investor in the game
-                  field, a serial entrepreneur in the game industry, focusing on
-                  the integration and construction of mobile games and
-                  metaverses. COO·BILL from the United States A blockchain
-                  marketing expert with more than 8 years of web 2.0 operating
-                  experience. Chief game producer Park Eun-Kyung is from South
-                  Korea A core member of a well-known Korean game company with
-                  more than 15 years of game experience Other members have
-                  extensive experience in games, web3, and the Internet
+                  OrdPlay redefines Play2Earn (P2E) in the BRC20 ecosystem.
+                  Through our diverse games, players earn $ODPG, our native
+                  token, unlocking new income opportunities. We don’t stop at
+                  gaming; we're developing an Initial Game Offering (IGO)
+                  platform for developers to launch and promote their games,
+                  ensuring a rich, diverse game selection.
+                  <br />
+                  Simultaneously, our upcoming NFT Marketplace allows users to
+                  create, buy, and sell NFTs, offering an additional income
+                  stream. The $ODPG token facilitates in-game transactions,
+                  governance, and profit sharing, fueling a vibrant gaming
+                  community.
+                  <br />
+                  With multiple revenue streams, including gaming rewards, NFT
+                  trading, IGOs, platform fees, and ad revenue, OrdPlay promises
+                  a financially sustainable and ever-evolving platform. The
+                  future of GameFi starts with OrdPlay.
                 </p>
               </div>
             </div>
