@@ -110,7 +110,7 @@ const LaunchpadDetails = () => {
     },
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0.00000033);
+  const [tokenPrice, setTokenPrice] = useState("0.00000033");
   const [percentage, setPercentage] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [whitelistActualAmount, setWhitelistActualAmount] = useState(0);
@@ -378,8 +378,8 @@ const LaunchpadDetails = () => {
                 OrdPlay is pioneering the future of the GameFi space by
                 leveraging the power of BRC-20 tokens and the novelty of
                 Ordinals. As the first Play2Earn platform within the Bitcoin
-                ecosystem, we're bringing unprecedented innovation and financial
-                opportunities to the gaming community.
+                ecosystem, we&apos;re bringing unprecedented innovation and
+                financial opportunities to the gaming community.
               </p>
               <div className={styles.contact}>
                 <Link href="https://ordplay.games/" passHref>
@@ -734,10 +734,10 @@ const LaunchpadDetails = () => {
                 <p>
                   OrdPlay redefines Play2Earn (P2E) in the BRC20 ecosystem.
                   Through our diverse games, players earn $ODPG, our native
-                  token, unlocking new income opportunities. We don’t stop at
-                  gaming; we're developing an Initial Game Offering (IGO)
-                  platform for developers to launch and promote their games,
-                  ensuring a rich, diverse game selection.
+                  token, unlocking new income opportunities. We don&apos;t stop
+                  at gaming; we&apos;re developing an Initial Game Offering
+                  (IGO) platform for developers to launch and promote their
+                  games, ensuring a rich, diverse game selection.
                   <br />
                   Simultaneously, our upcoming NFT Marketplace allows users to
                   create, buy, and sell NFTs, offering an additional income
