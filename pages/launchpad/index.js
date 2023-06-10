@@ -18,6 +18,11 @@ import avatar3 from "../../public/launchpad/avatar3-1.png";
 import avatar1 from "../../public/launchpad/avatar1.png";
 import project1 from "../../public/launchpad/project1.jpg";
 import project2 from "../../public/launchpad/project2.png";
+import chamchaAvatar from "../../public/launchpad/chamchaAvatar.png";
+import chamchaBanner from "../../public/launchpad/chamchaBanner.png";
+import pecAvatar from "../../public/launchpad/pecAvatar.png";
+import bitmosAvator from "../../public/launchpad/bitmosAvator.png";
+import deflAvatar from "../../public/launchpad/deflAvatar.png";
 import icon1 from "../../public/launchpad/titleicon.png";
 import icon2 from "../../public/launchpad/launchicon2.png";
 import icon3 from "../../public/launchpad/launchicon3.png";
@@ -62,35 +67,22 @@ const Launchpad = () => {
       telegram: null,
       discord: "https://discord.com/invite/tuxbNWqhmA",
     },
-    {
-      id: 3,
-      title: "Arkstart",
-      desc: `Arkstart is pioneering the new era of BRC-20 token staking with
-                our innovative blockchain project. We aim to build a sustainable
-                staking ecosystem using unique staking mechanisms and economic
-                models.`,
-      banner: project,
-      avatar: avatar,
-      hot: false,
-      details: "/launchpad/detail",
-      twitter: "https://twitter.com/arkscoin",
-      medium: "https://medium.com/@arkstart",
-      telegram: "https://t.me/ArkstartOfficial",
-      discord: null,
-    },
-    {
-      id: 3,
-      title: "ISKA",
-      desc: `Isekai Protocol is a pioneering AI-driven Web3 creator ecosystem dedicated to the creation of ACGN (anime, comics, games, and novels) content. By leveraging the power of AI and Web3 technology, Isekai Protocol enables users to unleash their creative potential, generating derivative works from established IPs while adhering to the principles of the Isekai Protocol, fostering a dynamic NFT network that seamlessly connects derivatives and originals. The platform offers AI-powered creator tools, including a visual novel maker to enable immersive storytelling experiences. Moreover, the derivative creation royalty system ensures owners and creators of NFTs integrated into derivative works receive a fair share of profits when such creations achieve success. By establishing a bottom-up ACGN content creation ecosystem, Isekai aims to revolutionize the way content is created, shared, and monetized. `,
-      banner: project2,
-      avatar: project2,
-      hot: false,
-      details: "/launchpad/detail2",
-      twitter: "https://twitter.com/isekaiprotocol",
-      medium: "https://medium.com/@isekaimetaverse",
-      telegram: null,
-      discord: "https://discord.com/invite/tuxbNWqhmA",
-    },
+    // {
+    //   id: 3,
+    //   title: "Arkstart",
+    //   desc: `Arkstart is pioneering the new era of BRC-20 token staking with
+    //             our innovative blockchain project. We aim to build a sustainable
+    //             staking ecosystem using unique staking mechanisms and economic
+    //             models.`,
+    //   banner: project,
+    //   avatar: avatar,
+    //   hot: false,
+    //   details: "/launchpad/detail",
+    //   twitter: "https://twitter.com/arkscoin",
+    //   medium: "https://medium.com/@arkstart",
+    //   telegram: "https://t.me/ArkstartOfficial",
+    //   discord: null,
+    // },
     {
       id: 4,
       title: "ODPG",
@@ -103,6 +95,59 @@ const Launchpad = () => {
       medium: "https://medium.com/ordplay",
       telegram: "https://t.me/OrdPlay",
       discord: null,
+    },
+    {
+      id: 5,
+      title: "Chamcha",
+      desc: `Chamcha, the pioneer of supporting the diverse ecosystem of #Bitcoin Ordinals, builds Ordinals Assets liquidity.`,
+      banner: chamchaBanner,
+      avatar: chamchaAvatar,
+      hot: false,
+      details: "/launchpad",
+      twitter: "https://twitter.com/0xChamcha",
+      medium: null,
+      telegram: "https://t.me/GlobalChamcha",
+      discord: "https://discord.com/invite/eDRAqZN6EJ",
+    },
+    {
+      id: 6,
+      title: "PECland",
+      desc: `PECland is a creative Web3 comprehensive gaming platform that offers users an immersive gaming experience!`,
+      banner: pecAvatar,
+      avatar: pecAvatar,
+      hot: false,
+      details: "/launchpad",
+      twitter: "/launchpad",
+      medium: "/launchpad",
+      telegram: null,
+      discord: null,
+    },
+    {
+      id: 7,
+      title: "BitMos",
+      desc: `20 wordp roject description:
+Bitmos: Unleashing Bitcoin and BRC20’s DeFi potential on Cosmos through cross-chain interoperability and smart contracts.`,
+      banner: bitmosAvator,
+      avatar: bitmosAvator,
+      hot: false,
+      details: "/launchpad",
+      twitter: "https://twitter.com/_BitMos_",
+      medium: null,
+      telegram: "https://t.me/bitmos_community",
+      discord: null,
+    },
+    {
+      id: 8,
+      title: "DEFL",
+      desc: `DFTL is a perfect gaming-based decentralized economic policy that insures price stability and long term growth for gamers and DeFi users.`,
+      banner: deflAvatar,
+      avatar: deflAvatar,
+      hot: false,
+      details: "/launchpad",
+      twitter: "https://twitter.com/defitankland",
+      medium: "https://medium.com/defitankland",
+      telegram: null,
+      discord: "https://discord.com/invite/wzPajCFVhK",
     },
   ];
 

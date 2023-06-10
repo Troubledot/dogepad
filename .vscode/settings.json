@@ -3,5 +3,13 @@
   // "git.ignoreLimitWarning": true,
   "prettier.tabWidth": 2,
   "i18n-ally.localesPaths": ["public/locales"],
-  "cSpell.words": ["BISO", "Echart", "Echarts", "swiper", "toastify", "unisat"]
+  "cSpell.words": [
+    "BISO",
+    "chamcha",
+    "Echart",
+    "Echarts",
+    "swiper",
+    "toastify",
+    "unisat"
+  ]
 }
