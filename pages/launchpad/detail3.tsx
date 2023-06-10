@@ -110,7 +110,7 @@ const LaunchpadDetails = () => {
     },
   ];
 
-  const [tokenPrice, setTokenPrice] = useState(0.00000033);
+  const [tokenPrice, setTokenPrice] = useState("0.00000033");
   const [percentage, setPercentage] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
   const [whitelistActualAmount, setWhitelistActualAmount] = useState(0);
@@ -378,8 +378,8 @@ const LaunchpadDetails = () => {
                 OrdPlay is pioneering the future of the GameFi space by
                 leveraging the power of BRC-20 tokens and the novelty of
                 Ordinals. As the first Play2Earn platform within the Bitcoin
-                ecosystem, we're bringing unprecedented innovation and financial
-                opportunities to the gaming community.
+                ecosystem, we&apos;re bringing unprecedented innovation and
+                financial opportunities to the gaming community.
               </p>
               <div className={styles.contact}>
                 <Link href="https://ordplay.games/" passHref>
@@ -734,10 +734,10 @@ const LaunchpadDetails = () => {
                 <p>
                   OrdPlay redefines Play2Earn (P2E) in the BRC20 ecosystem.
                   Through our diverse games, players earn $ODPG, our native
-                  token, unlocking new income opportunities. We don’t stop at
-                  gaming; we're developing an Initial Game Offering (IGO)
-                  platform for developers to launch and promote their games,
-                  ensuring a rich, diverse game selection.
+                  token, unlocking new income opportunities. We don&apos;t stop
+                  at gaming; we&apos;re developing an Initial Game Offering
+                  (IGO) platform for developers to launch and promote their
+                  games, ensuring a rich, diverse game selection.
                   <br />
                   Simultaneously, our upcoming NFT Marketplace allows users to
                   create, buy, and sell NFTs, offering an additional income
@@ -749,6 +749,48 @@ const LaunchpadDetails = () => {
                   trading, IGOs, platform fees, and ad revenue, OrdPlay promises
                   a financially sustainable and ever-evolving platform. The
                   future of GameFi starts with OrdPlay.
+                </p>
+                <div className={styles.title}>Token Overview</div>
+                <p>
+                  At the heart of our platform lies the native token, $ODPG.
+                  This innovative BRC-20 token, uniquely designed to bring
+                  together the value consensus of BTC and OrdPlay, plays a
+                  fundamental role in our platform’s mechanics. It not only
+                  fuels in-game transactions and governs decision-making
+                  processes, but also bestows upon its holders a share in the
+                  platform’s gains. Through $ODPG, we seek to galvanize an
+                  expansive audience to contribute to the blossoming OrdPlay
+                  ecosystem, thereby fortifying the Bitcoin network. As the
+                  lifeblood of OrdPlay, $ODPG fosters a community-centric future
+                  where the evolution of OrdPlay and the progression of the
+                  Bitcoin gaming ecosystem go hand in hand. The key details
+                  about $ORPG are as follows:
+                  <br />
+                  Token Symbol: $ODPG
+                  <br />
+                  Token Standard: BRC-20
+                  <br />
+                  Total Supply: 100,000,000
+                  <br />
+                  The total supply of $ODPG is set at a finite 100,000,000
+                  tokens. This limited supply ensures scarcity and could
+                  potentially drive value as the demand for tokens increases.
+                </p>
+                <div className={styles.title}>
+                  The total supply of $ODPG tokens is allocated as follows:
+                </div>
+                <p>
+                  Public Donation: 60%
+                  <br />
+                  Treasury: 15%
+                  <br />
+                  Play2Earn: 20%
+                  <br />
+                  Airdrops: 5%
+                  <br />
+                  Our token distribution strategy is carefully planned to ensure
+                  the sustainable growth of the platform, while keeping the
+                  interests of our community at the forefront.
                 </p>
               </div>
             </div>
