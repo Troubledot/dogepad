@@ -125,8 +125,7 @@ const Launchpad = () => {
     {
       id: 7,
       title: "BitMos",
-      desc: `20 wordp roject description:
-Bitmos: Unleashing Bitcoin and BRC20’s DeFi potential on Cosmos through cross-chain interoperability and smart contracts.`,
+      desc: `Unleashing Bitcoin and BRC20’s DeFi potential on Cosmos through cross-chain interoperability and smart contracts.`,
       banner: bitmosAvator,
       avatar: bitmosAvator,
       hot: false,
