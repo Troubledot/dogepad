@@ -20,15 +20,12 @@ import project1 from "../../public/launchpad/project1.jpg";
 import project2 from "../../public/launchpad/project2.png";
 import chamchaAvatar from "../../public/launchpad/chamchaAvatar.png";
 import chamchaBanner from "../../public/launchpad/chamchaBanner.png";
-import pecAvatar from "../../public/launchpad/pecAvatar.png";
 import bitmosAvator from "../../public/launchpad/bitmosAvator.png";
-import deflAvatar from "../../public/launchpad/deflAvatar.png";
 import icon1 from "../../public/launchpad/titleicon.png";
 import icon2 from "../../public/launchpad/launchicon2.png";
 import icon3 from "../../public/launchpad/launchicon3.png";
 import icon4 from "../../public/launchpad/launchicon4.png";
 import hot from "../../public/launchpad/hot.svg";
-import github from "../../public/launchpad/github.png";
 import twitter from "../../public/launchpad/twitter.png";
 import telegram from "../../public/launchpad/telegram.png";
 import discord from "../../public/launchpad/discord.png";
@@ -110,19 +107,6 @@ const Launchpad = () => {
       discord: "https://discord.com/invite/eDRAqZN6EJ",
     },
     {
-      id: 6,
-      title: "PECland",
-      desc: `PECland is a creative Web3 comprehensive gaming platform that offers users an immersive gaming experience!`,
-      banner: pecAvatar,
-      avatar: pecAvatar,
-      hot: false,
-      details: "/launchpad",
-      twitter: "/launchpad",
-      medium: "/launchpad",
-      telegram: null,
-      discord: null,
-    },
-    {
       id: 7,
       title: "BitMos",
       desc: `Unleashing Bitcoin and BRC20’s DeFi potential on Cosmos through cross-chain interoperability and smart contracts.`,
@@ -134,19 +118,6 @@ const Launchpad = () => {
       medium: null,
       telegram: "https://t.me/bitmos_community",
       discord: null,
-    },
-    {
-      id: 8,
-      title: "DEFL",
-      desc: `DFTL is a perfect gaming-based decentralized economic policy that insures price stability and long term growth for gamers and DeFi users.`,
-      banner: deflAvatar,
-      avatar: deflAvatar,
-      hot: false,
-      details: "/launchpad",
-      twitter: "https://twitter.com/defitankland",
-      medium: "https://medium.com/defitankland",
-      telegram: null,
-      discord: "https://discord.com/invite/wzPajCFVhK",
     },
   ];
 

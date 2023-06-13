@@ -5,9 +5,13 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { withRouter } from "next/router";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-
+import Button from "../components/Button";
 import styles from "../styles/home.module.scss";
-
+import twitter from "../public/home/twitter.png";
+import discord from "../public/home/discord.png";
+import tel from "../public/home/tel.png";
+import Link from "next/link";
+import Image from "next/image";
 import "animate.css";
 
 const Home = () => {
@@ -15,194 +19,190 @@ const Home = () => {
     <HeaderFooter activeIndex={1}>
       <ToastContainer />
       <div className={styles.wrapper}>
-        <div className={styles.slogan}>
-          <h1>The first AMM DEX in the BRC20 ecosystem!</h1>
-          <h2>BISO SWAP</h2>
-          <div className={styles.rhinoceros}></div>
-          <i className={styles.eth}></i>
-          <i className={styles.btc}></i>
-          <i className={styles.knc}></i>
-          <i className={styles.ada}></i>
-          <i className={styles.usdt}></i>
-          <i className={styles.dai}></i>
-        </div>
-        <ul className={styles.link}>
-          <li>
-            <span>IDO</span>
-            <i></i>
-          </li>
-          <li>
-            <span>Staking</span>
-            <i></i>
-          </li>
-          <li>
-            <span>Launchpad</span>
-            <i></i>
-          </li>
-          <li>
-            <span>Swap</span>
-            <i></i>
-          </li>
-        </ul>
-        <ul className={styles.partner}>
-          <li className={styles.tp}></li>
-          <li className={styles.gate}></li>
-          <li className={styles.mxc}></li>
-          <li className={styles.nasdaq}></li>
-        </ul>
-        <div className={styles.feature}>
-          <h1></h1>
-          <h2>
-            Bisoswap is aiming to address the lack of liquidity in BRC20 by
-            increasing the liquidity pool for LP trades and enabling real-time
-            trading.
-          </h2>
-          <ul>
-            <i className={styles.character}></i>
-            <li>
-              <h3>
-                <b>AMM</b> Model.
-              </h3>
-              <p>
-                Automated Market Maker (AMM) model: BisoSwap adopt an AMM model,
-                which simplifies trading processes and reduces the reliance on
-                order books.
-              </p>
-              <a href="#">go to Swap &gt;&gt;</a>
-            </li>
-            <li>
-              <h3>
-                <b>Liquidity</b>provision.
-              </h3>
-              <p>
-                Liquidity provision and incentives: Users can provide liquidity
-                to the platform and receive incentives to ensure sufficient
-                liquidity for better trading experience.
-              </p>
-              <a href="#">go to Swap &gt;&gt;</a>
-            </li>
-            <li>
-              <h3>
-                <b>User-friendly </b>Interface.
-              </h3>
-              <p>
-                User-friendly interface: BisoSwap offers a clean, intuitive
-                interface that allows users to easily connect their wallets and
-                interact with the platform.
-              </p>
-              <a href="#">go to Swap &gt;&gt;</a>
-            </li>
-          </ul>
-        </div>
-        <div className={styles.info}>
-          <div className={styles.inner}>
-            <div className={styles.text}>
-              <h1>
-                We serve users and
-                <br />
-                <b> project stakeholders</b>
-              </h1>
-              <p>
-                We&apos;re gonna offer users all the decentralized services, and
-                provide project partners with services like fundraising,
-                distribution, and airdrops.
-              </p>
-              <ul className={styles.icon}>
-                <li>No KYC</li>
-                <li>Non-Custodial</li>
-                <li>Indefinite Term</li>
-              </ul>
-              <p>
-                <button>
-                  Swap Now<i></i>
-                </button>
-                <a href="#">
-                  Learn<i></i>
-                </a>
-              </p>
+        <div className={styles.container}>
+          <div className={styles.top}>
+            <div className={styles.text}>The Drc-20’s New-gen LaunchPad</div>
+            <div className={styles.tips}>
+              Decentralization, stability, deep cultivation of memes, and
+              long-term prospects are the main drivers for the development of
+              Dogepad.
             </div>
-            <div className={styles.bg}>
-              <ul>
-                <li>
-                  <h1></h1>
-                  <p>
-                    1893 <b>Hloders</b>
-                  </p>
-                  <button>in the last 30 days</button>
-                </li>
-                <li>
-                  <h1></h1>
-                  <p>
-                    1893 <b>Hloders</b>
-                  </p>
-                  <button>in the last 30 days</button>
-                </li>
-                <li>
-                  <h1></h1>
-                  <p>
-                    1893 <b>Hloders</b>
-                  </p>
-                  <button>in the last 30 days</button>
-                </li>
-              </ul>
+            <div className={styles.buttons}>
+              <Button
+                renderContent={() => (
+                  <>
+                    <span>Open launchpad</span>
+                  </>
+                )}
+              ></Button>
+              <Button
+                type="normal"
+                renderContent={() => (
+                  <>
+                    <span>Subscribe</span>
+                  </>
+                )}
+              ></Button>
             </div>
+            <p>For All Meme Investors</p>
           </div>
-        </div>
-        <div className={styles.stake}>
-          <div className={styles.inner}>
-            <div className={styles.text}>
-              <h1>
-                <span className={styles.ori}>Stake</span> passive income
-                <br />
-                <span className={styles.gray}>with crypto.</span>
-              </h1>
-              <p>BisoSwap makes it easy to make your crypto work for you.</p>
-              <ul>
-                <li>
-                  USE $BISO <br />
-                  EARN $BISO TOKENS
-                </li>
-                <li>
-                  USTAKE $BISO TOKENS <br /> EARN FEES
-                </li>
-              </ul>
-              <div className={styles.opr}>
-                <button className={styles.oribtn}>Stake Now</button>
-                <button className={styles.btn}>Learn</button>
+          <div className={styles.contacts}>
+            <div className={styles.title}>FIND US ON SOCIAL MEDIA</div>
+            <div className={styles.contact}>
+              <div className={styles.item}>
+                <Image src={discord} alt="discord" width="48" height="38" />
+                <Link href="http://localhost:3000/en">Discord</Link>
+              </div>
+              <div className={styles.item}>
+                <Image src={tel} alt="tel" width="42" height="38" />
+                <Link href="http://localhost:3000/en">Telegram</Link>
+              </div>
+              <div className={styles.item}>
+                <Image src={twitter} alt="twitter" width="38" height="38" />
+                <Link href="http://localhost:3000/en">Twitter</Link>
               </div>
             </div>
-            <div className={styles.img1}></div>
           </div>
-          <div className={styles.inner}>
-            <div className={styles.text}>
-              <h1>
-                <span className={styles.ori}>Launchpad </span> passive <br />{" "}
-                income
-                <span className={styles.gray}> with crypto.</span>
-              </h1>
-              <p>BisoSwap makes it easy to make your crypto work for you.</p>
-              <ul>
-                <li>
-                  USE $BISO <br />
-                  EARN $BISO TOKENS
-                </li>
-                <li>
-                  USTAKE $BISO TOKENS <br /> EARN FEES
-                </li>
-              </ul>
-              <div className={styles.opr}>
-                <button className={styles.oribtn}>Stake Now</button>
-                <button className={styles.btn}>Learn</button>
-              </div>
+          <div className={styles.progress}>
+            <div className={styles.item}>
+              <div className={styles.icon}></div>
+              <div className={styles.amount}>$495.4M</div>
+              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.time}>in the last 30 days</div>
             </div>
-            <div className={styles.img1}></div>
+            <div className={styles.item}>
+              <div className={styles.icon}></div>
+              <div className={styles.amount}>$495.4M</div>
+              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.time}>in the last 30 days</div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.icon}></div>
+              <div className={styles.amount}>$495.4M</div>
+              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.time}>in the last 30 days</div>
+            </div>
+            <div className={styles.item}>
+              <div className={styles.icon}></div>
+              <div className={styles.amount}>$495.4M</div>
+              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.time}>in the last 30 days</div>
+            </div>
           </div>
         </div>
-        <div className={styles.subscribe}>
-          <div className={styles.bow}></div>
-          <div className={styles.inputwrap}>
-            <input type="text" placeholder="ENTER YOUR EMAIL" />
-            <button>SUBSCRIBE</button>
+        <div className={styles.help}>
+          <div className={styles.content}>
+            <div className={styles.text}>
+              HELP RAISE FUNDS FOR THE MOST SUCCESSFUL PROJECT ON THE
+              <br />
+              DRC-20 PROTOCOL
+            </div>
+            <div className={styles.buttons}>
+              <Button
+                renderContent={() => (
+                  <>
+                    <span>Open launchpad</span>
+                  </>
+                )}
+              ></Button>
+              <Button
+                type="normal"
+                renderContent={() => (
+                  <>
+                    <span>Subscribe</span>
+                  </>
+                )}
+              ></Button>
+            </div>
+          </div>
+        </div>
+        <div className={styles.nft}>
+          <div className={styles.content}>
+            <div className={styles.main}>
+              <div className={styles.title}>DOGEPAD NFT COMING SOON</div>
+              <div className={styles.subtitle}>
+                RAISE CAPITAL ACROSS ALL MAIN BLOCKCHAIN NETWORKS
+              </div>
+              <div className={styles.btn}>
+                <Button
+                  type="normal"
+                  renderContent={() => (
+                    <>
+                      <span>Learn More >></span>
+                    </>
+                  )}
+                ></Button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={styles.questions}>
+          <div className={styles.content}>
+            <div className={styles.title}>
+              <span>Have questions?</span>
+            </div>
+            <p>
+              Here are some answers to commonly asked questions. Did we miss
+              something?{" "}
+              <Link href="http://www.baidu.com">DM us on Twitter </Link>
+              to ask anything else.
+            </p>
+            <div className={styles.q}>1.What is Dogepad?</div>
+            <div className={styles.a}>
+              Dogepad is the first fully decentralized token distribution
+              platform based on DRC20 that is active in the meme community,
+              enabling you to obtain capital gains while ensuring your
+              investment security. Deneutralization.
+            </div>
+            <div className={styles.q}>
+              2.Is registering for a DogePad list safe?Is registering for a
+              DogePad list safe?Is registering for a DogePad list safe?Is
+              registering for a DogePad list safe?
+            </div>
+            <div className={styles.a}>
+              Dogepad is the first fully decentralized token distribution
+              platform based on DRC20 that is active in the meme community,
+              enabling you to obtain capital gains while ensuring your
+              investment security. Deneutralization.
+            </div>
+            <div className={styles.q}>
+              2.Is registering for a DogePad list safe?
+            </div>
+            <div className={styles.a}>
+              Dogepad is the first fully decentralized token distribution
+              platform based on DRC20 that is active in the meme community,
+              enabling you to obtain capital gains while ensuring your
+              investment security. Deneutralization.
+            </div>
+            <div className={styles.q}>
+              2.Is registering for a DogePad list safe?
+            </div>
+            <div className={styles.a}>
+              Dogepad is the first fully decentralized token distribution
+              platform based on DRC20 that is active in the meme community,
+              enabling you to obtain capital gains while ensuring your
+              investment security. Deneutralization.
+            </div>
+          </div>
+        </div>
+        <div className={styles.container}>
+          <div className={styles.sign}>
+            <div className={styles.subtitle}>NEVER WANT TO MISS A SALE?</div>
+            <div className={styles.title}>
+              Sign up for our newsletter and get the latest news and updates.
+            </div>
+            <div className={styles.inputs}>
+              <input type="text" />
+              <Button
+                type="normal"
+                size="small"
+                renderContent={() => (
+                  <>
+                    <span>Subscribe</span>
+                  </>
+                )}
+              ></Button>
+            </div>
           </div>
         </div>
       </div>

@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import Wallet from '../components/wallet';
-import Link from 'next/link';
-import classNames from 'classnames/bind';
-import Router, { useRouter } from 'next/router';
-import { useTranslation, Trans } from 'next-i18next';
-import { route } from 'next/dist/server/router';
-import styles from '../styles/layout.module.scss';
-import { concat } from 'ethers/lib/utils';
+import React, { useState, useEffect } from "react";
+import Wallet from "../components/wallet";
+import Link from "next/link";
+import classNames from "classnames/bind";
+import Router, { useRouter } from "next/router";
+import { useTranslation, Trans } from "next-i18next";
+import { route } from "next/dist/server/router";
+import styles from "../styles/layout.module.scss";
+import { concat } from "ethers/lib/utils";
 const cx = classNames.bind(styles);
 
-const Header = props => {
+const Header = (props) => {
   const { activeIndex, scrolling } = props;
   const [openState, setopenState] = useState(false);
 
   const router = useRouter();
-  const { t } = useTranslation('common');
-  const [account, setAccount] = useState('');
+  const { t } = useTranslation("common");
+  const [account, setAccount] = useState("");
 
   useEffect(async () => {
     // const timer = setInterval(async () => {
@@ -29,20 +29,20 @@ const Header = props => {
   }, []);
 
   const connectWallet = async () => {
-    if (typeof window.unisat !== 'undefined') {
+    if (typeof window.unisat !== "undefined") {
       let accounts = await window.unisat.requestAccounts();
       setAccount(accounts[0]);
     } else {
-      alert('UniSat Wallet is not installed!');
+      alert("UniSat Wallet is not installed!");
     }
   };
 
   const connectWalletOKX = async () => {
-    if (typeof window.okxwallet !== 'undefined') {
+    if (typeof window.okxwallet !== "undefined") {
       const res = await window.okxwallet.requestWallets(true);
       setAccount(res[0].address[0].address);
     } else {
-      alert('OKX Wallet is not installed!');
+      alert("OKX Wallet is not installed!");
     }
   };
 
@@ -57,7 +57,7 @@ const Header = props => {
           <Link href="/" passHref>
             <li
               className={cx({
-                active: activeIndex === 1
+                active: activeIndex === 1,
               })}
             >
               Home
@@ -66,22 +66,17 @@ const Header = props => {
           <Link href="/launchpad" passHref>
             <li
               className={cx({
-                active: activeIndex === 2
+                active: activeIndex === 2,
               })}
             >
               Launchpad
             </li>
           </Link>
-          <Link href="/staking" passHref>
-            <li
-              className={cx({
-                active: activeIndex === 3
-              })}
-            >
-              Stake
-            </li>
-          </Link>
-          <a href="https://bisoswap.gitbook.io/bisoswap/" target="_blank" rel="noreferrer">
+          <a
+            href="https://bisoswap.gitbook.io/bisoswap/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <li>Doc</li>
           </a>
         </ul>
@@ -92,12 +87,18 @@ const Header = props => {
                 <button>Connect Wallet</button>
                 <ul>
                   <li>
-                    <button className={styles.wallet_btn} onClick={() => connectWallet()}>
+                    <button
+                      className={styles.wallet_btn}
+                      onClick={() => connectWallet()}
+                    >
                       Connect Unisat Wallet
                     </button>
                   </li>
                   <li>
-                    <button className={styles.wallet_btn} onClick={() => connectWalletOKX()}>
+                    <button
+                      className={styles.wallet_btn}
+                      onClick={() => connectWalletOKX()}
+                    >
                       Connect OKX Wallet
                     </button>
                   </li>

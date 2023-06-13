@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
-import React, { useState, useEffect } from 'react';
-import Script from 'next/script';
-const HeaderFooter = props => {
+import Head from "next/head";
+import Header from "./Header";
+import Footer from "./Footer.js";
+import React, { useState, useEffect } from "react";
+import Script from "next/script";
+const HeaderFooter = (props) => {
   const { activeIndex, scrolling } = props;
   const [progress, setProgress] = useState(0);
 
@@ -23,11 +23,18 @@ const HeaderFooter = props => {
         <link rel="bookmark" href="/favicon.ico" />
         <meta name="description" content="BISO SWAP" />
         <meta name="keywords" content="BISO SWAP" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+        />
         {/* <script src="/js/viewport.js"></script> */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-X2NVSQMYBS"></script> */}
       </Head>
-      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-X2NVSQMYBS" strategy="afterInteractive" />
+      <Script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-X2NVSQMYBS"
+        strategy="afterInteractive"
+      />
       <Script id="google-analytics" strategy="afterInteractive">
         {`
           window.dataLayer = window.dataLayer || [];

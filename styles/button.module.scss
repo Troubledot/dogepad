@@ -3,8 +3,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 20px;
-  font-size: 16px;
+  border-radius: 10px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
+  padding: 0 30px;
+  &.primary {
+    background: linear-gradient(#f28904, #ef6600);
+    color: #fff;
+  }
+  &.normal {
+    background: rgba($color: #f28904, $alpha: 0.1);
+    color: #f28404;
+  }
+  &.medium {
+    font-size: 14px;
+  }
+  &.small {
+    height: 46px;
+  }
 }
