@@ -63,7 +63,7 @@ const Header = (props) => {
               Home
             </li>
           </Link>
-          <Link href="/launchpad" passHref>
+          <Link href="/" passHref>
             <li
               className={cx({
                 active: activeIndex === 2,

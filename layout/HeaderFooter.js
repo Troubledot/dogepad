@@ -10,19 +10,19 @@ const HeaderFooter = (props) => {
   return (
     <div>
       <Head>
-        <title>BISO SWAP</title>
+        <title>DogePad</title>
         <meta charSet="utf-8" />
         <meta name="renderer" content="webkit" />
-        <meta name="author" content="BISO SWAP" />
-        <meta name="generator" content="BISO SWAP" />
-        <meta name="copyright" content="BISO SWAP" />
+        <meta name="author" content="DogePad" />
+        <meta name="generator" content="DogePad" />
+        <meta name="copyright" content="DogePad" />
         {/* <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta httpEquiv="Cache-Control" content="no-transform" />
           <meta httpEquiv="Cache-Control" content="no-siteapp" /> */}
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="bookmark" href="/favicon.ico" />
-        <meta name="description" content="BISO SWAP" />
-        <meta name="keywords" content="BISO SWAP" />
+        <meta name="description" content="DogePad" />
+        <meta name="keywords" content="DogePad" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
