@@ -128,7 +128,7 @@ const Home = () => {
                   type="normal"
                   renderContent={() => (
                     <>
-                      <span>Learn More >></span>
+                      <span>Learn More &gt;&gt;</span>
                     </>
                   )}
                 ></Button>
