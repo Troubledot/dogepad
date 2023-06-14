@@ -12,7 +12,6 @@ const Footer = ({ t }) => {
             <div className={styles.navs}>
               <Link href="#">Home</Link>
               <Link href="#">Launchpad</Link>
-              <Link href="#">Swap</Link>
               <Link href="#">Stake</Link>
             </div>
           </div>
@@ -20,16 +19,15 @@ const Footer = ({ t }) => {
             <div className={styles.title}>Social</div>
             <div className={styles.contact}>
               <Link
-                href="https://bisoswap.gitbook.io/bisoswap/"
+                href="https://medium.com/@dogepad.drc"
                 target="_blank"
                 rel="noreferrer"
                 passHref
-                passHref
               >
-                <div className={styles.dc}></div>
+                <div className={styles.md}></div>
               </Link>
               <Link
-                href="https://t.me/BisoSwap"
+                href="https://t.me/DogePad_CN"
                 target="_blank"
                 rel="noreferrer"
                 passHref
@@ -37,7 +35,7 @@ const Footer = ({ t }) => {
                 <div className={styles.tg}></div>
               </Link>
               <Link
-                href="https://twitter.com/bisoswap"
+                href="https://twitter.com/DogePad_drc"
                 target="_blank"
                 rel="noreferrer"
                 passHref

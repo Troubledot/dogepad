@@ -91,15 +91,7 @@ const Header = (props) => {
                       className={styles.wallet_btn}
                       onClick={() => connectWallet()}
                     >
-                      Connect Unisat Wallet
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      className={styles.wallet_btn}
-                      onClick={() => connectWalletOKX()}
-                    >
-                      Connect OKX Wallet
+                      Connect Unielon Wallet
                     </button>
                   </li>
                 </ul>

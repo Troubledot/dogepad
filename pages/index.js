@@ -21,7 +21,7 @@ const Home = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.top}>
-            <div className={styles.text}>The Drc-20’s New-gen LaunchPad</div>
+            <div className={styles.text}>The DRC-20’s New-gen LaunchPad</div>
             <div className={styles.tips}>
               Decentralization, stability, deep cultivation of memes, and
               long-term prospects are the main drivers for the development of
@@ -51,15 +51,15 @@ const Home = () => {
             <div className={styles.contact}>
               <div className={styles.item}>
                 <Image src={discord} alt="discord" width="48" height="38" />
-                <Link href="http://localhost:3000/en">Discord</Link>
+                <Link href="https://medium.com/@dogepad.drc">Discord</Link>
               </div>
               <div className={styles.item}>
                 <Image src={tel} alt="tel" width="42" height="38" />
-                <Link href="http://localhost:3000/en">Telegram</Link>
+                <Link href="https://t.me/DogePad_CN">Telegram</Link>
               </div>
               <div className={styles.item}>
                 <Image src={twitter} alt="twitter" width="38" height="38" />
-                <Link href="http://localhost:3000/en">Twitter</Link>
+                <Link href="https://twitter.com/DogePad_drc?s=20">Twitter</Link>
               </div>
             </div>
           </div>
@@ -72,20 +72,20 @@ const Home = () => {
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>$495.4M</div>
-              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.amount}>300+</div>
+              <div className={styles.label}>Total Users in here</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>$495.4M</div>
-              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.amount}>5+</div>
+              <div className={styles.label}>Projects listing</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>$495.4M</div>
-              <div className={styles.label}>Total Liquidity Raised</div>
+              <div className={styles.amount}>$95.4M</div>
+              <div className={styles.label}>Total Values Locked</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
           </div>
