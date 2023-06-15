@@ -107,6 +107,20 @@
     display: flex;
     justify-content: space-between;
     padding: 60px 0;
+    position: relative;
+    z-index: 2;
+    &::before {
+      content: "";
+      background: url(../public/home/shadow.png);
+      width: 700px;
+      height: 700px;
+      background-size: 100% 100%;
+      position: absolute;
+      left: -420px;
+      top: 50%;
+      margin-top: -350px;
+      z-index: 1;
+    }
     .item {
       width: 280px;
       height: 260px;
