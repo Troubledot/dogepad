@@ -155,10 +155,17 @@
         width: 50px;
         height: 50px;
         margin-right: 20px;
+        cursor: pointer;
         &.tg {
           background: url(../public/home/w-tel.png) no-repeat center/100% auto;
           width: 23px;
           height: 23px;
+        }
+        &.md {
+          background: url(../public/home/w-md.png) no-repeat center/100%
+            auto;
+          width: 28px;
+          height: 28px;
         }
         &.tw {
           background: url(../public/home/w-twitter.png) no-repeat center/100%

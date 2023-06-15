@@ -8,6 +8,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Button from "../components/Button";
 import styles from "../styles/home.module.scss";
 import twitter from "../public/home/twitter.png";
+import md from "../public/home/md.png";
 import discord from "../public/home/discord.png";
 import tel from "../public/home/tel.png";
 import Link from "next/link";
@@ -50,8 +51,8 @@ const Home = () => {
             <div className={styles.title}>FIND US ON SOCIAL MEDIA</div>
             <div className={styles.contact}>
               <div className={styles.item}>
-                <Image src={discord} alt="discord" width="48" height="38" />
-                <Link href="https://medium.com/@dogepad.drc">Discord</Link>
+                <Image src={md} alt="discord" width="48" height="38" />
+                <Link href="https://medium.com/@dogepad.drc">Medium</Link>
               </div>
               <div className={styles.item}>
                 <Image src={tel} alt="tel" width="42" height="38" />

@@ -72,13 +72,7 @@ const Header = (props) => {
               Launchpad
             </li>
           </Link>
-          <a
-            href="https://bisoswap.gitbook.io/bisoswap/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <li>Doc</li>
-          </a>
+          <li>Doc</li>
         </ul>
         <div className={styles.settings}>
           <div className={styles.wallet}>
