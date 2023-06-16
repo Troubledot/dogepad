@@ -26,7 +26,7 @@ const Home = () => {
             <div className={styles.tips}>
               Decentralization, stability, deep cultivation of memes, and
               long-term prospects are the main drivers for the development of
-              Dogepad.
+              DogePad.
             </div>
             <div className={styles.buttons}>
               <Button
@@ -148,9 +148,9 @@ const Home = () => {
               <Link href="https://twitter.com/DogePad_drc">DM us on Twitter </Link>
               to ask anything else.
             </p>
-            <div className={styles.q}>1.What is Dogepad?</div>
+            <div className={styles.q}>1.What is DogePad?</div>
             <div className={styles.a}>
-             Dogepad is the first fully decentralized token distribution platform based on DRC20 that is active in the meme community, enabling you to obtain capital gains while ensuring your investment security. Deneutralization.
+             DogePad is the first fully decentralized token distribution platform based on DRC20 that is active in the meme community, enabling you to obtain capital gains while ensuring your investment security.
             </div>
             <div className={styles.q}>
               2.What is a DRC-20 token?

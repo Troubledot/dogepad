@@ -30,7 +30,7 @@ const Header = (props) => {
 
   const connectWallet = async () => {
     if (typeof window.unisat !== "undefined") {
-      let accounts = await window.unisat.requestAccounts();
+      let accounts = await window.unielon.requestAccounts();
       setAccount(accounts[0]);
     } else {
       alert("UniSat Wallet is not installed!");
