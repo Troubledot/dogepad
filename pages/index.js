@@ -150,39 +150,25 @@ const Home = () => {
             </p>
             <div className={styles.q}>1.What is Dogepad?</div>
             <div className={styles.a}>
-              Dogepad is the first fully decentralized token distribution
-              platform based on DRC20 that is active in the meme community,
-              enabling you to obtain capital gains while ensuring your
-              investment security. Deneutralization.
+             Dogepad is the first fully decentralized token distribution platform based on DRC20 that is active in the meme community, enabling you to obtain capital gains while ensuring your investment security. Deneutralization.
             </div>
             <div className={styles.q}>
-              2.Is registering for a DogePad list safe?Is registering for a
-              DogePad list safe?Is registering for a DogePad list safe?Is
-              registering for a DogePad list safe?
+              2.What is a DRC-20 token?
             </div>
             <div className={styles.a}>
-              Dogepad is the first fully decentralized token distribution
-              platform based on DRC20 that is active in the meme community,
-              enabling you to obtain capital gains while ensuring your
-              investment security. Deneutralization.
+              A DRC-20 token is a digital asset built on the Cardinals protocol, which provides a standardized framework for creating and managing tokens on the DOGE network. These tokens are characterized by their unique features, such as customizable parameters and functionalities, allowing for a wide range of applications ranging from utility tokens to meme-inspired concepts.
             </div>
             <div className={styles.q}>
-              2.Is registering for a DogePad list safe?
+              3.What is the relationship between DogePad and DRC-20?
             </div>
             <div className={styles.a}>
-              Dogepad is the first fully decentralized token distribution
-              platform based on DRC20 that is active in the meme community,
-              enabling you to obtain capital gains while ensuring your
-              investment security. Deneutralization.
+             DogePad utilizes the DRC-20 standard and Cardinals protocol to provide enhanced trading experience and functionalities for users within the DRC-20 ecosystem. By focusing on the unique characteristics and functionalities of DRC-20 tokens, DogePad aims to cater to the specific needs of this rapidly growing market.
             </div>
             <div className={styles.q}>
-              2.Is registering for a DogePad list safe?
+              4.What is the goal of DogePad?
             </div>
             <div className={styles.a}>
-              Dogepad is the first fully decentralized token distribution
-              platform based on DRC20 that is active in the meme community,
-              enabling you to obtain capital gains while ensuring your
-              investment security. Deneutralization.
+            The goal of DogePad is to provide a secure and reliable platform within the DRC-20 ecosystem, reducing investment risks, curating high-quality projects for users, establishing strong connections between projects and the platform, and assisting in the healthy and orderly growth of projects.
             </div>
           </div>
         </div>
