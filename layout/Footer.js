@@ -12,7 +12,6 @@ const Footer = ({ t }) => {
             <div className={styles.navs}>
               <Link href="#">Home</Link>
               <Link href="#">Launchpad</Link>
-              <Link href="#">Stake</Link>
             </div>
           </div>
           <div className={styles.social}>
@@ -46,7 +45,7 @@ const Footer = ({ t }) => {
           </div>
         </div>
         <div className={styles.copyright}>
-          <p>2022 BISOSWAP.All Rights Reserved</p>
+          <p>2023 DogePad.All Rights Reserved</p>
           <p>Picacy Poilcy · Terms&Conditons</p>
         </div>
       </div>

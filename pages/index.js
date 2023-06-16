@@ -22,7 +22,7 @@ const Home = () => {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <div className={styles.top}>
-            <div className={styles.text}>The DRC-20’s New-gen LaunchPad</div>
+            <div className={styles.text}>The DRC-20’s New-Gen LaunchPad</div>
             <div className={styles.tips}>
               Decentralization, stability, deep cultivation of memes, and
               long-term prospects are the main drivers for the development of
@@ -145,7 +145,7 @@ const Home = () => {
             <p>
               Here are some answers to commonly asked questions. Did we miss
               something?{" "}
-              <Link href="http://www.baidu.com">DM us on Twitter </Link>
+              <Link href="https://twitter.com/DogePad_drc">DM us on Twitter </Link>
               to ask anything else.
             </p>
             <div className={styles.q}>1.What is Dogepad?</div>
