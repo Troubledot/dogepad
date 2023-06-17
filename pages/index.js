@@ -67,25 +67,25 @@ const Home = () => {
           <div className={styles.progress}>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>$0M+</div>
+              <div className={styles.amount}>$100M+</div>
               <div className={styles.label}>Total Liquidity Raised</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>5000+</div>
+              <div className={styles.amount}>1000+</div>
               <div className={styles.label}>Total Users in here</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>5+</div>
+              <div className={styles.amount}>3+</div>
               <div className={styles.label}>Projects listing</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
             <div className={styles.item}>
               <div className={styles.icon}></div>
-              <div className={styles.amount}>$100M+</div>
+              <div className={styles.amount}>$0</div>
               <div className={styles.label}>Total Values Locked</div>
               <div className={styles.time}>in the last 30 days</div>
             </div>
