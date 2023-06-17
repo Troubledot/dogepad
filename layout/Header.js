@@ -33,7 +33,7 @@ const Header = (props) => {
       let accounts = await window.unielon.requestAccounts();
       setAccount(accounts[0]);
     } else {
-      alert("UniSat Wallet is not installed!");
+      alert("Unielon Wallet is not installed!");
     }
   };
 

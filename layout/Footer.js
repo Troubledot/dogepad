@@ -46,7 +46,7 @@ const Footer = ({ t }) => {
         </div>
         <div className={styles.copyright}>
           <p>2023 DogePad.All Rights Reserved</p>
-          <p>Picacy Poilcy · Terms&Conditons</p>
+          <p>Privacy Poilcy · Terms & Conditons</p>
         </div>
       </div>
     </footer>
