@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px 0;
     .nav {
-      font-family: "Play";
+      font-family: 'Play';
       li {
         color: #fff;
         display: inline-block;
@@ -83,7 +83,7 @@
   position: relative;
   border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
   &::before {
-    content: "";
+    content: '';
     background: url(../public/layout/footerbg.png);
     width: 1440px;
     height: 302px;
@@ -101,7 +101,7 @@
     height: 250px;
     position: relative;
     &::after {
-      content: "";
+      content: '';
       background: url(../public/home/path2.png);
       width: 596px;
       height: 177px;
@@ -162,20 +162,17 @@
           height: 23px;
         }
         &.md {
-          background: url(../public/home/w-md.png) no-repeat center/100%
-            auto;
+          background: url(../public/home/w-md.png) no-repeat center/100% auto;
           width: 28px;
           height: 28px;
         }
         &.tw {
-          background: url(../public/home/w-twitter.png) no-repeat center/100%
-            auto;
+          background: url(../public/home/w-twitter.png) no-repeat center/100% auto;
           width: 28px;
           height: 28px;
         }
         &.dc {
-          background: url(../public/home/w-discord.png) no-repeat center/100%
-            auto;
+          background: url(../public/home/w-discord.png) no-repeat center/100% auto;
           width: 28px;
           height: 23px;
         }
@@ -187,25 +184,44 @@
 @media screen and (max-width: 500px) {
   .header {
     .inner {
-      width: 100%;
-      padding: 5px 20px;
-
-      .settings {
-        .link {
-          display: none;
+      width: 96%;
+      padding: 10px 0;
+      font-size: 14px;
+      .nav {
+        font-family: 'Play';
+        li {
+          padding: 5px 8px;
         }
+      }
+      .logo {
+        background: url(../public/images/logo.png) no-repeat;
+        width: 71.6px;
+        height: 19.6px;
+        background-size: 100% 100%;
+      }
+      .settings {
         .wallet {
+          margin-left: 5px;
+          .wallet_inner {
+            ul {
+              padding: 10px 0;
+              margin-top: -10px;
+              li {
+                margin: 5px 0;
+                border-radius: 20px;
+                &:hover {
+                  button {
+                    background: #ff9500;
+                  }
+                }
+              }
+            }
+          }
           button {
-            border: 1px solid #ffb800;
-            background: transparent;
-            color: #fff;
-            padding: 10px 10px;
-            width: 140px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            cursor: pointer;
-            margin-left: 5px;
-            font-size: 12px;
+            height: 30px;
+            line-height: 30px;
+            width: 80px;
+            border-radius: 10px;
           }
         }
       }
@@ -213,15 +229,105 @@
   }
 
   .footer {
+    background: #1f1e29;
+    padding-top: 40px;
+    font-size: 18px;
+    position: relative;
+    border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
+    &::before {
+      content: '';
+      background: url(../public/layout/footerbg.png);
+      width: 1440px;
+      height: 302px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+    }
+
     .inner {
-      padding: 10px 0;
-      ul {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      height: 250px;
+      position: relative;
+      &::after {
+        content: '';
+        background: url(../public/home/path2.png);
+        width: 596px;
+        height: 177px;
+        position: absolute;
+        left: 180px;
+        bottom: 0;
+      }
+      .content {
+        width: 680px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        .social {
+          margin-right: 20px;
+        }
+        .navs {
+          display: flex;
+          flex-direction: column;
+          color: #fff;
+          a {
+            margin-bottom: 5px;
+            text-decoration: none;
+          }
+        }
+        .title {
+          color: #f28904;
+          margin-bottom: 20px;
+          font-weight: 700;
+          font-size: 18px;
+        }
+      }
+      .copyright {
+        p {
+          color: #fff;
+          padding: 3px 0;
+          &:nth-child(2) {
+            opacity: 0.5;
+          }
+        }
+      }
+      .logo {
+        background: url(../public/images/logo.png);
+        width: 214.8px;
+        height: 58.8px;
+        background-size: 100% 100%;
+      }
+      .contact {
         text-align: center;
-        li {
+        div {
           display: inline-block;
           width: 50px;
           height: 50px;
-          margin: 0 10px;
+          margin-right: 20px;
+          cursor: pointer;
+          &.tg {
+            background: url(../public/home/w-tel.png) no-repeat center/100% auto;
+            width: 23px;
+            height: 23px;
+          }
+          &.md {
+            background: url(../public/home/w-md.png) no-repeat center/100% auto;
+            width: 28px;
+            height: 28px;
+          }
+          &.tw {
+            background: url(../public/home/w-twitter.png) no-repeat center/100% auto;
+            width: 28px;
+            height: 28px;
+          }
+          &.dc {
+            background: url(../public/home/w-discord.png) no-repeat center/100% auto;
+            width: 28px;
+            height: 23px;
+          }
         }
       }
     }

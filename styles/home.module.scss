@@ -9,7 +9,7 @@
     position: relative;
     padding: 20px 0;
     &::before {
-      content: "";
+      content: '';
       background: url(../public/home/topbg.png);
       background-size: 100% 100%;
       width: 745px;
@@ -52,7 +52,7 @@
       bottom: 210px;
       line-height: 28px;
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         background: url(../public/home/path1.png);
         width: 544px;
@@ -86,7 +86,7 @@
         margin: 0 30px;
         position: relative;
         &::before {
-          content: "";
+          content: '';
           height: 25px;
           width: 1px;
           background: rgba($color: #fff, $alpha: 0.1);
@@ -110,7 +110,7 @@
     position: relative;
     z-index: 2;
     &::before {
-      content: "";
+      content: '';
       background: url(../public/home/shadow.png);
       width: 700px;
       height: 700px;
@@ -214,7 +214,7 @@
       height: 100%;
       position: relative;
       &::before {
-        content: "";
+        content: '';
         background: url(../public/home/nft.png);
         width: 564px;
         height: 336.8px;
@@ -250,7 +250,7 @@
   .questions {
     position: relative;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       background: url(../public/home/questionbg.png);
       width: 1440px;
@@ -275,7 +275,7 @@
           -webkit-text-fill-color: transparent;
           position: relative;
           &::before {
-            content: "";
+            content: '';
             position: absolute;
             background: url(../public/home/titleicon1.png);
             width: 34px;
@@ -284,7 +284,7 @@
             top: -20px;
           }
           &::after {
-            content: "";
+            content: '';
             position: absolute;
             background: url(../public/home/titleicon2.png);
             width: 43px;
@@ -320,7 +320,7 @@
         padding-left: 60px;
         position: relative;
         &::before {
-          content: "";
+          content: '';
           position: absolute;
           width: 9px;
           height: 9px;
@@ -344,7 +344,7 @@
     position: relative;
     margin-top: 60px;
     &::before {
-      content: "";
+      content: '';
       background: url(../public/home/bag.png);
       width: 500px;
       height: 500px;
@@ -388,17 +388,5 @@
 
 @media screen and (max-width: 500px) {
   .wrapper {
-  }
-}
-
-@keyframes bounce {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
-  100% {
-    transform: translateY(0);
   }
 }
