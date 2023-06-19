@@ -8,7 +8,7 @@
     align-items: center;
     padding: 20px 0;
     .nav {
-      font-family: 'Play';
+      font-family: "Play";
       li {
         color: #fff;
         display: inline-block;
@@ -83,7 +83,7 @@
   position: relative;
   border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
   &::before {
-    content: '';
+    content: "";
     background: url(../public/layout/footerbg.png);
     width: 1440px;
     height: 302px;
@@ -101,7 +101,7 @@
     height: 250px;
     position: relative;
     &::after {
-      content: '';
+      content: "";
       background: url(../public/home/path2.png);
       width: 596px;
       height: 177px;
@@ -167,12 +167,14 @@
           height: 28px;
         }
         &.tw {
-          background: url(../public/home/w-twitter.png) no-repeat center/100% auto;
+          background: url(../public/home/w-twitter.png) no-repeat center/100%
+            auto;
           width: 28px;
           height: 28px;
         }
         &.dc {
-          background: url(../public/home/w-discord.png) no-repeat center/100% auto;
+          background: url(../public/home/w-discord.png) no-repeat center/100%
+            auto;
           width: 28px;
           height: 23px;
         }
@@ -184,11 +186,11 @@
 @media screen and (max-width: 500px) {
   .header {
     .inner {
-      width: 96%;
+      width: 94%;
       padding: 10px 0;
       font-size: 14px;
       .nav {
-        font-family: 'Play';
+        font-family: "Play";
         li {
           padding: 5px 8px;
         }
@@ -229,45 +231,36 @@
   }
 
   .footer {
-    background: #1f1e29;
     padding-top: 40px;
-    font-size: 18px;
+    font-size: 14px;
     position: relative;
     border-top: 1px solid rgba($color: #ffffff, $alpha: 0.1);
     &::before {
-      content: '';
-      background: url(../public/layout/footerbg.png);
-      width: 1440px;
-      height: 302px;
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: 0;
+      display: none;
     }
-
     .inner {
       max-width: 1440px;
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
-      height: 250px;
+      justify-content: flex-start;
+      height: 200px;
       position: relative;
+      flex-direction: column;
       &::after {
-        content: '';
+        content: "";
         background: url(../public/home/path2.png);
-        width: 596px;
-        height: 177px;
+        width: 298px;
+        height: 88.5px;
+        background-size: 100% 100%;
         position: absolute;
         left: 180px;
         bottom: 0;
       }
       .content {
-        width: 680px;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
         .social {
-          margin-right: 20px;
+          margin-right: 10px;
         }
         .navs {
           display: flex;
@@ -289,6 +282,7 @@
         p {
           color: #fff;
           padding: 3px 0;
+          text-align: center;
           &:nth-child(2) {
             opacity: 0.5;
           }
@@ -296,9 +290,10 @@
       }
       .logo {
         background: url(../public/images/logo.png);
-        width: 214.8px;
-        height: 58.8px;
+        width: 107.4px;
+        height: 29.4px;
         background-size: 100% 100%;
+        margin-left: 10px;
       }
       .contact {
         text-align: center;
@@ -319,12 +314,14 @@
             height: 28px;
           }
           &.tw {
-            background: url(../public/home/w-twitter.png) no-repeat center/100% auto;
+            background: url(../public/home/w-twitter.png) no-repeat center/100%
+              auto;
             width: 28px;
             height: 28px;
           }
           &.dc {
-            background: url(../public/home/w-discord.png) no-repeat center/100% auto;
+            background: url(../public/home/w-discord.png) no-repeat center/100%
+              auto;
             width: 28px;
             height: 23px;
           }
