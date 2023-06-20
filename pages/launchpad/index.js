@@ -485,7 +485,7 @@ const Launchpad = () => {
                   rel="noreferrer"
                   passHref
                 >
-                  More >>
+                  More &gt;&gt;
                 </Link>
               </span>
             </div>
