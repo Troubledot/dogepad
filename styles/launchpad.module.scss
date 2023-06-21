@@ -143,7 +143,7 @@
       }
       .topinfo {
         left: 50%;
-        margin-left: -500px;
+        transform: translateX(-50%);
         display: flex;
         width: 1000px;
         height: 150px;
@@ -226,7 +226,6 @@
         padding: 20px;
         border-radius: 10px;
         .banner {
-          position: relative;
           flex-shrink: 0;
           position: relative;
         }
@@ -435,44 +434,33 @@
 }
 @media screen and (max-width: 500px) {
   .wrapper {
-    background: #1f1e29;
-    overflow: hidden;
-    position: relative;
-    padding-bottom: 80px;
+    padding-bottom: 20px;
+    video {
+      display: none;
+    }
     &::before {
-      content: "";
-      position: absolute;
-      z-index: 1;
       background: url(../public/launchpad/DOGEPAD.png);
-      width: 684px;
-      height: 113px;
-      right: 0;
+      width: 273.6px;
+      height: 45.2px;
+      background-size: 100% 100%;
     }
     .container {
-      width: 1200px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 5;
+      width: 96%;
       &::before {
-        content: "";
         background: url(../public/launchpad/shadow.png);
-        width: 600px;
-        height: 600px;
+        width: 100px;
+        height: 100px;
         background-size: 100% 100%;
-        position: absolute;
-        z-index: 1;
-        left: -300px;
-        top: 200px;
+        left: -30px;
+        top: 10px;
       }
       &::after {
-        content: "";
         background: url(../public/launchpad/circle.png);
-        width: 450px;
-        height: 450px;
+        width: 200px;
+        height: 200px;
         background-size: 100% 100%;
         position: absolute;
-        z-index: 1;
-        left: -340px;
+        left: -100px;
         top: 60px;
       }
       .tag {
@@ -494,132 +482,84 @@
         }
       }
       .top {
-        position: relative;
-        z-index: 5;
-        padding-top: 20px;
         &::before {
           content: "";
           position: absolute;
           background: url(../public/launchpad/dog.png);
-          width: 741px;
-          height: 617px;
+          width: 296.4px;
+          height: 246.8px;
+          background-size: 100% 100%;
           z-index: 1;
-          right: 0;
-          top: -120px;
+          right: -80px;
+          top: -20px;
         }
         .title {
-          font-size: 70px;
-          font-weight: bold;
-          line-height: 1;
-          width: 800px;
-          background-image: linear-gradient(to right, #ff4d00, #f28404);
-          background-clip: text;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-          position: relative;
-          z-index: 5;
+          font-size: 32px;
+          width: 100%;
+          padding: 0 20px;
         }
         .subtitle {
-          font-size: 18px;
+          font-size: 14px;
           color: #b4a592;
-          width: 600px;
-          margin-top: 20px;
-          position: relative;
-          z-index: 5;
+          width: 100%;
+          padding: 0 20px;
         }
       }
       .content {
-        position: relative;
-        margin-top: 180px;
-        padding: 80px 20px 60px;
-        z-index: 5;
-        background-color: rgba($color: #d9d9d9, $alpha: 0.25);
-        border-radius: 20px;
+        margin-top: 120px;
+        padding: 90px 20px 20px;
         .title {
-          display: flex;
-          justify-content: space-between;
-          padding-left: 10px;
-          margin: 15px 0;
-          align-items: center;
           .main {
-            font-size: 32px;
-            font-weight: bold;
-            background-image: linear-gradient(
-              90deg,
-              rgba($color: #ffffff, $alpha: 1),
-              rgba($color: #ffffff, $alpha: 0.3) 30%,
-              rgba($color: #ffffff, $alpha: 0.1)
-            );
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-          }
-          span {
-            color: #fff;
-            font-size: 12px;
+            font-size: 22px;
           }
         }
         .topinfo {
-          left: 50%;
-          margin-left: -500px;
-          display: flex;
-          width: 1000px;
-          height: 150px;
-          justify-content: space-between;
-          align-items: center;
-          background-color: #15171e;
-          border-radius: 20px;
+          width: 90%;
+          height: auto;
           padding: 20px;
-          position: absolute;
-          z-index: 5;
-          box-shadow: 0px 0px 11px 2px #f28404;
           top: -75px;
+          flex-wrap: wrap;
           .item {
-            display: flex;
-            align-items: center;
-            position: relative;
+            width: 50%;
             &::after {
-              content: "";
-              width: 2px;
-              height: 47px;
-              position: absolute;
-              background-color: rgba($color: #fff, $alpha: 0.2);
-              right: -30px;
-              top: 50%;
-              transform: translateY(-50%);
+              display: none;
             }
             .icon {
               margin-right: 8px;
+              flex-shrink: 0;
             }
             &:nth-child(1) {
+              margin-bottom: 20px;
               .icon {
                 background: url(../public/launchpad/icon_total.png);
-                width: 58px;
-                height: 50px;
+                width: 46.4px;
+                height: 40px;
                 background-size: 100% 100%;
               }
             }
             &:nth-child(2) {
+              margin-bottom: 10px;
+
               .icon {
                 background: url(../public/launchpad/icon_total.png);
-                width: 58px;
-                height: 50px;
+                width: 46.4px;
+                height: 40px;
                 background-size: 100% 100%;
               }
             }
             &:nth-child(3) {
               .icon {
                 background: url(../public/launchpad/icon_total.png);
-                width: 58px;
-                height: 50px;
+                width: 46.4px;
+                height: 40px;
                 background-size: 100% 100%;
               }
             }
             &:nth-child(4) {
               .icon {
                 background: url(../public/launchpad/icon_total.png);
-                width: 58px;
-                height: 50px;
+                width: 46.4px;
+                height: 40px;
                 background-size: 100% 100%;
               }
               &::after {
@@ -627,226 +567,58 @@
               }
             }
             .label {
-              color: #ffb800;
-              font-size: 14px;
-              margin-bottom: 4px;
+              font-size: 12px;
             }
             .val {
-              font-size: 30px;
-              color: #fff;
-              font-weight: bold;
+              font-size: 14px;
             }
           }
         }
         .going {
-          background-color: #1f1e29;
-          display: flex;
-          padding: 20px;
-          border-radius: 10px;
-          .banner {
-            position: relative;
-            flex-shrink: 0;
-            position: relative;
-          }
+          flex-direction: column;
           .info {
-            width: 450px;
-            color: #fff;
-            margin: 0 20px;
-            .subtitle {
-              font-size: 24px;
-              font-weight: bold;
-              display: flex;
-              align-items: center;
-              .contacts {
-                margin-left: 10px;
-                display: flex;
-                align-items: center;
-                > div {
-                  margin-right: 10px;
-                }
-              }
-            }
-            p {
-              font-size: 12px;
-              margin: 15px 0;
-              line-height: 1.3;
-            }
+            width: 100%;
+            margin: 0;
           }
           .amount {
-            display: flex;
             background-color: #36353e;
             border-radius: 10px;
-            padding: 10px 14px;
-            justify-content: space-between;
+            padding: 8px 14px;
+            flex-direction: column;
             .item {
-              position: relative;
+              display: flex;
+              justify-content: space-between;
+              margin: 3px 0;
               &::after {
-                content: " ";
-                background-color: #616167;
-                width: 1px;
-                height: 29px;
-                position: absolute;
-                right: -16px;
-                top: 50%;
-                transform: translateY(-50%);
-              }
-              &:last-child {
-                &::after {
-                  display: none;
-                }
+                display: none;
               }
             }
             .label {
-              font-size: 12px;
-              color: #9a9a9e;
-              margin-bottom: 5px;
+              margin-bottom: 0;
             }
             .val {
-              font-size: 18px;
-              font-weight: bold;
-              display: flex;
-              align-items: center;
-              span {
-                color: #68676e;
-              }
-              .pie {
-                background: url(../public/launchpad/pie.png);
-                width: 18px;
-                height: 18px;
-                background-size: 100% 100%;
-                margin-right: 5px;
-              }
+              font-size: 14px;
             }
           }
           .countdown {
-            flex-grow: 1;
-            padding-left: 26px;
-            position: relative;
+            padding-left: 0;
             &::after {
-              content: "";
-              width: 1px;
-              height: 148px;
-              background-color: #35353d;
-              position: absolute;
-              left: 5px;
-              top: 48px;
+              display: none;
             }
             .member {
-              display: flex;
-              align-items: center;
-              color: #686679;
-              justify-content: flex-end;
-              font-size: 12px;
-              .avatar {
-                border-radius: 50%;
-                overflow: hidden;
-                width: 23px;
-                height: 23px;
-                margin-right: 6px;
-              }
+              margin-top: 20px;
             }
             .start {
-              color: #fff;
-              font-size: 12px;
-              margin-top: 26px;
-            }
-            .timer {
-              color: #f18103;
-              display: flex;
-              align-items: center;
-              justify-content: space-between;
-              margin-top: 14px;
-              margin-bottom: 22px;
-              span {
-                margin: 0 10px;
-              }
-              .time {
-                font-size: 20px;
-                font-weight: bold;
-              }
-              .label {
-                font-size: 12px;
-                margin-top: 4px;
-              }
-            }
-            .btn {
-              display: flex;
-              align-items: center;
-              .arrow {
-                background: url(../public/home/white_arrow.svg);
-                width: 12px;
-                height: 12px;
-                margin-left: 8px;
-              }
+              margin-top: 5px;
             }
           }
         }
       }
       .projects {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
+        justify-content: center;
         .project {
-          padding: 15px;
-          width: 374px;
-          height: 424px;
-          background-color: #1f1e29;
-          border-radius: 20px;
-          margin-bottom: 20px;
-          .banner {
-            position: relative;
-            height: 180px;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-          }
-          .subtitle {
-            font-size: 24px;
-            color: #fff;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-            .contact {
-              display: flex;
-              align-items: center;
-              margin-left: 10px;
-              > div {
-                margin: 0 5px;
-                cursor: pointer;
-              }
-            }
-          }
-          p {
-            color: #828e86;
-            margin: 16px auto;
-            font-size: 14px;
-            line-height: 1.4;
-            display: -webkit-box;
-            -webkit-line-clamp: 4; /* 指定显示的行数 */
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-            text-overflow: ellipsis;
-          }
-          .amount {
-            background-color: #36353e;
-            padding: 10px 14px;
-            border-radius: 10px;
-            .item {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              font-size: 12px;
-              margin: 3px 0;
-              .label {
-                color: #9a9a9e;
-              }
-              .val {
-                color: #e38a33;
-                font-weight: bold;
-              }
-            }
-          }
+          width: 98%;
+          height: auto;
         }
       }
     }
