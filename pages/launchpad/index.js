@@ -248,7 +248,7 @@ const Launchpad = () => {
     }
   };
   return (
-    <HeaderFooter activeIndex={2}>
+    <HeaderFooter activeIndex={3}>
       <ToastContainer />
       <div className={styles.wrapper}>
         {/* <video autoPlay loop>
