@@ -63,7 +63,7 @@ const Header = (props) => {
               Home
             </li>
           </Link>
-           {/* <Link href="/ido" passHref>
+           <Link href="/ido" passHref>
             <li
               className={cx({
                 active: activeIndex === 2,
@@ -71,16 +71,16 @@ const Header = (props) => {
             >
               Ido
             </li>
-          </Link> */}
-          {/* <Link href="/launchpad" passHref>
+          </Link>
+          <Link href="/launchpad" passHref>
             <li
               className={cx({
-                active: activeIndex === 2,
+                active: activeIndex === 3,
               })}
             >
               Launchpad
             </li>
-          </Link> */}
+          </Link>
           <li>Doc</li>
         </ul>
         <div className={styles.settings}>

@@ -34,7 +34,13 @@ const Launchpad = () => {
       <ToastContainer />
       <div className={styles.wrapper}>
         <div className={styles.ido_wrapper}>
-          <div className={styles.ido}>
+          <div className={styles.solgin}>
+            <h1>DOGEPAD LAUNCHPAD PROTPOCOL</h1>
+            <h2>The Launchpad Protocol</h2>
+            <h3>Each diamond project.</h3>
+          </div>
+          <div className={styles.ido_content}>
+              <div className={styles.ido}>
             <div className={styles.title}>
               <div className={styles.text}>
                 <h1>DogePad</h1>
@@ -212,6 +218,8 @@ const Launchpad = () => {
                 </div>
             </div>
           </div>
+          </div>
+        
         </div>
       </div>
     </HeaderFooter>
