@@ -228,11 +228,11 @@ const Launchpad = () => {
           <div className={styles.amount}>
             <div className={styles.item}>
               <div className={styles.label}>Target subscription</div>
-              <div className={styles.val}>{item.target} Btc</div>
+              <div className={styles.val}>{item.target} DOGE</div>
             </div>
             <div className={styles.item}>
               <div className={styles.label}>Subscribed</div>
-              <div className={styles.val}>{item.subscribed} Btc</div>
+              <div className={styles.val}>{item.subscribed} DOGE</div>
             </div>
           </div>
         </div>
@@ -402,12 +402,12 @@ const Launchpad = () => {
                 <div className={styles.amount}>
                   <div className={styles.item}>
                     <div className={styles.label}>Target subscription</div>
-                    <div className={styles.val}>800 Btc</div>
+                    <div className={styles.val}>80 DOGE</div>
                   </div>
                   <div className={styles.item}>
                     <div className={styles.label}>Subscribed</div>
                     <div className={styles.val}>
-                      800 Btc <span>/800 Btc</span>
+                      5 DOGE <span>/10 DOGE</span>
                     </div>
                   </div>
                   <div className={styles.item}>
@@ -465,11 +465,14 @@ const Launchpad = () => {
                     </div>
                   </div>
                 </Timer>
+               
                 <Button
                   renderContent={() => (
                     <>
                       <span className={styles.btn}>
-                        Find Project<i className={styles.arrow}></i>
+                         <Link href="/launchpad/detail" target="_blank"
+                        rel="noreferrer"
+                        passHref>Find Project</Link><i className={styles.arrow}></i>
                       </span>
                     </>
                   )}

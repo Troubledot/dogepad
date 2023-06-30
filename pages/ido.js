@@ -92,36 +92,40 @@ const Launchpad = () => {
                 <div className={styles.info}>
                     <div className={styles.list}>
                         <span>Token Price</span>
-                        <span>10,000,000 Xmm</span>
+                        <span>10,000,000 PAD</span>
                     </div>
                     <div  className={styles.list}>
                         <span>Fundraising percentage</span>
-                        <span>900,000 Usdc</span>
+                        <span>900,000 DOGE</span>
                     </div>
                     <ul>
                         <li>
                             <h1>Total fundraising amount</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Actual fundraising amount</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Number of fundraisers</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Number of tokens obtained</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                     </ul>
                 </div>
                 <div className={styles.submit}>
+                    <div className={styles.label}>
+                        <span>Whitelist Round Quota</span>
+                        <span>0.01 $Doge - 0.077 $Doge</span>
+                    </div>
                     <input type="number" />
                     <div className={styles.label}>
                         <span>Balance</span>
-                        <span>0 $BISO</span>
+                        <span>0 DOGE</span>
                     </div>
                     <div>
                         <button><span>Mint</span><i></i></button>
@@ -133,7 +137,7 @@ const Launchpad = () => {
             <div className={styles.title}>
               <div className={styles.text}>
                 <h1>DogePad</h1>
-                <p>Private equity.</p>
+                <p>Public equity.</p>
               </div>
               <div className={styles.deadline}>
                 <span>Distance Start</span>
@@ -181,36 +185,40 @@ const Launchpad = () => {
                 <div className={styles.info}>
                     <div className={styles.list}>
                         <span>Token Price</span>
-                        <span>10,000,000 Xmm</span>
+                        <span>10,000,000 PAD</span>
                     </div>
                     <div  className={styles.list}>
                         <span>Fundraising percentage</span>
-                        <span>900,000 Usdc</span>
+                        <span>900,000 DOGE</span>
                     </div>
                     <ul>
                         <li>
                             <h1>Total fundraising amount</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Actual fundraising amount</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Number of fundraisers</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                         <li>
                             <h1>Number of tokens obtained</h1>
-                            <p>10,000.00 BTC</p>
+                            <p>10,000.00 DOGE</p>
                         </li>
                     </ul>
                 </div>
                 <div className={styles.submit}>
+                   <div className={styles.label}>
+                        <span>Public Round Quota</span>
+                        <span>0.01 $Doge - 0.077 $Doge</span>
+                    </div>
                     <input type="number" />
                     <div className={styles.label}>
                         <span>Balance</span>
-                        <span>0 $BISO</span>
+                        <span>0 DOGE</span>
                     </div>
                     <div>
                         <button><span>Mint</span><i></i></button>
