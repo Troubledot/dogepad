@@ -47,94 +47,43 @@ const Launchpad = () => {
   const projects = [
     {
       id: 2,
-      title: "Aradena",
-      desc: `Litoja Labs is a company founded by industry experts in technology, web3, and gaming, aiming to revolutionize the way we play games and interact online. The main investor of Litoja Labs is Animoca Brands, who have established important partnerships with various`,
-      banner: pro2,
-      avatar: pro2,
+      title: "Pepe cardinals",
+      desc: `Pepe Cardinals - believes in a bright future, actively uses all the benefits of the 21st century:
+              - cryptocurrency
+              - listens to music
+              - social networks
+              - worships Dogecoin
+              - waits for Elon Musk`,
+      banner: pro1,
+      avatar: pro1,
       hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
-      target: 800,
-      subscribed: 1000,
+      details: "/launchpad/detail",
+      twitter: "https://twitter.com/pepedrc20",
+      medium: "",
+      telegram: "",
+      discord: "",
+      target: 50000,
+      subscribed: 100000,
     },
     {
       id: 3,
-      title: "Edohigan2",
-      desc: `The Edohigan Network provides fast and easy-to-use tools that enable decentralized data validation, immutability and retrieval, empowering developers and data engineers to access reliable data they can use to build the future of Web3 with confidence.`,
+      title: "Dogemeta.ai",
+      desc: `Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
+
+But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
+
+Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!`,
       banner: pro3,
       avatar: pro3,
       hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
+      details: "/launchpad/detail2",
+      twitter: "https://twitter.com/dogy.ai",
+      medium: "",
+      telegram: "",
+      discord: "",
       target: 800,
       subscribed: 1000,
-    },
-    {
-      id: 4,
-      title: "Edohigan3",
-      desc: `The Edohigan Network provides fast and easy-to-use tools that enable decentralized data validation, immutability and retrieval, empowering developers and data engineers to access reliable data they can use to build the future of Web3 with confidence.`,
-      banner: pro4,
-      avatar: pro4,
-      hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
-      target: 800,
-      subscribed: 1000,
-    },
-    {
-      id: 5,
-      title: "Edohigan3",
-      desc: `The Edohigan Network provides fast and easy-to-use tools that enable decentralized data validation, immutability and retrieval, empowering developers and data engineers to access reliable data they can use to build the future of Web3 with confidence.`,
-      banner: pro5,
-      avatar: pro5,
-      hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
-      target: 800,
-      subscribed: 1000,
-    },
-    {
-      id: 6,
-      title: "Edohigan3",
-      desc: `The Edohigan Network provides fast and easy-to-use tools that enable decentralized data validation, immutability and retrieval, empowering developers and data engineers to access reliable data they can use to build the future of Web3 with confidence.`,
-      banner: pro6,
-      avatar: pro6,
-      hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
-      target: 800,
-      subscribed: 1000,
-    },
-    {
-      id: 7,
-      title: "Edohigan3",
-      desc: `The Edohigan Network provides fast and easy-to-use tools that enable decentralized data validation, immutability and retrieval, empowering developers and data engineers to access reliable data they can use to build the future of Web3 with confidence.`,
-      banner: pro7,
-      avatar: pro7,
-      hot: true,
-      details: "/launchpad",
-      twitter: "https://twitter.com/Edohigan_NW",
-      medium: "https://twitter.com/Edohigan_NW",
-      telegram: "https://twitter.com/Edohigan_NW",
-      discord: "https://discord.gg/C8Fqem6KaQ",
-      target: 800,
-      subscribed: 1000,
-    },
+    }
   ];
   const initProject = (projects) => {
     let projectList = [];
@@ -227,11 +176,11 @@ const Launchpad = () => {
           <p>{item.desc}</p>
           <div className={styles.amount}>
             <div className={styles.item}>
-              <div className={styles.label}>Target subscription</div>
+              <div className={styles.label}>Private Sale</div>
               <div className={styles.val}>{item.target} DOGE</div>
             </div>
             <div className={styles.item}>
-              <div className={styles.label}>Subscribed</div>
+              <div className={styles.label}>Public Sale</div>
               <div className={styles.val}>{item.subscribed} DOGE</div>
             </div>
           </div>
@@ -296,7 +245,7 @@ const Launchpad = () => {
                 </div>
               </div>
             </div>
-            <div className={styles.title}>
+            {/* <div className={styles.title}>
               <div className={styles.main}>ONGOING PROJECTS</div>
             </div>
             <div className={styles.going}>
@@ -478,7 +427,7 @@ const Launchpad = () => {
                   )}
                 ></Button>
               </div>
-            </div>
+            </div> */}
             <div className={styles.title}>
               <div className={styles.main}>HISTORY PROJECTS</div>
               <span>

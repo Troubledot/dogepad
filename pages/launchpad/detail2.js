@@ -31,7 +31,7 @@ import "animate.css";
 
 const Launchpad = () => {
  const options = {
-    color: [ "#282D34", "#21BF73", "#ff4b19"],
+    color: [ "#282D34", "#21BF73", "#ff4b19", "#8fb6ff", "#ff369a"],
     tooltip: {
       trigger: "item",
       textStyle:{
@@ -66,9 +66,11 @@ const Launchpad = () => {
           show: false,
         },
         data: [
-          { value: 4.2, name: "cex listings" },
-          { value: 6.9, name: "airdrops" },
-          { value: 88.9, name: "IDO" }
+          { value: 30, name: "IDO" },
+          { value: 20, name: "Development" },
+          { value: 10, name: "Marketing" },
+          { value: 10, name: "Ecosystem" },
+          { value: 30, name: "Staking and Farming" },
         ],
       },
     ],
@@ -82,15 +84,19 @@ const Launchpad = () => {
                 <dt>
                     <dl></dl>
                 </dt>
-                <img src="/launchpad/pro1.png" />
+                <img src="/launchpad/pro2.png" />
                 <div className={styles.text}>
-                    <h1>Pepe cardinals</h1>
+                    <h1>Dogemeta.ai</h1>
                     <h2>
-                        <img src="/launchpad/pro1.png" />
-                        <span>pepedoges</span>
+                        <img src="/launchpad/pro3.png" />
+                        <span>James O'Connor</span>
                     </h2>
                     <p>
-                        memecoin powered by Dogecoin community is for Pepe f.anThe most original memecoin in existence, a rattling mixture of pepe built on Dogecoin Chain (DRC-20)
+                       Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
+
+But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
+
+Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!
                     </p>
                 </div>
             </div>
@@ -146,11 +152,11 @@ const Launchpad = () => {
                     <div className={styles.info}>
                         <div className={styles.list}>
                             <span>Token Price</span>
-                            <span>0.000015 DOGE/KEK</span>
+                            <span>0.002 DOGE/DOGY</span>
                         </div>
                         <div  className={styles.list}>
                             <span>Fundraising percentage</span>
-                            <span>50,000 DOGE</span>
+                            <span>3,000,000 DOGE</span>
                         </div>
                         <ul>
                             <li>
@@ -239,11 +245,11 @@ const Launchpad = () => {
                     <div className={styles.info}>
                         <div className={styles.list}>
                             <span>Token Price</span>
-                            <span>0.000015 DOGE/KEK</span>
+                            <span>0.002 DOGE/DOGY</span>
                         </div>
                         <div  className={styles.list}>
                             <span>Fundraising percentage</span>
-                            <span>100,000 DOGE</span>
+                            <span>7,000,000 DOGE</span>
                         </div>
                         <ul>
                             <li>
@@ -292,21 +298,33 @@ const Launchpad = () => {
                     </div> */}
                     <div className={styles.protocol}>
                 <div className={styles.item}>
-                    <div className={styles.title}>About</div>
+                    <div className={styles.title}>Multidimensional Utility</div>
                     <p>
-                    Pepe Cardinals - believes in a bright future, actively uses all the benefits of the 21st century:<br/>
-                    - cryptocurrency<br/>
-                    - listens to music<br/>
-                    - social networks<br/>
-                    - worships Dogecoin<br/>
-                    - waits for Elon Musk
+                   Unlike traditional GameFi tokens, Dogy is not limited to a single game or ecosystem. It can be swapped, traded, and used across numerous games, providing unparalleled flexibility and utility in the gaming space.
                     </p>
                 </div>
                 <div className={styles.item}>
-                    <div className={styles.title}>Project advantages</div>
+                    <div className={styles.title}>Powerful AI Integration</div>
                     <p>
-                    memecoin powered by Dogecoin community is for Pepe fans
-                    The most original memecoin in existence, a rattling mixture of pepe built on Dogecoin Chain (DRC-20)
+                    Dogy introduces the AI Game Master, an advanced AI assistant designed to guide gamers through their challenges. This innovative technology reshapes the gaming experience, helping players transcend boundaries and reach new heights.
+                    </p>
+                </div>
+                <div className={styles.item}>
+                    <div className={styles.title}>Blockchain Fusion</div>
+                    <p>
+                    Dogy is the bridge that connects traditional gaming and the Web3 landscape. It brings the revolution of blockchain to conventional games, transforming gaming achievements into real-world rewards and enhancing the value proposition for players.
+                    </p>
+                </div>
+                 <div className={styles.item}>
+                    <div className={styles.title}>Community-Centric Prosperity</div>
+                    <p>
+                    Dogy promotes a sense of shared wealth within the gaming community. It offers a fair distribution mechanism for potential revenue generated within the ecosystem, fostering a more equitable and prosperous gaming landscape.
+                    </p>
+                </div>
+                <div className={styles.item}>
+                    <div className={styles.title}>Symbol of Change</div>
+                    <p>
+                    Dogy is more than a token - it's a beacon of hope, a symbol of community strength, and a testament to the transformative power of Web3 technologies.
                     </p>
                 </div>
                 
