@@ -248,7 +248,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                 <div className={styles.icon}></div>
                 <div className={styles.desc}>
                   <div className={styles.label}>
-                    Total Liquidity Raised Raised
+                    Total Users
                   </div>
                   <div className={styles.val}>$0</div>
                 </div>

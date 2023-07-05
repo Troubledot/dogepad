@@ -156,10 +156,12 @@
         z-index: 5;
         box-shadow: 0px 0px 11px 2px #f28404;
         top: -75px;
+        gap: 50px;
         .item {
           display: flex;
           align-items: center;
           position: relative;
+          width: 25%;
           &::after {
             content: "";
             width: 2px;

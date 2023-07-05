@@ -95,10 +95,10 @@ const Launchpad = () => {
                     <h1>PrivateAI</h1>
                     <h2>
                         <img src="/launchpad/pro6.png" />
-                        <span>James O'Connor</span>
+                        <span>James O&apos;Connor</span>
                     </h2>
                     <p>
-                       PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI's privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI's Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
+                       PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI&apos;s privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI&apos;s Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
                     </p>
                 </div>
             </div>
@@ -304,7 +304,7 @@ const Launchpad = () => {
                 <div className={styles.item}>
                     <div className={styles.title}>About</div>
                     <p>
-                    PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI's privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI's Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
+                    PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI&apos;s privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI&apos;s Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
                     </p>
                 </div>
                 <div className={styles.item}>
