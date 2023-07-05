@@ -89,14 +89,14 @@ const Launchpad = () => {
                     <h1>Dogemeta.ai</h1>
                     <h2>
                         <img src="/launchpad/pro3.png" />
-                        <span>James O'Connor</span>
+                        <span>James O&apos;Connor</span>
                     </h2>
                     <p>
-                       Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
+                       Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it&apos;s a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
 
-But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
+But Dogy&apos;s power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
 
-Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!
+Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It&apos;s more than a token—it&apos;s an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!
                     </p>
                 </div>
             </div>
@@ -324,7 +324,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                 <div className={styles.item}>
                     <div className={styles.title}>Symbol of Change</div>
                     <p>
-                    Dogy is more than a token - it's a beacon of hope, a symbol of community strength, and a testament to the transformative power of Web3 technologies.
+                    Dogy is more than a token - it&apos;s a beacon of hope, a symbol of community strength, and a testament to the transformative power of Web3 technologies.
                     </p>
                 </div>
                 
