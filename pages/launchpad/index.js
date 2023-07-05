@@ -46,6 +46,41 @@ const Launchpad = () => {
   };
   const projects = [
     {
+      id: 1,
+      title: "PrivateAI",
+      desc: `PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI's privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI's Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.`,
+      banner: pro5,
+      avatar: pro5,
+      hot: true,
+      details: "/launchpad/detail3",
+      twitter: "https://twitter.com/privateAIcom",
+      medium: "",
+      telegram: "https://t.me/privateaicom",
+      discord: "",
+      target: 3000000,
+      subscribed: 7700000,
+    },
+    
+    {
+      id: 3,
+      title: "Dogemeta.ai",
+      desc: `Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
+
+But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
+
+Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!`,
+      banner: pro3,
+      avatar: pro3,
+      hot: true,
+      details: "/launchpad/detail2",
+      twitter: "https://twitter.com/dogy.ai",
+      medium: "",
+      telegram: "",
+      discord: "",
+      target: 30000000,
+      subscribed: 70000000,
+    },
+    {
       id: 2,
       title: "Pepe cardinals",
       desc: `Pepe Cardinals - believes in a bright future, actively uses all the benefits of the 21st century:
@@ -65,25 +100,6 @@ const Launchpad = () => {
       target: 50000,
       subscribed: 100000,
     },
-    {
-      id: 3,
-      title: "Dogemeta.ai",
-      desc: `Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
-
-But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
-
-Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!`,
-      banner: pro3,
-      avatar: pro3,
-      hot: true,
-      details: "/launchpad/detail2",
-      twitter: "https://twitter.com/dogy.ai",
-      medium: "",
-      telegram: "",
-      discord: "",
-      target: 800,
-      subscribed: 1000,
-    }
   ];
   const initProject = (projects) => {
     let projectList = [];
@@ -218,14 +234,14 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                 <div className={styles.icon}></div>
                 <div className={styles.desc}>
                   <div className={styles.label}>Total Liquidity Raised</div>
-                  <div className={styles.val}>$495.4M</div>
+                  <div className={styles.val}>$0</div>
                 </div>
               </div>
               <div className={styles.item}>
                 <div className={styles.icon}></div>
                 <div className={styles.desc}>
                   <div className={styles.label}>Total Raised</div>
-                  <div className={styles.val}>$495.4M</div>
+                  <div className={styles.val}>$0</div>
                 </div>
               </div>
               <div className={styles.item}>
@@ -234,14 +250,14 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                   <div className={styles.label}>
                     Total Liquidity Raised Raised
                   </div>
-                  <div className={styles.val}>$495.4M</div>
+                  <div className={styles.val}>$0</div>
                 </div>
               </div>
               <div className={styles.item}>
                 <div className={styles.icon}></div>
                 <div className={styles.desc}>
-                  <div className={styles.label}>Total </div>
-                  <div className={styles.val}>$495.4M</div>
+                  <div className={styles.label}>Total Locked Liquidity</div>
+                  <div className={styles.val}>$0</div>
                 </div>
               </div>
             </div>

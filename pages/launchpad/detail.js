@@ -106,7 +106,7 @@ const Launchpad = () => {
                     formatValue={(value) =>
                         `${value < 10 ? `0${value}` : value} `
                     }
-                    initialTime={1000000}
+                    initialTime={0}
                     lastUnit="d"
                     direction="backward"
                     >
@@ -174,7 +174,7 @@ const Launchpad = () => {
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Whitelist Round Quota</span>
-                            <span>0.01 $Doge - 0.077 $Doge</span>
+                            <span>1000 $Doge - 2000 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>
@@ -199,7 +199,7 @@ const Launchpad = () => {
                     formatValue={(value) =>
                         `${value < 10 ? `0${value}` : value} `
                     }
-                    initialTime={1000000}
+                    initialTime={0}
                     lastUnit="d"
                     direction="backward"
                     >
@@ -267,7 +267,7 @@ const Launchpad = () => {
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Public Round Quota</span>
-                            <span>0.01 $Doge - 0.077 $Doge</span>
+                            <span>1000 $Doge - 2000 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>

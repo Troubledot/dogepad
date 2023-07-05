@@ -31,7 +31,7 @@ import "animate.css";
 
 const Launchpad = () => {
  const options = {
-    color: [ "#282D34", "#21BF73", "#ff4b19", "#8fb6ff", "#ff369a"],
+    // color: [ "#282D34", "#21BF73", "#ff4b19", "#8fb6ff", "#ff369a"],
     tooltip: {
       trigger: "item",
       textStyle:{
@@ -66,11 +66,17 @@ const Launchpad = () => {
           show: false,
         },
         data: [
-          { value: 30, name: "IDO" },
-          { value: 20, name: "Development" },
-          { value: 10, name: "Marketing" },
-          { value: 10, name: "Ecosystem" },
-          { value: 30, name: "Staking and Farming" },
+          { value: 15, name: "Team Pool" },
+          { value: 5.5, name: "Advisory Pool" },
+          { value: 15, name: "Community Growth" },
+          { value: 7.5, name: "B2B Sales" },
+          { value: 5, name: "Integrations" },
+          { value: 2.5, name: "Legal" },
+          { value: 1, name: "Admin" },
+          { value: 1, name: "Charity" },
+          { value: 12.5, name: "Liquidity & Listings" },
+          { value: 10, name: "IDO/IEO" },
+          { value: 25, name: "PrivateAI Core Building" },
         ],
       },
     ],
@@ -84,19 +90,15 @@ const Launchpad = () => {
                 <dt>
                     <dl></dl>
                 </dt>
-                <img src="/launchpad/pro2.png" />
+                <img src="/launchpad/pro5.png" />
                 <div className={styles.text}>
-                    <h1>Dogemeta.ai</h1>
+                    <h1>PrivateAI</h1>
                     <h2>
-                        <img src="/launchpad/pro3.png" />
+                        <img src="/launchpad/pro6.png" />
                         <span>James O'Connor</span>
                     </h2>
                     <p>
-                       Introducing Dogy, the revolutionary token reshaping the GameFi universe! Designed to break barriers, Dogy is not just a token—it's a beacon of hope and a testament to the power of Artificial Intelligence. Unlike traditional GameFi tokens, Dogy offers multidimensional utility across numerous games, boosting the demand for game tokens and fostering a more dynamic ecosystem.
-
-But Dogy's power extends beyond the gaming field. It is the key to unlocking the AI Game Master—an innovative assistant guiding players to new gaming heights. Dogy merges the conventional gaming world with the emerging Web3 landscape, propelling traditional games into the blockchain era and translating victories into tangible rewards.
-
-Most importantly, Dogy cultivates community prosperity, promising fair distribution of potential ecosystem revenue. It's more than a token—it's an emblem of change, community, and a prosperous future. Experience the future of GameFi. Embrace the power of Dogy!
+                       PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI's privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI's Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
                     </p>
                 </div>
             </div>
@@ -152,7 +154,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                     <div className={styles.info}>
                         <div className={styles.list}>
                             <span>Token Price</span>
-                            <span>0.002 DOGE/DOGY</span>
+                            <span>2.14 DOGE/PGPT</span>
                         </div>
                         <div  className={styles.list}>
                             <span>Fundraising percentage</span>
@@ -180,7 +182,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Whitelist Round Quota</span>
-<span>600 $Doge - 2000 $Doge</span>
+<span>1 $Doge - 10000 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>
@@ -245,11 +247,11 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                     <div className={styles.info}>
                         <div className={styles.list}>
                             <span>Token Price</span>
-                            <span>0.002 DOGE/DOGY</span>
+                            <span>2.14 DOGE/PGPT</span>
                         </div>
                         <div  className={styles.list}>
                             <span>Fundraising percentage</span>
-                            <span>7,000,000 DOGE</span>
+                            <span>7,700,000 DOGE</span>
                         </div>
                         <ul>
                             <li>
@@ -273,7 +275,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Public Round Quota</span>
-<span>600 $Doge - 2000 $Doge</span>
+<span>1 $Doge - 10000 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>
@@ -297,34 +299,20 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
                         </div>
                     </div> */}
                     <div className={styles.protocol}>
+
+                       
                 <div className={styles.item}>
-                    <div className={styles.title}>Multidimensional Utility</div>
+                    <div className={styles.title}>About</div>
                     <p>
-                   Unlike traditional GameFi tokens, Dogy is not limited to a single game or ecosystem. It can be swapped, traded, and used across numerous games, providing unparalleled flexibility and utility in the gaming space.
+                    PrivateAI is building the AI model compatible with homogeneous federated learning. $PGPT is the utility token that powers PrivateAI's privacy layer to interact with Chat GPT and Machine Learning (ML) that focuses on preventing both the internal data misuse as well as external exposure and leaks. With exponential growth and adoption of OpenAI's Chat GPT and other related Artificial Intelligence (AI) technologies, the question of preserving data privacy remains wide open. Using enhanced data protection, homomorphic encryption and federated learning, PrivateAI users will be able to train neural networks without revealing their data. The business model of PGPT includes subscription plans with multiple tiers as well as a privacy-focused marketplace of PrivateAI-powered dApps, plugins and content.
                     </p>
                 </div>
                 <div className={styles.item}>
-                    <div className={styles.title}>Powerful AI Integration</div>
+                    <div className={styles.title}>Project advantages</div>
                     <p>
-                    Dogy introduces the AI Game Master, an advanced AI assistant designed to guide gamers through their challenges. This innovative technology reshapes the gaming experience, helping players transcend boundaries and reach new heights.
-                    </p>
-                </div>
-                <div className={styles.item}>
-                    <div className={styles.title}>Blockchain Fusion</div>
-                    <p>
-                    Dogy is the bridge that connects traditional gaming and the Web3 landscape. It brings the revolution of blockchain to conventional games, transforming gaming achievements into real-world rewards and enhancing the value proposition for players.
-                    </p>
-                </div>
-                 <div className={styles.item}>
-                    <div className={styles.title}>Community-Centric Prosperity</div>
-                    <p>
-                    Dogy promotes a sense of shared wealth within the gaming community. It offers a fair distribution mechanism for potential revenue generated within the ecosystem, fostering a more equitable and prosperous gaming landscape.
-                    </p>
-                </div>
-                <div className={styles.item}>
-                    <div className={styles.title}>Symbol of Change</div>
-                    <p>
-                    Dogy is more than a token - it's a beacon of hope, a symbol of community strength, and a testament to the transformative power of Web3 technologies.
+                    As of now, none of the open-source AI models are compatible to be trained against fully encrypted data.FHE protocols including the considered Concrete ML have limitations in terms of the types of computations they can perform. These protocols are typically designed for basic arithmetic operations and simple computations. On the other hand, text processing AI models have complex structure and involve operations that require high computational power. Compared to that, PGPT utilizes federated learning technique, enabling more secure, resource-efficient AI model training while maintaining user privacy, unlike competitors that rely on centralized data processing. PGPT is focused primarily on data privacy and complex data encryption.
+Moreover, PGPT also uses data pseudonymization, a data protection technique that involves replacing personally identifiable information (PII) with artificial identifiers or pseudonyms. 
+In this method, sensitive data elements are replaced with non-sensitive tokens, which act as placeholders or references to the original data. This method is not used by the main competitors. 
                     </p>
                 </div>
                 

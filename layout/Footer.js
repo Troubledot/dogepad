@@ -10,8 +10,9 @@ const Footer = ({ t }) => {
           <div className={styles.navigate}>
             <div className={styles.title}>Navigate</div>
             <div className={styles.navs}>
-              <Link href="#">Home</Link>
-              <Link href="#">Launchpad</Link>
+              <Link href="/">Home</Link>
+              <Link href="/ido">IDO</Link>
+              <Link href="/launchpad">Launchpad</Link>
             </div>
           </div>
           <div className={styles.social}>
