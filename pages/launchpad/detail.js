@@ -90,7 +90,7 @@ const Launchpad = () => {
                         <span>pepedoges</span>
                     </h2>
                     <p>
-                        memecoin powered by Dogecoin community is for Pepe f.anThe most original memecoin in existence, a rattling mixture of pepe built on Dogecoin Chain (DRC-20)
+                       memecoin powered by Dogecoin community is for Pepe fan. The most original memecoin in existence, a rattling mixture of pepe built on Dogecoin Chain (DRC-20)
                     </p>
                 </div>
             </div>
@@ -174,7 +174,7 @@ const Launchpad = () => {
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Whitelist Round Quota</span>
-                            <span>1000 $Doge - 2000 $Doge</span>
+                            <span>15 $Doge - 300 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>
@@ -267,7 +267,7 @@ const Launchpad = () => {
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Public Round Quota</span>
-                            <span>1000 $Doge - 2000 $Doge</span>
+                            <span>1000 $Doge - 300 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>

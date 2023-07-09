@@ -83,12 +83,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
     {
       id: 2,
       title: "Pepe cardinals",
-      desc: `Pepe Cardinals - believes in a bright future, actively uses all the benefits of the 21st century:
-              - cryptocurrency
-              - listens to music
-              - social networks
-              - worships Dogecoin
-              - waits for Elon Musk`,
+      desc: `memecoin powered by Dogecoin community is for Pepe fan. The most original memecoin in existence, a rattling mixture of pepe built on Dogecoin Chain (DRC-20)`,
       banner: pro1,
       avatar: pro1,
       hot: true,
