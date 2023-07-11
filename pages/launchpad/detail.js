@@ -267,7 +267,7 @@ const Launchpad = () => {
                     <div className={styles.submit}>
                          <div className={styles.label}>
                             <span>Public Round Quota</span>
-                            <span>1000 $Doge - 300 $Doge</span>
+                            <span>15 $Doge - 300 $Doge</span>
                         </div>
                         <input type="number" />
                         <div className={styles.label}>
