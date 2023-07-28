@@ -88,7 +88,7 @@ Most importantly, Dogy cultivates community prosperity, promising fair distribut
       avatar: pro1,
       hot: true,
       details: "/launchpad/detail",
-      twitter: "https://twitter.com/pepedrc20",
+      twitter: "https://twitter.com/pepecardinals",
       medium: "",
       telegram: "",
       discord: "",

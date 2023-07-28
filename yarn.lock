@@ -3478,6 +3478,15 @@ babel-plugin-transform-strict-mode@^6.24.1:
     babel-runtime "^6.22.0"
     babel-types "^6.24.1"
 
+babel-polyfill@^6.23.0:
+  version "6.26.0"
+  resolved "https://registry.yarnpkg.com/babel-polyfill/-/babel-polyfill-6.26.0.tgz#379937abc67d7895970adc621f284cd966cf2153"
+  integrity sha512-F2rZGQnAdaHWQ8YAoeRbukc7HS9QgdgeyJ0rQDd485v9opwuPvjpPFcOOT/WmkKTdgy9ESgSPXDcTNpzrGr6iQ==
+  dependencies:
+    babel-runtime "^6.26.0"
+    core-js "^2.5.0"
+    regenerator-runtime "^0.10.5"
+
 babel-preset-env@^1.7.0:
   version "1.7.0"
   resolved "https://registry.npmmirror.com/babel-preset-env/-/babel-preset-env-1.7.0.tgz#dea79fa4ebeb883cd35dab07e260c1c9c04df77a"
@@ -6543,6 +6552,14 @@ he@1.2.0, he@^1.1.1:
   resolved "https://registry.npmmirror.com/he/-/he-1.2.0.tgz#84ae65fa7eafb165fddb61566ae14baf05664f0f"
   integrity sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==
 
+hellojs@^2.0.0-4:
+  version "2.0.0-4"
+  resolved "https://registry.yarnpkg.com/hellojs/-/hellojs-2.0.0-4.tgz#81d8130334bd164edf7a323da113fee7c02a6a75"
+  integrity sha512-ay9Ym3e13vZ/st2o/ndAQvKzMTeMIOeFUFh2nqKn/1LGaHdOgsBLYZ8ejpIbkpPwp3uYRcz0d4xg5JZp0CFNew==
+  dependencies:
+    babel-polyfill "^6.23.0"
+    tricks "^1.7.0"
+
 highlight.js@^10.4.1:
   version "10.7.3"
   resolved "https://registry.npmmirror.com/highlight.js/-/highlight.js-10.7.3.tgz#697272e3991356e40c3cac566a74eef681756531"
@@ -8183,6 +8200,11 @@ number-to-bn@1.7.0:
     bn.js "4.11.6"
     strip-hex-prefix "1.0.0"
 
+oauth-shim@^1.1.5:
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/oauth-shim/-/oauth-shim-1.1.5.tgz#9bb8fa863ff74cbf6e503ec33028a9007a02649f"
+  integrity sha512-asM8YQby4eJAxZ+nDovQ8tEcc16pnafqdzBnHtKrts5x7Lxz+qtaCF6pw5zzCshR9V0Exmh4kARFpg6ng5P0BA==
+
 oauth-sign@~0.9.0:
   version "0.9.0"
   resolved "https://registry.npmmirror.com/oauth-sign/-/oauth-sign-0.9.0.tgz#47a7b016baa68b5fa0ecf3dee08a85c679ac6455"
@@ -8987,6 +9009,11 @@ regenerate@^1.2.1, regenerate@^1.4.2:
   version "1.4.2"
   resolved "https://registry.npmmirror.com/regenerate/-/regenerate-1.4.2.tgz#b9346d8827e8f5a32f7ba29637d398b69014848a"
   integrity sha512-zrceR/XhGYU/d/opr2EKO7aRHUeiBI8qjtfHqADTwZd6Szfy16la6kqD0MIUs5z5hx6AaKa+PixpPrR289+I0A==
+
+regenerator-runtime@^0.10.5:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/regenerator-runtime/-/regenerator-runtime-0.10.5.tgz#336c3efc1220adcedda2c9fab67b5a7955a33658"
+  integrity sha512-02YopEIhAgiBHWeoTiA8aitHDt8z6w+rQqNuIftlM+ZtvSl/brTouaU7DW6GO/cHtvxJvS4Hwv2ibKdxIRi24w==
 
 regenerator-runtime@^0.11.0:
   version "0.11.1"
@@ -10045,6 +10072,11 @@ tr46@~0.0.3:
   version "0.0.3"
   resolved "https://registry.npmmirror.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
   integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
+tricks@^1.7.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/tricks/-/tricks-1.16.0.tgz#322abd0fb1753556a5b6bf887646e93c4208965c"
+  integrity sha512-P9DyQCIporLHZpY/PrtjhMyDlxvdRHMNI5aDc0nRfrTKLIj+wm9BlztFbHQkcXlViPk4ordBPN5jvAraGFpVWQ==
 
 trim-newlines@^2.0.0:
   version "2.0.0"

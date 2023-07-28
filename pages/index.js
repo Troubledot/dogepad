@@ -15,6 +15,7 @@ import Link from "next/link";
 import Image from "next/image";
 import "animate.css";
 
+
 const Home = () => {
   return (
     <HeaderFooter activeIndex={1}>

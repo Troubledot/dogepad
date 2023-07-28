@@ -5,6 +5,7 @@ import logger from 'morgan'
 import router from './server/router/router'
 import bodyParser from 'body-parser'
 import cookieParser from "cookie-parser"
+import oauthshim from 'oauth-shim'
 const port = parseInt(process.env.PORT, 10) || 5555
 const env = process.env.NODE_ENV
 const dev = env !== 'production'
@@ -34,7 +35,17 @@ app
       )
       server.use(bodyParser.json())
       
-      router(server, handle)
+      // router(server, handle)
+
+      server.all('/oauthproxy', oauthshim)
+
+      oauthshim.init([{
+        "name": "twitter",
+        "domain": "http://myapp.com",
+        "client_id": "OS1tMWY3aUo0dE9ISEFNSnpOMVg6MTpjaQ",
+        "client_secret": "5tGOGDPfrqXIXes4mxkkox2GUIrJeBSvIqPrwxLXufdYT4DtON",
+        "grant_url": "https://api.twitter.com/oauth/access_token"
+      }])
 
 
       server.listen(port, (err) => {
